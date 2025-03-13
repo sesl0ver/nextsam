@@ -1,0 +1,13 @@
+@charset "utf-8";
+
+#ns_dialog_build_StockFarm {
+
+}
+
+#ns_button_build_speedup_StockFarm {
+    width:120px;
+}
+
+#ns_dialog_build_StockFarm div.ns_panel_sub_top.ns_panel_flex > div:nth-child(2) {
+    margin-left: 10px;
+}

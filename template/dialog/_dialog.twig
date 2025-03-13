@@ -1,0 +1,838 @@
+<!-- message -->
+<div id="ns_dialog_message">
+    <span id="ns_button_message_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_message_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="content_message">
+                    <div class="content_main">
+                        <p class="message_container"></p>
+                    </div>
+                    <div class="content_bottom">
+                        <span id="ns_button_message_content_close">{{ i18n.t('ok') }}</span>
+                    </div>
+                </div>
+
+                <div class="content_package">
+                    <div class="content_main">
+                        <div class="content_package_container"></div>
+                    </div>
+                    <div class="text_align_center">
+                        <span class="content_package_massage"></span>
+                    </div>
+                    <div class="content_bottom">
+                        <span id="ns_button_package_use_again">{{ i18n.t('continue_using') }}</span>
+                    </div>
+                </div>
+
+                <div class="content_item">
+                    <div class="content_main">
+                        <div class="content_item_container"></div>
+                    </div>
+                    <div class="text_align_center">
+                        <span class="content_item_massage"></span>
+                    </div>
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_message_close_item">{{ i18n.t('ok') }}</span>
+                        <span id="ns_button_item_use_again">{{ i18n.t('continue_using') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- message_mt -->
+<div id="ns_dialog_message_mt">
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span class="content_pop_title">{{ i18n.t('information') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="content_message">
+                    <div class="content_main">
+                        <p class="message_container">{{ i18n.t('maintenance_check_notice') | raw }}</p>
+                    </div>
+                    <div class="content_bottom">
+                        <span id="ns_button_message_mt_ok">{{ i18n.t('ok') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_message_update" style="display:none;">
+    <div class="dlg_header"><span class="cont_pop_title">{{ i18n.t('information') }}</span></div>
+    <div class="dlg_content">
+        <div class="cont">
+            <div class="cont_header">
+                <p style="margin-top:50px;">
+                    {{ i18n.t('msg_game_updated') }}<br />
+                    {{ i18n.t('msg_connect_again_update') }}<br /><br />
+                    <span class="cont_version_desc"></span>
+                </p>
+            </div>
+        </div>
+        <div class="cont_bottom"><span id="ns_button_message_update_ok">{{ i18n.t('ok') }}</span></div>
+    </div>
+    <div class="dialog_footer"></div>
+</div>
+
+<div id="ns_dialog_message_charge" style="display:none;">
+    <div class="dlg_header"><span class="cont_pop_title">{{ i18n.t('information') }}</span></div>
+    <div class="dlg_content">
+        <div class="cont">
+            <div class="cont_header">
+                <p style="margin-top:60px;">결제를 요청 중 입니다.<br /></p>
+            </div>
+        </div>
+        <div class="cont_bottom"><span id="ns_button_message_charge_ok">{{ i18n.t('ok') }}</span></div>
+    </div>
+    <div class="dialog_footer"></div>
+</div>
+
+<!-- confirm -->
+<div id="ns_dialog_confirm">
+    <span id="ns_button_confirm_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span class="content_pop_title">{{ i18n.t('ok') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <p class="message"></p>
+                <div class="content_bottom">
+                    <span id="ns_button_confirm_ok">{{ i18n.t('yes') }}</span>
+                    <span id="ns_button_confirm_no">{{ i18n.t('no') }}</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- select_box -->
+<div id="ns_dialog_select_box">
+    <span id="ns_button_select_box_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_position_relative">
+                    <div class="select_box_list_wrap"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- select_box -->
+<!-- div id="ns_dialog_select_box">
+    <span id="ns_button_select_box_close_sub"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_select_box_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_position_relative">
+                    <div class="select_box_list_wrap"></div>
+                </div>
+                <div class="ns_panel_pop_button">
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div -->
+
+<!-- keypad -->
+<div id="ns_dialog_keypad">
+    <span id="ns_button_keypad_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_keypad_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_yy">
+                    <div class="ns_panel_flex_center wrap_amount_group">
+                        <input class="content_input_number" type="number" />
+                        <span> / </span>
+                        <span id="ns_button_amount_max_count"></span>
+                    </div>
+                </div>
+                <div class="ns_panel_basic">
+                    <div class="ns_panel_margin_yy">
+                        <div class="ns_panel_flex wrap_range_input">
+                            <label>
+                                <span id="ns_button_amount_decrease"></span>
+                                <input name="develop_slider" type="range" value="0" min="0" max="0" class="slider">
+                                <span id="ns_button_amount_increase"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="ns_panel_pop_button ns_panel_flex_center">
+                    <span id="ns_button_amount_submit">{{ i18n.t('apply') }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- development -->
+<div id="ns_dialog_development">
+    <span id="ns_button_development_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_development_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_development_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <div class="ns_panel_flex_info">
+                        <div class="develop_image"></div>
+                        <div class="develop_description"></div>
+                    </div>
+                </div>
+                <div class="ns_panel_basic ns_panel_margin_xx">
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th>{{ i18n.t('category') }}</th>
+                            <th>{{ i18n.t('requirement') }}</th>
+                            <th>{{ i18n.t('current_storage') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody class="content_development_table">
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ns_panel_full_contents ns_panel_margin_xx">
+                    <div class="content_side_pattern_bg">
+                        <div class="ns_panel_margin_center">
+                            <div class="content_develop_trans">
+                                <span class="text_cadet_gray">{{ i18n.t('personnel') }}</span>&nbsp;
+                                <input class="amount_field" type="number" />
+                                <span class="text_cadet_gray">/ </span>
+                                <span id="ns_button_development_updown">0</span>&nbsp;
+                                <span class="text_cadet_gray">{{ i18n.t('current_storage') }} :</span>&nbsp;
+                                <span class="develop_current text_green">0</span>
+                            </div>
+                            <div class="content_develop_trans wrapper_disperse_slider">
+                                <label>
+                                    <span id="ns_button_development_amount_decrease"></span>
+                                    <input name="develop_slider" type="range" value="0" min="0" max="0" class="slider">
+                                    <span id="ns_button_development_amount_increase"></span>
+                                </label>
+                            </div>
+                            <div class="content_develop_trans">
+                                <span class="text_cadet_gray">{{ i18n.t('time_required') }}</span> <span class="content_build_time">0</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="ns_panel_pop_button ns_panel_flex_column">
+                    <span id="ns_button_development_submit">{{ i18n.t('execute_command') }}</span>
+                    <span id="ns_button_development_submit_now">-</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- information -->
+<div id="ns_dialog_information">
+    <span id="ns_button_information_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_information_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th colspan="2">{{ i18n.t('capabilities') }}</th>
+                        <th colspan="2">{{ i18n.t('current_storage') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody class="content_spec_table">
+                    <tr>
+                        <td>{{ i18n.t('attack_power') }}</td>
+                        <td class="spec_attack"></td>
+                        <td>{{ i18n.t('military_type') }}</td>
+                        <td class="category"></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('defense_power') }}</td>
+                        <td class="spec_defence"></td>
+                        <td>{{ i18n.t('weak_ordnance_service') }}</td>
+                        <td class="weak_type"></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('vitality') }}</td>
+                        <td class="spec_energy"></td>
+                        <td>{{ i18n.t('target_range') }}</td>
+                        <td class="spec_target_range"></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('transport_capacity') }}</td>
+                        <td class="spec_capacity"></td>
+                        <td>{{ i18n.t('attack_range') }}</td>
+                        <td class="spec_attack_range"></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('move_speed') }}</td>
+                        <td class="spec_speed"></td>
+                        <td>{{ i18n.t('distance_efficiency') }}</td>
+                        <td class="spec_attack_efficiency"></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('consumption_food') }}</td>
+                        <td class="need_food"></td>
+                        <td>{{ i18n.t('attack_arrangement') }}</td>
+                        <td class="attack_line"></td>
+                    </tr>
+                    <tr>
+                        <td class="need_population_title">{{ i18n.t('required_population_amount') }}</td>
+                        <td class="need_population"></td>
+                        <td>{{ i18n.t('defense_position') }}</td>
+                        <td class="defence_line"></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="ns_panel_trans"></div>
+
+                <table class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th>{{ i18n.t('category') }}</th>
+                        <th>{{ i18n.t('requirement') }}</th>
+                        <th>{{ i18n.t('current_storage') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody class="content_condition_table">
+
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- tech_information -->
+<div id="ns_dialog_tech_information">
+    <span id="ns_button_tech_information_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_tech_information_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th>{{ i18n.t('technique_information') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="technique_infomation_description"></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="ns_panel_trans"></div>
+
+                <div class="ns_panel_basic content_information_wrapper">
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th>{{ i18n.t('category') }}</th>
+                            <th>{{ i18n.t('requirement') }}</th>
+                            <th>{{ i18n.t('current_storage') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody class="content_table_information">
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- disperse -->
+<div id="ns_dialog_disperse">
+    <span id="ns_button_disperse_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_disperse_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th class="col1">{{ i18n.t('category') }}</th>
+                            <th class="col2">{{ i18n.t('recovery_amount') }}</th>
+                            <th class="col3">{{ i18n.t('current_storage') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody class="content_disperse_resource">
+                        <tr>
+                            <td class="col1">{{ i18n.t('resource_food') }}</td>
+                            <td class="col2 content_demolish_food">-</td>
+                            <td class="col3 ns_resource_food_curr">-</td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('resource_horse') }}</td>
+                            <td class="content_demolish_horse">-</td>
+                            <td class="ns_resource_horse_curr">-</td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('resource_lumber') }}</td>
+                            <td class="content_demolish_lumber">-</td>
+                            <td class="ns_resource_lumber_curr">-</td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('resource_iron') }}</td>
+                            <td class="content_demolish_iron">-</td>
+                            <td class="ns_resource_iron_curr">-</td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('resource_gold') }}</td>
+                            <td class="content_demolish_gold">-</td>
+                            <td class="ns_territory_gold_curr">-</td>
+                        </tr>
+                        <tr>
+                            <td>주민</td>
+                            <td class="content_disperse_population">-</td>
+                            <td class="ns_territory_population_idle">-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ns_panel_margin_xx">
+                    <div class="ns_panel_heavy">
+                        {{ i18n.t('disperse_number_of_person') }}
+                    </div>
+                    <div class="ns_panel_flex_center ns_panel_margin_yy wrapper_disperse_amount ">
+                        <input class="amount_field" type="number" />
+                        <span> / </span>
+                        <span id="ns_button_disperse_amount_max_count"></span>
+                    </div>
+                    <div class="ns_panel_flex_center wrapper_disperse_slider">
+                        <label>
+                            <span id="ns_button_disperse_decrease"></span>
+                            <input name="develop_slide" type="range" value="0" min="0" max="0" class="slider" />
+                            <span id="ns_button_disperse_increase"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="ns_panel_margin_xx ns_panel_contents_box">
+                    <div class="content_desc_box">
+                        <p>{{ i18n.t('army_disperse_description') | raw }}</p>
+                    </div>
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_disperse_submit">{{ i18n.t('execution') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- lord_upgrade -->
+<div id="ns_dialog_lord_upgrade">
+    <span id="ns_button_lord_upgrade_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span class="content_pop_title">{{ i18n.t('lord_level_upgrade') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="lord_upgrade_reward"></div>
+
+                <span id="ns_button_lord_upgrade_close">{{ i18n.t('ok') }}</span>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- limit_buy -->
+<div id="ns_dialog_limit_buy" style="display:none;">
+    <div class="dlg_header">
+        <span class="cont_pop_title">승급 기념 한정 판매</span>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <div class="cont_limit_buy_wrap">
+                <span id="ns_button_limit_buy_button"></span>
+                <div class="cont_limit_buy"></div>
+                <div class="cont_lord_up_buy"></div>
+            </div>
+
+            <div class="qbwpan_pop_btn">
+                <span id="ns_button_limit_buy_keep">나중에 구매</span>
+                <span id="ns_button_limit_buy_close">다시 보지 않기</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="dialog_footer"></div>
+</div>
+
+<!-- game_help -->
+<div id="ns_dialog_game_help" style="display:none;">
+    <div class="dlg_header">
+        <div id="ns_button_game_help_close"></div>
+        <span class="cont_pop_title">도움말</span>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <div class="cont_help_content"></div>
+
+            <div class="qbwpan_pop_btn">
+                <span id="ns_button_game_help_close2">닫기</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="dialog_footer"></div>
+</div>
+
+<!-- account_link -->
+<div id="ns_dialog_account_link">
+    <span id="ns_button_account_link_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('account_link') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_account_link_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_account_link_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- push_agree -->
+<div id="ns_dialog_push_agree" style="display:none;">
+    <div class="dlg_header">
+        <span class="cont_pop_title">광고성 Push 수신 동의 [선택]</span>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+
+            <div class="qbwpan_TransTop" style="padding-top: 12px;">
+                <div style="float:left;"><span class="text_status" style="margin-left:8px;">주간(9~21)/야간(21~8)</span></div>
+                <div style="float:right;">
+                    <span id="ns_button_setting_all_push_agree">알림</span>
+                </div>
+                <div style="clear:both;"></div>
+            </div>
+
+            <div class="qbwpan_TransTop" style="padding-top: 8px; margin-left:16px;">
+                <div style="float:left;"><span class="cont_pn_title">공지 및 이벤트</span></div>
+                <div style="float:right;">
+                    <span id="ns_button_setting_pn_event_t1_agree">주간</span>
+                    <span id="ns_button_setting_pn_event_t2_agree">야간</span>
+                </div>
+                <div style="clear:both;"></div>
+                <div class="cont_pn_desc">게임에 관련된 공지사항, 이벤트</div>
+            </div>
+
+            <div class="cont_bottom">
+                <span id="ns_button_push_agree_submit">{{ i18n.t('ok') }}</span>&nbsp;
+            </div>
+        </div>
+    </div>
+    <div class="dialog_footer"></div>
+</div>
+
+<!-- coupon -->
+<div id="ns_dialog_coupon">
+    <span id="ns_button_coupon_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_coupon_close"></span>
+                <span class="content_pop_title">{{ i18n.t('enter_coupon_code') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_margin_yy ns_panel_margin_xx ns_panel_flex_column">
+                    <label class="width-80"><input name="coupon_code" class="button_input width-full" placeholder="{{ i18n.t('plz_enter_coupon_code') }}" maxlength="20" /></label>
+                    <span class="text_weight_bold">{{ i18n.t('coupon_reward_guidelines') }}</span>
+                    <span id="ns_button_coupon_submit">{{ i18n.t('submit') }}</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- menu -->
+<div id="ns_dialog_menu">
+    <span id="ns_button_menu_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('more') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_menu_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_menu_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <span id="ns_button_menu_notice"><span class="icon">📣</span> <span class="text">{{ i18n.t('notice') }}</span></span>
+                <div class="hr_division_brown"></div>
+                <span id="ns_button_menu_event"><span class="icon">🎁</span> <span class="text">{{ i18n.t('event') }}</span></span>
+                <div class="hr_division_brown"></div>
+                <!-- span id="ns_button_menu_account_link"><span class="icon">🔗</span> <span class="text">{{ i18n.t('account_link') }}</span></span>
+                <div class="hr_division_brown"></div -->
+                <span id="ns_button_menu_setting"><span class="icon">⚙️</span> <span class="text">{{ i18n.t('game_setting') }}</span></span>
+                <div class="hr_division_brown"></div>
+                <span id="ns_button_menu_inquiry"><span class="icon">📝</span> <span class="text">{{ i18n.t('inquiry') }}</span></span>
+                <div class="hr_division_brown"></div>
+                <span id="ns_button_menu_qbig"><span class="icon">💎</span> <span class="text">{{ i18n.t('buy_qbig') }}</span></span>
+                <div class="hr_division_brown"></div>
+                <span id="ns_button_menu_coupon"><span class="icon">🎫</span> <span class="text">{{ i18n.t('coupon') }}</span></span>
+                <div class="hr_division_brown"></div>
+                <!-- span id="ns_button_menu_server_select"><span class="icon">🔃</span> <span class="text">{{ i18n.t('server_selection') }}</span></span>
+                <div class="hr_division_brown"></div -->
+                <span id="ns_button_menu_game_rating"><span class="icon">🛡️</span> <span class="text">{{ i18n.t('game_rating') }}</span></span>
+                <div class="hr_division_brown"></div>
+                <span id="ns_button_menu_logout"><span class="icon">🔚</span> <span class="text">{{ i18n.t('logout') }}</span></span>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- terr_move_item_state -->
+<div id="ns_dialog_terr_move_item_state">
+    <span id="ns_button_terr_move_item_state_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_terr_move_item_state_close"></span>
+                <span class="content_pop_title">{{ i18n.t('terrotory_move_state') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="state_button_wrap ns_panel_grid_3">
+                    <span id="ns_button_terr_move_state_1"></span>
+                    <span id="ns_button_terr_move_state_2"></span>
+                    <span id="ns_button_terr_move_state_3"></span>
+                    <span id="ns_button_terr_move_state_4"></span>
+                    <span id="ns_button_terr_move_state_5"></span>
+                    <span id="ns_button_terr_move_state_6"></span>
+                    <span id="ns_button_terr_move_state_7"></span>
+                    <span id="ns_button_terr_move_state_8"></span>
+                    <span id="ns_button_terr_move_state_9"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- ---------------------------------------------------------------- -->
+<div id="ns_dialog_package_popup">
+    <span id="ns_button_package_popup_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_package_popup_close"></span>
+                <span class="content_pop_title">{{ i18n.t('item_sales') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+                <div class="main_content">
+
+                </div>
+                <div class="main_button_wrap">
+                    <span id="ns_button_buy_package">{{ i18n.t('purchase') }}<span class="inner_asset_text qbig"></span></span>
+                </div>
+            </div>
+        </div>
+        <div class="dialog_footer">
+            <div class="package_page_wrap ns_panel_flex">
+                <span id="ns_button_package_page_prev"></span>
+                <div class="package_page"></div>
+                <span id="ns_button_package_page_next"></span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------------------------------------------------------- -->
+<div id="ns_dialog_toast_message">
+    <div class="dialog_wrap">
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="content_action_wrap">
+                    <span class="content_message"></span><span class="toast_icon"></span>
+                    <span id="ns_button_toast_action"></span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ---------------------------------------------------------------- -->
+<div id="ns_dialog_world_goto_search">
+    <span id="ns_button_world_goto_search_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_content">
+            <span id="ns_button_world_goto_search_close"></span>
+            <div class="content">
+                <div class="goto_search_wrap">
+                    <span>X:</span>
+                    <label><input name="goto_x" class="button_input" value="0" maxlength="3" /></label>
+                    <span>Y:</span>
+                    <label><input name="goto_y" class="button_input" value="0" maxlength="3" /></label>
+                    <span id="ns_button_goto_search_ok"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="ns_dialog_game_rating">
+    <span id="ns_button_game_rating_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_game_rating_close"></span>
+                <span class="content_pop_title">{{ i18n.t('game_rating') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table>
+                    <thead>
+                    <tr>
+                        <td colspan="2" class="width-42">
+                            <p>Next 삼국지는</p>
+                            <p><span class="rate_color">15세 이용가</span> 게임물 입니다.</p>
+                        </td>
+                        <td colspan="2" class="width-58 text_align_right">
+                            <div class="rating_flex">
+                                <div class="rating r15"></div>
+                                <div class="rating sexuality"></div>
+                            </div>
+                        </td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <th>제명</th><td>Next 삼국지</td><th>상호</th><td>㈜상호명</td>
+                    </tr>
+                    <tr>
+                        <th>이용등급</th><td>15세 이용가</td><th>등급분류번호</th><td>제00-00-0000-0000호</td>
+                    </tr>
+                    <tr>
+                        <th>등급분류일자</th><td>0000.00.00</td><th>배급업신고번호</th><td>제0000-000000호</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

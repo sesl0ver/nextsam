@@ -1,0 +1,72 @@
+@charset "utf-8";
+
+#ns_dialog_build_TradeDept {
+
+}
+
+#ns_dialog_build_TradeDept div.ns_panel_sub_top.ns_panel_flex > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+#ns_dialog_build_TradeDept .ns_table_common tr:last-child > td {
+    border-bottom: 1px solid #596C8E;
+}
+#ns_dialog_build_TradeDept .ns_table_common span {
+    margin: auto;
+}
+
+#ns_dialog_build_TradeDept .ns_table_common>thead>tr>th:first-child {
+    width: 20%;
+}
+
+#ns_dialog_build_TradeDept .ns_table_common>thead>tr>th:nth-child(2),
+#ns_dialog_build_TradeDept .ns_table_common>thead>tr>th:nth-child(3) {
+    width: 30%;
+}
+
+#ns_dialog_build_TradeDept .ns_table_common>thead>tr>th:last-child {
+    width: 20%;
+}
+
+#ns_button_build_speedup_TradeDept {
+    width: 120px;
+}
+
+#ns_dialog_build_TradeDept_bid .ns_panel_sub_top,
+#ns_dialog_build_TradeDept_offer .ns_panel_sub_top {
+    color: #DCE7F1;
+    text-align: center;
+    font-weight: bold;
+    line-height: 42px;
+}
+
+#ns_dialog_build_TradeDept_bid .build_TradeDept_resource_info,
+#ns_dialog_build_TradeDept_offer .build_TradeDept_resource_info {
+    color: #FFFFFF;
+    text-align: center;
+    font-weight: bold;
+    padding: 8px 0;
+}
+
+#ns_button_trade_bid_resource_amount,
+#ns_button_trade_bid_unit_price,
+#ns_button_trade_offer_resource_amount,
+#ns_button_trade_offer_unit_price {
+    width: 100px;
+}
+
+#ns_dialog_build_TradeDept_bid .trade_bid_total_price,
+#ns_dialog_build_TradeDept_bid .trade_bid_commission_price,
+#ns_dialog_build_TradeDept_offer .trade_offer_total_price,
+#ns_dialog_build_TradeDept_offer .trade_offer_commission_price {
+    width: 123px;
+}
+
+#ns_button_build_TradeDept_bid,
+#ns_button_build_TradeDept_offer {
+    width: 100px;
+}
+
+#ns_dialog_build_TradeDept_delivery tbody .button_small_1 {
+    pointer-events: none;
+}

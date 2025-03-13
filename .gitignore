@@ -1,0 +1,16 @@
+.idea/
+composer.lock
+composer.phar
+master_data/cache/
+vendor/
+public/m_/cache/
+config/config.php
+config/gm_config.php
+admin/generate/data/*.xlsx
+i18n/locales/*.json
+public/minify/dialog.min.js
+public/minify/ext.min.js
+public/minify/m_.min.js
+public/minify/main.min.js
+public/minify/style.min.css
+public/minify/sub.min.js

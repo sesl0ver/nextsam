@@ -1,0 +1,64 @@
+@charset "utf-8";
+
+
+#ns_dialog_terr_info .buff_box {
+    padding: 0 5px;
+}
+
+#ns_dialog_terr_info .buff_box .buff_icon_wrap {
+    margin: 5px;
+}
+
+#ns_dialog_terr_info .buff_box .buff_description_wrap {
+    margin: 5px 0;
+    line-height: 24px;
+    color: #fff;
+}
+
+#ns_dialog_terr_info .terr_info_tab_goldpop,
+#ns_dialog_terr_info .terr_info_tab_resource {
+    margin: 0 auto;
+    width: 96%
+}
+
+#ns_dialog_terr_info .terr_population_description {
+    line-height: 22px;
+}
+
+/* thead 텍스트 좌측정렬 필요 */
+#ns_dialog_terr_info th {
+    text-align: left;
+    padding: 0 10px;
+}
+
+#ns_dialog_terr_info table tbody {
+    line-height: 32px;
+}
+
+#ns_dialog_terr_info table .buff_icon {
+    margin-right: 5px;
+}
+
+#ns_dialog_terr_info table td.width-50 > div {
+    margin: 0 auto;
+    width: 94%;
+}
+
+#ns_dialog_terr_info .ns_table_common td span {
+    line-height: 32px;
+    vertical-align: middle;
+}
+#ns_dialog_terr_info .ns_table_common td span.button_use_buff {
+    margin-right: 5px;
+}
+
+#ns_dialog_buff_item_desc .content>.ns_table_common div {
+    margin: 10px 0;
+}
+
+#ns_dialog_buff_item_desc .content_buff_item_desc {
+    display: inline-block;
+    margin: 10px 0;
+    line-height: 160%;
+
+}

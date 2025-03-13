@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+#ns_dialog_chat {
+
+}
+
+#ns_dialog_chat .content {
+    height: 100%;
+}
+
+#ns_dialog_chat label {
+    width: 100%;
+}
+
+#ns_dialog_chat input[name=chat_message] {
+    padding-left: 5px;
+    margin: 2px 0 0 0;
+    text-align: left;
+    width: 100%;
+    height: 22px;
+    border:1px solid #BB8E35;
+    outline:1px solid #EABD67;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#ns_dialog_chat .button_middle_2 {
+    width: 60px;
+    margin: auto 3px auto 1px;
+}
+
+#ns_dialog_chat .chat_list_wrap {
+    height: calc(100% - 41px - 36px - 22px - 8px);
+    overflow: hidden;
+    background: rgba(0, 0, 0, .7);
+}
+
+
+#ns_dialog_chat .chat_list_body {
+    width: 100%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#ns_dialog_chat .chat_list_body .message_box {
+    margin: 2px 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.main_top_chat_message .public,
+#ns_dialog_chat .chat_list_body .public {
+    color: orange;
+}
+
+.main_top_chat_message .alliance,
+#ns_dialog_chat .chat_list_body .alliance {
+    color: chartreuse;
+}
+
+.main_top_chat_message .notice,
+#ns_dialog_chat .chat_list_body .notice {
+    color: lightskyblue;
+}
+
+.main_top_chat_message .whisper,
+#ns_dialog_chat .chat_list_body .whisper {
+    color: hotpink;
+}
+
+.main_top_chat_message .alert,
+#ns_dialog_chat .chat_list_body .alert {
+    color: orangered;
+}
+
+.main_top_chat_message .notification,
+#ns_dialog_chat .chat_list_body .notification {
+    color: yellow;
+}
+
+#ns_dialog_chat .chat_list_body.alliance .public,
+#ns_dialog_chat .chat_list_body.alliance .whisper {
+    display: none;
+}
+
+#ns_dialog_chat .chat_list_body.whisper .public,
+#ns_dialog_chat .chat_list_body.whisper .alliance {
+    display: none;
+}
+
+#ns_dialog_chat .chat_list_body.notification .public,
+#ns_dialog_chat .chat_list_body.notification .alliance,
+#ns_dialog_chat .chat_list_body.notification .whisper {
+    display: none;
+}

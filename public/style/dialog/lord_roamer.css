@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+#ns_dialog_lord_roamer {
+    z-index: 2455;
+}
+
+#ns_dialog_lord_roamer .content_roamer_message {
+    font-weight: bold;
+}
+
+#ns_dialog_lord_roamer #ns_button_roamer_lord_decision {
+    width: 140px;
+}
+
+#ns_dialog_lord_roamer .content_hero_list {
+    justify-items: center;
+    gap: 10px 0;
+}

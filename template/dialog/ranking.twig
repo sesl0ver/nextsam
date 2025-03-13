@@ -1,0 +1,206 @@
+
+<div id="ns_dialog_ranking">
+    <span id="ns_button_ranking_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('ranking') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_ranking_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_ranking_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_tab ns_panel_grid_3">
+                <span id="ns_button_ranking_tab_lord">{{ i18n.t('lord_ranking') }}</span>
+                <span id="ns_button_ranking_tab_hero">{{ i18n.t('hero_ranking') }}</span>
+                <span id="ns_button_ranking_tab_ally">{{ i18n.t('alliance_ranking') }}</span>
+                <!-- span id="ns_button_ranking_tab_area">지역 랭킹</span -->
+            </div>
+
+            <div class="ns_panel_sub_top ns_panel_flex wrapper_sub_top_button">
+                <div class="ns_panel_flex_item_auto ns_panel_flex_middle text_status">
+                    <!-- span id="ns_button_ranking_prev">&nbsp;</span>
+                    <span class="text_page_paging">
+                            <span class="content_current_page">0</span>&nbsp;/&nbsp;<span class="content_total_page">0</span>
+                        </span>
+                    <span id="ns_button_ranking_next">&nbsp;</span -->
+                    <span id="ns_button_ranking_lord_sort">-</span>
+                    <span id="ns_button_ranking_hero_sort">-</span>
+                </div>
+                <!-- div class="ns_panel_flex_right">
+                    <span id="ns_button_ranking_my_lord">내 랭킹</span>
+                </div -->
+            </div>
+
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_xx">
+                    <div class="ranking_description">{{ i18n.t('ranking_description') }}</div>
+                    <!-- div class="ns_panel_trans_bottom ranking_search_wrap">
+                        <span class="ranking_search_title">군주검색</span> <label><input name="ranking_search" value="" /></label> <span id="ns_button_ranking_search">검색</span>
+                    </div -->
+                    <div class="tab_ranking_lord ns_panel_margin_x">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('my_ranking') }}</th>
+                                <th>{{ i18n.t('my_lord_name') }}</th>
+                                <th>{{ i18n.t('my_lord_power') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="my_rank">-</span></td>
+                                <td><span class="my_rank_name">-</span></td>
+                                <td><span class="my_rank_power">-</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('ranking') }}</th>
+                                <th>{{ i18n.t('lord_name') }}</th>
+                                <th>{{ i18n.t('alliance_name') }}</th>
+                                <th>{{ i18n.t('lord_power') }}</th>
+                                <th>{{ i18n.t('attack_point_short') }}</th>
+                                <th>{{ i18n.t('defense_point_short') }}</th>
+                                <th>{{ i18n.t('army_point_short') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="lord_list">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab_ranking_hero ns_panel_margin_x">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('ranking') }}</th>
+                                <th>{{ i18n.t('lord_name') }}</th>
+                                <th>{{ i18n.t('hero_name') }}</th>
+                                <th>{{ i18n.t('stats_leadership') }}</th>
+                                <th>{{ i18n.t('stats_military_force') }}</th>
+                                <th>{{ i18n.t('stats_intellect') }}</th>
+                                <th>{{ i18n.t('stats_politics') }}</th>
+                                <th>{{ i18n.t('stats_charm') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="hero_list">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab_ranking_ally ns_panel_margin_x">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('ranking') }}</th>
+                                <th>{{ i18n.t('alliance_name') }}</th>
+                                <th>{{ i18n.t('alliance_captain') }}</th>
+                                <th>{{ i18n.t('lord_power') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="ally_list">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab_ranking_area ns_panel_margin_x">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('ranking') }}</th>
+                                <th>{{ i18n.t('lord_name') }}</th>
+                                <th>{{ i18n.t('alliance_name') }}</th>
+                                <th>{{ i18n.t('lord_power') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="area_list">
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+
+<!-- div id="ns_dialog_region_ranking" style="display:none;">
+    <div class="dlg_header">
+        <div class="dlg_title"><span class="cont_title">지역별 랭킹</span></div>
+        <div class="dlg_header_left"><span id="ns_button_region_ranking_close"></span></div>
+        <div class="dlg_header_right"><span id="ns_button_region_ranking_closeAll"></span></div>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <table class="qbwpan_Tab">
+                <tr>
+                    <td width="50%" class="qbwpan_position_Relative"><span id="ns_button_region_ranking_tab_lord">지역 군주 랭킹</span></td>
+                    <td width="50%" class="qbwpan_position_Relative"><span id="ns_button_region_ranking_tab_alliance">지역 동맹 랭킹</span></td>
+                </tr>
+            </table>
+
+            <div class="qbwpan_Basic cont_background">
+
+                <table class="ranking_button">
+                    <tr>
+                        <td>병주</td>
+                        <td>기주</td>
+                        <td>유주</td>
+                    </tr>
+                    <tr>
+                        <td>사예주</td>
+                        <td>예주/연주</td>
+                        <td>서주/청주</td>
+                    </tr>
+                    <tr>
+                        <td>익주</td>
+                        <td>형주</td>
+                        <td>양주</td>
+                    </tr>
+                </table>
+
+                <div class="cont_ranking_desc">지역 랭킹은 마지막 갱신을 기점으로 한시간 후 갱신가능</div>
+                <div class="cont_ranking_time">-</div>
+
+                <div class="qbwpan_Most qbwpan_Trans">
+
+                    <table class="qbwtbl_Common cont_lord_list">
+                        <thead>
+                        <tr>
+                            <th>{{ i18n.t('ranking') }}</th>
+                            <th>{{ i18n.t('lord_name') }}</th>
+                            <th>동맹명</th>
+                            <th>{{ i18n.t('lord_power') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                    <table class="qbwtbl_Common cont_alliance_list">
+                        <thead>
+                        <tr>
+                            <th>{{ i18n.t('ranking') }}</th>
+                            <th>동맹명</th>
+                            <th>맹주명</th>
+                            <th>{{ i18n.t('lord_power') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="dialog_footer"></div>
+</div -->
+

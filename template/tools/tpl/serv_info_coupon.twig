@@ -1,0 +1,320 @@
+<style>
+	.ns_table_common {
+		width: 100%;
+		border-spacing: 0;
+	}
+
+	.ns_table_common table {
+		border-spacing: 0;
+		width:100%;
+	}
+
+	.ns_table_common thead > tr {
+		height: 30px;
+		line-height: 30px;
+		padding: 5px 10px;
+		background: #2B3C57;
+		color: #B4D2EC;
+		text-align: center;
+		font-size: .75rem;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		box-shadow: 0 1px 2px 0 #0008;
+	}
+
+	.ns_table_common tr th:first-child{
+		border-bottom-left-radius: 3px;
+		border-top-left-radius: 3px;
+	}
+
+	.ns_table_common tr th:last-child{
+		border-bottom-right-radius: 3px;
+		border-top-right-radius: 3px;
+	}
+
+	.ns_table_common tr th:not(:first-child):not(:last-child) {
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+	}
+
+	.ns_table_common tr th:last-child {
+		border-left: none;
+	}
+
+	.ns_table_common tbody,
+	.ns_table_common tfoot {
+		text-align: center;
+	}
+
+	.ns_table_common tbody > tr {
+		height: 40px;
+	}
+
+	.ns_table_common td {
+		height: 28px;
+		border-right: 0;
+		border-bottom: 1px solid #596C8E;
+		font-size: .75rem;
+	}
+
+	.ns_table_common tr:last-child > td
+	{
+		border-bottom:0;
+		box-shadow:none;
+	}
+
+	.ns_table_common.hovering tr:hover {
+		font-weight: bold;
+		/*background-color: #eeb37a;*/
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(1) {
+		width: 60px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(3) {
+		width: 240px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(4) {
+		width: 240px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(5) {
+		width: 140px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(6) {
+		width: 140px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(7) {
+		width: 100px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(8) {
+		width: 280px;
+	}
+
+	.ns_table_common > tbody > tr > td:nth-child(9) > button {
+		margin: 0 2px;
+		width: 50px;
+		height: 18px;
+	}
+
+	.ns_table_common > tbody > tr > td:nth-child(2) {
+		text-align: left;
+	}
+
+	#item_box,
+	#coupon_use_list {
+		position: fixed;
+		display: flex;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: rgba(0, 0, 0, .4);
+	}
+
+	#item_box .background,
+	#coupon_use_list .background {
+		margin: auto;
+		width: 40%;
+		background: #fff;
+		box-shadow: 3px 3px 3px;
+		border: 1px solid #000;
+		border-radius: 5px;
+		padding: 10px;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	#item_box .background table {
+		width: 100%;
+	}
+
+	#item_box .background table .td-size {
+		width: 20%;
+	}
+
+	#item_box .background table input,
+	#item_box .background table select {
+		font-size: 14px;
+		padding: 3px;
+		border: 1px solid #999;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+		outline: none;
+	}
+
+	#item_box .background .ns_table_common thead th:nth-child(1) {
+		width: 40%;
+	}
+
+	#item_box .background .ns_table_common thead th:nth-child(2),
+	#item_box .background .ns_table_common thead th:nth-child(3) {
+		width: 30%;
+	}
+
+	#item_box .background .ns_table_common tbody td {
+		text-align: center;
+	}
+
+	#item_box .background table input[name=coupon_server] {
+		vertical-align: middle;
+	}
+
+	#coupon_title {
+		width: 100%;
+	}
+
+	#coupon_count,
+	#coupon_item_count {
+		width: 100px;
+		text-align: right;
+	}
+
+	#all_coupon_server,
+	#add_item {
+		width: 40px;
+		height: 24px;
+	}
+
+	span.description {
+		font-size: 11px;
+		color: #666;
+	}
+
+	.button_area {
+		text-align: right;
+	}
+
+	#open_item_box {
+		width: 100px;
+	}
+
+	.button_area button {
+		width: 100px;
+		line-height: 22px;
+	}
+
+	.manage_button {
+		width: 60px;
+		line-height: 22px;
+		margin: 0 1px;
+	}
+</style>
+<div id="item_box">
+	<div class="background">
+		<h2>쿠폰 생성</h2>
+		<hr />
+		<table>
+			<tbody>
+			<tr>
+				<th class="td-size">쿠폰명</th>
+				<td><label><input id="coupon_title" value="" placeholder="쿠폰명을 입력하세요." /></label></td>
+			</tr>
+			<tr>
+				<th>유효기간</th>
+				<td>
+					<label><input type="text" id="coupon_start_datetime" autocomplete="off" /></label> ~ <label><input type="text" id="coupon_end_datetime" autocomplete="off" /></label>
+				</td>
+			</tr>
+			<tr>
+				<th>단일코드</th>
+				<td>
+					<label><input id="coupon_code" value="" /></label><br />
+					<span class="description">📣 단일코드 입력시 해당 코드로만 쿠폰 사용이 가능합니다. 비워두면 시리얼 쿠폰이 생성됩니다.</span>
+				</td>
+			</tr>
+			<tr>
+				<th>중복사용 여부</th>
+				<td>
+					<label><input type="checkbox" id="duplicate" value="1" /> 중복허용</label>
+					<span class="description">📣 한명의 사용자가 여러장의 시리얼 쿠폰을 사용하도록 허용합니다.</span>
+				</td>
+			</tr>
+			<tr>
+				<th>발행 개수</th>
+				<td>
+					<label><input type="number" id="coupon_count" value="100" min="1" /> 장</label>
+					<span class="description">📣 단일코드 쿠폰인 경우에는 최대 사용 개수로 지정됩니다.</span>
+				</td>
+			</tr>
+			<tr>
+				<th>지급 아이템</th>
+				<td>
+					<label>
+						<select name="coupon_item">
+						</select>
+					</label>
+					<label><input type="number" id="coupon_item_count" value="1" min="1" max="100" /> 개</label>
+					<label><button id="add_item">추가</button></label><br  />
+					<span id="item_description" class="description"></span>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					아이템 리스트
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<table id="item_data" class="ns_table_common">
+						<thead>
+						<tr>
+							<th>아이템명</th>
+							<th>수량</th>
+							<th>관리</th>
+						</tr>
+						</thead>
+						<tbody>
+
+						</tbody>
+					</table>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" class="button_area">
+					<button id="create_coupon">생성하기</button>
+					<button id="update_coupon">변경하기</button>
+					<button id="clear_item_box">초기화</button>
+					<button id="exit_item_box">닫기</button>
+				</td>
+			</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+
+<style>
+</style>
+<h2>서버 공지</h2>
+<hr />
+<br/>
+<div>
+	<button id="open_item_box">쿠폰추가</button>
+</div>
+<br/>
+<table id="coupon_list" class="ns_table_common">
+	<thead>
+	<tr>
+		<th>번호</th>
+		<th>쿠폰명</th>
+		<th>쿠폰코드</th>
+		<th>유효기간</th>
+		<th>사용/발행</th>
+		<th>사용율</th>
+		<th>등록일</th>
+		<th>관리</th>
+	</tr>
+	</thead>
+	<tbody>
+
+	</tbody>
+</table>

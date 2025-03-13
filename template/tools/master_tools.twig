@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>마스터데이터 툴</title>
+    <script type="text/javascript" src='/js_ext/axios.min.js'></script>
+    <script>
+        let ns_web_version = 'tools';
+    </script>
+    <script type="text/javascript" src='/js/ns_timer.js'></script>
+    <script type="text/javascript" src='/js/ns_auth.js'></script>
+    <script type="text/javascript" src='/js/ns_engine.js'></script>
+    <script type="text/javascript" src='/js/ns_xhr.js'></script>
+    <script type="text/javascript" src='/js/ns_global.js'></script>
+    <style>
+        .hide {
+            display: none;
+        }
+        .result_sub {
+            border: 1px solid #000000;
+        }
+        .result_sub .title {
+            padding: 5px;
+            background: #00B468;
+        }
+        .result_sub .area {
+            padding: 5px;
+            background: #d9a20f;
+        }
+
+    </style>
+</head>
+<body id="main_stage">
+<form method="post" enctype="multipart/form-data" action="#">
+    <div>
+        <input type="file" name="data_files" value="" accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"/>
+    </div>
+    <hr />
+    <div>
+        <button id="button_check">데이터 비교하기</button>
+        <button id="button_valid">데이터 확인하기</button>
+        <button id="button_update">데이터 업데이트</button>
+    </div>
+    <hr />
+    <div class="hide">
+        <div class="result_sub">
+            <span class="title"></span>
+            <div class="area"></div>
+        </div>
+    </div>
+    <div id="result">
+    </div>
+</form>
+<script>
+    let sub = new nsObject('.result_sub');
+    let result = new nsObject('#result');
+    let button_check = document.querySelector('#button_check');
+    let button_valid = document.querySelector('#button_valid');
+    let button_update = document.querySelector('#button_update');
+
+    const initButton = function ()
+    {
+        button_check.removeAttribute('disabled');
+        button_valid.setAttribute('disabled', '');
+        button_update.setAttribute('disabled', '');
+    }
+
+    const returnCheck = function (_data)
+    {
+        ns_xhr.xhrProgress(false);
+        let _return = _data['ns_xhr_return']; // _data.qbw_cmd_return TODO 리턴값 정리 필요.
+        switch (_return.code) {
+            case 'error':
+                alert(_data.message);
+                return false;
+            default:
+                return true;
+        }
+    }
+
+    initButton();
+
+    let form = document.querySelector('form');
+    form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        switch (e.submitter.id) {
+            case 'button_check':
+                let data = new FormData(this);
+                data['data_files'] = document.querySelector('input[name=data_files]').files[0];
+                ns_xhr.post('/admin/tools/api/check', data, (_data, _status) => {
+                    if(! returnCheck(_data)) {
+                        return;
+                    }
+                    _data = _data['ns_xhr_return']['add_data'];
+                    result.empty();
+                    if (_data.count <= 0) {
+                        alert('변경된 사항이 없습니다.');
+                        initButton();
+                        return;
+                    }
+                    for (let [_type, _result] of Object.entries(_data.result)) {
+                        let _sub = sub.clone();
+                        _sub.find('.title').text(_type);
+                        for (let [_id, __result] of Object.entries(_result)) {
+                            _sub.find('.area').html(_id + ': ' + JSON.stringify(__result) + '<br />', true);
+                        }
+                        result.append(_sub);
+                    }
+                    button_check.setAttribute('disabled', '');
+                    button_valid.removeAttribute('disabled');
+                });
+                break;
+            case 'button_valid':
+                ns_xhr.post('/admin/tools/api/valid', {}, (_data, _status) => {
+                    if(! returnCheck(_data)) {
+                        return;
+                    }
+                    _data = _data['ns_xhr_return']['add_data'];
+                    alert('문제가 발견되지 않았습니다.');
+                    button_valid.setAttribute('disabled', '');
+                    button_update.removeAttribute('disabled');
+                });
+                break;
+            case 'button_update':
+                ns_xhr.post('/admin/tools/api/update', {}, (_data, _status) => {
+                    if(! returnCheck(_data)) {
+                        return;
+                    }
+                    _data = _data['ns_xhr_return']['add_data'];
+                    alert('마스터데이터를 업데이트 하였습니다.');
+                    // button_update.setAttribute('disabled', '');
+                    // button_renewal.removeAttribute('disabled');
+                    initButton();
+                    result.empty();
+                });
+                break;
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,314 @@
+
+<div id="ns_dialog_report">
+    <span id="ns_button_report_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('letter_manage') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_report_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_report_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_tab ns_panel_grid_2">
+                <span id="ns_button_report_tab_report">{{ i18n.t('report') }}</span>
+                <span id="ns_button_report_tab_letter">{{ i18n.t('diplomatic_correspondence') }}</span>
+            </div>
+
+            <div class="content">
+
+                <div class="tab_report_wrap">
+                    <div class="ns_panel_tab ns_panel_grid_5">
+                        <span id="ns_button_report_tab2_scout">{{ i18n.t('reconnaissance') }}</span>
+                        <span id="ns_button_report_tab2_battle">{{ i18n.t('battle') }}</span>
+                        <span id="ns_button_report_tab2_recall">{{ i18n.t('return') }}</span>
+                        <span id="ns_button_report_tab2_move">{{ i18n.t('troop_move') }}</span>
+                        <span id="ns_button_report_tab2_misc">{{ i18n.t('other') }}</span>
+                    </div>
+                </div>
+                <div class="tab_letter_wrap">
+                    <div class="ns_panel_tab ns_panel_grid_4">
+                        <span id="ns_button_report_tab3_receive">{{ i18n.t('letter_box') }}</span>
+                        <span id="ns_button_report_tab3_system">{{ i18n.t('letter') }}</span>
+                        <span id="ns_button_report_tab3_write">{{ i18n.t('write') }}</span>
+                        <span id="ns_button_report_tab3_send">{{ i18n.t('send_box') }}</span>
+                    </div>
+                </div>
+
+                <div class="ns_panel_basic">
+
+                    <div class="ns_panel_sub_top ns_panel_flex">
+                        <!-- div class="ns_panel_flex_item_auto ns_panel_flex_middle content_header_wrapper text_gray">
+                            <span id="ns_button_report_prev">&nbsp;</span>
+                            <span class="text_page_paging">
+                            <span class="content_current_page">0</span>&nbsp;/&nbsp;<span class="content_total_page">0</span>
+                        </span>
+                            <span id="ns_button_report_next">&nbsp;</span>
+                        </div -->
+                        <div class="ns_panel_flex_right">
+{#                            <span id="ns_button_report_select_all">전체</span>#}
+                            <span id="ns_button_report_set_read">{{ i18n.t('read') }}</span>
+                            <span id="ns_button_report_remove_list">{{ i18n.t('delete') }}</span>
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_most ns_panel_trans_top text_align_center">
+                        <span class="text_notice text_gray"></span>
+                    </div>
+
+                    <div class="content_list_wrap">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th><span id="ns_button_report_select_all"></span></th>
+                                <th class="col1"></th>
+                                <th class="col2"></th>
+                                <th class="col3"></th>
+                                <th class="col4"></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="content_write_wrap">
+                        <table class="ns_table_common">
+                            <tbody>
+                            <tr>
+                                <td class="text_align_left"><span class="text_cadet_gray text_weight_bold">{{ i18n.t('recipients') }}</span> <span class="text_description text_white">({{ i18n.t('recipients_description') }})</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="ns_panel_flex">
+                                        <div class="letter_from ns_panel_flex_item_auto"></div>
+                                        <span id="ns_button_letter_receiver_add" class="ns_panel_flex_item_auto">{{ i18n.t('add') }}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text_align_left"><span class="text_cadet_gray text_weight_bold">{{ i18n.t('subject') }}</span> <span class="text_description text_white">({{ i18n.t('letter_subject_condition') }})</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label class="ns_panel_flex"><input type="text" name="letter_title" value="" class="letter_title" /></label>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text_align_left"><span class="text_cadet_gray text_weight_bold">{{ i18n.t('content') }}</span> <span class="text_description text_white">({{ i18n.t('letter_content_condition') }})</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label>
+                                        <textarea name="letter_content" class="letter_content"></textarea>
+                                    </label>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="ns_panel_pop_button">
+                            <span id="ns_button_send_letter">{{ i18n.t('send') }}</span>
+                        </div>
+                    </div>
+
+                    <div class="content_read_wrap">
+
+                        <div class="ns_panel_most ns_panel_trans ns_panel_flex">
+                            <div class="ns_panel_flex_item_auto">
+                                <span id="ns_button_report_move_prev">{{ i18n.t('going_back') }}</span>
+                                <span id="ns_button_report_forward">{{ i18n.t('delivery') }}</span>
+                                <span id="ns_button_report_reply">{{ i18n.t('reply') }}</span>
+                            </div>
+                            <div class="ns_panel_flex_right">
+                                <span id="ns_button_report_delete_one">{{ i18n.t('delete') }}</span>
+                            </div>
+                        </div>
+
+                        <div class="ns_panel_most">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th>{{ i18n.t('subject') }} : <span class="read_title"></span></th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto">
+                                                <div><span class="read_from_name"></span></div>
+                                            </div>
+                                            <div class="ns_panel_flex_right">
+                                                <div class="read_send_dt"></div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="read_content"></div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <!-- tfoot>
+                                <tr>
+                                    <td>수령가능한 보상</td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <div class="letter_item_list"></div>
+                                    </td>
+                                </tr>
+                                </tfoot -->
+                            </table>
+                        </div>
+
+                        <div class="ns_panel_pop_button">
+                            <span id="ns_button_get_reward">보상 수령</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_report_battle_detail">
+    <span id="ns_button_report_battle_detail_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">전투 상세 정보</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_report_battle_detail_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_report_battle_detail_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="report_detail">
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_letter_add_receiver">
+    <span id="ns_button_letter_add_receiver_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_letter_add_receiver_close"></span>
+                <span class="content_pop_title">{{ i18n.t('lord_search') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table class="ns_table_common">
+                    <tbody>
+                    <tr>
+                        <td><span class="receiver_desc">{{ i18n.t('lord_search_description') }}</span></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label><span>{{ i18n.t('lord_search') }}</span><input name="letter_find_lord" value="" class="letter_find_lord" /></label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <span id="ns_button_letter_add_receiver_find_lord">{{ i18n.t('search') }}</span>
+                            <span id="ns_button_letter_add_receiver_find_alliance">{{ i18n.t('alliance') }}</span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <table id="lord_search_result" class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th>{{ i18n.t('lord_name') }}</th>
+                        <th>{{ i18n.t('lord_power') }}</th>
+                        <th>{{ i18n.t('ranking') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody class="search_list">
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_hero_battle_result_viewer" style="display:none;">
+    <div class="dlg_header">
+        <div class="dlg_title"><span class="cont_title">일기토 보기</span></div>
+        <div class="dlg_header_left"><span id="ns_button_hero_battle_result_viewer_close"></span></div>
+        <div class="dlg_header_right"><span id="ns_button_hero_battle_result_viewer_closeAll"></span></div>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+        </div>
+    </div>
+    <div class="dialog_footer"></div>
+</div>
+
+<div id="ns_dialog_battle_result_viewer" style="display:none;">
+    <div class="dlg_header">
+        <div class="dlg_title"><span class="cont_title">전투 상세 보기</span></div>
+        <div class="dlg_header_left"><span id="ns_button_battle_result_viewer_close"></span></div>
+        <div class="dlg_header_right"><!--<span id="ns_button_game_help_BattleResultViewer"></span>--><span id="ns_button_battle_result_viewer_closeAll"></span></div>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <div class="hr_reverse"></div>
+
+            <div class="qbwpan_Basic cont_background">
+
+                <div class="qbwpan_Sub_Top">
+                    <div class="qbwpan_float_left"><span class="cont_turn">0합</span> <span class="cont_battle_winner"></span></div>
+                    <div class="qbwpan_float_right cont_battle_title_right"><span id="ns_button_battle_turn_prev"></span> <div class="cont_battle_turn_page"><span class="cont_curr_turn">0</span> / <span  class="cont_max_turn">0</span></div> <span id="ns_button_battle_turn_next"></span></div>
+                    <div class="qbwpan_clear_both"></div>
+                </div>
+
+                <div class="qbwpan_Most qbwpan_Trans">
+                    <div class="qbwpan_float_left cont_battle_info_left cont_att">
+                        <div class="cont_report_sub_title">공격측</div>
+                        <div class="cont_report_battle_desc">공격측 부대사기 <span class="cont_attack_fighting_spirit">0</span></div>
+                        <div class="cont_report_battle_att_skill">-</div>
+                        <div class="cont_report_battle_desc cont_battle_att_skill">-</div>
+                    </div>
+                    <div class="qbwpan_float_left cont_battle_info_right cont_def">
+                        <div class="cont_report_sub_title" style="float: right;">방어측</div>
+                        <div class="cont_report_battle_desc">방어측 부대사기  <span class="cont_defence_fighting_spirit">0</span></div>
+                        <div class="cont_report_battle_def_skill">-</div>
+                        <div class="cont_report_battle_desc cont_battle_def_skill">-</div>
+                    </div>
+                    <div class="qbwpan_clear_both"></div>
+                </div>
+
+                <div class="qbwpan_Most qbwpan_Trans">
+                    <div class="cont_battle_scene">
+                        <div class="cont_battle_att_scene"></div>
+                        <div class="cont_battle_scene_middle_line"></div>
+                        <div class="cont_battle_def_scene"></div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="dialog_footer"></div>
+</div>

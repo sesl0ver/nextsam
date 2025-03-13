@@ -1,0 +1,93 @@
+<h2>GM 서신 발송</h2>
+<hr />
+
+<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_lord_non_reward_quest" dir="ltr" style="width: 100%; ">
+	<div class="ui-jqgrid-view" id="gview_lord_own_terr_list" style="width: 100%; ">
+		<div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+			<span class="ui-jqgrid-title">GM 서신 수신 목록</span>
+		</div>
+		<div class="ui-jqgrid-bdiv" style="width: 100%; ">
+			<div style="position:relative;">
+				<div></div>
+				<table id="gm_letter_receiver_list" style="width:1054px; text-align:center; table-layout:fixed;" class="jqGridTable ui-jqgrid-btable" cellSpacing="0" cellPadding="0" border="0">
+					<thead>
+						<tr class="ui-jqgrid-labels">
+							<th class="ui-state-default ui-th-column ui-th-ltr" style='text-align:center; width:180px;'>서버명</th>
+							<th class="ui-state-default ui-th-column ui-th-ltr">군주명</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br/>
+
+<div style="text-align:right;">
+	<button id="add_letter_receiver" style="padding:0.4em">수신할 군주 추가</button>
+	<button id="write_gm_letter" style="padding:0.4em">서신 내용 작성</button>
+</div>
+
+<div id="write_letter_form" title="서신 내용 작성">
+	<h3>서신 제목</h3>
+	<hr />
+	<input type="text" id="letter_subject" style="width:494;min-width:494px;max-width:494px;" /><br/>
+	<br/>
+	<h3>서신 내용</h3>
+	<hr />
+	<textarea id="letter_content" style="width:494;min-width:494px;max-width:494px;height:184px;" ></textarea><br/>
+	<br/>
+	<h3>발송 사유</h3>
+	<hr />
+	<textarea id="cause" style="width:494;min-width:494px;max-width:494px;height:92px;" ></textarea>
+</div>
+
+<div id="lord_list" title="군주 목록">
+	<div id="target_server_select">
+		<h3>군주를 검색할 대상 서버</h3>
+		<hr />
+		<input type="radio" value="all" name="target_server" id="target_server_all" checked="checked"/> <label for="target_server_all">전체 서버</label>
+		<input type="radio" value="select" name="target_server" id="target_server_select_one"/> <label for="target_server_select_one">특정 서버</label>
+		<select id="target_server_list" disabled="disabled">
+			<option value="">선택하세요.</option>
+			{% for k, v in _SESSION['server_list'] %}
+				<option value='{{ v['server_pk'] }}'>{{ v['server_name'] }}</option>
+			{% endfor %}
+		</select>
+	</div>
+	<br />
+	<div>
+		<h3>군주명</h3>
+		<hr />
+		<input type="radio" value="all" name="target_user" id="target_user_all" style="display:none;" /> <label for="target_user_all" style="display:none;">전체 유저</label>
+		<input type="radio" value="select" name="target_user" id="target_user_select_one"  style="display:none;" checked="checked"/> <label for="target_user_select_one" style="display:none;">특정 유저</label>
+		<input type="text" id="search_lord_name" />
+	</div>
+	<br />
+	<hr />
+	<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_lord_non_reward_quest" dir="ltr" style="width: 497px; ">
+		<div class="ui-jqgrid-view" id="gview_lord_own_terr_list" style="width: 497px; ">
+			<div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+				<span class="ui-jqgrid-title">검색된 군주 목록</span>
+			</div>
+			<div class="ui-jqgrid-bdiv" style="height:230px; width: 497px; ">
+				<div style="position:relative;">
+					<div></div>
+					<table style="width:480px; text-align:center; table-layout:fixed;" class="jqGridTable ui-jqgrid-btable" cellSpacing="0" cellPadding="0" border="0">
+						<thead>
+							<tr class="ui-jqgrid-labels">
+								<th class="ui-state-default ui-th-column ui-th-ltr" style='text-align:center; width:180px;'>서버명</th>
+								<th class="ui-state-default ui-th-column ui-th-ltr">군주명</th>
+							</tr>
+						</thead>
+						<tbody id="searched_lord_list">
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

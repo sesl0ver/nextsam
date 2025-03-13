@@ -1,0 +1,149 @@
+<div id="ns_dialog_troop_view">
+    <span id="ns_button_troop_view_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_troop_view_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_troop_view_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_xx">
+
+                    <div class="ns_panel_most ns_panel_trans content_friendly_data1">
+                        <table class="ns_table_common troop_table">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('current_status') }}</th>
+                                <th class="content_src_posi_section1">{{ i18n.t('belong') }}</th>
+                                <th class="content_dst_posi_section1">{{ i18n.t('destination') }}</th>
+                                <th class="content_origin_posi_section1">{{ i18n.t('departure') }}</th>
+                                <th>{{ i18n.t('distance') }}</th>
+                                <th class="content_triptime_section1">{{ i18n.t('time_required') }}</th>
+                                <th class="content_camptime_section1">{{ i18n.t('camp_time') }}</th>
+                                <th class="content_cmd_type_section1">{{ i18n.t('performance_command') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="content_status"></span></td>
+                                <td class="content_src_posi_section2"><span class="content_src_posi"></span></td>
+                                <td class="content_dst_posi_section2"><span class="content_dst_posi"></span></td>
+                                <td class="content_origin_posi_section2"><span class="content_origin_posi"></span></td>
+                                <td><span class="content_distance">0</span> {{ i18n.t('distance_unit') }}</td>
+                                <td class="content_triptime_section2"><span class="content_triptime"></span></td>
+                                <td class="content_camptime_section2"><span class="content_camptime"></span></td>
+                                <td class="content_cmd_type_section2"><span class="content_cmd_type"></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="ns_panel_most ns_panel_trans">
+                        <div class="content_hero ns_panel_grid_3">
+                            <div class="captain_hero button_hero_empty_captain"></div>
+                            <div class="director_hero button_hero_empty_director"></div>
+                            <div class="staff_hero button_hero_empty_staff"></div>
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_most ns_panel_trans">
+                        <table class="ns_table_common army_table">
+                            <tbody>
+                            <tr>
+                                <td class="width-25">{{ i18n.t('army_title_410001') }}</td>
+                                <td class="width-25"><span class="army_worker"></span></td>
+                                <td class="width-25">{{ i18n.t('army_title_410002') }}</td>
+                                <td><span class="army_infantry"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('army_title_410003') }}</td>
+                                <td><span class="army_pikeman"></span></td>
+                                <td>{{ i18n.t('army_title_410004') }}</td>
+                                <td><span class="army_spearman"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('army_title_410005') }}</td>
+                                <td><span class="army_scout"></span></td>
+                                <td>{{ i18n.t('army_title_410006') }}</td>
+                                <td><span class="army_archer"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('army_title_410007') }}</td>
+                                <td><span class="army_horseman"></span></td>
+                                <td>{{ i18n.t('army_title_410008') }}</td>
+                                <td><span class="army_transporter"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('army_title_410009') }}</td>
+                                <td><span class="army_armed_infantry"></span></td>
+                                <td>{{ i18n.t('army_title_410010') }}</td>
+                                <td><span class="army_armed_horseman"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('army_title_410011') }}</td>
+                                <td><span class="army_bowman"></span></td>
+                                <td>{{ i18n.t('army_title_410012') }}</td>
+                                <td><span class="army_battering_ram"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('army_title_410013') }}</td>
+                                <td><span class="army_catapult"></span></td>
+                                <td>{{ i18n.t('army_title_410014') }}</td>
+                                <td><span class="army_adv_catapult"></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="ns_panel_most ns_panel_trans content_friendly_data2">
+                        <table class="ns_table_common resource_table">
+                            <tbody>
+                            <tr>
+                                <td class="width-25">{{ i18n.t('dispatched_troop_army') }}</td>
+                                <td class="width-25"><span class="total_army"></span></td>
+                                <td class="width-25">{{ i18n.t('resource_gold') }}</td>
+                                <td><span class="resource_gold"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('resource_food') }}</td>
+                                <td><span class="resource_food"></span></td>
+                                <td>{{ i18n.t('resource_horse') }}</td>
+                                <td><span class="resource_horse"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('resource_lumber') }}</td>
+                                <td><span class="resource_lumber"></span></td>
+                                <td>{{ i18n.t('resource_iron') }}</td>
+                                <td><span class="resource_iron"></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="ns_panel_most ns_panel_trans content_friendly_data3">
+                        <table class="ns_table_common status_table">
+                            <tbody class="status_tbody_wrap">
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="ns_panel_margin_top text_align_center">
+                        <span id="ns_button_troop_view_recall">{{ i18n.t('withdraw') }}</span>
+                        <span id="ns_button_troop_view_give_up">{{ i18n.t('give_up') }}</span>
+                        <span id="ns_button_troop_view_recall_ally">{{ i18n.t('forced_return') }}</span>
+                        <span id="ns_button_troop_view_withdrawal">{{ i18n.t('command_cancel') }}</span>
+                        <span id="ns_button_troop_view_speedup">{{ i18n.t('immediate_recall') }}</span>
+                        <span id="ns_button_troop_view_reinf">{{ i18n.t('additional_support') }}</span>
+                        <span id="ns_button_troop_view_preva">{{ i18n.t('supply') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

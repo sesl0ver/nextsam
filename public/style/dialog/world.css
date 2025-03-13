@@ -1,0 +1,188 @@
+@charset "utf-8";
+
+#ns_dialog_world_detail table td {
+    width: 30%;
+    color: #FFFFFF;
+    padding: 5px 2px 5px 2px;
+}
+
+#ns_dialog_world_detail .npc_point_detail_wrap table td {
+    width: 50%;
+}
+
+#ns_dialog_world_detail table .col1 {
+    width: 20%;
+    font-weight: bold;
+    background: url('/image/ui/sub/table_tile_bg.png') repeat;
+    background-size: 40px 40px;
+}
+
+#ns_dialog_world_detail .button_small_1,
+#ns_dialog_world_detail .button_favorite {
+    margin: 0 !important;
+}
+
+#ns_dialog_world_detail .ns_panel_pop_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+#ns_dialog_world_detail .ns_panel_pop_button > span {
+    width: 80px;
+    min-width: 80px;
+}
+
+#ns_dialog_world_favorite {
+    z-index: 2353;
+}
+
+#ns_dialog_world_favorite .dialog_wrap {
+    height: 300px;
+}
+
+#ns_dialog_world_favorite .ns_panel_sub_top {
+    background: url('/image/ui/sub/table_tile_2_bg_l.png') no-repeat left center,
+    url('/image/ui/sub/table_tile_2_bg_r.png') no-repeat right center,
+    url('/image/ui/sub/table_tile_2_bg.png') no-repeat center center;
+    background-size: 15px 30px, 15px 30px, calc(100% - 30px) 30px;
+    padding-left: 10px;
+    padding-right: 10px;
+    line-height: 27px;
+}
+
+#ns_dialog_world_favorite table td {
+    text-align: left;
+    padding: 0 5px;
+}
+
+#ns_dialog_world_favorite table td span {
+    vertical-align: middle;
+}
+
+#ns_dialog_world_favorite_add table th,
+#ns_dialog_world_favorite_add table td {
+    width: 50%;
+}
+
+#ns_dialog_world_favorite_add #content_memo {
+    width: 80px;
+    border: 1px solid #C0C0C0;
+    outline: 1px solid #918469;
+}
+
+#ns_dialog_world_favorite_add .content_bottom {
+    margin: 5px 0;
+    line-height: 15px;
+    color : #91A1B9;
+    font-weight: bold;
+    text-align: center;
+}
+
+#ns_dialog_world_troop_camp_list .content {
+    min-height: 250px;
+}
+
+
+#ns_dialog_world_troop_camp_list .ns_panel_basic > span:first-child {
+    padding-left: 5px;
+    line-height: 30px;
+}
+
+#ns_dialog_world_troop_camp_list .ns_panel_basic > span:last-child {
+    padding-left: 5px;
+    line-height: 30px;
+}
+
+#ns_dialog_world_fort {
+    z-index: 2353;
+}
+
+#ns_dialog_world_fort .world_fort_cache_wrap {
+    margin: 0 auto;
+    width: 320px;
+}
+
+#ns_dialog_world_fort_installation {
+    z-index: 2354;
+}
+
+#ns_dialog_world_fort_installation .develop_image {
+    border: 1px solid #C9C9C9;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+}
+
+#ns_dialog_world_fort_installation .develop_description {
+    color: #b4d2ec;
+}
+
+#ns_dialog_world_fort_installation .content_develop_trans {
+    padding: 8px 8%;
+    text-align: center;
+    color: #ffffff;
+    line-height: 22px;
+}
+
+#ns_dialog_world_fort_installation .ns_panel_flex_item_auto {
+    width: 50%;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+#ns_dialog_world_fort_installation .ns_panel_heavy .content_concurr_body{
+    padding: 5px 10px;
+}
+
+#ns_button_concurr_speedup_world_fort {
+    margin:0 8px 0 0;
+}
+
+#ns_dialog_world_fort_installation .wrapper_world_fort_installation_amount,
+#ns_dialog_world_fort_disperse .wrapper_world_fort_disperse_amount{
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+#ns_dialog_world_fort_installation .wrapper_world_fort_installation label,
+#ns_dialog_world_fort_disperse .wrapper_fort_disperse_slider label{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#ns_dialog_world_fort_installation .wrapper_world_fort_installation label input,
+#ns_dialog_world_fort_disperse .wrapper_fort_disperse_slider label input{
+    width: 80%;
+}
+
+#ns_dialog_world_fort_installation .button_special {
+    width: 180px;
+}
+
+#ns_dialog_world_fort_installation .button_arrow_updown {
+    position: relative;
+    left: 3px;
+}
+
+#ns_dialog_world_fort_disperse .ns_table_common>thead>tr>th:nth-child(1) {
+    width: 30%;
+}
+
+#ns_dialog_world_fort_disperse .ns_table_common>thead>tr>th:nth-child(2),
+#ns_dialog_world_fort_disperse .ns_table_common>thead>tr>th:nth-child(3) {
+    width: 35%;
+}
+
+#ns_dialog_world_fort_disperse {
+    z-index: 2354;
+}
+
+#ns_dialog_world_fort_disperse .ns_panel_heavy {
+    padding: 0 10px;
+}

@@ -1,0 +1,132 @@
+<h2>[ {{ _SESSION['selected_terr']['title'] }} ] 영지 소속 부대 주둔 현황</h2>
+<hr />
+<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_outer_occupied_list" dir="ltr" style="width: 100%; ">
+	<div class="ui-jqgrid-view" id="gview_lord_own_terr_list" style="width: 100%; ">
+		<div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+			<span class="ui-jqgrid-title">소속 부대의 외부 주둔 현황</span>
+		</div>
+		<div class="ui-jqgrid-bdiv" style="width: 100%; ">
+			<div style="position:relative;">
+				<table id="outer_occupied_list" style="width: 100%; table-layout:fixed;" class="jqGridTable ui-jqgrid-btable" cellSpacing="0" cellPadding="0" border="0">
+					<thead>
+						<tr class="ui-jqgrid-labels">
+							<th class="ui-state-default ui-th-column ui-th-ltr" style="width:70px;">No.</th>
+							<th class="ui-state-default ui-th-column ui-th-ltr">주둔지 유형</th>
+							<th class="ui-state-default ui-th-column ui-th-ltr">주둔지명</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br/>
+
+<div id="detail_view">
+</div>
+
+
+<div id="detail_template" class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" dir="ltr" style="width: 100%; display : none;">
+	<div class="ui-jqgrid-view" id="gview_lord_own_terr_list" style="width: 100%; ">
+		<div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+			<span class="ui-jqgrid-title"><?php echo $v['to_position']?></span>
+		</div>
+		<div class="ui-jqgrid-bdiv" style="width: 100%; ">
+			<div style="position:relative;">
+				<div></div>
+				<table id="terr_camp_army_<?php echo $v['valley_posi_pk']; ?>" style="width: 100%; table-layout:fixed;" class="jqGridTable ui-jqgrid-btable" cellSpacing="0" cellPadding="0" border="0">
+					<tbody>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">주둔유형</th>
+						<td style='text-align:center;'><span class="troop_type"></span></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">주둔지명</th>
+						<td style='text-align:center;'><span class="to_position"></span></td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th colspan="4" class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top : 1px solid #4297D7;">주둔영웅</th>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">주장</th>
+						<td style='text-align:center;'><span class="captain_desc"></span></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">부장</th>
+						<td style='text-align:center;'><span class="director_desc"></span></td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">참모</th>
+						<td style='text-align:center;'><span class="staff_desc"></span></td>
+						<td colspan="2">&nbsp;</td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th colspan="4" class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top : 1px solid #4297D7;">주둔병력</th>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">민병</th>
+						<td style='text-align:center;'><span class="army_worker"></span></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">보병</th>
+						<td style='text-align:center;'><span class="army_infantry"></span></td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">창병</th>
+						<td style='text-align:center;'><span class="army_pikeman"></span></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">극병</th>
+						<td style='text-align:center;'><span class="army_spearman"></span></td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">정찰병</th>
+						<td style='text-align:center;'><span class="army_scout"></span></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">궁병</th>
+						<td style='text-align:center;'><span class="army_archer"></span></td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">기병</th>
+						<td style='text-align:center;'><span class="army_horseman"></span></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">수송병</th>
+						<td style='text-align:center;'><span class="army_transporter"></span></td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">중갑보병</th>
+						<td style='text-align:center;'><span class="army_armed_infantry"></span></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">중갑기병</th>
+						<td style='text-align:center;'><span class="army_armed_horseman"></span></td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">노궁병</th>
+						<td style='text-align:center;'><span class="army_bowman"></span></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">공성추</th>
+						<td style='text-align:center;'><span class="army_battering_ram"></span></td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">투석기</th>
+						<td style='text-align:center;'><span class="army_catapult"></span></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">팔륜누차</th>
+						<td style='text-align:center;'><span class="army_adv_catapult"></span></td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th colspan="4" class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top : 1px solid #4297D7;">보유 자원</th>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">황금</th>
+						<td style='text-align:center;'><span class="reso_gold"></span></td>
+						<td colspan="2">&nbsp;</td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">식량</th>
+						<td style='text-align:center;'><span class="reso_food"></span></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">우마</th>
+						<td style='text-align:center;'><span class="reso_horse"></span></td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">목재</th>
+						<td style='text-align:center;'><span class="reso_lumber"></span></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">철강</th>
+						<td style='text-align:center;'><span class="reso_iron"></span></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

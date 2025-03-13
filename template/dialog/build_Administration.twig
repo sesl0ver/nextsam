@@ -1,0 +1,483 @@
+<div id="ns_dialog_build_Administration">
+    <span id="ns_button_build_Administration_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+                <span class="content_level"></span>
+                <span class="content_upgrading">&nbsp;&nbsp;{{ i18n.t('construction_upgrading') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_build_Administration_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_build_Administration_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_sub_top ns_panel_flex">
+                <div class="ns_panel_build_button_left ns_panel_flex_item_auto">
+                    <!-- span id="ns_button_build_desc_Administration"></span -->
+                    <span id="ns_button_build_move_Administration">{{ i18n.t('building_move') }}</span>
+                </div>
+                <div class="ns_panel_build_button_left ns_panel_flex_item_auto">
+                </div>
+                <div class="ns_panel_build_button_right ns_panel_flex_item_auto">
+                    <span id="ns_button_build_Administration_view_tax_rate">{{ i18n.t('tax_rate') }}</span><span id="ns_button_build_Administration_view_requisition">{{ i18n.t('requisition') }}</span><span id="ns_button_build_Administration_view_comforting">{{ i18n.t('comforting') }}</span><span id="ns_button_build_Administration_view_terr_title">{{ i18n.t('territory_title') }}</span>
+                </div>
+            </div>
+
+            <div class="content">
+
+                <!-- ########## -->
+
+                <div class="ns_panel_basic content_build_desc_wrap">
+                    <div class="ns_panel_contents_padding">
+
+                        <div class="content_build_desc">
+
+                            <p class="content_build_desc_def"></p>
+                            <p class="content_build_desc_footnote"></p>
+                            <!-- ##### HERO_ASSIGN_1 ##### -->
+                            <div class="ns_panel_trans content_build_desc_vr">
+                            </div>
+
+                            <div class="content_card_empty ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto ns_panel_position_relative">
+                                    <span class="button_hero_no_assign"></span>
+                                    <span id="ns_button_build_no_assign_Administration"></span>
+                                </div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_assign_effect">
+                                        <p>{{ i18n.t('hero_assign_add_effect') }}</p>
+                                        <p class="content_build_desc_assign"></p>
+                                        <p class="content_build_desc_assign_footnote"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content_card ns_panel_flex">
+                                <div class="ns_panel_position_relative ns_panel_flex_item_auto">
+                                    <div class="content_hero_detail"></div>
+                                    <span id="ns_button_build_assign_Administration"></span>
+                                </div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_effect">
+                                        <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa"></span></p>
+                                        <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ##### HERO_ASSIGN_1 ##### -->
+                        </div>
+                        <!-- ##### HERO_ASSIGN_2 ##### -->
+                        <div class="content_build_desc_sm">
+
+                            <div class="content_card_sm_empty ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="hero_card_sm ns_panel_flex">
+                                        <div class="hero_card_sm_image ns_panel_flex_item_auto"></div>
+                                        <div class="hero_card_sm_desc ns_panel_flex_item_auto">
+                                            <p class="hero_card_sm_name">{{ i18n.t('assign') }}</p>
+                                            <p class="hero_card_sm_level">{{ i18n.t('none') }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vr_hero_card_sm ns_panel_flex_item_auto"></div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_effect_sm">
+                                        <p><span></span><span class="content_build_desc_assign_sm"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content_card_sm ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_sm"></div>
+                                </div>
+                                <div class="vr_hero_card_sm ns_panel_flex_item_auto"></div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_effect_sm">
+                                        <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa_sm"></span></p>
+                                        <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill_sm"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- ##### HERO_ASSIGN_2 ##### -->
+                    </div>
+                </div>
+
+                <div class="ns_panel_heavy ns_panel_margin_10 content_build_level_desc">
+                </div>
+
+                <div class="ns_panel_trans">
+                    <div class="ns_panel_build_upgrade content_build_cons">
+                        <div><span class="content_build_construct_hero">-</span><br /><span class="content_build_left_time">-</span></div>
+                        <div class="ns_panel_trans">
+                            <span id="ns_button_build_speedup_Administration">{{ i18n.t('encourage') }}</span>
+                            <!-- <span id="ns_button_buil_cancel_Administration">취소</span> -->
+                        </div>
+                    </div>
+                    <div class="ns_panel_build_upgrade content_build_upgrade">
+                        <span id="ns_button_build_upgrade_Administration">{{ i18n.t('upgrade') }}</span>
+                    </div>
+                    <!-- ##### MULTI_NAVI ##### --><div class="ns_panel_build_upgrade content_build_cons_multi">
+                        <span id="ns_button_build_prev_Administration">&nbsp;</span> <span id="ns_button_build_cons_Administration">{{ i18n.t('add_construction') }} (<span class="content_page_curr">0</span>/<span class="content_page_total">0</span>)</span> <span id="ns_button_build_next_Administration">&nbsp;</span>
+                    </div><!-- ##### MULTI_NAVI ##### -->
+                    <div class="ns_panel_build_upgrade content_build_max_level">
+                        <!-- <p>최고 레벨 건설 완료</p> -->
+                    </div>
+                </div>
+
+                <!-- ########## -->
+
+                <div class="ns_panel_tab ns_panel_grid_3 ns_panel_margin_10">
+                    <span id="ns_button_build_Administration_tab_build">{{ i18n.t('construction_status') }}</span>
+                    <span id="ns_button_build_Administration_tab_prod">{{ i18n.t('production_status') }}</span>
+                    <span id="ns_button_build_Administration_tab_valley">{{ i18n.t('external_valley') }}</span>
+                    <!-- span id="ns_button_build_Administration_tab_terr">확장영지</span -->
+                </div>
+
+                <div class="ns_panel_basic">
+                    <div class="ns_panel_trans ns_panel_margin_xx">
+
+                        <!-- 건설현황 -->
+                        <div class="build_Administration_tab_build">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th>{{ i18n.t('building') }}</th>
+                                    <th>{{ i18n.t('level') }}</th>
+                                    <th>{{ i18n.t('status') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="in_castle_tbody">
+                                </tbody>
+                            </table>
+
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th>{{ i18n.t('production_facility') }}</th>
+                                    <th>{{ i18n.t('level') }}</th>
+                                    <th>{{ i18n.t('status') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="out_castle_tbody">
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="build_Administration_tab_prod">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th class="col1">{{ i18n.t('category') }}</th>
+                                    <th class="col2">{{ i18n.t('resource_food') }}</th>
+                                    <th class="col3">{{ i18n.t('resource_horse') }}</th>
+                                    <th class="col4">{{ i18n.t('resource_lumber') }}</th>
+                                    <th class="col5">{{ i18n.t('resource_iron') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td>{{ i18n.t('basic_production') }}</td>
+                                    <td class="content_food_providence">0</td>
+                                    <td class="content_horse_providence">0</td>
+                                    <td class="content_lumber_providence">0</td>
+                                    <td class="content_iron_providence">0</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('internal_production') }}</td>
+                                    <td class="content_food_production_territory">0</td>
+                                    <td class="content_horse_production_territory">0</td>
+                                    <td class="content_lumber_production_territory">0</td>
+                                    <td class="content_iron_production_territory">0</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('necessary_labor_force') }}</td>
+                                    <td class="content_food_labor_force_curr">0</td>
+                                    <td class="content_horse_labor_force_curr">0</td>
+                                    <td class="content_lumber_labor_force_curr">0</td>
+                                    <td class="content_iron_labor_force_curr">0</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('external_production') }}</td>
+                                    <td class="content_food_production_valley">0</td>
+                                    <td class="content_horse_production_valley">0</td>
+                                    <td class="content_lumber_production_valley">0</td>
+                                    <td class="content_iron_production_valley">0</td>
+                                </tr>
+                                <!-- tr>
+                                    <td>{{ i18n.t('basic_production') }}</td>
+                                    <td class="content_food_production_sum">0</td>
+                                    <td class="content_horse_production_sum">0</td>
+                                    <td class="content_lumber_production_sum">0</td>
+                                    <td class="content_iron_production_sum">0</td>
+                                </tr -->
+                                <tr>
+                                    <td>{{ i18n.t('technique_skill_effect') }}</td>
+                                    <td class="content_food_pct_plus_tech">0</td>
+                                    <td class="content_horse_pct_plus_tech">0</td>
+                                    <td class="content_lumber_pct_plus_tech">0</td>
+                                    <td class="content_iron_pct_plus_tech">0</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('hero_assign_effect') }}</td>
+                                    <td class="content_food_pct_plus_hero_assign">0</td>
+                                    <td class="content_horse_pct_plus_hero_assign">0</td>
+                                    <td class="content_lumber_pct_plus_hero_assign">0</td>
+                                    <td class="content_iron_pct_plus_hero_assign">0</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('hero_skill_effect') }}</td>
+                                    <td class="content_food_pct_plus_hero_skill">0</td>
+                                    <td class="content_horse_pct_plus_hero_skill">0</td>
+                                    <td class="content_lumber_pct_plus_hero_skill">0</td>
+                                    <td class="content_iron_pct_plus_hero_skill">0</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('item_effect') }}</td>
+                                    <td class="content_food_pct_plus_item">0</td>
+                                    <td class="content_horse_pct_plus_item">0</td>
+                                    <td class="content_lumber_pct_plus_item">0</td>
+                                    <td class="content_iron_pct_plus_item">0</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('open_gate_effect') }}</td>
+                                    <td class="content_food_pct_plus_gate">0</td>
+                                    <td class="content_horse_pct_plus_gate">0</td>
+                                    <td class="content_lumber_pct_plus_gate">0</td>
+                                    <td class="content_iron_pct_plus_gate">0</td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('total_production') }}</td>
+                                    <td class="ns_resource_food_production">0</td>
+                                    <td class="ns_resource_horse_production">0</td>
+                                    <td class="ns_resource_lumber_production">0</td>
+                                    <td class="ns_resource_iron_production">0</td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="build_Administration_tab_valley">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th>{{ i18n.t('external_valley') }}</th>
+                                    <th>{{ i18n.t('coordinates') }}</th>
+                                    <th>{{ i18n.t('production_resource') }}</th>
+                                    <th>{{ i18n.t('dispatch_hero') }}</th>
+                                    <th>{{ i18n.t('manage') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="build_Administration_tab_terr">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th>{{ i18n.t('territory_title') }}</th>
+                                    <th>{{ i18n.t('coordinates') }}</th>
+                                    <th>{{ i18n.t('lord') }}</th>
+                                    <th>{{ i18n.t('population') }}</th>
+                                    <th>{{ i18n.t('manage') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+
+<div id="ns_dialog_build_Administration_tax_rate">
+    <span id="ns_button_build_Administration_tax_rate_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_build_Administration_tax_rate_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th class="col1">{{ i18n.t('tax_rate') }}</th>
+                        <th class="col2">{{ i18n.t('taxable_population') }}</th>
+                        <th class="col3">{{ i18n.t('public_sentiment') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="col1"><span id="ns_button_build_Administration_tax_rate_input"></span></td>
+                        <td class="col2"><span class="content_population_curr"></span></td>
+                        <td class="col3"><span class="content_loyalty"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="ns_panel_contents_box">
+                    <div class="ns_panel_margin_auto">
+                        <div class="content_desc_box">
+                            <p>{{ i18n.t('administration_tax_rate_description_1') | raw }}</p>
+                            <p>{{ i18n.t('administration_tax_rate_description_2', ['<span class="content_per_hour_rate text_green"></span>']) | raw }}</p>
+                        </div>
+                        <span id="ns_button_build_Administration_tax_rate_Adjustment">{{ i18n.t('adjustment') }}</span>
+                    </div><span class="content_per_hour_rate text_green"></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_build_Administration_comforting">
+    <span id="ns_button_build_Administration_comforting_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_build_Administration_comforting_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th class="col1">{{ i18n.t('comforting_policy') }}</th>
+                        <th class="col2">{{ i18n.t('taxable_population') }}</th>
+                        <th class="col3">{{ i18n.t('public_sentiment') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span id="ns_button_build_Administration_comforting_filter"></span></td>
+                        <td><span class="content_population_curr"></span></td>
+                        <td><span class="content_loyalty"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="ns_panel_contents_box">
+                    <div class="ns_panel_margin_auto">
+                        <div class="content_desc_box">
+                            <p class="content_select_redress">{{ i18n.t('comforting_redress_description', ['<span class="content_need_food text_green"></span>']) | raw }}</p>
+                            <p class="content_select_ritual">{{ i18n.t('comforting_ritual_description', ['<span class="content_need_gold text_green"></span>', '<span class="content_need_food text_green"></span>']) | raw }}</p>
+                            <p class="content_select_prevention_disasters">{{ i18n.t('comforting_prevention_disasters_description', ['<span class="content_need_food text_green"></span>', '<span class="content_need_lumber text_green"></span>']) | raw }}</p>
+                            <p class="content_comfort_caution">{{ i18n.t('comforting_warning_description') | raw }}</p>
+                        </div>
+                        <span id="ns_button_build_Administration_comforting_Adjustment">{{ i18n.t('execution') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_build_Administration_requisition">
+    <span id="ns_button_build_Administration_requisition_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_build_Administration_requisition_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th class="col1">{{ i18n.t('requisition_target') }}</th>
+                        <th class="col2">{{ i18n.t('taxable_population') }}</th>
+                        <th class="col3">{{ i18n.t('public_sentiment') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span id="ns_button_build_Administration_requisition_filter">{{ i18n.t('resource_gold') }}</span></td>
+                        <td><span class="content_population_curr"></span></td>
+                        <td><span class="content_loyalty"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="ns_panel_contents_box text_align_center">
+                    <div class="ns_panel_margin_auto">
+                        <div class="content_desc_box">
+                            <p>{{ i18n.t('administration_requisition_description_1') | raw }}</p>
+                            <p>{{ i18n.t('administration_requisition_description_2', ['<span class="content_requisition text_green"></span>']) | raw }}</p>
+                        </div>
+                        <span id="ns_button_build_Administration_requisition_Adjustment">{{ i18n.t('execution') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_build_Administration_terr_title">
+    <span id="ns_button_build_Administration_terr_title_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_build_Administration_terr_title_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th class="col1">{{ i18n.t('territory_title_to_change') }}</th>
+                        <th class="col2">{{ i18n.t('current_territory_title') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="width-50">
+                            <label><input id="administration_terr_title" type="text" name="administration_terr_title" value="" /></label>
+                            <p class="text_align_center ns_panel_margin_bottom">{{ i18n.t('territory_title_change_condition') }}</p>
+                        </td>
+                        <td><span class="current_terr_title"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div class="ns_panel_contents_box">
+                    <div class="ns_panel_margin_auto">
+                        <div class="content_desc_box">
+                            <p>{{ i18n.t('territory_title_change_description') | raw }}</p>
+                        </div>
+                        <span id="ns_button_build_Administration_terr_title_Adjustment">{{ i18n.t('modify') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

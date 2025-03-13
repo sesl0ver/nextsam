@@ -1,0 +1,684 @@
+
+<div id="ns_dialog_terr_info">
+    <span id="ns_button_terr_info_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_terr_info_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_terr_info_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_tab ns_panel_grid_2">
+                <span id="ns_button_terr_info_tab_goldpop">{{ i18n.t('population_and_gold') }}</span>
+                <span id="ns_button_terr_info_tab_resource">{{ i18n.t('resource') }}</span>
+            </div>
+
+            <div class="content">
+
+                <div class="ns_panel_basic">
+                    <div class="buff_list_wrap ns_panel_grid_2">
+                        <!-- 얘는 가변임..버프에 따라 계속 추가적으로 늘어남. 그리고 항상 보여 -->
+                    </div>
+
+                    <div class="ns_panel_most">
+                        <div class="terr_info_tab_goldpop">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th colspan="2">{{ i18n.t('population') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="population_tbody">
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto">
+{#                                                <span id="ns_button_terr_info_loyalty_item">#}
+{#                                                    <span class="buff_icon buff_recovery_informatics"></span>#}
+{#                                                </span>#}
+                                                <span id="ns_button_terr_info_loyalty_item"></span><span>{{ i18n.t('public_sentiment') }}</span>
+                                            </div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_loyalty">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('public_sentiment_change') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_loyalty_trend">-</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+{#                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_population_item"><span class="buff_icon buff_recovery_population"></span></span><span>현재 인구</span></div>#}
+                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_population_item"></span><span>{{ i18n.t('current_population') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_curr">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50"></td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('working_population') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_labor_force">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('idle_population') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_idle">-</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="terr_population_description">
+                                    <td colspan="2" class="text_weight_bold text_condition_no">
+                                        {{ i18n.t('terr_info_description') | raw }}
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('population_incr_decr_trend') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_trend">-</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('incr_decr_per_hour') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_trend_amount">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('cottage_accommodation_limit') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_max">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('public_sentiment_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_loyalty_effect">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('territory_accommodation_limit') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_capacity">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50"></td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('basic_incr_decr') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span>200</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('hero_assign_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_upward_plus_hero_assign">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('technique_skill_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_upward_plus_tech">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('item_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_upward_plus_item">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('hero_skill_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_upward_plus_hero_skill">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('open_gate_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_upward_plus_gate">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <thead>
+                                <tr>
+                                    <th colspan="2">{{ i18n.t('resource_gold') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="gold_tbody">
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+{#                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_gold_item"><span class="buff_icon buff_gold_build"></span></span><span>보유 황금</span></div>#}
+                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_gold_item"></span><span>{{ i18n.t('resource_gold_in_stock') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_gold_curr">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('resource_gold_per_hour') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_gold_production">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('resource_gold_per_hour') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_population_curr">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('taxable_population') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_tax_rate">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('basic_tax_revenue') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span>100</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('item_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_tax_rate_plus_item">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('hero_skill_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_tax_rate_plus_hero_skill">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('open_gate_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_terr_tax_rate_plus_gate">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="terr_info_tab_resource">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th colspan="2">{{ i18n.t('resource_food') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="food_tbody">
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+{#                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_food_item"><span class="buff_icon buff_event_food_build"></span></span><span>보유 식량</span></div>#}
+                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_food_item"></span><span>{{ i18n.t('resource_food_in_stock') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_food_curr">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('retention_limit') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_food_max">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('production_per_hour') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_food_production">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('basic_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_food_providence">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('internal_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_food_production_territory">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('external_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_food_production_valley">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('technique_skill_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_food_pct_plus_tech">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('hero_assign_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_food_pct_plus_hero_assign">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('hero_skill_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_food_pct_plus_hero_skill">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('item_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_food_pct_plus_item">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50"></td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('open_gate_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_food_pct_plus_gate">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <thead>
+                                <tr>
+                                    <th colspan="2">{{ i18n.t('resource_horse') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="horse_tbody">
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+{#                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_horse_item"><span class="buff_icon buff_event_horse_build"></span></span><span>보유 우마</span></div>#}
+                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_horse_item"></span><span>{{ i18n.t('resource_horse_in_stock') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_horse_curr">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('retention_limit') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_horse_max">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('production_per_hour') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_horse_production">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('basic_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_horse_providence">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('internal_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_horse_production_territory">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('external_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_horse_production_valley">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('technique_skill_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_horse_pct_plus_tech">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('hero_assign_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_horse_pct_plus_hero_assign">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('hero_skill_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_horse_pct_plus_hero_skill">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('item_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_horse_pct_plus_item">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50"></td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('open_gate_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_horse_pct_plus_gate">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <thead>
+                                <tr>
+                                    <th colspan="2">{{ i18n.t('resource_lumber') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="lumber_tbody">
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+{#                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_lumber_item"><span class="buff_icon buff_event_lumber_build"></span></span><span>보유 목재</span></div>#}
+                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_lumber_item"></span><span>{{ i18n.t('resource_lumber_in_stock') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_lumber_curr">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('retention_limit') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_lumber_max">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('production_per_hour') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_lumber_production">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('basic_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_lumber_providence">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('internal_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_lumber_production_territory">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('external_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_lumber_production_valley">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('technique_skill_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_lumber_pct_plus_tech">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('hero_assign_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_lumber_pct_plus_hero_assign">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('hero_skill_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_lumber_pct_plus_hero_skill">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('item_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_lumber_pct_plus_item">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50"></td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('open_gate_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_lumber_pct_plus_gate">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                                <thead>
+                                <tr>
+                                    <th colspan="2">{{ i18n.t('resource_iron') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="iron_tbody">
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+{#                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_iron_item"><span class="buff_icon buff_event_iron_build"></span></span><span>보유 철강</span></div>#}
+                                            <div class="ns_panel_flex_item_auto"><span id="ns_button_terr_info_iron_item"></span><span>{{ i18n.t('resource_iron_in_stock') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_iron_curr">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('retention_limit') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_iron_max">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('production_per_hour') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_reso_iron_production">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('basic_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_iron_providence">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('internal_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_iron_production_territory">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('external_production') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_iron_production_valley">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('technique_skill_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_iron_pct_plus_tech">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('hero_assign_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_iron_pct_plus_hero_assign">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('hero_skill_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_iron_pct_plus_hero_skill">0</span></div>
+                                        </div>
+                                    </td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('item_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_iron_pct_plus_item">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="width-50"></td>
+                                    <td class="width-50">
+                                        <div class="ns_panel_flex">
+                                            <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('open_gate_effect') }}</span></div>
+                                            <div class="ns_panel_flex_right"><span class="ns_prod_iron_pct_plus_gate">0</span></div>
+                                        </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- 버프 아이템 설명 -->
+
+<div id="ns_dialog_buff_item_desc">
+    <span id="ns_button_buff_item_desc_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_buff_item_desc_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th>{{ i18n.t('effect') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="content_buff_item_desc"></span></td>
+                    </tr>
+                    </tbody>
+                    <thead>
+                    <tr>
+                        <th>{{ i18n.t('remain_time') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td><span class="content_left_time"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!--  ***************************************
+<div id="ns_dialog_resource">
+    <span id="ns_button_resource_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_resource_close"></span>
+                <span class="content_pop_title">인구 및 자원/생산량</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table class="ns_table_common">
+                    <tbody>
+                    <tr>
+                        <td class="col1"><span class="population_icon"></span></td>
+                        <td class="col2" ><span class="ns_terr_population_idle"></span>/<span class="ns_terr_population_trend_amount"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><span class="gold_icon"></span></td>
+                        <td class="col2" ><span class="ns_terr_gold_curr"></span>/<span class="ns_terr_gold_production"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><span class="food_icon"></span></td>
+                        <td class="col2" ><span class="ns_reso_food_curr"></span>/<span class="ns_reso_food_production"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><span class="horse_icon"></span></td>
+                        <td class="col2" ><span class="ns_reso_horse_curr"></span>/<span class="ns_reso_horse_production"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><span class="lumber_icon"></span></td>
+                        <td class="col2" ><span class="ns_reso_lumber_curr"></span>/<span class="ns_reso_lumber_production"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><span class="iron_icon"></span></td>
+                        <td class="col2" ><span class="ns_reso_iron_curr"></span>/<span class="ns_reso_iron_production"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="col1"><span class="qbig_icon"></span></td>
+                        <td class="col2" ><span class="cont_qbig_amount ns_qbig"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+-->

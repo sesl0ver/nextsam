@@ -1,0 +1,29 @@
+@charset "utf-8";
+
+#ns_dialog_territory_manage .ns_table_common {
+    margin-bottom:10px;
+}
+
+#ns_dialog_territory_manage .ns_table_common th {
+    height: 35px;
+}
+
+#ns_dialog_territory_manage .ns_table_common td {
+    height: 40px;
+}
+
+#ns_dialog_territory_manage .ns_table_common_2 {
+    margin-bottom:10px;
+}
+
+#ns_dialog_territory_manage .ns_table_common_2 th {
+    height: 35px;
+}
+
+#ns_dialog_territory_manage .ns_table_common_2 td {
+    height: 40px;
+}
+
+#ns_dialog_territory_manage .ns_table_common_2 * {
+    color: #FFF;
+}

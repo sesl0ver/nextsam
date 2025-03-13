@@ -1,0 +1,113 @@
+<h2>[ {{ _SESSION['selected_lord']['lord_name'] }} ] 군주 보유 영입 대기 중 영웅</h2>
+<hr />
+<table id="lord_own_hero" class="jqGridTable">
+</table>
+<div id="pager_lord_own_hero"></div>
+
+<div id="hero_slot_info">
+	<table border="1" bordercolor="#000" style="border-collapse:collapse;width:100%;text-align:center;">
+		<tbody>
+			<tr>
+				<th style="padding:0.4em;">영웅 이름</th>
+				<td style="padding:0.4em;" class="hero_name"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">관직</th>
+				<td style="padding:0.4em;" class="hero_offi"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">경험치</th>
+				<td style="padding:0.4em;" class="hero_exp"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">사용중인 슬롯 / 열려있는 슬롯</th>
+				<td style="padding:0.4em;" class="hero_slot_count"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">1번 슬롯</th>
+				<td style="padding:0.4em;" class="hero_slot_1"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">2번 슬롯</th>
+				<td style="padding:0.4em;" class="hero_slot_2"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">3번 슬롯</th>
+				<td style="padding:0.4em;" class="hero_slot_3"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">4번 슬롯</th>
+				<td style="padding:0.4em;" class="hero_slot_4"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">5번 슬롯</th>
+				<td style="padding:0.4em;" class="hero_slot_5"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">6번 슬롯</th>
+				<td style="padding:0.4em;" class="hero_slot_6"></td>
+			</tr>
+		</tbody>
+	</table>
+	<br />
+
+	<table border="1" bordercolor="#000" style="border-collapse:collapse;width:100%;text-align:center;">
+		<tbody>
+			<tr>
+				<th style="padding:0.4em;">능력</th>
+				<td style="padding:0.4em;">기본</td>
+				<td style="padding:0.4em;">강화</td>
+				<td style="padding:0.4em;">추가</td>
+				<td style="padding:0.4em;">스킬</td>
+				<td style="padding:0.4em;">관직</td>
+				<td style="padding:0.4em;">현재</td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">통솔</th>
+				<td style="padding:0.4em;" class="leadership_basic"></td>
+				<td style="padding:0.4em;" class="leadership_enchant"></td>
+				<td style="padding:0.4em;" class="leadership_plusstat"></td>
+				<td style="padding:0.4em;" class="leadership_skill"></td>
+				<td style="padding:0.4em;" class="stat_plus_leadership"></td>
+				<td style="padding:0.4em;" class="leadership"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">무력</th>
+				<td style="padding:0.4em;" class="mil_force_basic"></td>
+				<td style="padding:0.4em;" class="mil_force_enchant"></td>
+				<td style="padding:0.4em;" class="mil_force_plusstat"></td>
+				<td style="padding:0.4em;" class="mil_force_skill"></td>
+				<td style="padding:0.4em;" class="stat_plus_mil_force"></td>
+				<td style="padding:0.4em;" class="mil_force"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">지력</th>
+				<td style="padding:0.4em;" class="intellect_basic"></td>
+				<td style="padding:0.4em;" class="intellect_enchant"></td>
+				<td style="padding:0.4em;" class="intellect_plusstat"></td>
+				<td style="padding:0.4em;" class="intellect_skill"></td>
+				<td style="padding:0.4em;" class="stat_plus_intellect"></td>
+				<td style="padding:0.4em;" class="intellect"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">정치</th>
+				<td style="padding:0.4em;" class="politics_basic"></td>
+				<td style="padding:0.4em;" class="politics_enchant"></td>
+				<td style="padding:0.4em;" class="politics_plusstat"></td>
+				<td style="padding:0.4em;" class="politics_skill"></td>
+				<td style="padding:0.4em;" class="stat_plus_politics"></td>
+				<td style="padding:0.4em;" class="politics"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">매력</th>
+				<td style="padding:0.4em;" class="charm_basic"></td>
+				<td style="padding:0.4em;" class="charm_enchant"></td>
+				<td style="padding:0.4em;" class="charm_plusstat"></td>
+				<td style="padding:0.4em;" class="charm_skill"></td>
+				<td style="padding:0.4em;" class="stat_plus_charm"></td>
+				<td style="padding:0.4em;" class="charm"></td>
+			</tr>
+		</tbody>
+	</table>
+	<div><button id="hero_manage_guest" style="width:40px;height:30px;margin:5px;display:none;">영입</button></div>
+</div>

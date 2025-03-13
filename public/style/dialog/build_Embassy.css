@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+#ns_dialog_build_Embassy {
+
+}
+
+#ns_dialog_build_Embassy div.ns_panel_sub_top.ns_panel_flex > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+#ns_dialog_build_Embassy .ns_table_common th {
+    width: 70px;
+}
+
+#ns_dialog_build_Embassy .ns_table_common th:nth-child(1) {
+    width: auto;
+}
+
+#ns_dialog_build_Embassy .ns_table_common th:nth-child(5) {
+    width: 60px;
+}
+
+#ns_dialog_build_Embassy .ns_table_common td {
+    width: auto;
+    height: 31px;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+#ns_dialog_build_Embassy #ns_button_build_assign_Embassy,
+#ns_dialog_build_Embassy #ns_button_build_no_assign_Embassy {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 121px;
+}
+
+#ns_dialog_build_Embassy .hero_card_sm.ns_panel_flex {
+    width: 128px;
+}
+
+#ns_button_build_speedup_Embassy {
+    width: 120px;
+}

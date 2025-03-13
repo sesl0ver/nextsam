@@ -1,0 +1,83 @@
+
+<div id="ns_dialog_lord_roamer">
+
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('roamer_lord_information') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_lord_roamer_close"></span></div>
+            <div class="dialog_header_right"></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_sub_top">
+                    <span class="content_roamer_message">{{ i18n.t('roamer_lord_description_1') }}</span>
+                </div>
+
+                <div class="ns_panel_most ns_panel_margin_xx ns_panel_margin_y">
+                    {{ i18n.t('roamer_lord_description_2') }}
+                </div>
+
+                <div class="ns_panel_heavy ns_panel_margin_10 content_hero_info">
+                    <span> ▶ {{ i18n.t('roamer_lord_hero_list') }}</span>
+                </div>
+                <div class="ns_panel_margin_10">
+                    <div class="content_hero_card_wrap">
+                        <div class="content_hero_list ns_panel_grid_4"></div>
+                        <div class="text_align_center ns_panel_margin_y">{{ i18n.t('roamer_lord_hero_description') | raw }}</div>
+                    </div>
+                </div>
+
+                <div class="ns_panel_margin_10">
+                    <table class="ns_table_common">
+                        <tbody>
+                        <tr>
+                            <td class="width-50">{{ i18n.t('territory_title') }}</td>
+                            <td><span class="content_last_territory"></span></td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('fall_datetime') }}</td>
+                            <td><span class="content_defeated_datetime"></span></td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('occupying_lord') }}</td>
+                            <td><span class="content_src_lord_name"></span></td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('lord_power') }}</td>
+                            <td><span class="content_power"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ns_panel_margin_10">
+
+                    <table class="ns_table_common">
+                        <tbody>
+                        <tr>
+                            <td class="width-50">{{ i18n.t('kind') }}</td>
+                            <td><span class="content_item_kind"></span></td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('amount') }}</td>
+                            <td><span class="content_total_count"></span></td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('qbig') }}</td>
+                            <td><span class="content_qbig"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ns_panel_margin_yy text_align_center">
+                    <span id="ns_button_roamer_lord_decision">{{ i18n.t('start') }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

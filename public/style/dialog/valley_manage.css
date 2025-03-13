@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+#ns_dialog_valley_manage {
+
+}
+
+#ns_dialog_valley_manage .valley_list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+}
+
+#ns_dialog_valley_manage .valley_wrap {
+    display: flex;
+    border-bottom: 1px solid #09459f;
+    width: 100%;
+}
+
+#ns_dialog_valley_manage .valley_info {
+    width: 100%;
+}
+
+#ns_dialog_valley_manage .tile_wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10px;
+}
+
+#ns_dialog_valley_manage .tile_image_wrap {
+    display: inline-block;
+    width: 150px;
+    height: 92px;
+    background-image: url("/image/world/world_bg.jpg");
+    background-position: -295px -496px;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    margin: 10px auto;
+}
+
+#ns_dialog_valley_manage .tile_image {
+    display: inline-block;
+    width: 150px;
+    height: 92px;
+    background-size: 150px 92px;
+}
+
+#ns_dialog_valley_manage .production_desc {
+    line-height: 16px;
+    padding: 5px 0;
+    display: inline-block;
+}
+
+#ns_dialog_valley_manage .valley_posi_pk {
+    line-height: 30px;
+}
+
+#ns_dialog_valley_manage .valley_wrap_bottom {
+    margin-bottom: 10px;
+}
+
+

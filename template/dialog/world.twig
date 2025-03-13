@@ -1,0 +1,532 @@
+<div id="ns_dialog_world_detail">
+    <span id="ns_button_world_detail_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_world_detail_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic">
+                    <table class="ns_table_common">
+                        <tbody>
+                        <tr class="assign_hero_area">
+                            <td class="col1">{{ i18n.t('assign') }}</td>
+                            <td colspan="3"><span class="assign_hero_name"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">{{ i18n.t('lord') }}</td>
+                            <td class="col2" colspan="4"><span id="ns_button_world_detail_lord_info" class="lord_name"></span></td>
+                        </tr>
+                        <tr class="production_area">
+                            <td class="col1">{{ i18n.t('production_value') }}</td>
+                            <td colspan="3"><span class="production_description"></span></td>
+                        </tr>
+                        <tr class="occupation_area">
+                            <td class="col1">{{ i18n.t('occupation_point') }}</td>
+                            <td colspan="3">
+                                <span>{{ i18n.t('remaining') }}:</span> <span class="remain_occupation_point"></span><br />
+                                <span class="hours_point"></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col1">{{ i18n.t('lord_power') }}</td>
+                            <td><span class="power"></span></td>
+                            <td class="col1">{{ i18n.t('lord_grade') }}</td>
+                            <td><span class="level"></span></td>
+                        </tr>
+                        <tr>
+                            <td class="col1">{{ i18n.t('area') }}</td>
+                            <td><span class="state"></span></td>
+                            <td class="col1">{{ i18n.t('distance') }}</td>
+                            <td>
+                                <div class="ns_panel_flex">
+                                    <div class="ns_panel_flex_item_auto ns_panel_margin_auto">
+                                        <span class="distance"></span>
+                                    </div>
+                                    <div class="ns_panel_flex_right">
+                                        <span id="ns_button_world_detail_favorite"></span>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="npc_point_detail_wrap ns_panel_margin_y">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('occupying_time') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="occupation_date"></span></td>
+                            </tr>
+                            </tbody>
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('occupying_effect') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>
+                                    <p class="occupation_effect text_align_center">
+                                        {{ i18n.t('occupying_effect_description') | raw }}
+                                    </p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('npc_point_description') }}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="ns_panel_pop_button">
+                        <!-- span id="ns_button_world_detail_new">{{ i18n.t('territory_exploitation') }}</span -->
+                        <span id="ns_button_world_detail_enter">{{ i18n.t('territory_manage') }}</span>
+                        <span id="ns_button_world_detail_terr_change">{{ i18n.t('territory_change') }}</span>
+                        <span id="ns_button_world_detail_camp_troop">{{ i18n.t('troop_information') }}</span>
+                        <span id="ns_button_world_detail_attack">{{ i18n.t('attack') }}</span>
+                        <span id="ns_button_world_detail_scout">{{ i18n.t('reconnaissance') }}</span>
+                        <span id="ns_button_world_detail_fort">{{ i18n.t('defense_facilities') }}</span>
+                        <span id="ns_button_world_detail_reinforce">{{ i18n.t('support') }}</span>
+                        <span id="ns_button_world_detail_transport">{{ i18n.t('transport') }}</span>
+                        <span id="ns_button_world_detail_supply">{{ i18n.t('supply') }}</span>
+                        <span id="ns_button_world_detail_valley_give_up">{{ i18n.t('give_up') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- *********************************************** -->
+<div id="ns_dialog_new_territory" style="display:none; z-index:1010">
+    <div class="dlg_header"><span id="ns_button_new_territory_close"></span><span class="cont_pop_title"></span></div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <div class="qbwtbl_Common">
+                <table cellspacing="1">
+                    <thead>
+                    <tr>
+                        <th class="col1" style="width:30%;">{{ i18n.t('category') }}</th>
+                        <th class="col2" style="width:35%;">{{ i18n.t('requirement') }}</th>
+                        <th class="col3" style="width:35%;">{{ i18n.t('current_storage') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>{{ i18n.t('troop') }}</td>
+                        <td>{{ i18n.t('deployed') }}</td>
+                        <td><span class="cont_my_camp_troop"></span></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('territory_slot') }}</td>
+                        <td>1</td>
+                        <td><span class="cont_position_cnt"></span></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('item') }}</td>
+                        <td><span class="cont_need_item"></span></td>
+                        <td><span class="cont_my_item_cnt"></span></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('resource_food') }}</td>
+                        <td><span class="cont_need_food"></span></td>
+                        <td><span class="cont_my_food"></span></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('resource_horse') }}</td>
+                        <td><span class="cont_need_horse"></span></td>
+                        <td><span class="cont_my_horse"></span></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('resource_lumber') }}</td>
+                        <td><span class="cont_need_lumber"></span></td>
+                        <td><span class="cont_my_lumber"></span></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('resource_iron') }}</td>
+                        <td><span class="cont_need_iron"></span></td>
+                        <td><span class="cont_my_iron"></span></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('resource_gold') }}</td>
+                        <td><span class="cont_need_gold"></span></td>
+                        <td><span class="cont_my_gold"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+        </div>
+    </div>
+    <div class="dlg_footer"></div>
+</div>
+
+<!-- *********************************************** -->
+<div id="ns_dialog_world_favorite">
+    <span id="ns_button_world_favorite_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_world_favorite_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_tab ns_panel_grid_3">
+                    <span id="ns_button_tab_suppress_position">{{ i18n.t('suppression_order') }}</span>
+                    <span id="ns_button_tab_favorite_position">{{ i18n.t('favorite_area') }}</span>
+                    <span id="ns_button_tab_recent_position">{{ i18n.t('recently_destination') }}</span>
+                </div>
+
+                <div class="ns_panel_sub_top ns_panel_flex">
+                    <div class="ns_panel_flex_left">
+                        <span class="current_count"></span>
+                    </div>
+                    <div class="top_button_area ns_panel_flex_right">
+                        <span id="ns_button_favorite_all_selected">{{ i18n.t('full_selection') }}</span>
+                        <span id="ns_button_favorite_delete">{{ i18n.t('delete') }}</span>
+                    </div>
+                </div>
+
+                <table class="ns_table_common">
+                    <tbody>
+                    </tbody>
+                </table>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- *********************************************** -->
+<div id="ns_dialog_world_favorite_add">
+    <span id="ns_button_world_favorite_add_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_world_favorite_add_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th class="col1">{{ i18n.t('memo') }}</th>
+                        <th class="col2">{{ i18n.t('additional_locations') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <label for="content_memo">
+                                <input id="content_memo" type="text" name="world_favorite_add_memo" value="" class="cont_world_favorite_add_memo" />
+                            </label>
+                        </td>
+                        <td>
+                            <span class="favorite_add_position"></span>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="content_bottom">
+                    <div class="ns_panel_margin_auto">
+                        <div class="content_desc_box ns_panel_margin_y">
+                            <p>{{ i18n.t('world_favorite_description') }}</p>
+                        </div>
+
+                        <div class="text_align_center ns_panel_margin_y">
+                            <span id="ns_button_world_favorite_add">{{ i18n.t('save') }}</span>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- *********************************************** -->
+<div id="ns_dialog_world_troop_camp_list">
+    <span id="ns_button_world_troop_camp_list_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_world_troop_camp_list_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_top text_gray text_weight_bold">
+                    <span>{{ i18n.t('deployed_troop_count') }} :</span><span class="content_current_count"></span>
+                </div>
+
+                <table class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th class="col1">{{ i18n.t('troop_captain') }}</th>
+                        <th class="col2">{{ i18n.t('belong') }}</th>
+                        <th class="col3">{{ i18n.t('withdrawal_expert') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+
+                <div class="hr_division_brown"></div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- *********************************************** -->
+<div id="ns_dialog_world_fort">
+    <span id="ns_button_world_fort_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('defense_facilities') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_world_fort_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_world_fort_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_heavy ns_panel_margin_10">
+                    <div class="ns_panel_trans">
+                        <div class="content_concurr_body ns_panel_flex">
+                            <div class="ns_panel_flex_item_auto">
+                                <span class="content_concurr_title"></span>
+                            </div>
+                            <div class="ns_panel_flex_right">
+                                {#                            <span id="ns_button_concurr_cancel_world_fort"></span>#}
+                                <span class="content_concurr_time">{{ i18n.t('calculating') }}</span>
+                                <span id="ns_button_concurr_speedup_world_fort">{{ i18n.t('encourage') }}</span>
+                            </div>
+                        </div>
+                        <div class="content_concurr_idle">{{ i18n.t('not_in_install') }}</div>
+                    </div>
+                </div>
+
+                <div class="ns_panel_trans">
+                    <div class="world_fort_cache_wrap ns_panel_grid_2"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- *********************************************** -->
+<div id="ns_dialog_world_fort_installation">
+    <span id="ns_button_world_fort_installation_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+                <span class="content_level"></span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_world_fort_installation_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_world_fort_installation_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <div class="ns_panel_flex_info">
+                        <div class="develop_image"></div>
+                        <div class="develop_description"></div>
+                    </div>
+                </div>
+
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th>{{ i18n.t('category') }}</th>
+                            <th>{{ i18n.t('requirement') }}</th>
+                            <th>{{ i18n.t('current_storage') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table_fort_installation">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ns_panel_full_contents ns_panel_margin_10">
+                    <div class="content_side_pattern_bg">
+                        <div class="content_center">
+                            <div class="content_develop_trans">
+                                <div class="ns_panel_flex wrapper_world_fort_installation_amount">
+                                    <span class="cont_develop_input_text_title">{{ i18n.t('number_of_installations') }} : </span>
+                                    <input class="amount_field" type="number" />
+                                    <span class="text_cadet_gray"> / </span>
+                                    <span id="ns_button_world_fort_installation_amount_max"> 0 </span>
+                                </div>
+                            </div>
+                            <div class="ns_panel_margin_center">
+                                <div class="content_develop_trans wrapper_world_fort_installation">
+                                    <label>
+                                        <span id="ns_button_world_fort_installation_amount_decrease"></span>
+                                        <input name="develop_slider" type="range" class="slider" />
+                                        <span id="ns_button_world_fort_installation_amount_increase"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="content_develop_trans ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto">
+                                    <span>{{ i18n.t('current_storage') }} :</span> <span class="develop_current text_green">0</span><br />
+                                    <span>{{ i18n.t('maximum_storage') }} :</span> <span class="develop_max text_green">0</span>
+                                </div>
+                            </div>
+
+                            <div class="content_develop_trans ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto">
+                                    <span>{{ i18n.t('use_space') }} :</span>
+                                    <span class="fort_vacancy_current text_green">0</span><br>
+                                    <span>{{ i18n.t('total_space') }} :</span>
+                                    <span class="fort_vacancy_max text_green">0</span>
+                                </div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <span>{{ i18n.t('remain_space') }} :</span>
+                                    <span class="fort_vacancy_free text_green">0</span>
+                                </div>
+                            </div>
+
+                            <div class="hr_normal_line"></div>
+
+                            <div class="content_develop_trans">
+                                <span class="content_build_time_title">{{ i18n.t('time_required') }} : </span>
+                                <span class="content_build_time"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="ns_panel_pop_button ns_panel_trans">
+                    <span id="ns_button_world_fort_installation_submit">{{ i18n.t('execution') }}</span>
+                </div>
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- *********************************************** -->
+<div id="ns_dialog_world_fort_disperse">
+    <span id="ns_button_world_fort_disperse_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_world_fort_disperse_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <table class="ns_table_common">
+                    <thead>
+                    <tr>
+                        <th class="col1">{{ i18n.t('category') }}</th>
+                        <th class="col2">{{ i18n.t('recovery_amount') }}</th>
+                        <th class="col3">{{ i18n.t('current_storage') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody class="content_disperse_table">
+                    <tr>
+                        <td class="col1">{{ i18n.t('resource_food') }}</td>
+                        <td class="col2 content_disperse_food">-</td>
+                        <td class="col3 ns_resource_food_curr">-</td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('resource_horse') }}</td>
+                        <td class="content_disperse_horse">-</td>
+                        <td class="ns_resource_horse_curr">-</td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('resource_lumber') }}</td>
+                        <td class="content_disperse_lumber">-</td>
+                        <td class="ns_resource_lumber_curr">-</td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('resource_iron') }}</td>
+                        <td class="content_disperse_iron">-</td>
+                        <td class="ns_resource_iron_curr">-</td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('resource_gold') }}</td>
+                        <td class="content_disperse_gold">-</td>
+                        <td class="ns_territory_gold_curr">-</td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('installation_space') }}</td>
+                        <td class="content_disperse_vacancy">-</td>
+                        <td class="ns_territory_fort_vacancy_curr">-</td>
+                    </tr>
+                    </tbody>
+                </table>
+
+                <div class="ns_panel_trans"></div>
+
+                <div class="ns_panel_trans ns_panel_margin_yy">
+                    <div class="ns_panel_heavy">{{ i18n.t('number_of_dismantling') }}</div>
+                    <div class="ns_panel_flex_center ns_panel_margin_yy wrapper_world_fort_disperse_amount">
+                        <input class="amount_field" type="number" />
+                        <span class="text_cadet_gray"> / </span>
+                        <span id="ns_button_world_fort_disperse_amount_max"></span>
+                    </div>
+
+                    <div class="ns_panel_flex_center wrapper_fort_disperse_slider">
+                        <label>
+                            <span id="ns_button_world_fort_disperse_amount_decrease"></span>
+                            <input class="slider" name="develop_slider" type="range" />
+                            <span id="ns_button_world_fort_disperse_amount_increase"></span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="ns_panel_contents_box">
+                    <div class="ns_panel_margin_auto">
+                        <div class="content_desc_box text_align_center">
+                            <p>{{ i18n.t('world_fort_disperse_description') | raw }}</p>
+                        </div>
+                        <div class="ns_panel_pop_button">
+                            <span id="ns_button_world_fort_disperse_submit">{{ i18n.t('execution') }}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

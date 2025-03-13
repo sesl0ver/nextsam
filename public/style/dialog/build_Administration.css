@@ -1,0 +1,98 @@
+@charset "utf-8";
+
+#ns_dialog_build_Administration {
+
+}
+
+#ns_dialog_build_Administration div.ns_panel_sub_top.ns_panel_flex > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+#ns_button_build_speedup_Administration {
+    width: 120px;
+}
+
+#ns_dialog_build_Administration #ns_button_build_assign_Administration,
+#ns_dialog_build_Administration #ns_button_build_no_assign_Administration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 121px;
+}
+
+#ns_dialog_build_Administration .build_Administration_tab_build .ns_table_common tr span,
+#ns_dialog_build_Administration .build_Administration_tab_prod .ns_table_common tr span,
+#ns_dialog_build_Administration .build_Administration_tab_valley .ns_table_common tr span,
+#ns_dialog_build_Administration .build_Administration_tab_terr .ns_table_common tr span{
+    margin:auto;
+}
+
+
+#ns_dialog_build_Administration .build_Administration_tab_build th:first-child {
+    width:40%;
+}
+
+#ns_dialog_build_Administration .build_Administration_tab_build th:not(:first-child) {
+    width:30%;
+}
+
+#ns_dialog_build_Administration .content_desc_box  {
+    line-height: 16px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+#ns_dialog_build_Administration_terr_title #administration_terr_title {
+    width: 60px;
+    margin: 5px 0;
+    border: 1px solid #918469;
+    height: 20px;
+}
+
+#ns_dialog_build_Administration_tax_rate .content_desc_box > p,
+#ns_dialog_build_Administration_comforting .content_desc_box > p,
+#ns_dialog_build_Administration_requisition .content_desc_box > p,
+#ns_dialog_build_Administration_terr_title .content_desc_box > p {
+    margin: 5px 0 10px 0;
+}
+
+#ns_dialog_build_Administration_tax_rate .ns_panel_contents_box,
+#ns_dialog_build_Administration_comforting .ns_panel_contents_box,
+#ns_dialog_build_Administration_requisition .ns_panel_contents_box,
+#ns_dialog_build_Administration_terr_title .ns_panel_contents_box {
+    line-height: 15px;
+    color: #91A1B0;
+    font-weight: bold;
+    text-align: center;
+    border: 0;
+}
+
+#ns_dialog_build_Administration_tax_rate .ns_table_common thead tr :nth-child(1),
+#ns_dialog_build_Administration_tax_rate .ns_table_common thead tr :nth-child(2),
+#ns_dialog_build_Administration_requisition .ns_table_common thead tr :nth-child(1),
+#ns_dialog_build_Administration_requisition .ns_table_common thead tr :nth-child(2),
+#ns_dialog_build_Administration_comforting .ns_table_common thead tr :nth-child(1),
+#ns_dialog_build_Administration_comforting .ns_table_common thead tr :nth-child(2){
+    width: 35%;
+}
+
+#ns_dialog_build_Administration_tax_rate #ns_button_build_Administration_tax_rate_Adjustment,
+#ns_dialog_build_Administration_tax_rate #ns_button_build_Administration_tax_rate_close2,
+#ns_dialog_build_Administration_requisition #ns_button_build_Administration_requisition_Adjustment,
+#ns_dialog_build_Administration_requisition #ns_button_build_Administration_requisition_close_sub,
+#ns_dialog_build_Administration_comforting #ns_button_build_Administration_comforting_Adjustment,
+#ns_dialog_build_Administration_comforting #ns_button_build_Administration_comforting_close_sub,
+#ns_dialog_build_Administration_terr_title #ns_button_build_Administration_terr_title_Adjustment,
+#ns_dialog_build_Administration_terr_title #ns_button_build_Administration_terr_title_close_sub{
+    margin: 10px 4px;
+    width: 120px;
+}
+
+#ns_button_build_Administration_tax_rate_input {
+    width: 60px;
+}
+
+#ns_dialog_build_Administration .hero_card_sm.ns_panel_flex{
+    width: 120px;
+}

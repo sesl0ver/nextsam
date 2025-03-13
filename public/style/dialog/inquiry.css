@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+#ns_dialog_inquiry .inquiry_faq_wrap table tbody tr {
+    position: relative;
+    display: flex;
+    padding: 0 15px;
+    margin: 13px 7px;
+    color: #FFFFFF;
+    background: url('/image/ui/quest_2_bg.png') no-repeat;
+    background-size: 425px 45px;
+    height: 45px;
+    line-height: 45px;
+}
+
+#ns_dialog_inquiry .inquiry_faq_wrap table tbody td,
+#ns_dialog_inquiry .inquiry_write_wrap table tbody td {
+    border-bottom: none !important;
+}
+
+#ns_dialog_inquiry .inquiry_write_wrap table tbody tr {
+    height: auto !important;
+}
+
+#ns_dialog_inquiry .inquiry_write_wrap .description {
+    text-align: left;
+    color: #768CB5;
+}

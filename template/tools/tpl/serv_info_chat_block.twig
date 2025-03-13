@@ -1,0 +1,32 @@
+<h2>채팅 차단</h2>
+
+<hr />
+
+<fieldset id="lord_search_by_lord_name_form" class="cpn_search_form">
+	<legend><label for="lord_name">군주명 검색</label></legend>
+	<div>
+		<input type="text" id="lord_name" value="{{ _SESSION['selected_lord']['lord_name'] }}" />
+		<input type="button" id="do_search_lord_name" value="&nbsp;검색&nbsp;" /><br/>
+	</div>
+</fieldset>
+
+<br/>
+
+<div id="search_result">
+</div>
+
+<div id="dialog-form" title="유저 블럭">
+	<form>
+
+		<fieldset>
+			<legend><label for="limit_block_date">차단 기간</label></legend>
+			<input type="text" id="limit_block_date" value="" />
+		</fieldset>
+
+		<fieldset>
+			<legend><label for="blocked_cause">차단 사유</label></legend>
+			<p class="text_red">차단 후 적용을 위해 유저를 Kick 합니다.</p>
+			<textarea id="blocked_cause"></textarea>
+		</fieldset>
+	</form>
+</div>

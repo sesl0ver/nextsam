@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+#ns_dialog_build_CityHall {
+
+}
+
+#ns_dialog_build_CityHall div.ns_panel_sub_top.ns_panel_flex > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+#ns_dialog_build_CityHall .content_hero_detail {
+    width: 220px;
+    height: 121px;
+}
+
+#ns_dialog_build_CityHall .hero_card_sm.ns_panel_flex {
+    width: 120px;
+}
+
+#ns_button_build_speedup_CityHall {
+    width: 120px;
+}

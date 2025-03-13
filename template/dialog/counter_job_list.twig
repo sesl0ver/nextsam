@@ -1,0 +1,93 @@
+<div id="ns_dialog_counter_job_list">
+    <span id="ns_button_counter_job_list_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title"><span class="content_title"></span></div>
+            <div class="dialog_header_left"><span id="ns_button_counter_job_list_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_counter_job_list_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_tab ns_panel_grid_2">
+                <span id="ns_button_counter_job_tab">{{ i18n.t('work_status') }}</span>
+                <span id="ns_button_counter_troop_tab">{{ i18n.t('troop_status') }}</span>
+            </div>
+
+            <div class="content">
+
+                <div class="ns_panel_basic">
+
+                    <div class="ns_panel_most">
+                        <div class="content_counter_job_tab">
+
+                            <div class="content_construction">
+                                <div class="content_title_bar ns_panel_table_title">
+                                    <div class="title_bar">{{ i18n.t('construction') }} (<span>0</span>)</div>
+                                </div>
+                                <div class="content_list"></div>
+                            </div>
+
+                            <div class="content_technique">
+                                <div class="content_title_bar ns_panel_table_title">
+                                    <div class="title_bar">{{ i18n.t('researches') }} (<span>0</span>)</div>
+                                </div>
+                                <div class="content_list"></div>
+                            </div>
+
+                            <div class="content_explorer">
+                                <div class="content_title_bar ns_panel_table_title">
+                                    <div class="title_bar">{{ i18n.t('exploration') }} / {{ i18n.t('invitation') }}(<span>0</span>)</div>
+                                </div>
+                                <div class="content_list"></div>
+                            </div>
+
+                            <div class="content_army">
+                                <div class="content_title_bar ns_panel_table_title">
+                                    <div class="title_bar">{{ i18n.t('training') }} / {{ i18n.t('treatment') }} (<span>0</span>)</div>
+                                </div>
+                                <div class="content_list"></div>
+                            </div>
+
+                            <div class="content_fortification">
+                                <div class="content_title_bar ns_panel_table_title">
+                                    <div class="title_bar">{{ i18n.t('defense_facilities') }} (<span>0</span>)</div>
+                                </div>
+                                <div class="content_list"></div>
+                            </div>
+
+                            <!--
+                            <div class="content_list_row" style="display:none;">
+                              <span>무역장 Lv.7 - 장완 Lv.1</span>
+                              <span id="qbw_btn_speedup_27">독려</span>
+                              <span>13시간 33분 남음</span>
+                            </div>
+                            -->
+                        </div>
+
+                        <div class="content_counter_troop_tab">
+                            <div class="content_our_troop">
+                                <div class="content_title_bar ns_panel_table_title ns_panel_flex">
+                                    <div class="title_bar">{{ i18n.t('our_troop') }} (<span>0</span>)</div>
+                                    <span id="ns_button_alert_toggle_ally"></span>
+                                </div>
+                                <div class="content_list"></div>
+                            </div>
+
+                            <div class="content_enemy_troop">
+                                <div class="content_title_bar ns_panel_table_title ns_panel_flex">
+                                    <div class="title_bar">{{ i18n.t('enemy_troop') }} (<span>0</span>)</div>
+                                    <span id="ns_button_alert_toggle_enemy"></span>
+                                </div>
+                                <div class="content_list"></div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

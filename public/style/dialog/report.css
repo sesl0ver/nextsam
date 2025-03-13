@@ -1,0 +1,414 @@
+@charset "utf-8";
+
+#ns_dialog_report {
+    z-index: 2252;
+}
+
+#ns_dialog_report .content_list_wrap,
+#ns_dialog_report .content_write_wrap,
+#ns_dialog_report .content_read_wrap {
+    width: 440px;
+    margin: 0 auto;
+}
+
+#ns_dialog_report .tab_report_wrap {
+    width: 460px;
+}
+
+#ns_dialog_report .content .ns_panel_flex_item_auto.ns_panel_flex_middle {
+    margin-left:5px;
+}
+
+#ns_dialog_report .content .ns_panel_sub_top.ns_panel_flex .ns_panel_flex_right{
+    margin-right:5px;
+}
+
+#ns_dialog_report .content_list_wrap table.ns_table_common>thead>tr>th:nth-child(1) {
+    padding: 0 10px;
+    line-height: 14px;
+    width: 10%;
+}
+
+#ns_dialog_report .content_list_wrap table.ns_table_common>thead>tr>th.col1{
+    width: 30%;
+}
+
+#ns_dialog_report .content_list_wrap table.ns_table_common>thead>tr>th.col2,
+#ns_dialog_report .content_list_wrap table.ns_table_common>thead>tr>th.col3,
+#ns_dialog_report .content_list_wrap table.ns_table_common>thead>tr>th.col4,
+#ns_dialog_report .content_list_wrap table.ns_table_common>thead>tr>th.col5 {
+    width: 20%;
+}
+
+#ns_dialog_report .content_list_wrap table.ns_table_common>tbody>tr{
+    color: #aaaaaa;
+}
+
+#ns_dialog_report .content_list_wrap table.ns_table_common>tbody>tr.new_letter_glow{
+    font-weight: bold;
+    color: #ffffff;
+}
+
+#ns_dialog_report table td {
+    vertical-align: middle;
+    border-bottom: 1px solid #596C8E;
+}
+
+#ns_dialog_report .content_read_wrap .read_content>.ns_table_common_2>thead>tr>th{
+    border-left: 1px solid #596C8E;
+    border-radius: 0;
+}
+
+#ns_dialog_report .content_read_wrap .read_content>.ns_table_common_2:last-child>tbody>tr>td:last-child{
+    border-bottom: 1px solid #596C8E;
+}
+
+#ns_dialog_report .content_read_wrap .read_content .ns_table_common_2 tbody p,
+#ns_dialog_report .content_read_wrap .read_content .ns_table_common_2 tbody span
+{
+    color: #fff;
+}
+
+#ns_dialog_report .content_read_wrap .read_content .report_list_info tbody tr th
+{
+    background: #2B3C57;
+}
+
+#ns_dialog_report .content_read_wrap .read_content .report_list_info tbody tr th:first-child
+{
+    border-left: 0;
+    border-radius: 0;
+}
+#ns_dialog_report .content_read_wrap .read_content .report_list_info tbody tr td:last-child
+{
+    border-right: 0;
+}
+
+#ns_dialog_report .content_read_wrap .read_content .report_list_info tbody th
+{
+    color: #B4D2EC;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+#ns_dialog_report .content_write_wrap td {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+#ns_dialog_report .content_write_wrap td.text_align_left {
+    height: 20px;
+}
+
+#ns_dialog_report .letter_from,
+#ns_dialog_report .letter_title {
+    display: inline-block;
+    border: 1px solid #BB8E35;
+    outline: 1px solid #EABD67;
+    margin-right: 5px;
+    flex: auto;
+    text-align: left;
+    line-height: 23px;
+    background-color: #fff;
+}
+
+#ns_dialog_report .letter_title {
+    padding: 0 5px;
+}
+
+#ns_dialog_report .letter_content {
+    width: 100%;
+    height: 200px;
+    border: 1px solid #BB8E35;
+    outline: 1px solid #EABD67;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#ns_dialog_report .letter_from {
+    display: flex;
+}
+
+#ns_dialog_report .letter_from span {
+    vertical-align: middle;
+}
+
+#ns_dialog_report .letter_from_lord {
+    display: inline-block;
+    margin: auto 5px;
+    color: #888888;
+}
+
+#ns_dialog_report .read_content {
+    border: 1px solid #000;
+    outline: 1px solid #4778b3;
+    padding: 5px;
+    text-align: left;
+    background: #00000057;
+}
+
+#ns_dialog_report .read_content p {
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 5px 10px;
+}
+
+#ns_dialog_report .read_content .ns_table_common_2 {
+    margin-bottom: 10px;
+}
+
+#ns_dialog_report .report_list_info {
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+    gap: 20px;
+    flex-flow: wrap;
+}
+
+#ns_dialog_report .report_box {
+    width: 50px;
+}
+
+#ns_dialog_report .report_summary {
+    margin:15px 5px;
+    line-height: 160%;
+}
+
+#ns_dialog_report .point_table
+{
+    border:1px solid #596C8E ;
+    border-collapse:collapse;
+}
+
+#ns_dialog_report .point_table td
+{
+    border:1px solid #596C8E ;
+    width:48px;
+    height:24px;
+    text-align:center;
+}
+
+#ns_dialog_report .battle_result_image {
+    width: 440px;
+    height: 190px;
+    margin: -6px;
+}
+
+#ns_dialog_report .battle_result_image.victory {
+    background: url('/image/ui/report/report_battle_victory.png') no-repeat;
+    background-size: 440px 190px;
+}
+
+#ns_dialog_report .battle_result_image.defeat {
+    background: url('/image/ui/report/report_battle_defeat.png') no-repeat;
+    background-size: 440px 190px;
+}
+
+#ns_dialog_report .area_attack .result {
+    width: 100%;
+    line-height: 40px;
+    background-color: #2a4776;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+#ns_dialog_report .area_defence .result {
+    width: 100%;
+    line-height: 40px;
+    background-color: #a3444c;
+    font-size: 1.75rem;
+    text-align: center;
+}
+
+#ns_dialog_report .area_attack .result.victory,
+#ns_dialog_report .area_defence .result.victory {
+    width: 214px;
+    height: 52px;
+    background: url("/image/ui/report/report_battle_text_victory.png");
+}
+
+#ns_dialog_report .area_attack .result.defeat,
+#ns_dialog_report .area_defence .result.defeat {
+    width: 214px;
+    height: 52px;
+    background: url("/image/ui/report/report_battle_text_defeat.png");
+}
+
+#ns_dialog_report .area_attack .position,
+#ns_dialog_report .area_defence .position {
+    width: 100%;
+    padding: 5px 0;
+}
+
+#ns_dialog_report .area_attack .position > p,
+#ns_dialog_report .area_defence .position > p {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+#ns_dialog_report .area_attack .hero,
+#ns_dialog_report .area_defence .hero {
+    transform: scale(.7);
+    display: inline-flex;
+    margin: -17px -38px;
+    gap: 5px;
+}
+
+#ns_dialog_report .area_attack .army,
+#ns_dialog_report .area_defence .army {
+    width: 100%;
+    margin-top: 5px;
+}
+
+#ns_dialog_report .area_attack table,
+#ns_dialog_report .area_defence table {
+    width: 100% !important;
+}
+
+#ns_dialog_report .area_attack table tr,
+#ns_dialog_report .area_defence table tr {
+    height: auto !important;
+}
+
+#ns_dialog_report .area_attack table tr th:first-child,
+#ns_dialog_report .area_defence table tr th:first-child {
+    border-radius: 0 !important;
+    -webkit-border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+
+#ns_dialog_report .area_attack table th,
+#ns_dialog_report .area_defence table th {
+    color: #B4D2EC !important;
+    background-color: #2b3c57;
+    font-size: .75rem !important;
+}
+
+#ns_dialog_report .area_attack table td,
+#ns_dialog_report .area_defence table td {
+    border: none !important;
+    text-align: right;
+    padding-right: 10px;
+}
+
+#ns_dialog_report .detail_button_wrap {
+    width: 100%;
+    text-align: center;
+}
+
+#ns_dialog_report .detail_button_wrap .button_default {
+    margin-top: 12px;
+    margin-bottom: 5px;
+}
+
+#ns_dialog_report_battle_detail {
+    z-index: 2253;
+}
+
+#ns_dialog_report_battle_detail .report_detail {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    gap: 5px;
+}
+
+#ns_dialog_report_battle_detail .report_detail .report_summary {
+    padding: 10px;
+    border-radius: 10px;
+    background: #0B121A;
+    text-align: center;
+}
+
+#ns_dialog_report_battle_detail .report_list_info {
+    display: flex;
+    margin: 10px 0;
+    justify-content: center;
+    gap: 20px;
+    flex-flow: wrap;
+}
+
+#ns_dialog_report_battle_detail .report_list_info tbody tr th
+{
+    background: #2B3C57;
+}
+
+#ns_dialog_report_battle_detail .report_list_info tbody tr th:first-child
+{
+    border-left: 0;
+    border-radius: 0;
+}
+#ns_dialog_report_battle_detail .report_list_info tbody tr td:last-child
+{
+    border-right: 0;
+}
+
+#ns_dialog_report_battle_detail .report_list_info tbody th
+{
+    color: #B4D2EC;
+    font-weight: bold;
+    text-shadow: none;
+}
+
+#ns_dialog_report .report_list_info .double_event::after,
+#ns_dialog_report_battle_detail .report_list_info .double_event::after
+{
+    position: absolute;
+    top: -5px;
+    left: 45px;
+    width: 67px;
+    height: 52px;
+    background: url("/image/ui/report/icon_event_double.png") no-repeat;
+    background-size: 67px 52px;
+    content: " ";
+}
+
+#ns_dialog_report .report_box .report_box_title,
+#ns_dialog_report_battle_detail .report_box .report_box_title {
+    display: block;
+    position: relative;
+    width: 45px;
+    text-align: center;
+    white-space: nowrap;
+}
+
+#ns_dialog_report .report_box .report_box_title::before,
+#ns_dialog_report_battle_detail .report_box .report_box_title::before {
+    content: '';
+    margin-left: -100%;
+}
+
+#ns_dialog_report .report_box .report_box_title::after,
+#ns_dialog_report_battle_detail .report_box .report_box_title::after {
+    content: '';
+    margin-right: -100%;
+}
+
+#ns_dialog_letter_add_receiver .ns_table_common tbody td {
+    border-bottom: none;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#ns_dialog_letter_add_receiver .receiver_desc {
+    color: #91A1B0;
+}
+
+#ns_dialog_letter_add_receiver .button_pop_normal {
+    margin: 10px 0;
+}
+
+#ns_dialog_letter_add_receiver .ns_table_common {
+    margin-bottom: 10px;
+}
+
+#ns_dialog_letter_add_receiver .letter_find_lord {
+    display: inline-block;
+    border: 1px solid #BB8E35;
+    outline: 1px solid #EABD67;
+    margin: 0 5px;
+    text-align: left;
+    line-height: 18px;
+    background-color: #fff;
+}

@@ -1,0 +1,323 @@
+@charset "utf-8";
+
+.world_coords {
+    position: absolute;
+    width: 150px;
+    height: 92px;
+    background-image: none;
+    background-size: 150px 92px;
+}
+
+.world_coords:hover {
+    filter: brightness(120%);
+}
+
+.tile_D_0 { background-image:url('/image/world/tile/tile_D_0.png'); }
+.tile_npc_supp_0 { background-image:url('/image/world/tile/tile_npc_supp_0.png'); }
+
+.tile_F_1 { background-image:url('/image/world/tile/tile_F_1.png'); }
+.tile_F_2 { background-image:url('/image/world/tile/tile_F_2.png'); }
+.tile_F_3 { background-image:url('/image/world/tile/tile_F_3.png'); }
+.tile_F_4 { background-image:url('/image/world/tile/tile_F_4.png'); }
+.tile_F_5 { background-image:url('/image/world/tile/tile_F_5.png'); }
+.tile_F_6 { background-image:url('/image/world/tile/tile_F_6.png'); }
+.tile_F_7 { background-image:url('/image/world/tile/tile_F_7.png'); }
+.tile_F_8 { background-image:url('/image/world/tile/tile_F_8.png'); }
+.tile_F_9 { background-image:url('/image/world/tile/tile_F_9.png'); }
+.tile_F_10 { background-image:url('/image/world/tile/tile_F_10.png'); }
+
+.tile_G_1 { background-image:url('/image/world/tile/tile_G_1.png'); }
+.tile_G_2 { background-image:url('/image/world/tile/tile_G_2.png'); }
+.tile_G_3 { background-image:url('/image/world/tile/tile_G_3.png'); }
+.tile_G_4 { background-image:url('/image/world/tile/tile_G_4.png'); }
+.tile_G_5 { background-image:url('/image/world/tile/tile_G_5.png'); }
+.tile_G_6 { background-image:url('/image/world/tile/tile_G_6.png'); }
+.tile_G_7 { background-image:url('/image/world/tile/tile_G_7.png'); }
+.tile_G_8 { background-image:url('/image/world/tile/tile_G_8.png'); }
+.tile_G_9 { background-image:url('/image/world/tile/tile_G_9.png'); }
+.tile_G_10 { background-image:url('/image/world/tile/tile_G_10.png'); }
+
+.tile_L_1 { background-image:url('/image/world/tile/tile_L_1.png'); }
+.tile_L_2 { background-image:url('/image/world/tile/tile_L_2.png'); }
+.tile_L_3 { background-image:url('/image/world/tile/tile_L_3.png'); }
+.tile_L_4 { background-image:url('/image/world/tile/tile_L_4.png'); }
+.tile_L_5 { background-image:url('/image/world/tile/tile_L_5.png'); }
+.tile_L_6 { background-image:url('/image/world/tile/tile_L_6.png'); }
+.tile_L_7 { background-image:url('/image/world/tile/tile_L_7.png'); }
+.tile_L_8 { background-image:url('/image/world/tile/tile_L_8.png'); }
+.tile_L_9 { background-image:url('/image/world/tile/tile_L_9.png'); }
+.tile_L_10 { background-image:url('/image/world/tile/tile_L_10.png'); }
+
+.tile_M_1 { background-image:url('/image/world/tile/tile_M_1.png'); }
+.tile_M_2 { background-image:url('/image/world/tile/tile_M_2.png'); }
+.tile_M_3 { background-image:url('/image/world/tile/tile_M_3.png'); }
+.tile_M_4 { background-image:url('/image/world/tile/tile_M_4.png'); }
+.tile_M_5 { background-image:url('/image/world/tile/tile_M_5.png'); }
+.tile_M_6 { background-image:url('/image/world/tile/tile_M_6.png'); }
+.tile_M_7 { background-image:url('/image/world/tile/tile_M_7.png'); }
+.tile_M_8 { background-image:url('/image/world/tile/tile_M_8.png'); }
+.tile_M_9 { background-image:url('/image/world/tile/tile_M_9.png'); }
+.tile_M_10 { background-image:url('/image/world/tile/tile_M_10.png'); }
+
+.tile_R_1 { background-image:url('/image/world/tile/tile_R_1.png'); }
+.tile_R_2 { background-image:url('/image/world/tile/tile_R_2.png'); }
+.tile_R_3 { background-image:url('/image/world/tile/tile_R_3.png'); }
+.tile_R_4 { background-image:url('/image/world/tile/tile_R_4.png'); }
+.tile_R_5 { background-image:url('/image/world/tile/tile_R_5.png'); }
+.tile_R_6 { background-image:url('/image/world/tile/tile_R_6.png'); }
+.tile_R_7 { background-image:url('/image/world/tile/tile_R_7.png'); }
+.tile_R_8 { background-image:url('/image/world/tile/tile_R_8.png'); }
+.tile_R_9 { background-image:url('/image/world/tile/tile_R_9.png'); }
+.tile_R_10 { background-image:url('/image/world/tile/tile_R_10.png'); }
+
+.tile_T_1 { background-image:url('/image/world/tile/tile_T_1.png'); }
+.tile_T_2 { background-image:url('/image/world/tile/tile_T_2.png'); }
+.tile_T_3 { background-image:url('/image/world/tile/tile_T_3.png'); }
+.tile_T_4 { background-image:url('/image/world/tile/tile_T_4.png'); }
+.tile_T_5 { background-image:url('/image/world/tile/tile_T_5.png'); }
+.tile_T_6 { background-image:url('/image/world/tile/tile_T_6.png'); }
+.tile_T_7 { background-image:url('/image/world/tile/tile_T_7.png'); }
+.tile_T_8 { background-image:url('/image/world/tile/tile_T_8.png'); }
+.tile_T_9 { background-image:url('/image/world/tile/tile_T_9.png'); }
+.tile_T_10 { background-image:url('/image/world/tile/tile_T_10.png'); }
+
+.tile_P_1 { background-image:url('/image/world/tile/tile_P_1.png'); }
+.tile_P_2 { background-image:url('/image/world/tile/tile_P_2.png'); }
+.tile_P_3 { background-image:url('/image/world/tile/tile_P_3.png'); }
+
+.world_flag::after {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    width: 27px;
+    height: 37px;
+    background-size: 27px 37px;
+    font-weight: bold;
+    text-align: center;
+    color: #FDFDFB;
+    content: attr(data-flag);
+    font-size: 0.8rem;
+    line-height: 28px;
+    pointer-events: none;
+}
+
+.world_flag.blue_flag::after {
+    background-image:url('/image/world/flag_blue.png');
+}
+
+.world_flag.green_flag::after {
+    background-image:url('/image/world/flag_green.png');
+}
+
+.world_flag.black_flag::after {
+    background-image:url('/image/world/flag_black.png');
+}
+
+.world_flag.npc_flag::after {
+    background-image:url('/image/world/flag_npc.png');
+}
+
+.world_truce::before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 150px;
+    height: 98px;
+    background: url('/image/world/effect_terr_shield.png') no-repeat;
+    background-size: 1500px 588px;
+    content: " ";
+    animation: truce_animate_x 330ms steps(10) infinite, truce_animate_y 1980ms steps(6) infinite;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes truce_animate_x {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -1500px;
+    }
+}
+
+@keyframes truce_animate_y {
+    0% {
+        background-position-y: 0;
+    }
+    100% {
+        background-position-y:  -588px;
+    }
+}
+
+.world_attack::before {
+    position:absolute;
+    top:54px;
+    left:104px;
+    width:20px;
+    height:24px;
+    background-image:url('/image/world/attack.png');
+    background-size:20px 24px;
+    content: " ";
+    pointer-events: none;
+}
+
+.world_attack_disable::before {
+    position:absolute;
+    top:54px;
+    left:104px;
+    width:20px;
+    height:24px;
+    background-image:url('/image/world/attack_disable.png');
+    background-size:20px 24px;
+    content: " ";
+    pointer-events: none;
+}
+
+.world_defence::before {
+    position:absolute;
+    top:54px;
+    left:104px;
+    width:20px;
+    height:24px;
+    background-image:url('/image/world/defence.png');
+    background-size:20px 24px;
+    content: " ";
+    pointer-events: none;
+}
+
+.world_defence_disable::before {
+    position:absolute;
+    top:54px;
+    left:104px;
+    width:20px;
+    height:24px;
+    background-image:url('/image/world/defence_disable.png');
+    background-size:20px 24px;
+    content: " ";
+    pointer-events: none;
+}
+
+/*.world_my_valley::before
+{
+    position:absolute;
+    top: 12px;
+    left: 18px;
+    width:24px;
+    height:24px;
+    background-image:url('/image/world/my_valley.png');
+    background-size:24px 24px;
+
+    font-weight:bold;
+    text-align:center;
+    color:#FDFDFB;
+    line-height:24px;
+    content: " ";
+    pointer-events: none;
+}
+
+.world_other_valley::before
+{
+    position:absolute;
+    top: 12px;
+    left: 18px;
+    width:20px;
+    height:24px;
+    background-image:url('/image/world/other_valley.png');
+
+    font-weight:bold;
+    text-align:center;
+    color:#FDFDFB;
+    line-height:20px;
+    background-size:20px 24px;
+    content: " ";
+    pointer-events: none;
+}*/
+
+.tile_title {
+    display: block;
+    width: 70%;
+    margin: 72px auto 0 auto;
+    font-size: .7rem;
+    text-align: center;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .7);
+    pointer-events: none;
+}
+
+.world_coords > .color {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    z-index: 1;
+    border-radius: 10px;
+    pointer-events: none;
+}
+
+.world_coords > .color.my {
+    width: 150px;
+    height: 92px;
+    background: url("/image/world/tile_color_mine.png") no-repeat;
+    background-size: 150px 92px;
+    background-blend-mode: normal;
+}
+
+.world_coords > .color.ally {
+    width: 150px;
+    height: 92px;
+    background: url("/image/world/tile_color_ally.png") no-repeat;
+    background-size: 150px 92px;
+    background-blend-mode: normal;
+}
+
+.world_coords > .color.enemy {
+    width: 150px;
+    height: 92px;
+    background: url("/image/world/tile_color_enemy.png") no-repeat;
+    background-size: 150px 92px;
+    background-blend-mode: normal;
+}
+
+.world_coords > .color.npc {
+    width: 150px;
+    height: 92px;
+    background: url("/image/world/tile_color_enemy.png") no-repeat;
+    background-size: 150px 92px;
+    background-blend-mode: normal;
+}
+
+.world_battle_effect {
+    position: absolute;
+    bottom: -46px;
+    left: -25px;
+    width: 200px;
+    height: 200px;
+    background: url('/image/world/effect_world_battle.png') no-repeat;
+    background-size: 2000px 800px;
+    content: " ";
+    animation: battle_effect_x 330ms steps(10) 4, battle_effect_y 1320ms steps(4) 1;
+    pointer-events: none;
+    z-index: 1;
+}
+
+@keyframes battle_effect_x {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -2000px;
+    }
+}
+
+@keyframes battle_effect_y {
+    0% {
+        background-position-y: 0;
+    }
+    100% {
+        background-position-y:  -800px;
+    }
+}

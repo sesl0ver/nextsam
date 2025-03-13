@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+#ns_dialog_hero_select {
+    z-index: 2353;
+}
+
+#ns_dialog_hero_select .dialog_header {
+    color: #fcdc80;
+    text-shadow: 0 1px 1px #bba25f;
+    font-weight: bold;
+}
+
+#ns_dialog_hero_select .content_next_card_title,
+#ns_dialog_hero_select .content_previous_card_title {
+    font-weight: bold;
+    color: #91A1B0;
+    /*text-shadow: 1px 1px 2px #F0E8D1;*/
+    line-height: 19px;
+    padding-left: 2px;
+}
+
+#ns_dialog_hero_select .content_next_card_button,
+#ns_dialog_hero_select .content_previous_card_button {
+    text-align: center;
+    padding: 3px 0 4px 0;
+}
+
+#ns_dialog_hero_select .content_next_card_message,
+#ns_dialog_hero_select .content_previous_card_message {
+    text-align: center;
+    font-weight: bold;
+    color: #91A1B0;
+    padding: 5px;
+}
+
+#ns_button_hero_select_do,
+#ns_button_hero_select_undo,
+#ns_button_hero_select_now {
+    width: 180px;
+}
+
+#ns_dialog_hero_select .content_icon_scroll_hr
+{
+    display: inline-block;
+    float: right;
+    margin-top: 4px;
+    margin-right: 5px;
+    width: 17px;
+    height: 7px;
+    background-image: url('/image/icon/icon_scroll_hr.png');
+    background-size: 17px 7px;
+    background-repeat: no-repeat;
+}
+
+#ns_dialog_hero_select .content_card_select {
+    display: flex;
+}

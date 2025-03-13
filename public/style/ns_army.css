@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+.army_image_transporter { background: url('/image/m_/410008.png') no-repeat; }
+.army_image_scout { background: url('/image/m_/410005.png') no-repeat; }
+.army_image_worker { background: url('/image/m_/410001.png') no-repeat; }
+.army_image_infantry { background: url('/image/m_/410002.png') no-repeat; }
+.army_image_archer { background: url('/image/m_/410006.png') no-repeat; }
+.army_image_horseman { background: url('/image/m_/410007.png') no-repeat; }
+.army_image_armed_infantry { background: url('/image/m_/410009.png') no-repeat; }
+.army_image_armed_horseman { background: url('/image/m_/410010.png') no-repeat; }
+.army_image_bowman { background: url('/image/m_/410011.png') no-repeat; }
+.army_image_battering_ram { background: url('/image/m_/410012.png') no-repeat; }
+.army_image_catapult { background: url('/image/m_/410013.png') no-repeat; }
+.army_image_adv_catapult { background: url('/image/m_/410014.png') no-repeat; }
+.army_image_pikeman { background: url('/image/m_/410003.png') no-repeat; }
+.army_image_spearman { background: url('/image/m_/410004.png') no-repeat; }
+
+.fort_image_trap { background: url('/image/m_/420001.png') no-repeat; }
+.fort_image_abatis { background: url('/image/m_/420002.png') no-repeat; }
+.fort_image_tower { background: url('/image/m_/420003.png') no-repeat; }
+.fort_image_wall { background: url('/image/m_/wall.png') no-repeat; }

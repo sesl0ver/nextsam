@@ -1,0 +1,311 @@
+<?php
+if (!isset($_SESSION) || !isset($_SESSION['gm_active']))
+{
+	// 세션이 설정되지 않은 경우 이 파일을 볼 수없음.
+	header("HTTP/1.0 404 Not Found");
+	exit(1);
+}
+
+// DB 접속을 위한 상수 선언
+define('GAME_PGSQL_IP', $_SESSION['selected_server']['db_ip']);
+define('GAME_PGSQL_PORT', $_SESSION['selected_server']['db_port']);
+define('GAME_PGSQL_DB', 'qbegame');
+define('GAME_PGSQL_USER', $_SESSION['selected_server']['db_account']);
+define('GAME_PGSQL_PASS', $_SESSION['selected_server']['db_password']);
+define('GAME_PGSQL_PERSISTENT', true);
+
+require_once_classes(['CPgsql']);
+require_once_caches(['item']);
+
+$Db = new CPgsql('GAME');
+
+// 출석 현황 가져오기
+$query_params = Array($_SESSION['selected_lord']['lord_pk']);
+
+$Db->query('SELECT t2.attendance_cnt AS cnt, t2.last_attendance_dt::abstime AS dt FROM lord t1, my_event t2 WHERE t1.lord_pk = t2.lord_pk AND t1.lord_pk = $1', $query_params);
+$Db->fetch();
+$row = $Db->row;
+?>
+<div style="width:50%;float: left;">
+    <h2>[ <?php echo $_SESSION['selected_server']['server_name']; ?> ] 일괄 외교서신 발송</h2>
+    <table style="width:480px;">
+        <tr>
+            <td style="text-align:center;">제목</td>
+            <td><input id="gm_all_letter_title" style="width:100%;" /></td>
+        </tr>
+        <tr>
+            <td style="text-align:center;">선택사항</td>
+            <td>
+                <select id="gm_all_mode">
+                    <option value="">전체군주</option>
+                    <option value="select_lord">선택군주</option>
+                    <option value="roamer_exce">방랑군주제외</option>
+                    <option value="roamer_only">방랑군주에게</option>
+                </select>
+            </td>
+        </tr>
+        <tr id="select_lord" style="display: none;">
+            <td style="text-align:center;">선택군주</td>
+            <td>
+                <textarea id="gm_all_select_lord_list" style="width:100%;height:50px;"></textarea><br />
+                군주명 입력. ,로 구분.
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center;">내용</td>
+            <td><textarea id="gm_all_letter_content" style="width:100%;height:300px;"></textarea></td>
+        </tr>
+        <tr>
+            <td style="text-align:center;">보상</td>
+            <td>
+                <select id="gm_all_reward_type">
+                    <option value="">보상선택</option>
+                    <option value="item">아이템</option>
+                    <!--
+                    <option value="resource">자원</option>
+                    <option value="qbig">큐빅</option>
+                    <option value="army">병력</option>
+                    <option value="fort">수성병기</option>
+                    <option value="hero">영웅</option>
+                    <option value="skill">영웅기술</option>
+                    -->
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td style="text-align:center;">item_data</td>
+            <td>
+                <textarea id="gm_all_letter_item_data" style="width:100%;height:50px;" readonly="readonly"></textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align:center;"><button id="gm_all_letter_submit">보내기</button></td>
+        </tr>
+    </table>
+</div>
+<div style="width:50%;height:800px;float: right;">
+    <div id="item_data_item_list" style="display:none;">
+        <table style="width:100%;">
+            <thead>
+            <tr style="text-align:center;background-color:#f0ad4e;">
+                <th>아이템코드</th>
+                <th>아이템명</th>
+                <th>아이템수량</th>
+                <th>삭제</th>
+            </tr>
+            </thead>
+            <tbody id="selected_item_table">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4" style="text-align: center;"><button id="init_item_reward">초기화</button><button id="checkout_item_reward">보상선택</button></td>
+                </tr>
+            </tfoot>
+        </table>
+        <div style="width:100%;height:500px;overflow-x: hidden;overflow-y: scroll;">
+            <table style="width:100%;">
+                <thead>
+                <tr style="text-align:center;background-color:#6dd0f7;">
+                    <th>아이템코드</th>
+                    <th>아이템명</th>
+                </tr>
+                </thead>
+                <tbody>
+                <?php
+                $m_item = $_M['ITEM'];
+                foreach ($m_item AS $m_item_pk => $data) {
+                    if ($data['yn_use'] === 'Y') {
+                        ?>
+                        <tr id="item_<?php echo $data['m_item_pk']; ?>" class="item_data_btn" style='cursor:pointer;' onmouseenter='this.style.background="#fcecae";' onmouseleave='this.style.background="#FFFFFF";'>
+                            <td style="text-align:center;"><?php echo $data['m_item_pk']; ?></td>
+                            <td><?php echo $data['title']; ?></td>
+                        </tr>
+                        <?php
+                    }
+                }
+                ?>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+<div style="clear: both;"></div>
+<hr />
+<script>
+    $(function(){
+        let selected_all_reward = {
+            item:{},
+            resource:{},
+            qbig:{},
+            army:{},
+            fort:{},
+            hero:{},
+            skill:{},
+        };
+        let selected_item_reward = {};
+
+        let draw_selected_item_table = function()
+        {
+            let tbody = document.getElementById('selected_item_table');
+            tbody.innerHTML = '';
+
+            Object.keys(selected_item_reward).forEach(function(d, k){
+                let tr = document.createElement('tr');
+                let td1 = document.createElement('td');
+                td1.innerHTML = qbw_cs.m.item[d].m_item_pk;
+                tr.appendChild(td1);
+                let td2 = document.createElement('td');
+                td2.innerHTML = qbw_cs.m.item[d].title;
+                tr.appendChild(td2);
+                let td3 = document.createElement('td');
+                let input = document.createElement('input');
+                input.setAttribute('name', 'item_cnt_' + d);
+                input.setAttribute('value', selected_item_reward[d]);
+                input.classList.add('selected_item_cnt');
+                td3.appendChild(input);
+                tr.appendChild(td3);
+                let td4 = document.createElement('td');
+                let button = document.createElement('button');
+                button.setAttribute('id', 'delete_item_' + d);
+                button.classList.add('delete_item_btn');
+                button.innerHTML = '삭제';
+                td4.appendChild(button);
+                tr.appendChild(td4);
+
+                tbody.appendChild(tr);
+            });
+
+            $('.delete_item_btn').bind('click', function(){
+                let select_id = this.id.split('_')[2];
+                if (! selected_item_reward[select_id]) {
+                    console.log('아이템 읎어!');
+                } else {
+                    delete selected_item_reward[select_id];
+                }
+
+                draw_selected_item_table();
+            });
+
+            $('.selected_item_cnt').bind('change', function(){
+                let select_id = this.name.split('_')[2];
+                if (! selected_item_reward[select_id]) {
+                    console.log('아이템 읎어!');
+                } else {
+                    selected_item_reward[select_id] = parseInt(this.value);
+                }
+
+                draw_selected_item_table();
+            });
+        };
+
+        $('#init_item_reward').bind('click', function(){
+            selected_item_reward = {};
+            draw_selected_item_table();
+        });
+
+        $('#checkout_item_reward').bind('click', function(){
+            selected_all_reward.item = selected_item_reward;
+            let item_data_string = '';
+            Object.keys(selected_all_reward).forEach(function(d, k){
+                switch (d) {
+                    case 'item':
+                        Object.keys(selected_all_reward[d]).forEach(function(d2, k2){
+                            if (item_data_string === '') {
+                                item_data_string += 'i=';
+                            } else {
+                                item_data_string += ';';
+                            }
+                            item_data_string += d2 + ':' + selected_all_reward[d][d2];
+                        });
+                        break;
+                    default:
+                        break;
+                }
+            });
+
+            $('#gm_all_letter_item_data').val(item_data_string);
+        });
+
+
+        $('#gm_all_reward_type').change(function(){
+            let item_data_item_list = $('#item_data_item_list');
+            if ($(this).val() === 'item') {
+                item_data_item_list.show();
+            } else {
+                item_data_item_list.hide();
+            }
+        });
+
+        $('#gm_all_mode').change(function(){
+            let select_lord = $('#select_lord');
+            if ($(this).val() === 'select_lord') {
+                select_lord.show();
+            } else {
+                select_lord.hide();
+            }
+        });
+
+        $('#gm_all_reward_type').change(function(){
+            let select_lord = $('#select_lord');
+            if ($(this).val() === 'item') {
+
+            } else if ($(this).val() === 'resource') {
+
+            } else {
+            }
+        });
+
+        $('.item_data_btn').bind('click', function(){
+            let select_id = this.id.split('_')[1];
+            if (! selected_item_reward[select_id]) {
+                selected_item_reward[select_id] = 1;
+            } else {
+                selected_item_reward[select_id]++;
+            }
+
+            draw_selected_item_table();
+        });
+
+        $('#gm_all_letter_submit').bind('mouseup', function(){
+            if (! confirm('보내기 전에 다시 한번 확인해주세요.')) {
+                return false;
+            }
+
+            let title = $('#gm_all_letter_title').val();
+            if (title === '') {
+                alert('서신 제목을 입력하세요.');
+                return false;
+            }
+
+            let content = $('#gm_all_letter_content').val();
+            if (content === '') {
+                alert('서신 내용을 입력하세요.');
+                return false;
+            }
+
+            let mode = $('#gm_all_mode').val();
+            let item_data = $('#gm_all_letter_item_data').val();
+            let lord_name = $('#gm_all_select_lord_list').val();
+
+            let data = {};
+            data['action'] = 'write';
+            data['title'] = title;
+            data['content'] = content;
+            data['mode'] = mode;
+            data['item_data'] = item_data;
+            data['lord_name'] = lord_name;
+            // data['all_push'] = $('#gm_all_push').val();
+
+            $.post('./do/do_all_letter_post.php',  data, function(data){
+                if (data.result === 'fail') {
+                    alert(data.msg);
+                    return false;
+                } else {
+                    alert('총 ' + data.count + '명의 군주에게 서신을 보냈습니다.' );
+                }
+            }, 'json');
+        });
+    });
+</script>
+<script src="/f/m_/cache/qbw_m.item.js"></script>

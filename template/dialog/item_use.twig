@@ -1,0 +1,56 @@
+<div id="ns_dialog_item_use">
+    <span id="ns_button_item_use_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_item_use_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic">
+                    <div class="ns_panel_flex ns_panel_margin_yy">
+                        <div class="item_image ns_panel_flex_item_auto"></div>
+                        <div class="item_description"></div>
+                    </div>
+
+                    <div>
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th class="col1">{{ i18n.t('use') }}/{{ i18n.t('possession') }}</th>
+                                <th class="col2">{{ i18n.t('price') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="item_amount"></span></td>
+                                <td><span class="content_item_qbig_amount qbig_amount"></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="item_use_slider_wrap ns_panel_margin_yy">
+                        <div class="ns_panel_flex wrap_range_input">
+                            <label>
+                                <span id="ns_button_item_use_amount_decrease"></span>
+                                <input name="item_use_slider" type="range" value="0" min="0" max="0" class="slider">
+                                <span id="ns_button_item_use_amount_increase"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_item_use_ok">{{ i18n.t('use_item_amount', ['<span class="item_use_amount">0</span>']) | raw }}</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

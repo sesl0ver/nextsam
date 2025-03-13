@@ -1,0 +1,41 @@
+
+<h2>[ {{ _SESSION['selected_lord']['lord_name'] }} ] 군주 영지 정보</h2>
+<hr />
+<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_lord_own_terr_list" dir="ltr" style="width: 100%; ">
+    <div class="ui-jqgrid-view" id="gview_lord_own_terr_list" style="width: 100%; ">
+        <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+            <span class="ui-jqgrid-title">영지 상태</span>
+        </div>
+        <div class="ui-jqgrid-bdiv" style="width: 100%; ">
+            <div style="position:relative;">
+                <div></div>
+                <table id="lord_own_terr_list" style="width:100%; text-align:center; table-layout:fixed;" class="jqGridTable ui-jqgrid-btable" cellSpacing="0" cellPadding="0" border="0">
+                    <thead>
+                    <tr class="ui-jqgrid-labels">
+                        <th class="ui-state-default ui-th-column ui-th-ltr" style="width:70px;">No.</th>
+                        <th class="ui-state-default ui-th-column ui-th-ltr">영지명</th>
+                        <th class="ui-state-default ui-th-column ui-th-ltr">깃발명</th>
+                        <th class="ui-state-default ui-th-column ui-th-ltr">주</th>
+                        <th class="ui-state-default ui-th-column ui-th-ltr">좌표</th>
+                        <th class="ui-state-default ui-th-column ui-th-ltr">민심</th>
+                        <th class="ui-state-default ui-th-column ui-th-ltr">세율</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for k, v in view_data.territory_rows %}
+                    <tr id="terr_{{ v.posi_pk }}" class="ui-widget-content jqgrow ui-row-ltr" style="text-align:center;">
+                        <td style='text-align:center; width:70px;'>{{ k + 1 }}</td>
+                        <td style='text-align:center;'>{{ v.title }}</td>
+                        <td style='text-align:center;'>{{ v.flag }}</td>
+                        <td style='text-align:center;'>{{ v.state }}</td>
+                        <td style='text-align:center;'>{{ v.posi_pk }}</td>
+                        <td style='text-align:center;'>{{ v.loyalty }}</td>
+                        <td style='text-align:center;'>{{ v.tax_rate }}</td>
+                    </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

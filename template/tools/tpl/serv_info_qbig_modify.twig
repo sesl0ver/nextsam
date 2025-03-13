@@ -1,0 +1,80 @@
+<h2>큐빅 지급/회수</h2>
+
+<hr />
+
+<fieldset id="lord_search_by_lord_name_form" class="cpn_search_form">
+	<legend>군주명 검색</legend>
+	<div>
+		<input type="text" id="lord_name" value="{{ _SESSION['selected_lord']['lord_name'] }}" /> <input type="button" id="do_search_lord_name" value="&nbsp;검색&nbsp;" /><br/>
+	</div>
+</fieldset>
+
+<br/>
+
+<div id="view_info_form" style="display : none;">
+
+	<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_lord_qbig_flow" dir="ltr" style="width:100%;">
+		<div class="ui-jqgrid-view" id="gview_lord_own_terr_list" style="width: 100%; ">
+			<div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+				<span class="ui-jqgrid-title">소지 큐빅</span>
+			</div>
+			<div class="ui-jqgrid-bdiv" style=" width: 100%; ">
+				<div style="position:relative;">
+					<div></div>
+					<table id="lord_non_reward_quest" style="width:1054px; text-align:center; table-layout:fixed;" class="jqGridTable ui-jqgrid-btable" cellSpacing="0" cellPadding="0" border="0">
+						<thead>
+							<tr class="ui-jqgrid-labels">
+								<th class="ui-state-default ui-th-column ui-th-ltr">군주 pk</th>
+								<th class="ui-state-default ui-th-column ui-th-ltr">군주명</th>
+								<th class="ui-state-default ui-th-column ui-th-ltr">소지 큐빅량</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="ui-widget-content jqgrow ui-row-ltr">
+								<td style="text-align:center;"><span id="qbig_has_lord_pk"></span></td>
+								<td style="text-align:center;"><span id="qbig_has_lord_name"></span></td>
+								<td style="text-align:center;"><span id="qbig_has_qbig"></span></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<br />
+
+	<div style="text-align:right;">
+		<button id="give_qbig" style="padding:0.4em;">큐빅 지급하기</button>
+		<button id="withdraw_qbig" style="padding:0.4em;">큐빅 회수하기</button>
+	</div>
+
+</div>
+
+
+
+<div id="give_qbig_form" title="지급하기">
+	<h3>지급할 큐빅량</h3>
+	<hr />
+	<input type="text" id="give_amount" />
+	<br />
+	<br />
+	<h3>지급 사유</h3>
+	<hr/>
+	<div>
+		<textarea id="give_cause" style="width:614px; height:64px;"></textarea>
+	</div>
+</div>
+
+<div id="withdraw_qbig_form" title="회수하기">
+	<h3>회수할 큐빅량</h3>
+	<hr />
+	<input type="text" id="withdraw_amount" />
+	<br />
+	<br />
+	<h3>회수 사유</h3>
+	<hr/>
+	<div>
+		<textarea id="withdraw_cause" style="width:614px; height:64px;"></textarea>
+	</div>
+</div>

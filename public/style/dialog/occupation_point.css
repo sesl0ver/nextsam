@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+#ns_dialog_occupation_point {
+
+}
+
+#ns_dialog_occupation_point .ranking_description {
+    text-align: center;
+    font-weight: bold;
+    color: #91A1B0;
+    line-height: 30px;
+    height: 30px;
+}
+
+#ns_dialog_occupation_point .occupation_rule_wrap {
+    position: absolute;
+    top: 110px;
+    left: 50px;
+    width: 360px;
+    padding: 10px;
+    font-size: .7rem;
+    z-index: 1;
+}
+
+#ns_dialog_occupation_point .occupation_rule_wrap p {
+    margin: 15px 10px;
+}
+
+#ns_dialog_occupation_point #ns_button_occupation_reward,
+#ns_dialog_occupation_point #ns_button_occupation_rule,
+#ns_dialog_occupation_point #ns_button_occupation_goal_rule {
+    font-size: 1.5rem;
+}
+
+#ns_dialog_occupation_point .item_image {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+#ns_dialog_occupation_point .item_image .item_count {
+    position: absolute;
+    bottom: 4px;
+    right: 4px;
+    text-shadow: -2px 0 #000000, 0 2px #000000, 2px 0 #000000, 0 -2px #000000;
+    font-size: 1rem;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#ns_dialog_occupation_point .my_reward_item {
+    padding-top: 10px;
+}
+
+#ns_dialog_occupation_point .reward_list .item_image,
+#ns_dialog_occupation_point .goal_list .item_image {
+    margin: 5px 10px 0 10px;
+}
+
+#ns_button_occupation_tooltip_close {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+}

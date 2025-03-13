@@ -1,0 +1,245 @@
+@charset "utf-8";
+
+/* Table Common */
+.ns_table_common {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.ns_table_common table {
+    border-spacing: 0;
+    width:100%;
+}
+
+.ns_table_common thead > tr {
+    height: 30px;
+    line-height: 30px;
+    padding: 5px 10px;
+    background: #2B3C57;
+    color: #B4D2EC;
+    text-align: center;
+    font-size: .75rem;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    box-shadow: 0 1px 2px 0 #0008;
+}
+
+.ns_table_common tr th:first-child{
+    border-bottom-left-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.ns_table_common tr th:last-child{
+    border-bottom-right-radius: 3px;
+    border-top-right-radius: 3px;
+}
+
+.ns_table_common tr th:not(:first-child):not(:last-child) {
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+}
+
+.ns_table_common tr th:last-child {
+    border-left: none;
+}
+
+.ns_table_common tbody,
+.ns_table_common tfoot {
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.ns_table_common tbody > tr {
+    height: 40px;
+}
+
+.ns_table_common td {
+    height: 28px;
+    border-right: 0;
+    border-bottom: 1px solid #596C8E;
+    font-size: .75rem;
+}
+
+.ns_table_common tr:last-child > td
+{
+    border-bottom:0;
+    box-shadow:none;
+}
+
+.ns_table_common.hovering tr:hover {
+    font-weight: bold;
+    /*background-color: #eeb37a;*/
+}
+
+/* common 2 */
+.ns_table_common_2
+{
+    width:100%;
+    padding:0;
+    background-color:#F1E4D1;
+    border-spacing:0;
+    /* border:1px solid #E2D4BE; */
+}
+
+.ns_table_common_2 table
+{
+    border-spacing: 0;
+    width:100%;
+}
+
+.ns_table_common_2 thead
+{
+    background: #314465; /* Old browsers */
+    font-weight:bold;
+    color:#DBE8F1;
+    text-align:center;
+}
+
+.ns_table_common_2 th
+{
+    height:22px;
+    border: 0;
+    border-left:1px solid #596C8E;
+    border-top:1px solid #596C8E;
+}
+
+.ns_table_common_2 th:last-child
+{
+    border-right:1px solid #596C8E;
+}
+
+.ns_table_common_2 tbody,
+.ns_table_common_2 tfoot
+{
+    color:#543C25;
+    text-shadow:0 1px 2px #96836E;
+    text-align:center;
+}
+
+.ns_table_common_2 td
+{
+    height: 22px;
+    background: #0B121A;
+    border-left: 1px solid #596C8E;
+    border-bottom: 1px solid #596C8E;
+    text-shadow: 0 0 BLACK;
+    color: #dce6f0;
+}
+
+.ns_table_common_2 td:last-child
+{
+    border-right:1px solid #596C8E;
+}
+
+/* common 3 */
+.ns_table_common_3 {
+    width:100%;
+    border-spacing:0;
+}
+
+.ns_table_common_3 th {
+    height:19px;
+    background:url('/image/ui/sub/pattern_title.png');
+    background-size: 263px 19px;
+}
+
+.ns_table_common_3 th:first-child
+{
+    background:url('/image/ui/sub/pattern_title.png');
+    background-size: 263px 19px;
+}
+
+.ns_table_common_3 th:last-child {
+    background: url('/image/ui/sub/pattern_title_right.png') right;
+    background-size: 250px 19px;
+}
+
+.ns_table_common_3 tbody,
+.ns_table_common_3 tfoot {
+    color:#543C25;
+    text-align:center;
+}
+
+.ns_table_common_3 td {
+    height:30px;
+    border-right:1px solid #596C8E;
+    border-bottom:1px solid #596C8E;
+    /*box-shadow: 0 1px 0 #F6E3C3;*/
+}
+
+.ns_table_common_3 td:last-child {
+    border-right:0;
+}
+
+.ns_table_common_3 tr:last-child > td {
+    border-bottom:0;
+    box-shadow:none;
+}
+
+/* 영웅카드 + 스탯 테이블 공통 정보 */
+.ns_table_col_size_hero td { height: 22px !important; }
+.ns_table_col_size_hero .col1 {  }
+.ns_table_col_size_hero .col2 { width: 34px; }
+.ns_table_col_size_hero .col3 { position: relative; }
+.ns_table_col_size_hero .col2_3 { }
+
+
+/* pop_hero_preview */
+#ns_dialog_pop_hero_preview .ns_table_common table { width: 100%; }
+#ns_dialog_pop_hero_preview .ns_table_common thead td { height: 22px !important; }
+#ns_dialog_pop_hero_preview .ns_table_common tbody tr:nth-child(even) { background: #f0e5d2 }
+#ns_dialog_pop_hero_preview .ns_table_common tbody td { height: 18px !important; overflow: hidden; }
+#ns_dialog_pop_hero_preview .ns_table_common tbody td.content_card { position: relative; width: 92px; font-size: inherit !important; }
+#ns_dialog_pop_hero_preview .ns_table_common tbody .col3.rare_type { background: none; }
+#ns_dialog_pop_hero_preview .ns_table_common tbody .cont_leadership { position: relative; z-index: 2 }
+#ns_dialog_pop_hero_preview .ns_table_common tbody .cont_leadership_gauge,
+#ns_dialog_pop_hero_preview .ns_table_common tbody .cont_mil_force_gauge,
+#ns_dialog_pop_hero_preview .ns_table_common tbody .cont_intellect_gauge,
+#ns_dialog_pop_hero_preview .ns_table_common tbody .cont_politics_gauge,
+#ns_dialog_pop_hero_preview .ns_table_common tbody .cont_charm_gauge {
+    position: absolute;
+    bottom: 1px;
+    height: 13px;
+    background: linear-gradient(#ff9c9c, #3d0000);
+    opacity: .3;
+    z-index: 1;
+}
+
+#ns_dialog_pop_hero_preview .ns_table_col_size_2 .col1 { width: 46px; }
+#ns_dialog_pop_hero_preview .ns_table_col_size_2 .col2 {  }
+#ns_dialog_pop_hero_preview .ns_table_col_size_2 .col3 { width: 46px; }
+#ns_dialog_pop_hero_preview .ns_table_col_size_2 .col4 { width: 40px; }
+#ns_dialog_pop_hero_preview .ns_table_col_size_2 .col5 { width: 46px; }
+#ns_dialog_pop_hero_preview .ns_table_col_size_2 .col6 { width: 80px; }
+#ns_dialog_pop_hero_preview .ns_table_col_size_2 .col3_4 { width: 97px; }
+#ns_dialog_pop_hero_preview .ns_table_col_size_2 .col5_6 { width: 127px; }
+
+/* ns_dialog_pop_hero_unassigned_preview */
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common table { width: 100%; }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common thead td { height: 22px !important; }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common tbody tr:nth-child(even) { background: #f0e5d2 }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common tbody td { height: 18px !important; overflow: hidden; }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common tbody td.content_card { position: relative; width: 92px; font-size: inherit !important; }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common tbody .col3.rare_type { background: none; }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common tbody .cont_leadership { position: relative; z-index: 2 }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common tbody .cont_leadership_gauge,
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common tbody .cont_mil_force_gauge,
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common tbody .cont_intellect_gauge,
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common tbody .cont_politics_gauge,
+#ns_dialog_pop_hero_unassigned_preview .ns_table_common tbody .cont_charm_gauge {
+    position: absolute;
+    bottom: 1px;
+    height: 13px;
+    background: linear-gradient(#ff9c9c, #3d0000);
+    opacity: .3;
+    z-index: 1;
+}
+
+#ns_dialog_pop_hero_unassigned_preview .ns_table_col_size_2 .col1 { width: 50px; }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_col_size_2 .col2 { width: 50px; }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_col_size_2 .col3 { width: 42px; }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_col_size_2 .col4 {  }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_col_size_2 .col1_2 { width: 101px; }
+#ns_dialog_pop_hero_unassigned_preview .ns_table_col_size_2 .col3_4 { }

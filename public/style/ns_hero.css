@@ -1,0 +1,1143 @@
+@charset "utf-8";
+
+#hero_deck_list {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    padding-bottom: 121px;
+}
+
+#ns_button_hero_select_filter {
+    margin: 0 auto;
+    width: 90px;
+    font-size: .7rem;
+}
+
+#ns_button_hero_select_filter_show_work,
+#ns_button_hero_select_filter_show_idle {
+    width: 90px;
+    font-size: .7rem;
+    vertical-align: bottom;
+    padding: 0 0 0 17px;
+    margin: 4px 0 0 4px;
+}
+
+/* hero_card */
+.hero_card_small {
+    width: 92px;
+    height: 121px;
+    background-repeat: no-repeat;
+}
+
+.hero_card_small * {
+    pointer-events: none;
+}
+
+.cont_hero_card .cont_leadership,
+.cont_hero_card .cont_mil_force,
+.cont_hero_card .cont_intellect,
+.cont_hero_card .cont_politics,
+.cont_hero_card .cont_charm {
+    font-family: var(--main-font-family);
+    font-size: .75rem;
+    letter-spacing: -1px;
+}
+
+.hero_card_opacity {
+    position: absolute;
+    width: 92px;
+    height: 100px;
+    background: rgba(0, 0, 0, 0);
+}
+
+.hero_card_frame {
+    position: relative;
+    width: 92px;
+    height: 121px;
+    background-repeat: no-repeat;
+}
+
+.hero_card_frame.hero_rare1 { background: url('/image/hero/hero_frame_rare1.png') no-repeat; }
+.hero_card_frame.hero_rare2 { background: url('/image/hero/hero_frame_rare2.png') no-repeat; }
+.hero_card_frame.hero_rare3 { background: url('/image/hero/hero_frame_rare3.png') no-repeat; }
+.hero_card_frame.hero_rare4 { background: url('/image/hero/hero_frame_rare4.png') no-repeat; }
+.hero_card_frame.hero_rare5 { background: url('/image/hero/hero_frame_rare5.png') no-repeat; }
+.hero_card_frame.hero_rare6 { background: url('/image/hero/hero_frame_rare6.png') no-repeat; }
+.hero_card_frame.hero_rare7 { background: url('/image/hero/hero_frame_rare7.png') no-repeat; }
+
+.hero_card_name {
+    position:absolute;
+    top: 100px;
+    left: 8px;
+    right:8px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    font-weight: bold;
+    font-size: .7rem;
+    color: #EFEFEF;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.hero_card_name_modifier {
+    color: #FFAD5B !important;
+}
+
+.hero_card_level {
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: .7rem;
+    color: #EFEFEF;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.hero_card_group_display {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 21px;
+    height: 45px;
+    z-index: 1;
+}
+
+.hero_card_group_C { background:url('/image/hero/group/C.gif') no-repeat; }
+.hero_card_group_D { background:url('/image/hero/group/D.gif') no-repeat; }
+.hero_card_group_S { background:url('/image/hero/group/S.gif') no-repeat; }
+.hero_card_group_E { background:url('/image/hero/group/E.gif') no-repeat; }
+.hero_card_group_B { background:url('/image/hero/group/B.gif') no-repeat; }
+.hero_card_group_T { background:url('/image/hero/group/T.gif') no-repeat; }
+
+.hero_card_group_order_1 { background-position:0 0; }
+.hero_card_group_order_2 { background-position:-21px 0; }
+.hero_card_group_order_3 { background-position:-42px 0; }
+.hero_card_group_order_4 { background-position:-63px 0; }
+.hero_card_group_order_5 { background-position:-84px 0; }
+.hero_card_group_order_6 { background-position:-105px 0; }
+.hero_card_group_order_7 { background-position:-126px 0; }
+.hero_card_group_order_8 { background-position:-147px 0; }
+.hero_card_group_order_9 { background-position:-168px 0; }
+
+.hero_card_status {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 121px;
+    line-height: 15px;
+}
+
+.hero_card_status_assigned { background: url('/image/hero/status_assigned_02.png') no-repeat right top; background-size: 92px 121px; }
+.hero_card_status_cmd_ing { background: url('/image/hero/status_cmd_ing_02.png') no-repeat right top; background-size: 92px 121px; }
+.hero_card_status_not_cond { background: url('/image/hero/status_not_condition_02.png') no-repeat right top; background-size: 92px 121px; }
+.hero_card_status_recommend { background: url('/image/hero/status_recommend_02.png') no-repeat right top; background-size: 92px 121px; }
+/*.hero_card_status_treatment { background: url('/image/hero/status_treatment.png') no-repeat right top; background-size: 92px 121px; }
+.hero_card_status_enchant {  }
+.hero_card_status_strike { background: url('/image/hero/status_strike.png') no-repeat right top; background-size: 92px 121px; }*/
+
+
+.hero_card_status_desc {
+    position: absolute;
+    top: 63px;
+    left: 0;
+    width: 92px;
+    line-height: 15px;
+    color: #ffffff;
+    font-size: .75rem;
+    text-align: center;
+}
+
+.hero_card_status_desc span {
+    line-height: 25px;
+}
+
+.aptitude_grade_color_S { font-weight: bold; color: #fe01a9; }
+.aptitude_grade_color_A { font-weight: bold; color: #fe6400; }
+.aptitude_grade_color_B { font-weight: bold; color: #01b959; }
+.aptitude_grade_color_C { font-weight: bold; color: #0a5cff; }
+.aptitude_grade_color_D { font-weight: bold; color: #ac00ff; }
+
+.hero_card_selector_frame::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 121px;
+    background-image: url('/image/hero/card_select_frame.png');
+    background-repeat: no-repeat;
+    content: ' ';
+}
+
+.hero_card_detail .hero_card_gauge_wrap {
+    margin: 2px 4px;
+}
+
+.hero_card_detail .status_title {
+    font-size: .75rem;
+    font-weight: bold;
+    color: #91A1B0;
+    margin-right:3px;
+}
+
+.hero_card_detail .hero_card_gauge {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 18px;
+    padding: 0;
+    margin: 1px 2px 1px auto;
+    border: 1px solid #000;
+    border-radius: 2px;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 10%, rgba(96,96,96,1) 100%);
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+}
+
+.hero_card_detail .status_gauge {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 2px;
+    width: 40px;
+    height: 100%;
+    padding: 0;
+    border-radius: 2px;
+    background: rgb(255,68,0);
+    background: linear-gradient(180deg, rgba(255,68,0,1) 0%, rgba(255,111,0,1) 15%, rgba(255,154,77,1) 100%);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.hero_card_detail .hero_card_gauge .status_value {
+    position: absolute;
+    top: 0;
+    left: 3px;
+    font-size: .7rem;
+    font-weight: bold;
+    line-height: .9rem;
+    z-index: 40;
+}
+
+.hero_card_sm {
+    position: relative;
+    width: 76px;
+}
+
+.hero_card_modifier {
+    color: #FFAD5B;
+}
+
+.hero_card_selector
+{
+    position:absolute;
+    width:92px;
+    height:121px;
+    background-repeat:no-repeat;
+}
+
+.hero_card_warnning
+{
+    position:absolute;
+    top:79px;
+    left:69px;
+    width:18px;
+    height:19px;
+    background-repeat:no-repeat;
+}
+.hero_card_warnning_on { background-image:url('/image/hero/icon_warnning.gif'); }
+
+.hero_card_empty_no_assign
+{
+    display:inline-block;
+    width:92px;
+    height:121px;
+    background-image:url('/image/hero/hero_no_assign.png');
+}
+
+.hero_card_empty_no_assign_L
+{
+    display:inline-block;
+    width:92px;
+    height:121px;
+    background-image:url('/image/hero/hero_no_assign_L.png');
+}
+
+.hero_card_empty_no_assign_M
+{
+    display:inline-block;
+    width:92px;
+    height:121px;
+    background-image:url('/image/hero/hero_no_assign_M.png');
+}
+
+.hero_card_empty_no_assign_I
+{
+    display:inline-block;
+    width:92px;
+    height:121px;
+    background-image:url('/image/hero/hero_no_assign_I.png');
+}
+
+.hero_card_empty_no_select
+{
+    display:inline-block;
+    width:92px;
+    height:121px;
+    background-image:url('/image/hero/hero_no_select.png');
+}
+
+.view_result_hero_stat
+{
+    background-color:white;
+    width:150px;
+    height:120px;
+    color:#666;
+}
+
+.view_result_hero_stat .title
+{
+    margin-left:9px;
+    background-image:url('/image/hero/message_box_result/title.png');
+    width:132px;
+    height:23px;
+    line-height:23px;
+    background-repeat:no-repeat;
+    text-align:center;
+}
+
+.view_result_hero_stat .stat_row
+{
+    height:16px;
+    line-height:16px;
+}
+
+.view_result_hero_stat .first_row
+{
+    margin-top:2px;
+}
+
+.view_result_hero_stat .stat_row .stat_text
+{
+    float:left;
+    width:28px;
+    margin-left:4px;
+}
+
+.view_result_hero_stat .stat_row .stat_bar
+{
+    float:left;
+    width:85px;
+    height:16px;
+    text-align:center;
+}
+
+.view_result_hero_stat .stat_row .stat_bar .bar_base
+{
+    width:77px;
+    height:7px;
+    line-height:7px;
+    display:inline-block;
+    *display:block;
+    margin-top:4px;
+    background-image:url('/image/hero/message_box_result/stat_bg.png');
+    background-repeat:no-repeat;
+    *text-align:left;
+}
+
+.view_result_hero_stat .stat_row .stat_bar .bar_base .bar
+{
+    height:5px;
+    line-height:5px;
+    margin-top:1px;
+    margin-left:1px;
+    background-image:url('/image/hero/message_box_result/stat_bar.png');
+    background-repeat:repeat-x;
+    width:1px;
+}
+
+.view_result_hero_stat .stat_row .stat_amount
+{
+    float:left;
+    width:25px;
+    text-align:right;
+    font-size:8pt;
+    font-weight:bold;
+}
+
+.view_result_hero_stat .stat_row .end_row
+{
+    clear:both;
+}
+
+.view_result_hero_stat .rare_type
+{
+    text-align:center;
+}
+
+.view_result_hero_stat .rare_type .rare_bg
+{
+    width:77px;
+    height:11px;
+    line-height:11px;
+    display:inline-block;
+    *display:block;
+    background-image:url('/image/hero/message_box_result/rare_bg.png');
+    background-repeat:no-repeat;
+    *text-align:left;
+}
+
+.view_result_hero_stat .rare_type .rare_bg .rare
+{
+    height:11px;
+    line-height:11px;
+    background-image:url('/image/hero/message_box_result/rare_grade.png');
+    background-repeat:repeat-x;
+    width:11px;
+}
+
+
+/* 영웅 카드 얼굴 이미지 - 편의상 한줄 코드로 사용함*/
+.hero_card_120000 { background-image: url('/image/m_/120000.png') !important; }
+.hero_card_120001 { background-image: url('/image/m_/120001.png') !important; }
+.hero_card_120002 { background-image: url('/image/m_/120002.png') !important; }
+.hero_card_120003 { background-image: url('/image/m_/120003.png') !important; }
+.hero_card_120004 { background-image: url('/image/m_/120004.png') !important; }
+.hero_card_120006 { background-image: url('/image/m_/120006.png') !important; }
+.hero_card_120007 { background-image: url('/image/m_/120007.png') !important; }
+.hero_card_120008 { background-image: url('/image/m_/120008.png') !important; }
+.hero_card_120010 { background-image: url('/image/m_/120010.png') !important; }
+.hero_card_120011 { background-image: url('/image/m_/120011.png') !important; }
+.hero_card_120012 { background-image: url('/image/m_/120012.png') !important; }
+.hero_card_120013 { background-image: url('/image/m_/120013.png') !important; }
+.hero_card_120014 { background-image: url('/image/m_/120014.png') !important; }
+.hero_card_120015 { background-image: url('/image/m_/120015.png') !important; }
+.hero_card_120016 { background-image: url('/image/m_/120016.png') !important; }
+.hero_card_120017 { background-image: url('/image/m_/120017.png') !important; }
+.hero_card_120018 { background-image: url('/image/m_/120018.png') !important; }
+.hero_card_120019 { background-image: url('/image/m_/120019.png') !important; }
+.hero_card_120021 { background-image: url('/image/m_/120021.png') !important; }
+.hero_card_120022 { background-image: url('/image/m_/120022.png') !important; }
+.hero_card_120024 { background-image: url('/image/m_/120024.png') !important; }
+.hero_card_120025 { background-image: url('/image/m_/120025.png') !important; }
+.hero_card_120027 { background-image: url('/image/m_/120027.png') !important; }
+.hero_card_120028 { background-image: url('/image/m_/120028.png') !important; }
+.hero_card_120029 { background-image: url('/image/m_/120029.png') !important; }
+.hero_card_120031 { background-image: url('/image/m_/120031.png') !important; }
+.hero_card_120032 { background-image: url('/image/m_/120032.png') !important; }
+.hero_card_120033 { background-image: url('/image/m_/120033.png') !important; }
+.hero_card_120035 { background-image: url('/image/m_/120035.png') !important; }
+.hero_card_120036 { background-image: url('/image/m_/120036.png') !important; }
+.hero_card_120037 { background-image: url('/image/m_/120037.png') !important; }
+.hero_card_120038 { background-image: url('/image/m_/120038.png') !important; }
+.hero_card_120039 { background-image: url('/image/m_/120039.png') !important; }
+.hero_card_120040 { background-image: url('/image/m_/120040.png') !important; }
+.hero_card_120042 { background-image: url('/image/m_/120042.png') !important; }
+.hero_card_120043 { background-image: url('/image/m_/120043.png') !important; }
+.hero_card_120044 { background-image: url('/image/m_/120044.png') !important; }
+.hero_card_120045 { background-image: url('/image/m_/120045.png') !important; }
+.hero_card_120046 { background-image: url('/image/m_/120046.png') !important; }
+.hero_card_120047 { background-image: url('/image/m_/120047.png') !important; }
+.hero_card_120048 { background-image: url('/image/m_/120048.png') !important; }
+.hero_card_120049 { background-image: url('/image/m_/120049.png') !important; }
+.hero_card_120050 { background-image: url('/image/m_/120050.png') !important; }
+.hero_card_120051 { background-image: url('/image/m_/120051.png') !important; }
+.hero_card_120052 { background-image: url('/image/m_/120052.png') !important; }
+.hero_card_120053 { background-image: url('/image/m_/120053.png') !important; }
+.hero_card_120054 { background-image: url('/image/m_/120054.png') !important; }
+.hero_card_120055 { background-image: url('/image/m_/120055.png') !important; }
+.hero_card_120056 { background-image: url('/image/m_/120056.png') !important; }
+.hero_card_120057 { background-image: url('/image/m_/120057.png') !important; }
+.hero_card_120058 { background-image: url('/image/m_/120058.png') !important; }
+.hero_card_120059 { background-image: url('/image/m_/120059.png') !important; }
+.hero_card_120060 { background-image: url('/image/m_/120060.png') !important; }
+.hero_card_120061 { background-image: url('/image/m_/120061.png') !important; }
+.hero_card_120062 { background-image: url('/image/m_/120062.png') !important; }
+.hero_card_120063 { background-image: url('/image/m_/120063.png') !important; }
+.hero_card_120064 { background-image: url('/image/m_/120064.png') !important; }
+.hero_card_120065 { background-image: url('/image/m_/120065.png') !important; }
+.hero_card_120066 { background-image: url('/image/m_/120066.png') !important; }
+.hero_card_120067 { background-image: url('/image/m_/120067.png') !important; }
+.hero_card_120069 { background-image: url('/image/m_/120069.png') !important; }
+.hero_card_120070 { background-image: url('/image/m_/120070.png') !important; }
+.hero_card_120071 { background-image: url('/image/m_/120071.png') !important; }
+.hero_card_120072 { background-image: url('/image/m_/120072.png') !important; }
+.hero_card_120073 { background-image: url('/image/m_/120073.png') !important; }
+.hero_card_120074 { background-image: url('/image/m_/120074.png') !important; }
+.hero_card_120075 { background-image: url('/image/m_/120075.png') !important; }
+.hero_card_120076 { background-image: url('/image/m_/120076.png') !important; }
+.hero_card_120077 { background-image: url('/image/m_/120077.png') !important; }
+.hero_card_120078 { background-image: url('/image/m_/120078.png') !important; }
+.hero_card_120079 { background-image: url('/image/m_/120079.png') !important; }
+.hero_card_120080 { background-image: url('/image/m_/120080.png') !important; }
+.hero_card_120082 { background-image: url('/image/m_/120082.png') !important; }
+.hero_card_120083 { background-image: url('/image/m_/120083.png') !important; }
+.hero_card_120084 { background-image: url('/image/m_/120084.png') !important; }
+.hero_card_120085 { background-image: url('/image/m_/120085.png') !important; }
+.hero_card_120086 { background-image: url('/image/m_/120086.png') !important; }
+.hero_card_120087 { background-image: url('/image/m_/120087.png') !important; }
+.hero_card_120088 { background-image: url('/image/m_/120088.png') !important; }
+.hero_card_120089 { background-image: url('/image/m_/120089.png') !important; }
+.hero_card_120090 { background-image: url('/image/m_/120090.png') !important; }
+.hero_card_120091 { background-image: url('/image/m_/120091.png') !important; }
+.hero_card_120092 { background-image: url('/image/m_/120092.png') !important; }
+.hero_card_120093 { background-image: url('/image/m_/120093.png') !important; }
+.hero_card_120094 { background-image: url('/image/m_/120094.png') !important; }
+.hero_card_120095 { background-image: url('/image/m_/120095.png') !important; }
+.hero_card_120096 { background-image: url('/image/m_/120096.png') !important; }
+.hero_card_120097 { background-image: url('/image/m_/120097.png') !important; }
+.hero_card_120098 { background-image: url('/image/m_/120098.png') !important; }
+.hero_card_120099 { background-image: url('/image/m_/120099.png') !important; }
+.hero_card_120101 { background-image: url('/image/m_/120101.png') !important; }
+.hero_card_120102 { background-image: url('/image/m_/120102.png') !important; }
+.hero_card_120103 { background-image: url('/image/m_/120103.png') !important; }
+.hero_card_120104 { background-image: url('/image/m_/120104.png') !important; }
+.hero_card_120105 { background-image: url('/image/m_/120105.png') !important; }
+.hero_card_120106 { background-image: url('/image/m_/120106.png') !important; }
+.hero_card_120107 { background-image: url('/image/m_/120107.png') !important; }
+.hero_card_120108 { background-image: url('/image/m_/120108.png') !important; }
+.hero_card_120109 { background-image: url('/image/m_/120109.png') !important; }
+.hero_card_120110 { background-image: url('/image/m_/120110.png') !important; }
+.hero_card_120111 { background-image: url('/image/m_/120111.png') !important; }
+.hero_card_120112 { background-image: url('/image/m_/120112.png') !important; }
+.hero_card_120113 { background-image: url('/image/m_/120113.png') !important; }
+.hero_card_120114 { background-image: url('/image/m_/120114.png') !important; }
+.hero_card_120115 { background-image: url('/image/m_/120115.png') !important; }
+.hero_card_120116 { background-image: url('/image/m_/120116.png') !important; }
+.hero_card_120117 { background-image: url('/image/m_/120117.png') !important; }
+.hero_card_120118 { background-image: url('/image/m_/120118.png') !important; }
+.hero_card_120119 { background-image: url('/image/m_/120119.png') !important; }
+.hero_card_120120 { background-image: url('/image/m_/120120.png') !important; }
+.hero_card_120121 { background-image: url('/image/m_/120121.png') !important; }
+.hero_card_120122 { background-image: url('/image/m_/120122.png') !important; }
+.hero_card_120123 { background-image: url('/image/m_/120123.png') !important; }
+.hero_card_120124 { background-image: url('/image/m_/120124.png') !important; }
+.hero_card_120125 { background-image: url('/image/m_/120125.png') !important; }
+.hero_card_120126 { background-image: url('/image/m_/120126.png') !important; }
+.hero_card_120127 { background-image: url('/image/m_/120127.png') !important; }
+.hero_card_120128 { background-image: url('/image/m_/120128.png') !important; }
+.hero_card_120129 { background-image: url('/image/m_/120129.png') !important; }
+.hero_card_120130 { background-image: url('/image/m_/120130.png') !important; }
+.hero_card_120131 { background-image: url('/image/m_/120131.png') !important; }
+.hero_card_120132 { background-image: url('/image/m_/120132.png') !important; }
+.hero_card_120133 { background-image: url('/image/m_/120133.png') !important; }
+.hero_card_120134 { background-image: url('/image/m_/120134.png') !important; }
+.hero_card_120135 { background-image: url('/image/m_/120135.png') !important; }
+.hero_card_120136 { background-image: url('/image/m_/120136.png') !important; }
+.hero_card_120137 { background-image: url('/image/m_/120137.png') !important; }
+.hero_card_120138 { background-image: url('/image/m_/120138.png') !important; }
+.hero_card_120139 { background-image: url('/image/m_/120139.png') !important; }
+.hero_card_120140 { background-image: url('/image/m_/120140.png') !important; }
+.hero_card_120141 { background-image: url('/image/m_/120141.png') !important; }
+.hero_card_120142 { background-image: url('/image/m_/120142.png') !important; }
+.hero_card_120143 { background-image: url('/image/m_/120143.png') !important; }
+.hero_card_120144 { background-image: url('/image/m_/120144.png') !important; }
+.hero_card_120145 { background-image: url('/image/m_/120145.png') !important; }
+.hero_card_120146 { background-image: url('/image/m_/120146.png') !important; }
+.hero_card_120147 { background-image: url('/image/m_/120147.png') !important; }
+.hero_card_120148 { background-image: url('/image/m_/120148.png') !important; }
+.hero_card_120149 { background-image: url('/image/m_/120149.png') !important; }
+.hero_card_120150 { background-image: url('/image/m_/120150.png') !important; }
+.hero_card_120151 { background-image: url('/image/m_/120151.png') !important; }
+.hero_card_120152 { background-image: url('/image/m_/120152.png') !important; }
+.hero_card_120153 { background-image: url('/image/m_/120153.png') !important; }
+.hero_card_120154 { background-image: url('/image/m_/120154.png') !important; }
+.hero_card_120155 { background-image: url('/image/m_/120155.png') !important; }
+.hero_card_120157 { background-image: url('/image/m_/120157.png') !important; }
+.hero_card_120158 { background-image: url('/image/m_/120158.png') !important; }
+.hero_card_120159 { background-image: url('/image/m_/120159.png') !important; }
+.hero_card_120161 { background-image: url('/image/m_/120161.png') !important; }
+.hero_card_120162 { background-image: url('/image/m_/120162.png') !important; }
+.hero_card_120163 { background-image: url('/image/m_/120163.png') !important; }
+.hero_card_120164 { background-image: url('/image/m_/120164.png') !important; }
+.hero_card_120165 { background-image: url('/image/m_/120165.png') !important; }
+.hero_card_120166 { background-image: url('/image/m_/120166.png') !important; }
+.hero_card_120167 { background-image: url('/image/m_/120167.png') !important; }
+.hero_card_120168 { background-image: url('/image/m_/120168.png') !important; }
+.hero_card_120169 { background-image: url('/image/m_/120169.png') !important; }
+.hero_card_120170 { background-image: url('/image/m_/120170.png') !important; }
+.hero_card_120171 { background-image: url('/image/m_/120171.png') !important; }
+.hero_card_120172 { background-image: url('/image/m_/120172.png') !important; }
+.hero_card_120173 { background-image: url('/image/m_/120173.png') !important; }
+.hero_card_120174 { background-image: url('/image/m_/120174.png') !important; }
+.hero_card_120175 { background-image: url('/image/m_/120175.png') !important; }
+.hero_card_120176 { background-image: url('/image/m_/120176.png') !important; }
+.hero_card_120177 { background-image: url('/image/m_/120177.png') !important; }
+.hero_card_120178 { background-image: url('/image/m_/120178.png') !important; }
+.hero_card_120179 { background-image: url('/image/m_/120179.png') !important; }
+.hero_card_120181 { background-image: url('/image/m_/120181.png') !important; }
+.hero_card_120182 { background-image: url('/image/m_/120182.png') !important; }
+.hero_card_120183 { background-image: url('/image/m_/120183.png') !important; }
+.hero_card_120184 { background-image: url('/image/m_/120184.png') !important; }
+.hero_card_120185 { background-image: url('/image/m_/120185.png') !important; }
+.hero_card_120187 { background-image: url('/image/m_/120187.png') !important; }
+.hero_card_120188 { background-image: url('/image/m_/120188.png') !important; }
+.hero_card_120190 { background-image: url('/image/m_/120190.png') !important; }
+.hero_card_120191 { background-image: url('/image/m_/120191.png') !important; }
+.hero_card_120192 { background-image: url('/image/m_/120192.png') !important; }
+.hero_card_120193 { background-image: url('/image/m_/120193.png') !important; }
+.hero_card_120194 { background-image: url('/image/m_/120194.png') !important; }
+.hero_card_120195 { background-image: url('/image/m_/120195.png') !important; }
+.hero_card_120196 { background-image: url('/image/m_/120196.png') !important; }
+.hero_card_120197 { background-image: url('/image/m_/120197.png') !important; }
+.hero_card_120198 { background-image: url('/image/m_/120198.png') !important; }
+.hero_card_120199 { background-image: url('/image/m_/120199.png') !important; }
+.hero_card_120200 { background-image: url('/image/m_/120200.png') !important; }
+.hero_card_120201 { background-image: url('/image/m_/120201.png') !important; }
+.hero_card_120202 { background-image: url('/image/m_/120202.png') !important; }
+.hero_card_120203 { background-image: url('/image/m_/120203.png') !important; }
+.hero_card_120204 { background-image: url('/image/m_/120204.png') !important; }
+.hero_card_120205 { background-image: url('/image/m_/120205.png') !important; }
+.hero_card_120206 { background-image: url('/image/m_/120206.png') !important; }
+.hero_card_120207 { background-image: url('/image/m_/120207.png') !important; }
+.hero_card_120208 { background-image: url('/image/m_/120208.png') !important; }
+.hero_card_120209 { background-image: url('/image/m_/120209.png') !important; }
+.hero_card_120210 { background-image: url('/image/m_/120210.png') !important; }
+.hero_card_120211 { background-image: url('/image/m_/120211.png') !important; }
+.hero_card_120212 { background-image: url('/image/m_/120212.png') !important; }
+.hero_card_120213 { background-image: url('/image/m_/120213.png') !important; }
+.hero_card_120214 { background-image: url('/image/m_/120214.png') !important; }
+.hero_card_120216 { background-image: url('/image/m_/120216.png') !important; }
+.hero_card_120218 { background-image: url('/image/m_/120218.png') !important; }
+.hero_card_120220 { background-image: url('/image/m_/120220.png') !important; }
+.hero_card_120221 { background-image: url('/image/m_/120221.png') !important; }
+.hero_card_120222 { background-image: url('/image/m_/120222.png') !important; }
+.hero_card_120223 { background-image: url('/image/m_/120223.png') !important; }
+.hero_card_120224 { background-image: url('/image/m_/120224.png') !important; }
+.hero_card_120225 { background-image: url('/image/m_/120225.png') !important; }
+.hero_card_120227 { background-image: url('/image/m_/120227.png') !important; }
+.hero_card_120228 { background-image: url('/image/m_/120228.png') !important; }
+.hero_card_120229 { background-image: url('/image/m_/120229.png') !important; }
+.hero_card_120230 { background-image: url('/image/m_/120230.png') !important; }
+.hero_card_120231 { background-image: url('/image/m_/120231.png') !important; }
+.hero_card_120232 { background-image: url('/image/m_/120232.png') !important; }
+.hero_card_120233 { background-image: url('/image/m_/120233.png') !important; }
+.hero_card_120234 { background-image: url('/image/m_/120234.png') !important; }
+.hero_card_120235 { background-image: url('/image/m_/120235.png') !important; }
+.hero_card_120236 { background-image: url('/image/m_/120236.png') !important; }
+.hero_card_120237 { background-image: url('/image/m_/120237.png') !important; }
+.hero_card_120238 { background-image: url('/image/m_/120238.png') !important; }
+.hero_card_120239 { background-image: url('/image/m_/120239.png') !important; }
+.hero_card_120240 { background-image: url('/image/m_/120240.png') !important; }
+.hero_card_120241 { background-image: url('/image/m_/120241.png') !important; }
+.hero_card_120242 { background-image: url('/image/m_/120242.png') !important; }
+.hero_card_120243 { background-image: url('/image/m_/120243.png') !important; }
+.hero_card_120244 { background-image: url('/image/m_/120244.png') !important; }
+.hero_card_120245 { background-image: url('/image/m_/120245.png') !important; }
+.hero_card_120246 { background-image: url('/image/m_/120246.png') !important; }
+.hero_card_120247 { background-image: url('/image/m_/120247.png') !important; }
+.hero_card_120248 { background-image: url('/image/m_/120248.png') !important; }
+.hero_card_120249 { background-image: url('/image/m_/120249.png') !important; }
+.hero_card_120250 { background-image: url('/image/m_/120250.png') !important; }
+.hero_card_120251 { background-image: url('/image/m_/120251.png') !important; }
+.hero_card_120252 { background-image: url('/image/m_/120252.png') !important; }
+.hero_card_120253 { background-image: url('/image/m_/120253.png') !important; }
+.hero_card_120254 { background-image: url('/image/m_/120254.png') !important; }
+.hero_card_120255 { background-image: url('/image/m_/120255.png') !important; }
+.hero_card_120256 { background-image: url('/image/m_/120256.png') !important; }
+.hero_card_120257 { background-image: url('/image/m_/120257.png') !important; }
+.hero_card_120258 { background-image: url('/image/m_/120258.png') !important; }
+.hero_card_120259 { background-image: url('/image/m_/120259.png') !important; }
+.hero_card_120260 { background-image: url('/image/m_/120260.png') !important; }
+.hero_card_120261 { background-image: url('/image/m_/120261.png') !important; }
+.hero_card_120262 { background-image: url('/image/m_/120262.png') !important; }
+.hero_card_120263 { background-image: url('/image/m_/120263.png') !important; }
+.hero_card_120264 { background-image: url('/image/m_/120264.png') !important; }
+.hero_card_120265 { background-image: url('/image/m_/120265.png') !important; }
+.hero_card_120266 { background-image: url('/image/m_/120266.png') !important; }
+.hero_card_120267 { background-image: url('/image/m_/120267.png') !important; }
+.hero_card_120268 { background-image: url('/image/m_/120268.png') !important; }
+.hero_card_120269 { background-image: url('/image/m_/120269.png') !important; }
+.hero_card_120270 { background-image: url('/image/m_/120270.png') !important; }
+.hero_card_120271 { background-image: url('/image/m_/120271.png') !important; }
+.hero_card_120272 { background-image: url('/image/m_/120272.png') !important; }
+.hero_card_120273 { background-image: url('/image/m_/120273.png') !important; }
+.hero_card_120274 { background-image: url('/image/m_/120274.png') !important; }
+.hero_card_120275 { background-image: url('/image/m_/120275.png') !important; }
+.hero_card_120276 { background-image: url('/image/m_/120276.png') !important; }
+.hero_card_120277 { background-image: url('/image/m_/120277.png') !important; }
+.hero_card_120278 { background-image: url('/image/m_/120278.png') !important; }
+.hero_card_120279 { background-image: url('/image/m_/120279.png') !important; }
+.hero_card_120280 { background-image: url('/image/m_/120280.png') !important; }
+.hero_card_120281 { background-image: url('/image/m_/120281.png') !important; }
+.hero_card_120282 { background-image: url('/image/m_/120282.png') !important; }
+.hero_card_120283 { background-image: url('/image/m_/120283.png') !important; }
+.hero_card_120284 { background-image: url('/image/m_/120284.png') !important; }
+.hero_card_120285 { background-image: url('/image/m_/120285.png') !important; }
+.hero_card_120286 { background-image: url('/image/m_/120286.png') !important; }
+.hero_card_120287 { background-image: url('/image/m_/120287.png') !important; }
+.hero_card_120288 { background-image: url('/image/m_/120288.png') !important; }
+.hero_card_120289 { background-image: url('/image/m_/120289.png') !important; }
+.hero_card_120290 { background-image: url('/image/m_/120290.png') !important; }
+.hero_card_120291 { background-image: url('/image/m_/120291.png') !important; }
+.hero_card_120292 { background-image: url('/image/m_/120292.png') !important; }
+.hero_card_120293 { background-image: url('/image/m_/120293.png') !important; }
+.hero_card_120294 { background-image: url('/image/m_/120294.png') !important; }
+.hero_card_120295 { background-image: url('/image/m_/120295.png') !important; }
+.hero_card_120296 { background-image: url('/image/m_/120296.png') !important; }
+.hero_card_120297 { background-image: url('/image/m_/120297.png') !important; }
+.hero_card_120298 { background-image: url('/image/m_/120298.png') !important; }
+.hero_card_120299 { background-image: url('/image/m_/120299.png') !important; }
+.hero_card_120300 { background-image: url('/image/m_/120300.png') !important; }
+.hero_card_120301 { background-image: url('/image/m_/120301.png') !important; }
+.hero_card_120302 { background-image: url('/image/m_/120302.png') !important; }
+.hero_card_120303 { background-image: url('/image/m_/120303.png') !important; }
+.hero_card_120304 { background-image: url('/image/m_/120304.png') !important; }
+.hero_card_120305 { background-image: url('/image/m_/120305.png') !important; }
+.hero_card_120306 { background-image: url('/image/m_/120306.png') !important; }
+.hero_card_120307 { background-image: url('/image/m_/120307.png') !important; }
+.hero_card_120308 { background-image: url('/image/m_/120308.png') !important; }
+.hero_card_120309 { background-image: url('/image/m_/120309.png') !important; }
+.hero_card_120310 { background-image: url('/image/m_/120310.png') !important; }
+.hero_card_120311 { background-image: url('/image/m_/120311.png') !important; }
+.hero_card_120312 { background-image: url('/image/m_/120312.png') !important; }
+.hero_card_120313 { background-image: url('/image/m_/120313.png') !important; }
+.hero_card_120314 { background-image: url('/image/m_/120314.png') !important; }
+.hero_card_120315 { background-image: url('/image/m_/120315.png') !important; }
+.hero_card_120316 { background-image: url('/image/m_/120316.png') !important; }
+.hero_card_120317 { background-image: url('/image/m_/120317.png') !important; }
+.hero_card_120318 { background-image: url('/image/m_/120318.png') !important; }
+.hero_card_120319 { background-image: url('/image/m_/120319.png') !important; }
+.hero_card_120320 { background-image: url('/image/m_/120320.png') !important; }
+.hero_card_120321 { background-image: url('/image/m_/120321.png') !important; }
+.hero_card_120322 { background-image: url('/image/m_/120322.png') !important; }
+.hero_card_120323 { background-image: url('/image/m_/120323.png') !important; }
+.hero_card_120324 { background-image: url('/image/m_/120324.png') !important; }
+.hero_card_120325 { background-image: url('/image/m_/120325.png') !important; }
+.hero_card_120326 { background-image: url('/image/m_/120326.png') !important; }
+.hero_card_120327 { background-image: url('/image/m_/120327.png') !important; }
+.hero_card_120328 { background-image: url('/image/m_/120328.png') !important; }
+.hero_card_120329 { background-image: url('/image/m_/120329.png') !important; }
+.hero_card_120330 { background-image: url('/image/m_/120330.png') !important; }
+.hero_card_120331 { background-image: url('/image/m_/120331.png') !important; }
+.hero_card_120332 { background-image: url('/image/m_/120332.png') !important; }
+.hero_card_120333 { background-image: url('/image/m_/120333.png') !important; }
+.hero_card_120334 { background-image: url('/image/m_/120334.png') !important; }
+.hero_card_120335 { background-image: url('/image/m_/120335.png') !important; }
+.hero_card_120336 { background-image: url('/image/m_/120336.png') !important; }
+.hero_card_120337 { background-image: url('/image/m_/120337.png') !important; }
+.hero_card_120338 { background-image: url('/image/m_/120338.png') !important; }
+.hero_card_120339 { background-image: url('/image/m_/120339.png') !important; }
+.hero_card_120340 { background-image: url('/image/m_/120340.png') !important; }
+.hero_card_120341 { background-image: url('/image/m_/120341.png') !important; }
+.hero_card_120342 { background-image: url('/image/m_/120342.png') !important; }
+.hero_card_120343 { background-image: url('/image/m_/120343.png') !important; }
+.hero_card_120344 { background-image: url('/image/m_/120344.png') !important; }
+.hero_card_120345 { background-image: url('/image/m_/120345.png') !important; }
+.hero_card_120346 { background-image: url('/image/m_/120346.png') !important; }
+.hero_card_120347 { background-image: url('/image/m_/120347.png') !important; }
+.hero_card_120348 { background-image: url('/image/m_/120348.png') !important; }
+.hero_card_120349 { background-image: url('/image/m_/120349.png') !important; }
+.hero_card_120350 { background-image: url('/image/m_/120350.png') !important; }
+.hero_card_120351 { background-image: url('/image/m_/120351.png') !important; }
+.hero_card_120352 { background-image: url('/image/m_/120352.png') !important; }
+.hero_card_120353 { background-image: url('/image/m_/120353.png') !important; }
+.hero_card_120354 { background-image: url('/image/m_/120354.png') !important; }
+.hero_card_120355 { background-image: url('/image/m_/120355.png') !important; }
+.hero_card_120356 { background-image: url('/image/m_/120356.png') !important; }
+.hero_card_120357 { background-image: url('/image/m_/120357.png') !important; }
+.hero_card_120358 { background-image: url('/image/m_/120358.png') !important; }
+.hero_card_120359 { background-image: url('/image/m_/120359.png') !important; }
+.hero_card_120360 { background-image: url('/image/m_/120360.png') !important; }
+.hero_card_120361 { background-image: url('/image/m_/120361.png') !important; }
+.hero_card_120362 { background-image: url('/image/m_/120362.png') !important; }
+.hero_card_120363 { background-image: url('/image/m_/120363.png') !important; }
+.hero_card_120364 { background-image: url('/image/m_/120364.png') !important; }
+.hero_card_120367 { background-image: url('/image/m_/120367.png') !important; }
+.hero_card_120365 { background-image: url('/image/m_/120365.png') !important; }
+.hero_card_120366 { background-image: url('/image/m_/120366.png') !important; }
+.hero_card_120368 { background-image: url('/image/m_/120368.png') !important; }
+.hero_card_120369 { background-image: url('/image/m_/120369.png') !important; }
+.hero_card_120370 { background-image: url('/image/m_/120370.png') !important; }
+.hero_card_120371 { background-image: url('/image/m_/120371.png') !important; }
+.hero_card_120372 { background-image: url('/image/m_/120372.png') !important; }
+.hero_card_120373 { background-image: url('/image/m_/120373.png') !important; }
+.hero_card_120374 { background-image: url('/image/m_/120374.png') !important; }
+.hero_card_120375 { background-image: url('/image/m_/120375.png') !important; }
+.hero_card_120376 { background-image: url('/image/m_/120376.png') !important; }
+.hero_card_120377 { background-image: url('/image/m_/120377.png') !important; }
+.hero_card_120378 { background-image: url('/image/m_/120378.png') !important; }
+.hero_card_120379 { background-image: url('/image/m_/120379.png') !important; }
+.hero_card_120380 { background-image: url('/image/m_/120380.png') !important; }
+.hero_card_120381 { background-image: url('/image/m_/120381.png') !important; }
+.hero_card_120382 { background-image: url('/image/m_/120382.png') !important; }
+.hero_card_120383 { background-image: url('/image/m_/120383.png') !important; }
+.hero_card_120384 { background-image: url('/image/m_/120384.png') !important; }
+.hero_card_120385 { background-image: url('/image/m_/120385.png') !important; }
+.hero_card_120386 { background-image: url('/image/m_/120386.png') !important; }
+.hero_card_120387 { background-image: url('/image/m_/120387.png') !important; }
+.hero_card_120388 { background-image: url('/image/m_/120388.png') !important; }
+.hero_card_120389 { background-image: url('/image/m_/120389.png') !important; }
+.hero_card_120390 { background-image: url('/image/m_/120390.png') !important; }
+.hero_card_120391 { background-image: url('/image/m_/120391.png') !important; }
+.hero_card_120392 { background-image: url('/image/m_/120392.png') !important; }
+.hero_card_120393 { background-image: url('/image/m_/120393.png') !important; }
+.hero_card_120394 { background-image: url('/image/m_/120394.png') !important; }
+.hero_card_120395 { background-image: url('/image/m_/120395.png') !important; }
+.hero_card_120396 { background-image: url('/image/m_/120396.png') !important; }
+.hero_card_120397 { background-image: url('/image/m_/120397.png') !important; }
+.hero_card_120398 { background-image: url('/image/m_/120398.png') !important; }
+.hero_card_120399 { background-image: url('/image/m_/120399.png') !important; }
+.hero_card_120400 { background-image: url('/image/m_/120400.png') !important; }
+.hero_card_120401 { background-image: url('/image/m_/120401.png') !important; }
+.hero_card_120402 { background-image: url('/image/m_/120402.png') !important; }
+.hero_card_120403 { background-image: url('/image/m_/120403.png') !important; }
+.hero_card_120404 { background-image: url('/image/m_/120404.png') !important; }
+.hero_card_120405 { background-image: url('/image/m_/120405.png') !important; }
+.hero_card_120406 { background-image: url('/image/m_/120406.png') !important; }
+.hero_card_120407 { background-image: url('/image/m_/120407.png') !important; }
+.hero_card_120408 { background-image: url('/image/m_/120408.png') !important; }
+.hero_card_120409 { background-image: url('/image/m_/120409.png') !important; }
+.hero_card_120410 { background-image: url('/image/m_/120410.png') !important; }
+.hero_card_120411 { background-image: url('/image/m_/120411.png') !important; }
+.hero_card_120412 { background-image: url('/image/m_/120412.png') !important; }
+.hero_card_120413 { background-image: url('/image/m_/120413.png') !important; }
+.hero_card_120414 { background-image: url('/image/m_/120414.png') !important; }
+.hero_card_120415 { background-image: url('/image/m_/120415.png') !important; }
+.hero_card_120416 { background-image: url('/image/m_/120416.png') !important; }
+.hero_card_120417 { background-image: url('/image/m_/120417.png') !important; }
+.hero_card_120418 { background-image: url('/image/m_/120418.png') !important; }
+.hero_card_120419 { background-image: url('/image/m_/120419.png') !important; }
+.hero_card_120420 { background-image: url('/image/m_/120420.png') !important; }
+.hero_card_120421 { background-image: url('/image/m_/120421.png') !important; }
+.hero_card_120422 { background-image: url('/image/m_/120422.png') !important; }
+.hero_card_120423 { background-image: url('/image/m_/120423.png') !important; }
+.hero_card_120424 { background-image: url('/image/m_/120424.png') !important; }
+.hero_card_120425 { background-image: url('/image/m_/120425.png') !important; }
+.hero_card_120426 { background-image: url('/image/m_/120426.png') !important; }
+.hero_card_120427 { background-image: url('/image/m_/120427.png') !important; }
+.hero_card_120428 { background-image: url('/image/m_/120428.png') !important; }
+.hero_card_120429 { background-image: url('/image/m_/120429.png') !important; }
+.hero_card_120430 { background-image: url('/image/m_/120430.png') !important; }
+.hero_card_120431 { background-image: url('/image/m_/120431.png') !important; }
+.hero_card_120432 { background-image: url('/image/m_/120432.png') !important; }
+.hero_card_120433 { background-image: url('/image/m_/120433.png') !important; }
+.hero_card_120434 { background-image: url('/image/m_/120434.png') !important; }
+.hero_card_120435 { background-image: url('/image/m_/120435.png') !important; }
+.hero_card_120436 { background-image: url('/image/m_/120436.png') !important; }
+.hero_card_120437 { background-image: url('/image/m_/120437.png') !important; }
+.hero_card_120438 { background-image: url('/image/m_/120438.png') !important; }
+.hero_card_120439 { background-image: url('/image/m_/120439.png') !important; }
+.hero_card_120440 { background-image: url('/image/m_/120440.png') !important; }
+.hero_card_120441 { background-image: url('/image/m_/120441.png') !important; }
+.hero_card_120442 { background-image: url('/image/m_/120442.png') !important; }
+.hero_card_120443 { background-image: url('/image/m_/120443.png') !important; }
+.hero_card_120444 { background-image: url('/image/m_/120444.png') !important; }
+.hero_card_120445 { background-image: url('/image/m_/120445.png') !important; }
+.hero_card_120446 { background-image: url('/image/m_/120446.png') !important; }
+.hero_card_120447 { background-image: url('/image/m_/120447.png') !important; }
+.hero_card_120448 { background-image: url('/image/m_/120448.png') !important; }
+.hero_card_120449 { background-image: url('/image/m_/120449.png') !important; }
+.hero_card_120450 { background-image: url('/image/m_/120450.png') !important; }
+.hero_card_120451 { background-image: url('/image/m_/120451.png') !important; }
+.hero_card_120452 { background-image: url('/image/m_/120452.png') !important; }
+.hero_card_120453 { background-image: url('/image/m_/120453.png') !important; }
+.hero_card_120454 { background-image: url('/image/m_/120454.png') !important; }
+.hero_card_120455 { background-image: url('/image/m_/120455.png') !important; }
+.hero_card_120456 { background-image: url('/image/m_/120456.png') !important; }
+.hero_card_120457 { background-image: url('/image/m_/120457.png') !important; }
+.hero_card_120458 { background-image: url('/image/m_/120458.png') !important; }
+.hero_card_120459 { background-image: url('/image/m_/120459.png') !important; }
+.hero_card_120460 { background-image: url('/image/m_/120460.png') !important; }
+.hero_card_120461 { background-image: url('/image/m_/120461.png') !important; }
+.hero_card_120462 { background-image: url('/image/m_/120462.png') !important; }
+.hero_card_120463 { background-image: url('/image/m_/120463.png') !important; }
+.hero_card_120464 { background-image: url('/image/m_/120464.png') !important; }
+.hero_card_120465 { background-image: url('/image/m_/120465.png') !important; }
+.hero_card_120466 { background-image: url('/image/m_/120466.png') !important; }
+.hero_card_120467 { background-image: url('/image/m_/120467.png') !important; }
+.hero_card_120468 { background-image: url('/image/m_/120468.png') !important; }
+.hero_card_120469 { background-image: url('/image/m_/120469.png') !important; }
+.hero_card_120470 { background-image: url('/image/m_/120470.png') !important; }
+.hero_card_120471 { background-image: url('/image/m_/120471.png') !important; }
+.hero_card_120472 { background-image: url('/image/m_/120472.png') !important; }
+.hero_card_120473 { background-image: url('/image/m_/120473.png') !important; }
+.hero_card_120474 { background-image: url('/image/m_/120474.png') !important; }
+.hero_card_120475 { background-image: url('/image/m_/120475.png') !important; }
+.hero_card_120476 { background-image: url('/image/m_/120476.png') !important; }
+.hero_card_120477 { background-image: url('/image/m_/120477.png') !important; }
+.hero_card_120479 { background-image: url('/image/m_/120479.png') !important; }
+.hero_card_120480 { background-image: url('/image/m_/120480.png') !important; }
+.hero_card_120481 { background-image: url('/image/m_/120481.png') !important; }
+.hero_card_120482 { background-image: url('/image/m_/120482.png') !important; }
+.hero_card_120483 { background-image: url('/image/m_/120483.png') !important; }
+.hero_card_120484 { background-image: url('/image/m_/120484.png') !important; }
+.hero_card_120485 { background-image: url('/image/m_/120485.png') !important; }
+.hero_card_120486 { background-image: url('/image/m_/120486.png') !important; }
+.hero_card_120487 { background-image: url('/image/m_/120487.png') !important; }
+.hero_card_120488 { background-image: url('/image/m_/120488.png') !important; }
+.hero_card_120489 { background-image: url('/image/m_/120489.png') !important; }
+.hero_card_120490 { background-image: url('/image/m_/120490.png') !important; }
+.hero_card_120491 { background-image: url('/image/m_/120491.png') !important; }
+.hero_card_120492 { background-image: url('/image/m_/120492.png') !important; }
+.hero_card_120493 { background-image: url('/image/m_/120493.png') !important; }
+.hero_card_120494 { background-image: url('/image/m_/120494.png') !important; }
+.hero_card_120495 { background-image: url('/image/m_/120495.png') !important; }
+.hero_card_120501 { background-image: url('/image/m_/120501.png') !important; }
+.hero_card_120502 { background-image: url('/image/m_/120502.png') !important; }
+.hero_card_120503 { background-image: url('/image/m_/120503.png') !important; }
+.hero_card_120504 { background-image: url('/image/m_/120504.png') !important; }
+.hero_card_120505 { background-image: url('/image/m_/120505.png') !important; }
+.hero_card_120506 { background-image: url('/image/m_/120506.png') !important; }
+.hero_card_120507 { background-image: url('/image/m_/120507.png') !important; }
+.hero_card_120508 { background-image: url('/image/m_/120508.png') !important; }
+.hero_card_120509 { background-image: url('/image/m_/120509.png') !important; }
+.hero_card_120510 { background-image: url('/image/m_/120510.png') !important; }
+.hero_card_120601 { background-image: url('/image/m_/120601.png') !important; }
+
+/* hero_skill */
+.hero_skill_1501 { background-image:url('/image/m_/skill/1501.png') !important; }
+.hero_skill_1502 { background-image:url('/image/m_/skill/1502.png') !important; }
+.hero_skill_1503 { background-image:url('/image/m_/skill/1503.png') !important; }
+.hero_skill_1504 { background-image:url('/image/m_/skill/1504.png') !important; }
+.hero_skill_1505 { background-image:url('/image/m_/skill/1505.png') !important; }
+.hero_skill_1506 { background-image:url('/image/m_/skill/1506.png') !important; }
+.hero_skill_1507 { background-image:url('/image/m_/skill/1507.png') !important; }
+.hero_skill_1508 { background-image:url('/image/m_/skill/1508.png') !important; }
+.hero_skill_1509 { background-image:url('/image/m_/skill/1509.png') !important; }
+.hero_skill_1510 { background-image:url('/image/m_/skill/1510.png') !important; }
+.hero_skill_1511 { background-image:url('/image/m_/skill/1511.png') !important; }
+.hero_skill_1512 { background-image:url('/image/m_/skill/1512.png') !important; }
+.hero_skill_1513 { background-image:url('/image/m_/skill/1513.png') !important; }
+.hero_skill_1514 { background-image:url('/image/m_/skill/1514.png') !important; }
+.hero_skill_1515 { background-image:url('/image/m_/skill/1515.png') !important; }
+.hero_skill_1516 { background-image:url('/image/m_/skill/1516.png') !important; }
+.hero_skill_1517 { background-image:url('/image/m_/skill/1517.png') !important; }
+.hero_skill_1518 { background-image:url('/image/m_/skill/1518.png') !important; }
+.hero_skill_1519 { background-image:url('/image/m_/skill/1519.png') !important; }
+.hero_skill_1520 { background-image:url('/image/m_/skill/1520.png') !important; }
+.hero_skill_1521 { background-image:url('/image/m_/skill/1521.png') !important; }
+.hero_skill_1522 { background-image:url('/image/m_/skill/1522.png') !important; }
+.hero_skill_1523 { background-image:url('/image/m_/skill/1523.png') !important; }
+.hero_skill_1524 { background-image:url('/image/m_/skill/1524.png') !important; }
+.hero_skill_1525 { background-image:url('/image/m_/skill/1525.png') !important; }
+.hero_skill_1526 { background-image:url('/image/m_/skill/1526.png') !important; }
+.hero_skill_1527 { background-image:url('/image/m_/skill/1527.png') !important; }
+.hero_skill_1528 { background-image:url('/image/m_/skill/1528.png') !important; }
+.hero_skill_1530 { background-image:url('/image/m_/skill/1530.png') !important; }
+.hero_skill_1531 { background-image:url('/image/m_/skill/1531.png') !important; }
+.hero_skill_1532 { background-image:url('/image/m_/skill/1532.png') !important; }
+.hero_skill_1533 { background-image:url('/image/m_/skill/1533.png') !important; }
+.hero_skill_1534 { background-image:url('/image/m_/skill/1534.png') !important; }
+.hero_skill_1535 { background-image:url('/image/m_/skill/1535.png') !important; }
+.hero_skill_1536 { background-image:url('/image/m_/skill/1536.png') !important; }
+.hero_skill_1538 { background-image:url('/image/m_/skill/1538.png') !important; }
+.hero_skill_1539 { background-image:url('/image/m_/skill/1539.png') !important; }
+.hero_skill_1540 { background-image:url('/image/m_/skill/1540.png') !important; }
+.hero_skill_1541 { background-image:url('/image/m_/skill/1541.png') !important; }
+.hero_skill_1542 { background-image:url('/image/m_/skill/1542.png') !important; }
+.hero_skill_1543 { background-image:url('/image/m_/skill/1543.png') !important; }
+.hero_skill_1544 { background-image:url('/image/m_/skill/1544.png') !important; }
+.hero_skill_1545 { background-image:url('/image/m_/skill/1545.png') !important; }
+.hero_skill_1546 { background-image:url('/image/m_/skill/1546.png') !important; }
+.hero_skill_1547 { background-image:url('/image/m_/skill/1547.png') !important; }
+.hero_skill_1548 { background-image:url('/image/m_/skill/1548.png') !important; }
+.hero_skill_1549 { background-image:url('/image/m_/skill/1549.png') !important; }
+.hero_skill_1550 { background-image:url('/image/m_/skill/1550.png') !important; }
+.hero_skill_1551 { background-image:url('/image/m_/skill/1551.png') !important; }
+.hero_skill_1552 { background-image:url('/image/m_/skill/1552.png') !important; }
+.hero_skill_1553 { background-image:url('/image/m_/skill/1553.png') !important; }
+.hero_skill_1554 { background-image:url('/image/m_/skill/1554.png') !important; }
+.hero_skill_1555 { background-image:url('/image/m_/skill/1555.png') !important; }
+.hero_skill_1556 { background-image:url('/image/m_/skill/1556.png') !important; }
+.hero_skill_1557 { background-image:url('/image/m_/skill/1557.png') !important; }
+.hero_skill_1558 { background-image:url('/image/m_/skill/1558.png') !important; }
+.hero_skill_1559 { background-image:url('/image/m_/skill/1559.png') !important; }
+.hero_skill_1561 { background-image:url('/image/m_/skill/1561.png') !important; }
+.hero_skill_1562 { background-image:url('/image/m_/skill/1562.png') !important; }
+.hero_skill_1563 { background-image:url('/image/m_/skill/1563.png') !important; }
+.hero_skill_1564 { background-image:url('/image/m_/skill/1564.png') !important; }
+.hero_skill_1565 { background-image:url('/image/m_/skill/1565.png') !important; }
+.hero_skill_1566 { background-image:url('/image/m_/skill/1566.png') !important; }
+.hero_skill_1567 { background-image:url('/image/m_/skill/1567.png') !important; }
+.hero_skill_1568 { background-image:url('/image/m_/skill/1568.png') !important; }
+.hero_skill_1569 { background-image:url('/image/m_/skill/1569.png') !important; }
+.hero_skill_1570 { background-image:url('/image/m_/skill/1570.png') !important; }
+.hero_skill_1571 { background-image:url('/image/m_/skill/1571.png') !important; }
+.hero_skill_1572 { background-image:url('/image/m_/skill/1572.png') !important; }
+.hero_skill_1573 { background-image:url('/image/m_/skill/1573.png') !important; }
+.hero_skill_1574 { background-image:url('/image/m_/skill/1574.png') !important; }
+.hero_skill_1575 { background-image:url('/image/m_/skill/1575.png') !important; }
+.hero_skill_1576 { background-image:url('/image/m_/skill/1576.png') !important; }
+.hero_skill_1577 { background-image:url('/image/m_/skill/1577.png') !important; }
+.hero_skill_1578 { background-image:url('/image/m_/skill/1578.png') !important; }
+.hero_skill_1579 { background-image:url('/image/m_/skill/1579.png') !important; }
+.hero_skill_1580 { background-image:url('/image/m_/skill/1580.png') !important; }
+.hero_skill_1581 { background-image:url('/image/m_/skill/1581.png') !important; }
+.hero_skill_1582 { background-image:url('/image/m_/skill/1582.png') !important; }
+.hero_skill_1583 { background-image:url('/image/m_/skill/1583.png') !important; }
+.hero_skill_1584 { background-image:url('/image/m_/skill/1584.png') !important; }
+.hero_skill_1585 { background-image:url('/image/m_/skill/1585.png') !important; }
+.hero_skill_1586 { background-image:url('/image/m_/skill/1586.png') !important; }
+.hero_skill_1587 { background-image:url('/image/m_/skill/1587.png') !important; }
+.hero_skill_1588 { background-image:url('/image/m_/skill/1588.png') !important; }
+.hero_skill_1589 { background-image:url('/image/m_/skill/1589.png') !important; }
+.hero_skill_1590 { background-image:url('/image/m_/skill/1590.png') !important; }
+.hero_skill_1591 { background-image:url('/image/m_/skill/1591.png') !important; }
+.hero_skill_1592 { background-image:url('/image/m_/skill/1592.png') !important; }
+.hero_skill_1593 { background-image:url('/image/m_/skill/1593.png') !important; }
+.hero_skill_1594 { background-image:url('/image/m_/skill/1594.png') !important; }
+
+.hero_skill_rare1 {  background-image:url('/image/m_/skill/rare_1.png'); }
+.hero_skill_rare2 {  background-image:url('/image/m_/skill/rare_2.png'); }
+.hero_skill_rare3 {  background-image:url('/image/m_/skill/rare_3.png'); }
+.hero_skill_rare4 {  background-image:url('/image/m_/skill/rare_4.png'); }
+.hero_skill_rare5 {  background-image:url('/image/m_/skill/rare_5.png'); }
+.hero_skill_rare6 {  background-image:url('/image/m_/skill/rare_6.png'); }
+.hero_skill_rare7 {  background-image:url('/image/m_/skill/rare_7.png'); }
+.hero_skill_rare8 {  background-image:url('/image/m_/skill/rare_8.png'); }
+
+.rare_border_1::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url('/image/m_/skill/rare_1.png');
+    background-size: 45px 45px;
+    content: " ";
+}
+.rare_border_2::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url('/image/m_/skill/rare_2.png');
+    background-size: 45px 45px;
+    content: " ";
+}
+.rare_border_3::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url('/image/m_/skill/rare_3.png');
+    background-size: 45px 45px;
+    content: " ";
+}
+.rare_border_4::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url('/image/m_/skill/rare_4.png');
+    background-size: 45px 45px;
+    content: " ";
+}
+.rare_border_5::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url('/image/m_/skill/rare_5.png');
+    background-size: 45px 45px;
+    content: " ";
+}
+.rare_border_6::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url('/image/m_/skill/rare_6.png');
+    background-size: 45px 45px;
+    content: " ";
+}
+.rare_border_7::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url('/image/m_/skill/rare_7.png');
+    background-size: 45px 45px;
+    content: " ";
+}
+.rare_border_8::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-image: url('/image/m_/skill/rare_8.png');
+    background-size: 45px 45px;
+    content: " ";
+}
+
+/* pickup_frame_animation */
+.frame_effect {
+    position: absolute;
+    width: 92px;
+    height: 121px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    animation: frame_effect_x 334ms steps(10) infinite, frame_effect_y 2004ms steps(6) infinite;
+    z-index: 1;
+}
+
+.frame_effect.start {
+    background-image: url('/image/hero/hero_frame_effect_start.png');
+    animation: frame_start_x 167ms steps(5) 3, frame_start_y 501ms steps(3) 1 !important;
+}
+
+.frame_effect.rare4 {
+    background-image: url('/image/hero/hero_frame_effect_rare4.png');
+}
+
+.frame_effect.rare5 {
+    background-image: url('/image/hero/hero_frame_effect_rare5.png');
+}
+
+.frame_effect.rare6 {
+    background-image: url('/image/hero/hero_frame_effect_rare6.png');
+}
+
+.frame_effect.rare7 {
+    background-image: url('/image/hero/hero_frame_effect_rare7.png');
+}
+
+@keyframes frame_effect_x {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -920px;
+    }
+}
+
+@keyframes frame_effect_y {
+    0% {
+        background-position-y: 0;
+    }
+    100% {
+        background-position-y:  -726px;
+    }
+}
+
+@keyframes frame_start_x {
+    0% {
+        background-position-x: 0;
+    }
+    100% {
+        background-position-x: -460px;
+    }
+}
+
+@keyframes frame_start_y {
+    0% {
+        background-position-y: 0;
+    }
+    100% {
+        background-position-y:  -363px;
+    }
+}

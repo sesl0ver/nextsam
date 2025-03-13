@@ -1,0 +1,30 @@
+<h2>유저 블럭 해제</h2>
+
+<hr />
+
+<fieldset id="lord_search_by_lord_name_form" class="cpn_search_form">
+	<legend>군주명 검색</legend>
+	<div>
+		<input type="text" id="lord_name" value="{{ _SESSION['selected_lord']['lord_name'] }}" /> <input type="button" id="do_search_lord_name" value="&nbsp;검색&nbsp;" /><br/>
+	</div>
+</fieldset>
+
+<br/>
+
+<div id="search_result">
+
+<table id="serv_info_user_block_clear" class="jqGridTable">
+</table>
+<div id="pager_serv_info_user_block_clear"></div>
+
+</div>
+
+<div id="dialog-form" title="유저 블럭 해제">
+	<form>
+	<fieldset style="border:none;">
+		<h2 for="name">사유</h2>
+		<br/>
+		<textarea type="text" id="blocked_clear_cause" style="width:320px;height:120px;min-width:320px;min-height:120px;"></textarea>
+	</fieldset>
+	</form>
+</div>

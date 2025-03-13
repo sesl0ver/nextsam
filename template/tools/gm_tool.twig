@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>NEXT 삼국지 GM TOOL</title>
+
+    <link rel="stylesheet" type="text/css" href="/tools/css/page/gm.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/page/base.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/page/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/page/component.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/ui.jqgrid.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/jquery.datetimepicker.min.css" />
+
+    <script type="text/javascript" src="/tools/js/moment.min.js"></script>
+    <script type="text/javascript" src="/tools/js/moment-timezone-with-data.js"></script>
+    <script type="text/javascript" src="/tools/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/tools/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/tools/js/jquery-ui-timepicker-addon.min.js"></script>
+    <script type="text/javascript" src="/tools/js/jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript" src="/tools/js/jquery.jqGrid.min.js"></script>
+
+    <script type="text/javascript" src='/js_ext/axios.min.js'></script>
+
+    <script type="text/javascript" src="/tools/js/page/common.js"></script>
+    <script type="text/javascript" src="/tools/js/page/request_func.js"></script>
+
+    <style>
+        .ui-jqgrid tr.jqgrow td {font-weight: normal; overflow: hidden; white-space: normal !important; height:22px; padding: 0 2px 0 2px;border-bottom-width: 1px; border-bottom-color: inherit; border-bottom-style: solid;}
+        .ui-jqgrid .ui-jqgrid-titlebar { padding-left : 0.8em; font-size : 11pt; }
+        .ui-jqgrid .ui-jqgrid-titlebar span { font-size : 11pt; }
+    </style>
+
+    <script>
+        $.datetimepicker.setLocale('ko');
+        //<![CDATA[
+        let gm_info = {
+            'view_name' : '{{ params['view'] }}',
+            'selected_server_pk' : '{{ _SESSION['selected_server']['server_pk'] }}',
+            'selected_server_ip' : '{{ _SESSION['selected_server']['db_ip'] }}',
+            'selected_server_domain' : '{{ _SESSION['selected_server']['set_domain'] }}',
+            'selected_lord_pk' : '{{ _SESSION['selected_lord']['lord_pk'] }}',
+            'selected_posi_pk' : '{{ _SESSION['selected_terr']['posi_pk']}}',
+            'lord_selected' : {{ _SESSION['selected_lord'] ? 'true' : 'false' }},
+            'terr_selected' : {{ _SESSION['selected_terr'] ? 'true' : 'false' }},
+            'loaded_timestamp' : {{ time }},
+            'ts' : 0,
+            'opened_left_menu_idx': {{ opened_left_menu_idx }}
+        }
+
+        let ns_web_version  = 'gm';
+        let ns_cs = { m: {} }; // 마스터데이터용
+    </script>
+
+    <script type="text/javascript" src='/js_ext/big.min.js'></script>
+    <script type="text/javascript" src='/m_/cache/ns_m.item.js'></script>
+    <script type="text/javascript" src='/js_ext/axios.min.js'></script>
+    <script type="text/javascript" src='/js/ns_auth.js'></script>
+    <script type="text/javascript" src='/js/ns_engine.js'></script>
+    <script type="text/javascript" src='/js/ns_timer.js'></script>
+    <script type="text/javascript" src='/js/ns_global.js'></script>
+    <script type="text/javascript" src='/js/ns_xhr.js'></script>
+    <script type="text/javascript" src='/js/ns_math.js'></script>
+    <script type="text/javascript" src='/js/ns_util.js'></script>
+    <script type="text/javascript" src='/js/ns_i18n.js'></script>
+    <script>
+        ns_i18n.setResource(`{{ text_resource }}`);
+    </script>
+</head>
+<body id="main_stage">
+
+<div id="frame">
+    <div id="header">
+        <h1>Next 삼국지 GM TOOL</h1>
+        <div class="time_area">
+            <span id="server_time"></span>
+        </div>
+        <div id="gm_info">
+            <h4>GM 정보 : {{ _SESSION['gm_id'] }}</h4>
+            <ul style="list-style-type : none;">
+                <li class="bullet"><a href="/admin/gm/change_pw">비번변경</a></li>
+                <li class="bullet"><a href="/admin/gm/logout">로그아웃</a></li>
+                <li class="bullet" id="gm_permission">권한정보</li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div id="navi" class="cpn_box">{{ navi_path | raw }}</div>
+        <div id="body">
+            <div id="left" class="cpn_box">
+                {{ draw_left_menu | raw }}
+            </div>
+            <div id="center" class="cpn_box">
+                {% if require_file %}
+                    {% include require_file %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div style="height : 40px; line-height : 30px; text-align : center;">
+        Copyright &copy; <span style="font-weight : bold; color : #d9a20f; font-family : arial, serif;">NextLv</span>. All rights reserved.
+    </div>
+</div>
+<br/>
+
+<div id="gm_permission_info" style="display : none;">
+    <ul style="list-style-type : none; width : 100px;">
+        <li class="<?php echo ($_SESSION['gm_permit']['NOTICE'] === true) ? 'checked' : 'not'; ?>">공지</li>
+        <li class="<?php echo ($_SESSION['gm_permit']['BLOCK'] === true) ? 'checked' : 'not'; ?>">제재</li>
+        <li class="<?php echo ($_SESSION['gm_permit']['LOG'] === true) ? 'checked' : 'not'; ?>">로그 조회</li>
+        <li class="<?php echo ($_SESSION['gm_permit']['CHEAT'] === true) ? 'checked' : 'not'; ?>">치트툴</li>
+        <li class="<?php echo ($_SESSION['gm_permit']['EDIT'] === true) ? 'checked' : 'not'; ?>">에디팅</li>
+        <li class="<?php echo ($_SESSION['gm_permit']['SMONITOR'] === true) ? 'checked' : 'not'; ?>">서버 모니터링</li>
+        <li class="<?php echo ($_SESSION['gm_permit']['SCOMMAND'] === true) ? 'checked' : 'not'; ?>">서버 명령</li>
+        <li class="<?php echo ($_SESSION['gm_permit']['ENQUINARY'] === true) ? 'checked' : 'not'; ?>">일반 조회</li>
+    </ul>
+</div>
+
+<script type="text/javascript" src="/tools/js/common/gm_log.js"></script>
+<script type="text/javascript" src="/tools/js/page/{{ params['view'] }}.js"></script>
+</body>
+</html>

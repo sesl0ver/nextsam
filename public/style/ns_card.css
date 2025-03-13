@@ -1,0 +1,1638 @@
+@charset "utf-8";
+
+.hero_card .hero_card_front {
+    -webkit-transition-timing-function: linear;
+}
+
+.hero_card .hero_card_back {
+    -webkit-transition-timing-function: linear;
+}
+
+.hero_card .hero_card_wrap {
+    position: relative;
+    width: 277px;
+    height: 353px;
+}
+
+.hero_card .hero_card_front .hero_card_wrap {
+    background:url('/image/card/hero_card_front_bg.png') no-repeat;
+    background-size: 277px 353px;
+}
+
+.hero_card .hero_card_back .hero_card_wrap {
+    background:url('/image/card/hero_card_back_bg.png') no-repeat;
+    background-size: 277px 353px;
+}
+
+.hero_card .hero_card_cover .hero_card_wrap {
+    background:url('/image/card/hero_card_cover.png') no-repeat;
+    background-size: 277px 353px;
+}
+
+.hero_card_front .hero_card_level {
+    top: 16px;
+    left: 247px;
+    width: 12px;
+    height: 18px;
+    background: url('/image/card/number.png') no-repeat;
+    background-size: 120px 18px;
+}
+
+.hero_card_front .hero_card_level.lv1 { background-position: calc(12px * -1) 0; }
+.hero_card_front .hero_card_level.lv2 { background-position: calc(12px * -2) 0; }
+.hero_card_front .hero_card_level.lv3 { background-position: calc(12px * -3) 0; }
+.hero_card_front .hero_card_level.lv4 { background-position: calc(12px * -4) 0; }
+.hero_card_front .hero_card_level.lv5 { background-position: calc(12px * -5) 0; }
+.hero_card_front .hero_card_level.lv6 { background-position: calc(12px * -6) 0; }
+.hero_card_front .hero_card_level.lv7 { background-position: calc(12px * -7) 0; }
+.hero_card_front .hero_card_level.lv8 { background-position: calc(12px * -8) 0; }
+.hero_card_front .hero_card_level.lv9 { background-position: calc(12px * -9) 0; }
+
+.hero_card_front .hero_card_level.lv10 { left: 241px; background-position: -12px 0; }
+.hero_card_front .hero_card_level.lv10:after {
+    position:absolute;
+    left: 12px;
+    width: 12px;
+    height: 18px;
+    content: ' ';
+    background: url('/image/card/number.png') no-repeat 0 0;
+    background-size: 120px 18px;
+}
+
+.hero_card_front .hero_card_level.lv20 { left: 241px; background-position: -24px 0; }
+.hero_card_front .hero_card_level.lv20:after {
+    position:absolute;
+    left: 12px;
+    width: 12px;
+    height: 18px;
+    content: ' ';
+    background: url('/image/card/number.png') no-repeat 0 0;
+    background-size: 120px 18px;
+}
+
+.hero_card_front .hero_card_level.lv11 { left: 241px; background-position: -12px 0; }
+.hero_card_front .hero_card_level.lv11:after {
+    position:absolute;
+    left: 12px;
+    width: 12px;
+    height: 18px;
+    content: ' ';
+    background: url('/image/card/number.png') no-repeat calc(12px * -1) 0;
+    background-size: 120px 18px;
+}
+
+.hero_card_front .hero_card_level.lv12 { left: 241px; background-position: -12px 0; }
+.hero_card_front .hero_card_level.lv12:after {
+    position:absolute;
+    left: 12px;
+    width: 12px;
+    height: 18px;
+    content: ' ';
+    background: url('/image/card/number.png') no-repeat calc(12px * -2) 0;
+    background-size: 120px 18px;
+}
+
+.hero_card_front .hero_card_level.lv13 { left: 241px; background-position: -12px 0; }
+.hero_card_front .hero_card_level.lv13:after {
+    position:absolute;
+    left: 12px;
+    width: 12px;
+    height: 18px;
+    content: ' ';
+    background: url('/image/card/number.png') no-repeat calc(12px * -3) 0;
+    background-size: 120px 18px;
+}
+
+.hero_card_front .hero_card_level.lv14 { left: 241px; background-position: -12px 0; }
+.hero_card_front .hero_card_level.lv14:after {
+    position:absolute;
+    left: 12px;
+    width: 12px;
+    height: 18px;
+    content: ' ';
+    background: url('/image/card/number.png') no-repeat calc(12px * -4) 0;
+    background-size: 120px 18px;
+}
+
+.hero_card_front .hero_card_level.lv15 { left: 241px; background-position: -12px 0; }
+.hero_card_front .hero_card_level.lv15:after {
+    position:absolute;
+    left: 12px;
+    width: 12px;
+    height: 18px;
+    content: ' ';
+    background: url('/image/card/number.png') no-repeat calc(12px * -5) 0;
+    background-size: 120px 18px;
+}
+
+.hero_card_front .hero_card_level.lv16 { left: 241px; background-position: -12px 0; }
+.hero_card_front .hero_card_level.lv16:after {
+    position:absolute;
+    left: 12px;
+    width: 12px;
+    height: 18px;
+    content: ' ';
+    background: url('/image/card/number.png') no-repeat calc(12px * -6) 0;
+    background-size: 120px 18px;
+}
+
+.hero_card_front .hero_card_level.lv17 { left: 241px; background-position: -12px 0; }
+.hero_card_front .hero_card_level.lv17:after {
+    position:absolute;
+    left: 12px;
+    width: 12px;
+    height: 18px;
+    content: ' ';
+    background: url('/image/card/number.png') no-repeat calc(12px * -7) 0;
+    background-size: 120px 18px;
+}
+
+.hero_card_front .hero_card_level.lv18 { left: 241px; background-position: -12px 0; }
+.hero_card_front .hero_card_level.lv18:after {
+    position:absolute;
+    left: 12px;
+    width: 12px;
+    height: 18px;
+    content: ' ';
+    background: url('/image/card/number.png') no-repeat calc(12px * -8) 0;
+    background-size: 120px 18px;
+}
+
+.hero_card_front .hero_card_level.lv19 { left: 241px; background-position: -12px 0; }
+.hero_card_front .hero_card_level.lv19:after {
+    position:absolute;
+    left: 12px;
+    width: 12px;
+    height: 18px;
+    content: ' ';
+    background: url('/image/card/number.png') no-repeat calc(12px * -9) 0;
+    background-size: 120px 18px;
+}
+
+
+.hero_card_front .hero_card_adv_emblem {
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    width: 106px;
+    height: 106px;
+    background: url('/image/card/adv_emblem.png') no-repeat;
+    background-size: 106px 106px;
+    z-index: 30;
+}
+
+.hero_card_front .hero_card_named {
+    position: absolute;
+    top: 266px;
+    left: 180px;
+    width: 52px;
+    height: 19px;
+    line-height: 19px;
+    text-align: center;
+    color: rgb(253, 193, 37);
+    font-size: .96rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #000;
+    z-index: 10;
+}
+
+.hero_card_front .hero_card_name {
+    top: 11px;
+    left: 89px;
+    width: 140px;
+    height: 24px;
+    line-height: 24px;
+    letter-spacing: 4px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.hero_card_front .hero_card_pic {
+    position: absolute;
+    top: 42px;
+    left: 9px;
+    width: 219px;
+    height: 246px;
+    background-size: 219px 246px;
+    background-repeat: no-repeat;
+}
+
+
+.hero_card_front .hero_card_small_skill_slot {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    top: 274px;
+    left: 10px;
+}
+
+.hero_card_front .hero_card_small_skill_slot > div {
+    width:12px;
+    height:12px;
+    background: url('/image/card/small_skill_slot_off.png') no-repeat;
+    background-size: 12px 12px;
+}
+
+.hero_card_front .hero_card_small_skill_slot > div.on {
+    background: url('/image/card/small_skill_slot_on.png') no-repeat !important;
+    background-size: 12px 12px !important;
+}
+
+.hero_card_front .hero_card_status {
+    position: absolute;
+    top: 242px;
+    left: 235px;
+    width: 33px;
+    height: 46px;
+    background: url('/image/card/status.png') no-repeat;
+    background-size: 231px 46px;
+}
+
+.hero_card_front .hero_card_status.I { background-position: 0 0; }
+.hero_card_front .hero_card_status.A { background-position: -33px 0; }
+.hero_card_front .hero_card_status.C { background-position: -66px 0; }
+.hero_card_front .hero_card_status.P { background-position: -99px 0; }
+.hero_card_front .hero_card_status.S { background-position: -132px 0; }
+
+.hero_card_front .hero_card_group {
+    position: absolute;
+    top: 42px;
+    right: 49px;
+    width: 12px;
+    height: 12px;
+    background: url('/image/icon/hero_manage_group.gif') no-repeat;
+    background-size: 72px 12px;
+    opacity: .7;
+}
+.hero_card_front .hero_card_group.C { background-position: 0 0; }
+.hero_card_front .hero_card_group.D { background-position: -12px 0; }
+.hero_card_front .hero_card_group.S { background-position: -24px 0; }
+.hero_card_front .hero_card_group.E { background-position: -36px 0; }
+.hero_card_front .hero_card_group.B { background-position: -48px 0; }
+.hero_card_front .hero_card_group.T { background-position: -60px 0; }
+
+.hero_card_front .hero_card_stat_txt {
+    bottom: 24px;
+    width: 36px;
+    height: 24px;
+    line-height:24px;
+    font-size: .8rem;
+    font-weight: bold;
+    text-align: left;
+    text-shadow: -1px -1px 3px #000;
+}
+
+.hero_card_front .hero_card_forces {
+    position: absolute;
+    top: 0;
+    left: 8px;
+    width: 60px;
+    height: 90px;
+    background: url('/image/card/forces.png') no-repeat;
+    background-size: 420px 90px;
+}
+
+.hero_card_front .hero_card_forces.UB { background-position: 0 0; }
+.hero_card_front .hero_card_forces.SK { background-position: -60px 0; }
+.hero_card_front .hero_card_forces.JJ { background-position: calc(60px * -2) 0; }
+.hero_card_front .hero_card_forces.DT { background-position: calc(60px * -3) 0; }
+.hero_card_front .hero_card_forces.WS { background-position: calc(60px * -4) 0; }
+.hero_card_front .hero_card_forces.PC { background-position: calc(60px * -5) 0; }
+.hero_card_front .hero_card_forces.NN { background-position: calc(60px * -6) 0; }
+
+.hero_card_front .hero_card_rare {
+    position: absolute;
+    top: 69px;
+    left: 242px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    width: 20px;
+    text-align: center;
+}
+
+.hero_card_front .hero_card_rare > span {
+    display: block;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    background: url('/image/card/icon_rare.png') repeat-y;
+    background-size: 20px 20px;
+}
+
+.hero_card_front .hero_card_stat_val {
+    position: absolute;
+    bottom: 8px;
+    width: 46px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 1px 1px 3px #794800;
+}
+
+.hero_card_front .hero_card_stat_val.leadership { left: 9px; }
+.hero_card_front .hero_card_stat_val.mil_force { left: 62px; }
+.hero_card_front .hero_card_stat_val.intellect { left: 115px; }
+.hero_card_front .hero_card_stat_val.politics { left: 168px; }
+.hero_card_front .hero_card_stat_val.charm { left: 221px; }
+
+.hero_card_front .hero_card_stat_val.upper { color: #b4ff48; } /* >= 70 */
+.hero_card_front .hero_card_stat_val.best { color: #ff8020; } /* >= 100 */
+
+.hero_card_front .hero_card_detail_status_wrap {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 240px;
+    text-align: center;
+    background: rgba(0, 0, 0, .9);
+    z-index: 20;
+    padding: 5px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.hero_card_front .hero_card_detail_status_wrap * {
+    pointer-events: none;
+}
+
+.hero_card_front .hero_card_detail_status_wrap .status_title {
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+.hero_card_front .hero_card_detail_status_wrap .hero_card_gauge {
+    display: inline-block;
+    position: relative;
+    width: 160px;
+    height: 11px;
+    padding: 0;
+    margin-right: 2px;
+    border-radius: 2px;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 10%, rgba(96,96,96,1) 100%);
+    box-sizing: border-box;
+    -webkit-box-sizing:border-box;
+}
+
+.hero_card_front .hero_card_gauge_wrap .status_gauge {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 2px;
+    width: 80px;
+    height: 11px;
+    padding: 0;
+    border-radius: 2px;
+    background: rgb(255,68,0);
+    background: linear-gradient(180deg, rgba(255,68,0,1) 0%, rgba(255,111,0,1) 15%, rgba(255,154,77,1) 100%);
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+
+.hero_card_front .hero_card_gauge .status_value {
+    position: absolute;
+    top: -2px;
+    left: 3px;
+    font-size: .65rem;
+    font-weight: bold;
+    line-height: .9rem;
+    z-index: 40;
+    text-shadow: 1px 1px 0 #000;
+}
+.hero_card_front .hero_card_detail_status_wrap td { color: #FFFFFF; }
+.hero_card_front .hero_card_detail_status_wrap td .plusstat { color: #2181C8; }
+.hero_card_front .hero_card_detail_status_wrap td .officer { color: #00B468; }
+.hero_card_front .hero_card_detail_status_wrap td .enchant { color: #FF1D1D; }
+.hero_card_front .hero_card_detail_status_wrap td .skill { color: #E57B20; }
+
+/* back */
+.hero_card_back .hero_card_pic_small {
+    position: absolute;
+    top: 12px;
+    left: 9px;
+    width: 62px;
+    height: 68px;
+    background-size: 64px 70px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.hero_card_back .hero_card_name {
+    position: absolute;
+    top: 79px;
+    left: 8px;
+    width: 64px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+.hero_card_back .hero_card_group {
+    position: absolute;
+    top: 12px;
+    left: 9px;
+    width: 12px;
+    height: 12px;
+    background: url('/image/icon/hero_manage_group.gif') no-repeat;
+    background-size: 72px 12px;
+    opacity: .7;
+}
+.hero_card_back .hero_card_group.C { background-position: 0 0; }
+.hero_card_back .hero_card_group.D { background-position: -12px 0; }
+.hero_card_back .hero_card_group.S { background-position: -24px 0; }
+.hero_card_back .hero_card_group.E { background-position: -36px 0; }
+.hero_card_back .hero_card_group.B { background-position: -48px 0; }
+.hero_card_back .hero_card_group.T { background-position: -60px 0; }
+
+.hero_card_back .hero_card_mil_aptitude_wrap {
+    position: absolute;
+    top: 10px;
+    left: 73px;
+    margin-top: 1px;
+    width: 192px;
+    height: 85px;
+}
+
+.hero_card_back .text_card_back_title {
+    text-align: center;
+    font-size: .78rem;
+    font-weight: bold;
+    text-shadow: -1px -1px 3px #000;
+    color: #dcc065;
+    /*letter-spacing: 4px;*/
+}
+
+.hero_card_back .hero_card_mil_aptitude {
+    display: flex;
+    gap: .03em;
+}
+
+.hero_card_back .hero_card_mil_aptitude > div {
+    width: 32px;
+}
+
+.hero_card_back .hero_card_mil_aptitude .text_card_back_subtitle {
+    display: inline-block;
+    width: 32px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+    font-size: .7rem;
+    font-weight: bold;
+    text-shadow: -1px -1px 3px #000;
+    color: #EFEFEF;
+}
+
+.hero_card_back .hero_card_mil_aptitude .text_card_back_value {
+    display: inline-block;
+    width: 32px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 1px #333;
+}
+.hero_card_back .hero_card_mil_aptitude .text_card_back_value.S { color: #fe01a9; }
+.hero_card_back .hero_card_mil_aptitude .text_card_back_value.A { color: #fe6400; }
+.hero_card_back .hero_card_mil_aptitude .text_card_back_value.B { color: #01b959; }
+.hero_card_back .hero_card_mil_aptitude .text_card_back_value.C { color: #0a5cff; }
+.hero_card_back .hero_card_mil_aptitude .text_card_back_value.D { color: #ac00ff; }
+
+.hero_card_back .hero_card_officer_title {
+    position: absolute;
+    top: 125px;
+    left: 10px;
+    width: 54px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.hero_card_back .hero_card_officer_value {
+    position: absolute;
+    top: 125px;
+    left: 68px;
+    width: 66px;
+    height: 18px;
+    font-size: .7rem;
+    text-align: center;
+    line-height: 18px;
+}
+
+.hero_card_back .hero_card_loyalty_title {
+    position: absolute;
+    top: 125px;
+    left: 142px;
+    width: 54px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.hero_card_back .hero_card_loyalty_value {
+    position: absolute;
+    top: 125px;
+    left: 198px;
+    width: 66px;
+    height: 18px;
+    font-size: .7rem;
+    text-align: center;
+    line-height: 18px;
+}
+
+.hero_card_back .hero_card_enchant_title {
+    position: absolute;
+    top: 146px;
+    left: 10px;
+    width: 54px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.hero_card_back .hero_card_enchant_value {
+    position: absolute;
+    top: 146px;
+    left: 68px;
+    width: 66px;
+    height: 18px;
+    font-size: .7rem;
+    text-align: center;
+    line-height: 18px;
+}
+
+.hero_card_back .hero_card_status_title {
+    position: absolute;
+    top: 146px;
+    left: 142px;
+    width: 54px;
+    height: 18px;
+    text-align: center;
+    line-height: 18px;
+}
+
+.hero_card_back .hero_card_status_value {
+    position: absolute;
+    top: 146px;
+    left: 194px;
+    width: 75px;
+    height: 18px;
+    font-size: .7rem;
+    text-align: center;
+    line-height: 18px;
+}
+
+.hero_card_back .hero_card_skill_title {
+    position: absolute;
+    top: 170px;
+    left: 80px;
+    width: 117px;
+    height: 18px;
+    text-align: center;
+}
+
+.hero_card_back .hero_card_description_title {
+    position: absolute;
+    top: 240px;
+    left: 80px;
+    width: 117px;
+    height: 18px;
+    text-align: center;
+}
+
+.hero_card_back .hero_card_description_wrap {
+    position: absolute;
+    top: 264px;
+    left: 16px;
+    width: 246px;
+    height: 76px;
+    overflow: hidden;
+    z-index: 3;
+
+}
+
+.hero_card_back .hero_card_description {
+    font-size: .75rem;
+    font-weight: normal;
+    line-height: 140%;
+}
+
+.hero_card_back .hero_card_skill_list {
+    display: flex;
+    gap: 4px;
+    position: relative;
+    top: 161px;
+    left: 0;
+    margin: 0 11px;
+    z-index: 2;
+}
+
+.hero_card_back .hero_card_skill_list .hero_card_skill_slot {
+    position: relative;
+    width: 39px;
+    height: 39px;
+    background-size: 39px 39px;
+    background-repeat: no-repeat;
+    background-image: url('/image/card/skill_box_0.png');
+}
+.hero_card_back .hero_card_skill_list .hero_card_skill_slot.lock1 { background-image: url('/image/card/skill_box_1.png'); }
+.hero_card_back .hero_card_skill_list .hero_card_skill_slot.lock2 { background-image: url('/image/card/skill_box_2.png'); }
+.hero_card_back .hero_card_skill_list .hero_card_skill_slot.lock3 { background-image: url('/image/card/skill_box_3.png'); }
+.hero_card_back .hero_card_skill_list .hero_card_skill_slot.lock4 { background-image: url('/image/card/skill_box_4.png'); }
+.hero_card_back .hero_card_skill_list .hero_card_skill_slot.lock5 { background-image: url('/image/card/skill_box_5.png'); }
+
+
+.hero_card_back .hero_card_skill_list .hero_card_skill_slot > div {
+    width: 39px;
+    height: 39px;
+    background-size: 39px 39px;
+}
+
+.hero_card_back .hero_card_skill_list .rare_border_1::after,
+.hero_card_back .hero_card_skill_list .rare_border_2::after,
+.hero_card_back .hero_card_skill_list .rare_border_3::after,
+.hero_card_back .hero_card_skill_list .rare_border_4::after,
+.hero_card_back .hero_card_skill_list .rare_border_5::after,
+.hero_card_back .hero_card_skill_list .rare_border_6::after,
+.hero_card_back .hero_card_skill_list .rare_border_7::after {
+    width: 39px;
+    height: 39px;
+    background-size: 39px 39px;
+}
+
+.hero_card_back .hero_card_skill_list .lock1 {
+    background-image: url('/image/card/skill_box_1.png');
+}
+
+.hero_card_back .hero_card_skill_list .lock2 {
+    background-image: url('/image/card/skill_box_2.png');
+}
+
+.hero_card_back .hero_card_skill_list .lock3 {
+    background-image: url('/image/card/skill_box_3.png');
+}
+
+.hero_card_back .hero_card_skill_list .lock4 {
+    background-image: url('/image/card/skill_box_4.png');
+}
+
+.hero_card_back .hero_card_skill_list .lock5 {
+    background-image: url('/image/card/skill_box_5.png');
+}
+
+/* card big face */
+.hero_card .hero_card_pic.card_face_120000 { background-image: url('/image/m_/big/120000.png'); }
+.hero_card .hero_card_pic.card_face_120001 { background-image: url('/image/m_/big/120001.png'); }
+.hero_card .hero_card_pic.card_face_120002 { background-image: url('/image/m_/big/120002.png'); }
+.hero_card .hero_card_pic.card_face_120003 { background-image: url('/image/m_/big/120003.png'); }
+.hero_card .hero_card_pic.card_face_120004 { background-image: url('/image/m_/big/120004.png'); }
+.hero_card .hero_card_pic.card_face_120006 { background-image: url('/image/m_/big/120006.png'); }
+.hero_card .hero_card_pic.card_face_120007 { background-image: url('/image/m_/big/120007.png'); }
+.hero_card .hero_card_pic.card_face_120008 { background-image: url('/image/m_/big/120008.png'); }
+.hero_card .hero_card_pic.card_face_120010 { background-image: url('/image/m_/big/120010.png'); }
+.hero_card .hero_card_pic.card_face_120011 { background-image: url('/image/m_/big/120011.png'); }
+.hero_card .hero_card_pic.card_face_120012 { background-image: url('/image/m_/big/120012.png'); }
+.hero_card .hero_card_pic.card_face_120013 { background-image: url('/image/m_/big/120013.png'); }
+.hero_card .hero_card_pic.card_face_120014 { background-image: url('/image/m_/big/120014.png'); }
+.hero_card .hero_card_pic.card_face_120015 { background-image: url('/image/m_/big/120015.png'); }
+.hero_card .hero_card_pic.card_face_120016 { background-image: url('/image/m_/big/120016.png'); }
+.hero_card .hero_card_pic.card_face_120017 { background-image: url('/image/m_/big/120017.png'); }
+.hero_card .hero_card_pic.card_face_120018 { background-image: url('/image/m_/big/120018.png'); }
+.hero_card .hero_card_pic.card_face_120019 { background-image: url('/image/m_/big/120019.png'); }
+.hero_card .hero_card_pic.card_face_120021 { background-image: url('/image/m_/big/120021.png'); }
+.hero_card .hero_card_pic.card_face_120022 { background-image: url('/image/m_/big/120022.png'); }
+.hero_card .hero_card_pic.card_face_120024 { background-image: url('/image/m_/big/120024.png'); }
+.hero_card .hero_card_pic.card_face_120025 { background-image: url('/image/m_/big/120025.png'); }
+.hero_card .hero_card_pic.card_face_120027 { background-image: url('/image/m_/big/120027.png'); }
+.hero_card .hero_card_pic.card_face_120028 { background-image: url('/image/m_/big/120028.png'); }
+.hero_card .hero_card_pic.card_face_120029 { background-image: url('/image/m_/big/120029.png'); }
+.hero_card .hero_card_pic.card_face_120031 { background-image: url('/image/m_/big/120031.png'); }
+.hero_card .hero_card_pic.card_face_120032 { background-image: url('/image/m_/big/120032.png'); }
+.hero_card .hero_card_pic.card_face_120033 { background-image: url('/image/m_/big/120033.png'); }
+.hero_card .hero_card_pic.card_face_120035 { background-image: url('/image/m_/big/120035.png'); }
+.hero_card .hero_card_pic.card_face_120036 { background-image: url('/image/m_/big/120036.png'); }
+.hero_card .hero_card_pic.card_face_120037 { background-image: url('/image/m_/big/120037.png'); }
+.hero_card .hero_card_pic.card_face_120038 { background-image: url('/image/m_/big/120038.png'); }
+.hero_card .hero_card_pic.card_face_120039 { background-image: url('/image/m_/big/120039.png'); }
+.hero_card .hero_card_pic.card_face_120040 { background-image: url('/image/m_/big/120040.png'); }
+.hero_card .hero_card_pic.card_face_120042 { background-image: url('/image/m_/big/120042.png'); }
+.hero_card .hero_card_pic.card_face_120043 { background-image: url('/image/m_/big/120043.png'); }
+.hero_card .hero_card_pic.card_face_120044 { background-image: url('/image/m_/big/120044.png'); }
+.hero_card .hero_card_pic.card_face_120045 { background-image: url('/image/m_/big/120045.png'); }
+.hero_card .hero_card_pic.card_face_120046 { background-image: url('/image/m_/big/120046.png'); }
+.hero_card .hero_card_pic.card_face_120047 { background-image: url('/image/m_/big/120047.png'); }
+.hero_card .hero_card_pic.card_face_120048 { background-image: url('/image/m_/big/120048.png'); }
+.hero_card .hero_card_pic.card_face_120049 { background-image: url('/image/m_/big/120049.png'); }
+.hero_card .hero_card_pic.card_face_120050 { background-image: url('/image/m_/big/120050.png'); }
+.hero_card .hero_card_pic.card_face_120051 { background-image: url('/image/m_/big/120051.png'); }
+.hero_card .hero_card_pic.card_face_120052 { background-image: url('/image/m_/big/120052.png'); }
+.hero_card .hero_card_pic.card_face_120053 { background-image: url('/image/m_/big/120053.png'); }
+.hero_card .hero_card_pic.card_face_120054 { background-image: url('/image/m_/big/120054.png'); }
+.hero_card .hero_card_pic.card_face_120055 { background-image: url('/image/m_/big/120055.png'); }
+.hero_card .hero_card_pic.card_face_120056 { background-image: url('/image/m_/big/120056.png'); }
+.hero_card .hero_card_pic.card_face_120057 { background-image: url('/image/m_/big/120057.png'); }
+.hero_card .hero_card_pic.card_face_120058 { background-image: url('/image/m_/big/120058.png'); }
+.hero_card .hero_card_pic.card_face_120059 { background-image: url('/image/m_/big/120059.png'); }
+.hero_card .hero_card_pic.card_face_120060 { background-image: url('/image/m_/big/120060.png'); }
+.hero_card .hero_card_pic.card_face_120061 { background-image: url('/image/m_/big/120061.png'); }
+.hero_card .hero_card_pic.card_face_120062 { background-image: url('/image/m_/big/120062.png'); }
+.hero_card .hero_card_pic.card_face_120063 { background-image: url('/image/m_/big/120063.png'); }
+.hero_card .hero_card_pic.card_face_120064 { background-image: url('/image/m_/big/120064.png'); }
+.hero_card .hero_card_pic.card_face_120065 { background-image: url('/image/m_/big/120065.png'); }
+.hero_card .hero_card_pic.card_face_120066 { background-image: url('/image/m_/big/120066.png'); }
+.hero_card .hero_card_pic.card_face_120067 { background-image: url('/image/m_/big/120067.png'); }
+.hero_card .hero_card_pic.card_face_120069 { background-image: url('/image/m_/big/120069.png'); }
+.hero_card .hero_card_pic.card_face_120070 { background-image: url('/image/m_/big/120070.png'); }
+.hero_card .hero_card_pic.card_face_120071 { background-image: url('/image/m_/big/120071.png'); }
+.hero_card .hero_card_pic.card_face_120072 { background-image: url('/image/m_/big/120072.png'); }
+.hero_card .hero_card_pic.card_face_120073 { background-image: url('/image/m_/big/120073.png'); }
+.hero_card .hero_card_pic.card_face_120074 { background-image: url('/image/m_/big/120074.png'); }
+.hero_card .hero_card_pic.card_face_120075 { background-image: url('/image/m_/big/120075.png'); }
+.hero_card .hero_card_pic.card_face_120076 { background-image: url('/image/m_/big/120076.png'); }
+.hero_card .hero_card_pic.card_face_120077 { background-image: url('/image/m_/big/120077.png'); }
+.hero_card .hero_card_pic.card_face_120078 { background-image: url('/image/m_/big/120078.png'); }
+.hero_card .hero_card_pic.card_face_120079 { background-image: url('/image/m_/big/120079.png'); }
+.hero_card .hero_card_pic.card_face_120080 { background-image: url('/image/m_/big/120080.png'); }
+.hero_card .hero_card_pic.card_face_120082 { background-image: url('/image/m_/big/120082.png'); }
+.hero_card .hero_card_pic.card_face_120083 { background-image: url('/image/m_/big/120083.png'); }
+.hero_card .hero_card_pic.card_face_120084 { background-image: url('/image/m_/big/120084.png'); }
+.hero_card .hero_card_pic.card_face_120085 { background-image: url('/image/m_/big/120085.png'); }
+.hero_card .hero_card_pic.card_face_120086 { background-image: url('/image/m_/big/120086.png'); }
+.hero_card .hero_card_pic.card_face_120087 { background-image: url('/image/m_/big/120087.png'); }
+.hero_card .hero_card_pic.card_face_120088 { background-image: url('/image/m_/big/120088.png'); }
+.hero_card .hero_card_pic.card_face_120089 { background-image: url('/image/m_/big/120089.png'); }
+.hero_card .hero_card_pic.card_face_120090 { background-image: url('/image/m_/big/120090.png'); }
+.hero_card .hero_card_pic.card_face_120091 { background-image: url('/image/m_/big/120091.png'); }
+.hero_card .hero_card_pic.card_face_120092 { background-image: url('/image/m_/big/120092.png'); }
+.hero_card .hero_card_pic.card_face_120093 { background-image: url('/image/m_/big/120093.png'); }
+.hero_card .hero_card_pic.card_face_120094 { background-image: url('/image/m_/big/120094.png'); }
+.hero_card .hero_card_pic.card_face_120095 { background-image: url('/image/m_/big/120095.png'); }
+.hero_card .hero_card_pic.card_face_120096 { background-image: url('/image/m_/big/120096.png'); }
+.hero_card .hero_card_pic.card_face_120097 { background-image: url('/image/m_/big/120097.png'); }
+.hero_card .hero_card_pic.card_face_120098 { background-image: url('/image/m_/big/120098.png'); }
+.hero_card .hero_card_pic.card_face_120099 { background-image: url('/image/m_/big/120099.png'); }
+.hero_card .hero_card_pic.card_face_120101 { background-image: url('/image/m_/big/120101.png'); }
+.hero_card .hero_card_pic.card_face_120102 { background-image: url('/image/m_/big/120102.png'); }
+.hero_card .hero_card_pic.card_face_120103 { background-image: url('/image/m_/big/120103.png'); }
+.hero_card .hero_card_pic.card_face_120104 { background-image: url('/image/m_/big/120104.png'); }
+.hero_card .hero_card_pic.card_face_120105 { background-image: url('/image/m_/big/120105.png'); }
+.hero_card .hero_card_pic.card_face_120106 { background-image: url('/image/m_/big/120106.png'); }
+.hero_card .hero_card_pic.card_face_120107 { background-image: url('/image/m_/big/120107.png'); }
+.hero_card .hero_card_pic.card_face_120108 { background-image: url('/image/m_/big/120108.png'); }
+.hero_card .hero_card_pic.card_face_120109 { background-image: url('/image/m_/big/120109.png'); }
+.hero_card .hero_card_pic.card_face_120110 { background-image: url('/image/m_/big/120110.png'); }
+.hero_card .hero_card_pic.card_face_120111 { background-image: url('/image/m_/big/120111.png'); }
+.hero_card .hero_card_pic.card_face_120112 { background-image: url('/image/m_/big/120112.png'); }
+.hero_card .hero_card_pic.card_face_120113 { background-image: url('/image/m_/big/120113.png'); }
+.hero_card .hero_card_pic.card_face_120114 { background-image: url('/image/m_/big/120114.png'); }
+.hero_card .hero_card_pic.card_face_120115 { background-image: url('/image/m_/big/120115.png'); }
+.hero_card .hero_card_pic.card_face_120116 { background-image: url('/image/m_/big/120116.png'); }
+.hero_card .hero_card_pic.card_face_120117 { background-image: url('/image/m_/big/120117.png'); }
+.hero_card .hero_card_pic.card_face_120118 { background-image: url('/image/m_/big/120118.png'); }
+.hero_card .hero_card_pic.card_face_120119 { background-image: url('/image/m_/big/120119.png'); }
+.hero_card .hero_card_pic.card_face_120120 { background-image: url('/image/m_/big/120120.png'); }
+.hero_card .hero_card_pic.card_face_120121 { background-image: url('/image/m_/big/120121.png'); }
+.hero_card .hero_card_pic.card_face_120122 { background-image: url('/image/m_/big/120122.png'); }
+.hero_card .hero_card_pic.card_face_120123 { background-image: url('/image/m_/big/120123.png'); }
+.hero_card .hero_card_pic.card_face_120124 { background-image: url('/image/m_/big/120124.png'); }
+.hero_card .hero_card_pic.card_face_120125 { background-image: url('/image/m_/big/120125.png'); }
+.hero_card .hero_card_pic.card_face_120126 { background-image: url('/image/m_/big/120126.png'); }
+.hero_card .hero_card_pic.card_face_120127 { background-image: url('/image/m_/big/120127.png'); }
+.hero_card .hero_card_pic.card_face_120128 { background-image: url('/image/m_/big/120128.png'); }
+.hero_card .hero_card_pic.card_face_120129 { background-image: url('/image/m_/big/120129.png'); }
+.hero_card .hero_card_pic.card_face_120130 { background-image: url('/image/m_/big/120130.png'); }
+.hero_card .hero_card_pic.card_face_120131 { background-image: url('/image/m_/big/120131.png'); }
+.hero_card .hero_card_pic.card_face_120132 { background-image: url('/image/m_/big/120132.png'); }
+.hero_card .hero_card_pic.card_face_120133 { background-image: url('/image/m_/big/120133.png'); }
+.hero_card .hero_card_pic.card_face_120134 { background-image: url('/image/m_/big/120134.png'); }
+.hero_card .hero_card_pic.card_face_120135 { background-image: url('/image/m_/big/120135.png'); }
+.hero_card .hero_card_pic.card_face_120136 { background-image: url('/image/m_/big/120136.png'); }
+.hero_card .hero_card_pic.card_face_120137 { background-image: url('/image/m_/big/120137.png'); }
+.hero_card .hero_card_pic.card_face_120138 { background-image: url('/image/m_/big/120138.png'); }
+.hero_card .hero_card_pic.card_face_120139 { background-image: url('/image/m_/big/120139.png'); }
+.hero_card .hero_card_pic.card_face_120140 { background-image: url('/image/m_/big/120140.png'); }
+.hero_card .hero_card_pic.card_face_120141 { background-image: url('/image/m_/big/120141.png'); }
+.hero_card .hero_card_pic.card_face_120142 { background-image: url('/image/m_/big/120142.png'); }
+.hero_card .hero_card_pic.card_face_120143 { background-image: url('/image/m_/big/120143.png'); }
+.hero_card .hero_card_pic.card_face_120144 { background-image: url('/image/m_/big/120144.png'); }
+.hero_card .hero_card_pic.card_face_120145 { background-image: url('/image/m_/big/120145.png'); }
+.hero_card .hero_card_pic.card_face_120146 { background-image: url('/image/m_/big/120146.png'); }
+.hero_card .hero_card_pic.card_face_120147 { background-image: url('/image/m_/big/120147.png'); }
+.hero_card .hero_card_pic.card_face_120148 { background-image: url('/image/m_/big/120148.png'); }
+.hero_card .hero_card_pic.card_face_120149 { background-image: url('/image/m_/big/120149.png'); }
+.hero_card .hero_card_pic.card_face_120150 { background-image: url('/image/m_/big/120150.png'); }
+.hero_card .hero_card_pic.card_face_120151 { background-image: url('/image/m_/big/120151.png'); }
+.hero_card .hero_card_pic.card_face_120152 { background-image: url('/image/m_/big/120152.png'); }
+.hero_card .hero_card_pic.card_face_120153 { background-image: url('/image/m_/big/120153.png'); }
+.hero_card .hero_card_pic.card_face_120154 { background-image: url('/image/m_/big/120154.png'); }
+.hero_card .hero_card_pic.card_face_120155 { background-image: url('/image/m_/big/120155.png'); }
+.hero_card .hero_card_pic.card_face_120157 { background-image: url('/image/m_/big/120157.png'); }
+.hero_card .hero_card_pic.card_face_120158 { background-image: url('/image/m_/big/120158.png'); }
+.hero_card .hero_card_pic.card_face_120159 { background-image: url('/image/m_/big/120159.png'); }
+.hero_card .hero_card_pic.card_face_120161 { background-image: url('/image/m_/big/120161.png'); }
+.hero_card .hero_card_pic.card_face_120162 { background-image: url('/image/m_/big/120162.png'); }
+.hero_card .hero_card_pic.card_face_120163 { background-image: url('/image/m_/big/120163.png'); }
+.hero_card .hero_card_pic.card_face_120164 { background-image: url('/image/m_/big/120164.png'); }
+.hero_card .hero_card_pic.card_face_120165 { background-image: url('/image/m_/big/120165.png'); }
+.hero_card .hero_card_pic.card_face_120166 { background-image: url('/image/m_/big/120166.png'); }
+.hero_card .hero_card_pic.card_face_120167 { background-image: url('/image/m_/big/120167.png'); }
+.hero_card .hero_card_pic.card_face_120168 { background-image: url('/image/m_/big/120168.png'); }
+.hero_card .hero_card_pic.card_face_120169 { background-image: url('/image/m_/big/120169.png'); }
+.hero_card .hero_card_pic.card_face_120170 { background-image: url('/image/m_/big/120170.png'); }
+.hero_card .hero_card_pic.card_face_120171 { background-image: url('/image/m_/big/120171.png'); }
+.hero_card .hero_card_pic.card_face_120172 { background-image: url('/image/m_/big/120172.png'); }
+.hero_card .hero_card_pic.card_face_120173 { background-image: url('/image/m_/big/120173.png'); }
+.hero_card .hero_card_pic.card_face_120174 { background-image: url('/image/m_/big/120174.png'); }
+.hero_card .hero_card_pic.card_face_120175 { background-image: url('/image/m_/big/120175.png'); }
+.hero_card .hero_card_pic.card_face_120176 { background-image: url('/image/m_/big/120176.png'); }
+.hero_card .hero_card_pic.card_face_120177 { background-image: url('/image/m_/big/120177.png'); }
+.hero_card .hero_card_pic.card_face_120178 { background-image: url('/image/m_/big/120178.png'); }
+.hero_card .hero_card_pic.card_face_120179 { background-image: url('/image/m_/big/120179.png'); }
+.hero_card .hero_card_pic.card_face_120181 { background-image: url('/image/m_/big/120181.png'); }
+.hero_card .hero_card_pic.card_face_120182 { background-image: url('/image/m_/big/120182.png'); }
+.hero_card .hero_card_pic.card_face_120183 { background-image: url('/image/m_/big/120183.png'); }
+.hero_card .hero_card_pic.card_face_120184 { background-image: url('/image/m_/big/120184.png'); }
+.hero_card .hero_card_pic.card_face_120185 { background-image: url('/image/m_/big/120185.png'); }
+.hero_card .hero_card_pic.card_face_120187 { background-image: url('/image/m_/big/120187.png'); }
+.hero_card .hero_card_pic.card_face_120188 { background-image: url('/image/m_/big/120188.png'); }
+.hero_card .hero_card_pic.card_face_120190 { background-image: url('/image/m_/big/120190.png'); }
+.hero_card .hero_card_pic.card_face_120191 { background-image: url('/image/m_/big/120191.png'); }
+.hero_card .hero_card_pic.card_face_120192 { background-image: url('/image/m_/big/120192.png'); }
+.hero_card .hero_card_pic.card_face_120193 { background-image: url('/image/m_/big/120193.png'); }
+.hero_card .hero_card_pic.card_face_120194 { background-image: url('/image/m_/big/120194.png'); }
+.hero_card .hero_card_pic.card_face_120195 { background-image: url('/image/m_/big/120195.png'); }
+.hero_card .hero_card_pic.card_face_120196 { background-image: url('/image/m_/big/120196.png'); }
+.hero_card .hero_card_pic.card_face_120197 { background-image: url('/image/m_/big/120197.png'); }
+.hero_card .hero_card_pic.card_face_120198 { background-image: url('/image/m_/big/120198.png'); }
+.hero_card .hero_card_pic.card_face_120199 { background-image: url('/image/m_/big/120199.png'); }
+.hero_card .hero_card_pic.card_face_120200 { background-image: url('/image/m_/big/120200.png'); }
+.hero_card .hero_card_pic.card_face_120201 { background-image: url('/image/m_/big/120201.png'); }
+.hero_card .hero_card_pic.card_face_120202 { background-image: url('/image/m_/big/120202.png'); }
+.hero_card .hero_card_pic.card_face_120203 { background-image: url('/image/m_/big/120203.png'); }
+.hero_card .hero_card_pic.card_face_120204 { background-image: url('/image/m_/big/120204.png'); }
+.hero_card .hero_card_pic.card_face_120205 { background-image: url('/image/m_/big/120205.png'); }
+.hero_card .hero_card_pic.card_face_120206 { background-image: url('/image/m_/big/120206.png'); }
+.hero_card .hero_card_pic.card_face_120207 { background-image: url('/image/m_/big/120207.png'); }
+.hero_card .hero_card_pic.card_face_120208 { background-image: url('/image/m_/big/120208.png'); }
+.hero_card .hero_card_pic.card_face_120209 { background-image: url('/image/m_/big/120209.png'); }
+.hero_card .hero_card_pic.card_face_120210 { background-image: url('/image/m_/big/120210.png'); }
+.hero_card .hero_card_pic.card_face_120211 { background-image: url('/image/m_/big/120211.png'); }
+.hero_card .hero_card_pic.card_face_120212 { background-image: url('/image/m_/big/120212.png'); }
+.hero_card .hero_card_pic.card_face_120213 { background-image: url('/image/m_/big/120213.png'); }
+.hero_card .hero_card_pic.card_face_120214 { background-image: url('/image/m_/big/120214.png'); }
+.hero_card .hero_card_pic.card_face_120216 { background-image: url('/image/m_/big/120216.png'); }
+.hero_card .hero_card_pic.card_face_120218 { background-image: url('/image/m_/big/120218.png'); }
+.hero_card .hero_card_pic.card_face_120220 { background-image: url('/image/m_/big/120220.png'); }
+.hero_card .hero_card_pic.card_face_120221 { background-image: url('/image/m_/big/120221.png'); }
+.hero_card .hero_card_pic.card_face_120222 { background-image: url('/image/m_/big/120222.png'); }
+.hero_card .hero_card_pic.card_face_120223 { background-image: url('/image/m_/big/120223.png'); }
+.hero_card .hero_card_pic.card_face_120224 { background-image: url('/image/m_/big/120224.png'); }
+.hero_card .hero_card_pic.card_face_120225 { background-image: url('/image/m_/big/120225.png'); }
+.hero_card .hero_card_pic.card_face_120227 { background-image: url('/image/m_/big/120227.png'); }
+.hero_card .hero_card_pic.card_face_120228 { background-image: url('/image/m_/big/120228.png'); }
+.hero_card .hero_card_pic.card_face_120229 { background-image: url('/image/m_/big/120229.png'); }
+.hero_card .hero_card_pic.card_face_120230 { background-image: url('/image/m_/big/120230.png'); }
+.hero_card .hero_card_pic.card_face_120231 { background-image: url('/image/m_/big/120231.png'); }
+.hero_card .hero_card_pic.card_face_120232 { background-image: url('/image/m_/big/120232.png'); }
+.hero_card .hero_card_pic.card_face_120233 { background-image: url('/image/m_/big/120233.png'); }
+.hero_card .hero_card_pic.card_face_120234 { background-image: url('/image/m_/big/120234.png'); }
+.hero_card .hero_card_pic.card_face_120235 { background-image: url('/image/m_/big/120235.png'); }
+.hero_card .hero_card_pic.card_face_120236 { background-image: url('/image/m_/big/120236.png'); }
+.hero_card .hero_card_pic.card_face_120237 { background-image: url('/image/m_/big/120237.png'); }
+.hero_card .hero_card_pic.card_face_120238 { background-image: url('/image/m_/big/120238.png'); }
+.hero_card .hero_card_pic.card_face_120239 { background-image: url('/image/m_/big/120239.png'); }
+.hero_card .hero_card_pic.card_face_120240 { background-image: url('/image/m_/big/120240.png'); }
+.hero_card .hero_card_pic.card_face_120241 { background-image: url('/image/m_/big/120241.png'); }
+.hero_card .hero_card_pic.card_face_120242 { background-image: url('/image/m_/big/120242.png'); }
+.hero_card .hero_card_pic.card_face_120243 { background-image: url('/image/m_/big/120243.png'); }
+.hero_card .hero_card_pic.card_face_120244 { background-image: url('/image/m_/big/120244.png'); }
+.hero_card .hero_card_pic.card_face_120245 { background-image: url('/image/m_/big/120245.png'); }
+.hero_card .hero_card_pic.card_face_120246 { background-image: url('/image/m_/big/120246.png'); }
+.hero_card .hero_card_pic.card_face_120247 { background-image: url('/image/m_/big/120247.png'); }
+.hero_card .hero_card_pic.card_face_120248 { background-image: url('/image/m_/big/120248.png'); }
+.hero_card .hero_card_pic.card_face_120249 { background-image: url('/image/m_/big/120249.png'); }
+.hero_card .hero_card_pic.card_face_120250 { background-image: url('/image/m_/big/120250.png'); }
+.hero_card .hero_card_pic.card_face_120251 { background-image: url('/image/m_/big/120251.png'); }
+.hero_card .hero_card_pic.card_face_120252 { background-image: url('/image/m_/big/120252.png'); }
+.hero_card .hero_card_pic.card_face_120253 { background-image: url('/image/m_/big/120253.png'); }
+.hero_card .hero_card_pic.card_face_120254 { background-image: url('/image/m_/big/120254.png'); }
+.hero_card .hero_card_pic.card_face_120255 { background-image: url('/image/m_/big/120255.png'); }
+.hero_card .hero_card_pic.card_face_120256 { background-image: url('/image/m_/big/120256.png'); }
+.hero_card .hero_card_pic.card_face_120257 { background-image: url('/image/m_/big/120257.png'); }
+.hero_card .hero_card_pic.card_face_120258 { background-image: url('/image/m_/big/120258.png'); }
+.hero_card .hero_card_pic.card_face_120259 { background-image: url('/image/m_/big/120259.png'); }
+.hero_card .hero_card_pic.card_face_120260 { background-image: url('/image/m_/big/120260.png'); }
+.hero_card .hero_card_pic.card_face_120261 { background-image: url('/image/m_/big/120261.png'); }
+.hero_card .hero_card_pic.card_face_120262 { background-image: url('/image/m_/big/120262.png'); }
+.hero_card .hero_card_pic.card_face_120263 { background-image: url('/image/m_/big/120263.png'); }
+.hero_card .hero_card_pic.card_face_120264 { background-image: url('/image/m_/big/120264.png'); }
+.hero_card .hero_card_pic.card_face_120265 { background-image: url('/image/m_/big/120265.png'); }
+.hero_card .hero_card_pic.card_face_120266 { background-image: url('/image/m_/big/120266.png'); }
+.hero_card .hero_card_pic.card_face_120267 { background-image: url('/image/m_/big/120267.png'); }
+.hero_card .hero_card_pic.card_face_120268 { background-image: url('/image/m_/big/120268.png'); }
+.hero_card .hero_card_pic.card_face_120269 { background-image: url('/image/m_/big/120269.png'); }
+.hero_card .hero_card_pic.card_face_120270 { background-image: url('/image/m_/big/120270.png'); }
+.hero_card .hero_card_pic.card_face_120271 { background-image: url('/image/m_/big/120271.png'); }
+.hero_card .hero_card_pic.card_face_120272 { background-image: url('/image/m_/big/120272.png'); }
+.hero_card .hero_card_pic.card_face_120273 { background-image: url('/image/m_/big/120273.png'); }
+.hero_card .hero_card_pic.card_face_120274 { background-image: url('/image/m_/big/120274.png'); }
+.hero_card .hero_card_pic.card_face_120275 { background-image: url('/image/m_/big/120275.png'); }
+.hero_card .hero_card_pic.card_face_120276 { background-image: url('/image/m_/big/120276.png'); }
+.hero_card .hero_card_pic.card_face_120277 { background-image: url('/image/m_/big/120277.png'); }
+.hero_card .hero_card_pic.card_face_120278 { background-image: url('/image/m_/big/120278.png'); }
+.hero_card .hero_card_pic.card_face_120279 { background-image: url('/image/m_/big/120279.png'); }
+.hero_card .hero_card_pic.card_face_120280 { background-image: url('/image/m_/big/120280.png'); }
+.hero_card .hero_card_pic.card_face_120281 { background-image: url('/image/m_/big/120281.png'); }
+.hero_card .hero_card_pic.card_face_120282 { background-image: url('/image/m_/big/120282.png'); }
+.hero_card .hero_card_pic.card_face_120283 { background-image: url('/image/m_/big/120283.png'); }
+.hero_card .hero_card_pic.card_face_120284 { background-image: url('/image/m_/big/120284.png'); }
+.hero_card .hero_card_pic.card_face_120285 { background-image: url('/image/m_/big/120285.png'); }
+.hero_card .hero_card_pic.card_face_120286 { background-image: url('/image/m_/big/120286.png'); }
+.hero_card .hero_card_pic.card_face_120287 { background-image: url('/image/m_/big/120287.png'); }
+.hero_card .hero_card_pic.card_face_120288 { background-image: url('/image/m_/big/120288.png'); }
+.hero_card .hero_card_pic.card_face_120289 { background-image: url('/image/m_/big/120289.png'); }
+.hero_card .hero_card_pic.card_face_120290 { background-image: url('/image/m_/big/120290.png'); }
+.hero_card .hero_card_pic.card_face_120291 { background-image: url('/image/m_/big/120291.png'); }
+.hero_card .hero_card_pic.card_face_120292 { background-image: url('/image/m_/big/120292.png'); }
+.hero_card .hero_card_pic.card_face_120293 { background-image: url('/image/m_/big/120293.png'); }
+.hero_card .hero_card_pic.card_face_120294 { background-image: url('/image/m_/big/120294.png'); }
+.hero_card .hero_card_pic.card_face_120295 { background-image: url('/image/m_/big/120295.png'); }
+.hero_card .hero_card_pic.card_face_120296 { background-image: url('/image/m_/big/120296.png'); }
+.hero_card .hero_card_pic.card_face_120297 { background-image: url('/image/m_/big/120297.png'); }
+.hero_card .hero_card_pic.card_face_120298 { background-image: url('/image/m_/big/120298.png'); }
+.hero_card .hero_card_pic.card_face_120299 { background-image: url('/image/m_/big/120299.png'); }
+.hero_card .hero_card_pic.card_face_120300 { background-image: url('/image/m_/big/120300.png'); }
+.hero_card .hero_card_pic.card_face_120301 { background-image: url('/image/m_/big/120301.png'); }
+.hero_card .hero_card_pic.card_face_120302 { background-image: url('/image/m_/big/120302.png'); }
+.hero_card .hero_card_pic.card_face_120303 { background-image: url('/image/m_/big/120303.png'); }
+.hero_card .hero_card_pic.card_face_120304 { background-image: url('/image/m_/big/120304.png'); }
+.hero_card .hero_card_pic.card_face_120305 { background-image: url('/image/m_/big/120305.png'); }
+.hero_card .hero_card_pic.card_face_120306 { background-image: url('/image/m_/big/120306.png'); }
+.hero_card .hero_card_pic.card_face_120307 { background-image: url('/image/m_/big/120307.png'); }
+.hero_card .hero_card_pic.card_face_120308 { background-image: url('/image/m_/big/120308.png'); }
+.hero_card .hero_card_pic.card_face_120309 { background-image: url('/image/m_/big/120309.png'); }
+.hero_card .hero_card_pic.card_face_120310 { background-image: url('/image/m_/big/120310.png'); }
+.hero_card .hero_card_pic.card_face_120311 { background-image: url('/image/m_/big/120311.png'); }
+.hero_card .hero_card_pic.card_face_120312 { background-image: url('/image/m_/big/120312.png'); }
+.hero_card .hero_card_pic.card_face_120313 { background-image: url('/image/m_/big/120313.png'); }
+.hero_card .hero_card_pic.card_face_120314 { background-image: url('/image/m_/big/120314.png'); }
+
+.hero_card .hero_card_pic.card_face_120315 { background-image: url('/image/m_/big/120315.png'); }
+.hero_card .hero_card_pic.card_face_120316 { background-image: url('/image/m_/big/120316.png'); }
+.hero_card .hero_card_pic.card_face_120317 { background-image: url('/image/m_/big/120317.png'); }
+.hero_card .hero_card_pic.card_face_120318 { background-image: url('/image/m_/big/120318.png'); }
+.hero_card .hero_card_pic.card_face_120319 { background-image: url('/image/m_/big/120319.png'); }
+.hero_card .hero_card_pic.card_face_120320 { background-image: url('/image/m_/big/120320.png'); }
+.hero_card .hero_card_pic.card_face_120321 { background-image: url('/image/m_/big/120321.png'); }
+.hero_card .hero_card_pic.card_face_120322 { background-image: url('/image/m_/big/120322.png'); }
+.hero_card .hero_card_pic.card_face_120323 { background-image: url('/image/m_/big/120323.png'); }
+.hero_card .hero_card_pic.card_face_120324 { background-image: url('/image/m_/big/120324.png'); }
+.hero_card .hero_card_pic.card_face_120325 { background-image: url('/image/m_/big/120325.png'); }
+.hero_card .hero_card_pic.card_face_120326 { background-image: url('/image/m_/big/120326.png'); }
+.hero_card .hero_card_pic.card_face_120327 { background-image: url('/image/m_/big/120327.png'); }
+.hero_card .hero_card_pic.card_face_120328 { background-image: url('/image/m_/big/120328.png'); }
+.hero_card .hero_card_pic.card_face_120329 { background-image: url('/image/m_/big/120329.png'); }
+.hero_card .hero_card_pic.card_face_120330 { background-image: url('/image/m_/big/120330.png'); }
+.hero_card .hero_card_pic.card_face_120331 { background-image: url('/image/m_/big/120331.png'); }
+.hero_card .hero_card_pic.card_face_120332 { background-image: url('/image/m_/big/120332.png'); }
+.hero_card .hero_card_pic.card_face_120333 { background-image: url('/image/m_/big/120333.png'); }
+.hero_card .hero_card_pic.card_face_120334 { background-image: url('/image/m_/big/120334.png'); }
+.hero_card .hero_card_pic.card_face_120335 { background-image: url('/image/m_/big/120335.png'); }
+.hero_card .hero_card_pic.card_face_120336 { background-image: url('/image/m_/big/120336.png'); }
+.hero_card .hero_card_pic.card_face_120337 { background-image: url('/image/m_/big/120337.png'); }
+.hero_card .hero_card_pic.card_face_120338 { background-image: url('/image/m_/big/120338.png'); }
+.hero_card .hero_card_pic.card_face_120339 { background-image: url('/image/m_/big/120339.png'); }
+.hero_card .hero_card_pic.card_face_120340 { background-image: url('/image/m_/big/120340.png'); }
+.hero_card .hero_card_pic.card_face_120341 { background-image: url('/image/m_/big/120341.png'); }
+.hero_card .hero_card_pic.card_face_120342 { background-image: url('/image/m_/big/120342.png'); }
+.hero_card .hero_card_pic.card_face_120343 { background-image: url('/image/m_/big/120343.png'); }
+.hero_card .hero_card_pic.card_face_120344 { background-image: url('/image/m_/big/120344.png'); }
+.hero_card .hero_card_pic.card_face_120345 { background-image: url('/image/m_/big/120345.png'); }
+.hero_card .hero_card_pic.card_face_120346 { background-image: url('/image/m_/big/120346.png'); }
+.hero_card .hero_card_pic.card_face_120347 { background-image: url('/image/m_/big/120347.png'); }
+.hero_card .hero_card_pic.card_face_120348 { background-image: url('/image/m_/big/120348.png'); }
+.hero_card .hero_card_pic.card_face_120349 { background-image: url('/image/m_/big/120349.png'); }
+.hero_card .hero_card_pic.card_face_120350 { background-image: url('/image/m_/big/120350.png'); }
+.hero_card .hero_card_pic.card_face_120351 { background-image: url('/image/m_/big/120351.png'); }
+.hero_card .hero_card_pic.card_face_120352 { background-image: url('/image/m_/big/120352.png'); }
+.hero_card .hero_card_pic.card_face_120353 { background-image: url('/image/m_/big/120353.png'); }
+.hero_card .hero_card_pic.card_face_120354 { background-image: url('/image/m_/big/120354.png'); }
+.hero_card .hero_card_pic.card_face_120355 { background-image: url('/image/m_/big/120355.png'); }
+.hero_card .hero_card_pic.card_face_120356 { background-image: url('/image/m_/big/120356.png'); }
+.hero_card .hero_card_pic.card_face_120357 { background-image: url('/image/m_/big/120357.png'); }
+.hero_card .hero_card_pic.card_face_120358 { background-image: url('/image/m_/big/120358.png'); }
+.hero_card .hero_card_pic.card_face_120359 { background-image: url('/image/m_/big/120359.png'); }
+.hero_card .hero_card_pic.card_face_120360 { background-image: url('/image/m_/big/120360.png'); }
+.hero_card .hero_card_pic.card_face_120361 { background-image: url('/image/m_/big/120361.png'); }
+.hero_card .hero_card_pic.card_face_120362 { background-image: url('/image/m_/big/120362.png'); }
+.hero_card .hero_card_pic.card_face_120363 { background-image: url('/image/m_/big/120363.png'); }
+.hero_card .hero_card_pic.card_face_120364 { background-image: url('/image/m_/big/120364.png'); }
+
+
+.hero_card .hero_card_pic.card_face_120367 { background-image: url('/image/m_/big/120367.jpg'); }
+.hero_card .hero_card_pic.card_face_120365 { background-image: url('/image/m_/big/120365.jpg'); }
+.hero_card .hero_card_pic.card_face_120366 { background-image: url('/image/m_/big/120366.jpg'); }
+.hero_card .hero_card_pic.card_face_120368 { background-image: url('/image/m_/big/120368.jpg'); }
+.hero_card .hero_card_pic.card_face_120369 { background-image: url('/image/m_/big/120369.jpg'); }
+.hero_card .hero_card_pic.card_face_120370 { background-image: url('/image/m_/big/120370.jpg'); }
+.hero_card .hero_card_pic.card_face_120371 { background-image: url('/image/m_/big/120371.jpg'); }
+.hero_card .hero_card_pic.card_face_120372 { background-image: url('/image/m_/big/120372.jpg'); }
+.hero_card .hero_card_pic.card_face_120373 { background-image: url('/image/m_/big/120373.jpg'); }
+.hero_card .hero_card_pic.card_face_120374 { background-image: url('/image/m_/big/120374.jpg'); }
+.hero_card .hero_card_pic.card_face_120375 { background-image: url('/image/m_/big/120375.jpg'); }
+.hero_card .hero_card_pic.card_face_120376 { background-image: url('/image/m_/big/120376.jpg'); }
+.hero_card .hero_card_pic.card_face_120377 { background-image: url('/image/m_/big/120377.jpg'); }
+.hero_card .hero_card_pic.card_face_120378 { background-image: url('/image/m_/big/120378.jpg'); }
+.hero_card .hero_card_pic.card_face_120379 { background-image: url('/image/m_/big/120379.jpg'); }
+.hero_card .hero_card_pic.card_face_120380 { background-image: url('/image/m_/big/120380.jpg'); }
+.hero_card .hero_card_pic.card_face_120381 { background-image: url('/image/m_/big/120381.jpg'); }
+.hero_card .hero_card_pic.card_face_120382 { background-image: url('/image/m_/big/120382.jpg'); }
+.hero_card .hero_card_pic.card_face_120383 { background-image: url('/image/m_/big/120383.jpg'); }
+.hero_card .hero_card_pic.card_face_120384 { background-image: url('/image/m_/big/120384.jpg'); }
+.hero_card .hero_card_pic.card_face_120385 { background-image: url('/image/m_/big/120385.jpg'); }
+.hero_card .hero_card_pic.card_face_120386 { background-image: url('/image/m_/big/120386.jpg'); }
+.hero_card .hero_card_pic.card_face_120387 { background-image: url('/image/m_/big/120387.jpg'); }
+.hero_card .hero_card_pic.card_face_120388 { background-image: url('/image/m_/big/120388.jpg'); }
+.hero_card .hero_card_pic.card_face_120389 { background-image: url('/image/m_/big/120389.jpg'); }
+.hero_card .hero_card_pic.card_face_120390 { background-image: url('/image/m_/big/120390.jpg'); }
+.hero_card .hero_card_pic.card_face_120391 { background-image: url('/image/m_/big/120391.jpg'); }
+.hero_card .hero_card_pic.card_face_120392 { background-image: url('/image/m_/big/120392.jpg'); }
+.hero_card .hero_card_pic.card_face_120393 { background-image: url('/image/m_/big/120393.jpg'); }
+.hero_card .hero_card_pic.card_face_120394 { background-image: url('/image/m_/big/120394.jpg'); }
+.hero_card .hero_card_pic.card_face_120395 { background-image: url('/image/m_/big/120395.jpg'); }
+.hero_card .hero_card_pic.card_face_120396 { background-image: url('/image/m_/big/120396.jpg'); }
+.hero_card .hero_card_pic.card_face_120397 { background-image: url('/image/m_/big/120397.jpg'); }
+.hero_card .hero_card_pic.card_face_120398 { background-image: url('/image/m_/big/120398.jpg'); }
+.hero_card .hero_card_pic.card_face_120399 { background-image: url('/image/m_/big/120399.jpg'); }
+.hero_card .hero_card_pic.card_face_120400 { background-image: url('/image/m_/big/120400.jpg'); }
+.hero_card .hero_card_pic.card_face_120401 { background-image: url('/image/m_/big/120401.jpg'); }
+.hero_card .hero_card_pic.card_face_120402 { background-image: url('/image/m_/big/120402.jpg'); }
+.hero_card .hero_card_pic.card_face_120403 { background-image: url('/image/m_/big/120403.jpg'); }
+.hero_card .hero_card_pic.card_face_120404 { background-image: url('/image/m_/big/120404.jpg'); }
+.hero_card .hero_card_pic.card_face_120405 { background-image: url('/image/m_/big/120405.jpg'); }
+.hero_card .hero_card_pic.card_face_120406 { background-image: url('/image/m_/big/120406.jpg'); }
+.hero_card .hero_card_pic.card_face_120407 { background-image: url('/image/m_/big/120407.jpg'); }
+.hero_card .hero_card_pic.card_face_120408 { background-image: url('/image/m_/big/120408.jpg'); }
+.hero_card .hero_card_pic.card_face_120409 { background-image: url('/image/m_/big/120409.jpg'); }
+.hero_card .hero_card_pic.card_face_120410 { background-image: url('/image/m_/big/120410.jpg'); }
+.hero_card .hero_card_pic.card_face_120411 { background-image: url('/image/m_/big/120411.jpg'); }
+.hero_card .hero_card_pic.card_face_120412 { background-image: url('/image/m_/big/120412.jpg'); }
+.hero_card .hero_card_pic.card_face_120413 { background-image: url('/image/m_/big/120413.jpg'); }
+.hero_card .hero_card_pic.card_face_120414 { background-image: url('/image/m_/big/120414.jpg'); }
+.hero_card .hero_card_pic.card_face_120415 { background-image: url('/image/m_/big/120415.jpg'); }
+.hero_card .hero_card_pic.card_face_120416 { background-image: url('/image/m_/big/120416.jpg'); }
+.hero_card .hero_card_pic.card_face_120417 { background-image: url('/image/m_/big/120417.jpg'); }
+.hero_card .hero_card_pic.card_face_120418 { background-image: url('/image/m_/big/120418.jpg'); }
+.hero_card .hero_card_pic.card_face_120419 { background-image: url('/image/m_/big/120419.jpg'); }
+.hero_card .hero_card_pic.card_face_120420 { background-image: url('/image/m_/big/120420.jpg'); }
+.hero_card .hero_card_pic.card_face_120421 { background-image: url('/image/m_/big/120421.jpg'); }
+.hero_card .hero_card_pic.card_face_120422 { background-image: url('/image/m_/big/120422.jpg'); }
+.hero_card .hero_card_pic.card_face_120423 { background-image: url('/image/m_/big/120423.jpg'); }
+.hero_card .hero_card_pic.card_face_120424 { background-image: url('/image/m_/big/120424.jpg'); }
+.hero_card .hero_card_pic.card_face_120425 { background-image: url('/image/m_/big/120425.jpg'); }
+.hero_card .hero_card_pic.card_face_120426 { background-image: url('/image/m_/big/120426.jpg'); }
+.hero_card .hero_card_pic.card_face_120427 { background-image: url('/image/m_/big/120427.jpg'); }
+.hero_card .hero_card_pic.card_face_120428 { background-image: url('/image/m_/big/120428.jpg'); }
+.hero_card .hero_card_pic.card_face_120429 { background-image: url('/image/m_/big/120429.jpg'); }
+.hero_card .hero_card_pic.card_face_120430 { background-image: url('/image/m_/big/120430.jpg'); }
+.hero_card .hero_card_pic.card_face_120431 { background-image: url('/image/m_/big/120431.jpg'); }
+.hero_card .hero_card_pic.card_face_120432 { background-image: url('/image/m_/big/120432.jpg'); }
+.hero_card .hero_card_pic.card_face_120433 { background-image: url('/image/m_/big/120433.jpg'); }
+.hero_card .hero_card_pic.card_face_120434 { background-image: url('/image/m_/big/120434.jpg'); }
+.hero_card .hero_card_pic.card_face_120435 { background-image: url('/image/m_/big/120435.jpg'); }
+.hero_card .hero_card_pic.card_face_120436 { background-image: url('/image/m_/big/120436.jpg'); }
+.hero_card .hero_card_pic.card_face_120437 { background-image: url('/image/m_/big/120437.jpg'); }
+.hero_card .hero_card_pic.card_face_120438 { background-image: url('/image/m_/big/120438.jpg'); }
+.hero_card .hero_card_pic.card_face_120439 { background-image: url('/image/m_/big/120439.jpg'); }
+.hero_card .hero_card_pic.card_face_120440 { background-image: url('/image/m_/big/120440.jpg'); }
+.hero_card .hero_card_pic.card_face_120441 { background-image: url('/image/m_/big/120441.jpg'); }
+.hero_card .hero_card_pic.card_face_120442 { background-image: url('/image/m_/big/120442.jpg'); }
+.hero_card .hero_card_pic.card_face_120443 { background-image: url('/image/m_/big/120443.jpg'); }
+.hero_card .hero_card_pic.card_face_120444 { background-image: url('/image/m_/big/120444.jpg'); }
+.hero_card .hero_card_pic.card_face_120445 { background-image: url('/image/m_/big/120445.jpg'); }
+
+.hero_card .hero_card_pic.card_face_120446 { background-image: url('/image/m_/big/120446.png') !important;; }
+.hero_card .hero_card_pic.card_face_120447 { background-image: url('/image/m_/big/120447.png') !important;; }
+.hero_card .hero_card_pic.card_face_120448 { background-image: url('/image/m_/big/120448.png') !important;; }
+.hero_card .hero_card_pic.card_face_120449 { background-image: url('/image/m_/big/120449.png') !important;; }
+.hero_card .hero_card_pic.card_face_120450 { background-image: url('/image/m_/big/120450.png') !important;; }
+.hero_card .hero_card_pic.card_face_120451 { background-image: url('/image/m_/big/120451.png') !important;; }
+.hero_card .hero_card_pic.card_face_120452 { background-image: url('/image/m_/big/120452.png') !important;; }
+.hero_card .hero_card_pic.card_face_120453 { background-image: url('/image/m_/big/120453.png') !important;; }
+.hero_card .hero_card_pic.card_face_120454 { background-image: url('/image/m_/big/120454.png') !important;; }
+.hero_card .hero_card_pic.card_face_120455 { background-image: url('/image/m_/big/120455.png') !important;; }
+
+.hero_card .hero_card_pic.card_face_120501 { background-image: url('/image/m_/big/120501.png') !important; }
+.hero_card .hero_card_pic.card_face_120502 { background-image: url('/image/m_/big/120502.png') !important; }
+.hero_card .hero_card_pic.card_face_120503 { background-image: url('/image/m_/big/120503.png') !important; }
+.hero_card .hero_card_pic.card_face_120504 { background-image: url('/image/m_/big/120504.png') !important; }
+.hero_card .hero_card_pic.card_face_120505 { background-image: url('/image/m_/big/120505.png') !important; }
+.hero_card .hero_card_pic.card_face_120506 { background-image: url('/image/m_/big/120506.png') !important; }
+.hero_card .hero_card_pic.card_face_120507 { background-image: url('/image/m_/big/120507.png') !important; }
+.hero_card .hero_card_pic.card_face_120508 { background-image: url('/image/m_/big/120508.png') !important; }
+.hero_card .hero_card_pic.card_face_120509 { background-image: url('/image/m_/big/120509.png') !important; }
+.hero_card .hero_card_pic.card_face_120510 { background-image: url('/image/m_/big/120510.png') !important; }
+
+/* 이 밑으로는 Big 카드가 없는데? */
+.hero_card .hero_card_pic.card_face_120446, .hero_card .hero_card_pic_small.card_face_120446 { background-image: url('/image/m_/120446.png'); }
+.hero_card .hero_card_pic.card_face_120447, .hero_card .hero_card_pic_small.card_face_120447 { background-image: url('/image/m_/120447.png'); }
+.hero_card .hero_card_pic.card_face_120448, .hero_card .hero_card_pic_small.card_face_120448 { background-image: url('/image/m_/120448.png'); }
+.hero_card .hero_card_pic.card_face_120449, .hero_card .hero_card_pic_small.card_face_120449 { background-image: url('/image/m_/120449.png'); }
+.hero_card .hero_card_pic.card_face_120450, .hero_card .hero_card_pic_small.card_face_120450 { background-image: url('/image/m_/120450.png'); }
+.hero_card .hero_card_pic.card_face_120451, .hero_card .hero_card_pic_small.card_face_120451 { background-image: url('/image/m_/120451.png'); }
+.hero_card .hero_card_pic.card_face_120452, .hero_card .hero_card_pic_small.card_face_120452 { background-image: url('/image/m_/120452.png'); }
+.hero_card .hero_card_pic.card_face_120453, .hero_card .hero_card_pic_small.card_face_120453 { background-image: url('/image/m_/120453.png'); }
+.hero_card .hero_card_pic.card_face_120454, .hero_card .hero_card_pic_small.card_face_120454 { background-image: url('/image/m_/120454.png'); }
+.hero_card .hero_card_pic.card_face_120455, .hero_card .hero_card_pic_small.card_face_120455 { background-image: url('/image/m_/120455.png'); }
+
+.hero_card .hero_card_pic.card_face_120456, .hero_card .hero_card_pic_small.card_face_120456 { background-image: url('/image/m_/120456.png'); }
+.hero_card .hero_card_pic.card_face_120457, .hero_card .hero_card_pic_small.card_face_120457 { background-image: url('/image/m_/120457.png'); }
+.hero_card .hero_card_pic.card_face_120458, .hero_card .hero_card_pic_small.card_face_120458 { background-image: url('/image/m_/120458.png'); }
+.hero_card .hero_card_pic.card_face_120459, .hero_card .hero_card_pic_small.card_face_120459 { background-image: url('/image/m_/120459.png'); }
+.hero_card .hero_card_pic.card_face_120460, .hero_card .hero_card_pic_small.card_face_120460 { background-image: url('/image/m_/120460.png'); }
+.hero_card .hero_card_pic.card_face_120461, .hero_card .hero_card_pic_small.card_face_120461 { background-image: url('/image/m_/120461.png'); }
+.hero_card .hero_card_pic.card_face_120462, .hero_card .hero_card_pic_small.card_face_120462 { background-image: url('/image/m_/120462.png'); }
+.hero_card .hero_card_pic.card_face_120463, .hero_card .hero_card_pic_small.card_face_120463 { background-image: url('/image/m_/120463.png'); }
+.hero_card .hero_card_pic.card_face_120464, .hero_card .hero_card_pic_small.card_face_120464 { background-image: url('/image/m_/120464.png'); }
+.hero_card .hero_card_pic.card_face_120465, .hero_card .hero_card_pic_small.card_face_120465 { background-image: url('/image/m_/120465.png'); }
+.hero_card .hero_card_pic.card_face_120466, .hero_card .hero_card_pic_small.card_face_120466 { background-image: url('/image/m_/120466.png'); }
+.hero_card .hero_card_pic.card_face_120467, .hero_card .hero_card_pic_small.card_face_120467 { background-image: url('/image/m_/120467.png'); }
+.hero_card .hero_card_pic.card_face_120468, .hero_card .hero_card_pic_small.card_face_120468 { background-image: url('/image/m_/120468.png'); }
+.hero_card .hero_card_pic.card_face_120469, .hero_card .hero_card_pic_small.card_face_120469 { background-image: url('/image/m_/120469.png'); }
+.hero_card .hero_card_pic.card_face_120470, .hero_card .hero_card_pic_small.card_face_120470 { background-image: url('/image/m_/120470.png'); }
+.hero_card .hero_card_pic.card_face_120471, .hero_card .hero_card_pic_small.card_face_120471 { background-image: url('/image/m_/120471.png'); }
+.hero_card .hero_card_pic.card_face_120472, .hero_card .hero_card_pic_small.card_face_120472 { background-image: url('/image/m_/120472.png'); }
+.hero_card .hero_card_pic.card_face_120473, .hero_card .hero_card_pic_small.card_face_120473 { background-image: url('/image/m_/120473.png'); }
+.hero_card .hero_card_pic.card_face_120474, .hero_card .hero_card_pic_small.card_face_120474 { background-image: url('/image/m_/120474.png'); }
+.hero_card .hero_card_pic.card_face_120475, .hero_card .hero_card_pic_small.card_face_120475 { background-image: url('/image/m_/120475.png'); }
+.hero_card .hero_card_pic.card_face_120476, .hero_card .hero_card_pic_small.card_face_120476 { background-image: url('/image/m_/120476.png'); }
+.hero_card .hero_card_pic.card_face_120477, .hero_card .hero_card_pic_small.card_face_120477 { background-image: url('/image/m_/120477.png'); }
+
+.hero_card .hero_card_pic.card_face_120479, .hero_card .hero_card_pic_small.card_face_120479 { background-image: url('/image/m_/120479.png'); }
+.hero_card .hero_card_pic.card_face_120480, .hero_card .hero_card_pic_small.card_face_120480 { background-image: url('/image/m_/120480.png'); }
+.hero_card .hero_card_pic.card_face_120481, .hero_card .hero_card_pic_small.card_face_120481 { background-image: url('/image/m_/120481.png'); }
+.hero_card .hero_card_pic.card_face_120482, .hero_card .hero_card_pic_small.card_face_120482 { background-image: url('/image/m_/120482.png'); }
+.hero_card .hero_card_pic.card_face_120483, .hero_card .hero_card_pic_small.card_face_120483 { background-image: url('/image/m_/120483.png'); }
+.hero_card .hero_card_pic.card_face_120484, .hero_card .hero_card_pic_small.card_face_120484 { background-image: url('/image/m_/120484.png'); }
+.hero_card .hero_card_pic.card_face_120485, .hero_card .hero_card_pic_small.card_face_120485 { background-image: url('/image/m_/120485.png'); }
+.hero_card .hero_card_pic.card_face_120486, .hero_card .hero_card_pic_small.card_face_120486 { background-image: url('/image/m_/120486.png'); }
+
+.hero_card .hero_card_pic.card_face_120487, .hero_card .hero_card_pic_small.card_face_120487 { background-image: url('/image/m_/120487.png'); }
+.hero_card .hero_card_pic.card_face_120488, .hero_card .hero_card_pic_small.card_face_120488 { background-image: url('/image/m_/120488.png'); }
+.hero_card .hero_card_pic.card_face_120489, .hero_card .hero_card_pic_small.card_face_120489 { background-image: url('/image/m_/120489.png'); }
+.hero_card .hero_card_pic.card_face_120490, .hero_card .hero_card_pic_small.card_face_120490 { background-image: url('/image/m_/120490.png'); }
+.hero_card .hero_card_pic.card_face_120491, .hero_card .hero_card_pic_small.card_face_120491 { background-image: url('/image/m_/120491.png'); }
+.hero_card .hero_card_pic.card_face_120492, .hero_card .hero_card_pic_small.card_face_120492 { background-image: url('/image/m_/120492.png'); }
+.hero_card .hero_card_pic.card_face_120493, .hero_card .hero_card_pic_small.card_face_120493 { background-image: url('/image/m_/120493.png'); }
+.hero_card .hero_card_pic.card_face_120494, .hero_card .hero_card_pic_small.card_face_120494 { background-image: url('/image/m_/120494.png'); }
+.hero_card .hero_card_pic.card_face_120495, .hero_card .hero_card_pic_small.card_face_120495 { background-image: url('/image/m_/120495.png'); }
+
+.hero_card .hero_card_pic.card_face_120501, .hero_card .hero_card_pic_small.card_face_120501 { background-image: url('/image/m_/120501.png'); }
+.hero_card .hero_card_pic.card_face_120502, .hero_card .hero_card_pic_small.card_face_120502 { background-image: url('/image/m_/120502.png'); }
+.hero_card .hero_card_pic.card_face_120503, .hero_card .hero_card_pic_small.card_face_120503 { background-image: url('/image/m_/120503.png'); }
+.hero_card .hero_card_pic.card_face_120504, .hero_card .hero_card_pic_small.card_face_120504 { background-image: url('/image/m_/120504.png'); }
+.hero_card .hero_card_pic.card_face_120505, .hero_card .hero_card_pic_small.card_face_120505 { background-image: url('/image/m_/120505.png'); }
+.hero_card .hero_card_pic.card_face_120506, .hero_card .hero_card_pic_small.card_face_120506 { background-image: url('/image/m_/120506.png'); }
+.hero_card .hero_card_pic.card_face_120507, .hero_card .hero_card_pic_small.card_face_120507 { background-image: url('/image/m_/120507.png'); }
+.hero_card .hero_card_pic.card_face_120508, .hero_card .hero_card_pic_small.card_face_120508 { background-image: url('/image/m_/120508.png'); }
+.hero_card .hero_card_pic.card_face_120509, .hero_card .hero_card_pic_small.card_face_120509 { background-image: url('/image/m_/120509.png'); }
+.hero_card .hero_card_pic.card_face_120510, .hero_card .hero_card_pic_small.card_face_120510 { background-image: url('/image/m_/120510.png'); }
+
+.hero_card .hero_card_pic.card_face_120601, .hero_card .hero_card_pic_small.card_face_120601 { background-image: url('/image/m_/120601.png'); }
+
+/* card small face */
+.hero_card_pic_small.card_face_120000 { background-image: url('/image/m_/120000.png'); }
+.hero_card_pic_small.card_face_120001 { background-image: url('/image/m_/120001.png'); }
+.hero_card_pic_small.card_face_120002 { background-image: url('/image/m_/120002.png'); }
+.hero_card_pic_small.card_face_120003 { background-image: url('/image/m_/120003.png'); }
+.hero_card_pic_small.card_face_120004 { background-image: url('/image/m_/120004.png'); }
+.hero_card_pic_small.card_face_120006 { background-image: url('/image/m_/120006.png'); }
+.hero_card_pic_small.card_face_120007 { background-image: url('/image/m_/120007.png'); }
+.hero_card_pic_small.card_face_120008 { background-image: url('/image/m_/120008.png'); }
+.hero_card_pic_small.card_face_120010 { background-image: url('/image/m_/120010.png'); }
+.hero_card_pic_small.card_face_120011 { background-image: url('/image/m_/120011.png'); }
+.hero_card_pic_small.card_face_120012 { background-image: url('/image/m_/120012.png'); }
+.hero_card_pic_small.card_face_120013 { background-image: url('/image/m_/120013.png'); }
+.hero_card_pic_small.card_face_120014 { background-image: url('/image/m_/120014.png'); }
+.hero_card_pic_small.card_face_120015 { background-image: url('/image/m_/120015.png'); }
+.hero_card_pic_small.card_face_120016 { background-image: url('/image/m_/120016.png'); }
+.hero_card_pic_small.card_face_120017 { background-image: url('/image/m_/120017.png'); }
+.hero_card_pic_small.card_face_120018 { background-image: url('/image/m_/120018.png'); }
+.hero_card_pic_small.card_face_120019 { background-image: url('/image/m_/120019.png'); }
+.hero_card_pic_small.card_face_120021 { background-image: url('/image/m_/120021.png'); }
+.hero_card_pic_small.card_face_120022 { background-image: url('/image/m_/120022.png'); }
+.hero_card_pic_small.card_face_120024 { background-image: url('/image/m_/120024.png'); }
+.hero_card_pic_small.card_face_120025 { background-image: url('/image/m_/120025.png'); }
+.hero_card_pic_small.card_face_120027 { background-image: url('/image/m_/120027.png'); }
+.hero_card_pic_small.card_face_120028 { background-image: url('/image/m_/120028.png'); }
+.hero_card_pic_small.card_face_120029 { background-image: url('/image/m_/120029.png'); }
+.hero_card_pic_small.card_face_120031 { background-image: url('/image/m_/120031.png'); }
+.hero_card_pic_small.card_face_120032 { background-image: url('/image/m_/120032.png'); }
+.hero_card_pic_small.card_face_120033 { background-image: url('/image/m_/120033.png'); }
+.hero_card_pic_small.card_face_120035 { background-image: url('/image/m_/120035.png'); }
+.hero_card_pic_small.card_face_120036 { background-image: url('/image/m_/120036.png'); }
+.hero_card_pic_small.card_face_120037 { background-image: url('/image/m_/120037.png'); }
+.hero_card_pic_small.card_face_120038 { background-image: url('/image/m_/120038.png'); }
+.hero_card_pic_small.card_face_120039 { background-image: url('/image/m_/120039.png'); }
+.hero_card_pic_small.card_face_120040 { background-image: url('/image/m_/120040.png'); }
+.hero_card_pic_small.card_face_120042 { background-image: url('/image/m_/120042.png'); }
+.hero_card_pic_small.card_face_120043 { background-image: url('/image/m_/120043.png'); }
+.hero_card_pic_small.card_face_120044 { background-image: url('/image/m_/120044.png'); }
+.hero_card_pic_small.card_face_120045 { background-image: url('/image/m_/120045.png'); }
+.hero_card_pic_small.card_face_120046 { background-image: url('/image/m_/120046.png'); }
+.hero_card_pic_small.card_face_120047 { background-image: url('/image/m_/120047.png'); }
+.hero_card_pic_small.card_face_120048 { background-image: url('/image/m_/120048.png'); }
+.hero_card_pic_small.card_face_120049 { background-image: url('/image/m_/120049.png'); }
+.hero_card_pic_small.card_face_120050 { background-image: url('/image/m_/120050.png'); }
+.hero_card_pic_small.card_face_120051 { background-image: url('/image/m_/120051.png'); }
+.hero_card_pic_small.card_face_120052 { background-image: url('/image/m_/120052.png'); }
+.hero_card_pic_small.card_face_120053 { background-image: url('/image/m_/120053.png'); }
+.hero_card_pic_small.card_face_120054 { background-image: url('/image/m_/120054.png'); }
+.hero_card_pic_small.card_face_120055 { background-image: url('/image/m_/120055.png'); }
+.hero_card_pic_small.card_face_120056 { background-image: url('/image/m_/120056.png'); }
+.hero_card_pic_small.card_face_120057 { background-image: url('/image/m_/120057.png'); }
+.hero_card_pic_small.card_face_120058 { background-image: url('/image/m_/120058.png'); }
+.hero_card_pic_small.card_face_120059 { background-image: url('/image/m_/120059.png'); }
+.hero_card_pic_small.card_face_120060 { background-image: url('/image/m_/120060.png'); }
+.hero_card_pic_small.card_face_120061 { background-image: url('/image/m_/120061.png'); }
+.hero_card_pic_small.card_face_120062 { background-image: url('/image/m_/120062.png'); }
+.hero_card_pic_small.card_face_120063 { background-image: url('/image/m_/120063.png'); }
+.hero_card_pic_small.card_face_120064 { background-image: url('/image/m_/120064.png'); }
+.hero_card_pic_small.card_face_120065 { background-image: url('/image/m_/120065.png'); }
+.hero_card_pic_small.card_face_120066 { background-image: url('/image/m_/120066.png'); }
+.hero_card_pic_small.card_face_120067 { background-image: url('/image/m_/120067.png'); }
+.hero_card_pic_small.card_face_120069 { background-image: url('/image/m_/120069.png'); }
+.hero_card_pic_small.card_face_120070 { background-image: url('/image/m_/120070.png'); }
+.hero_card_pic_small.card_face_120071 { background-image: url('/image/m_/120071.png'); }
+.hero_card_pic_small.card_face_120072 { background-image: url('/image/m_/120072.png'); }
+.hero_card_pic_small.card_face_120073 { background-image: url('/image/m_/120073.png'); }
+.hero_card_pic_small.card_face_120074 { background-image: url('/image/m_/120074.png'); }
+.hero_card_pic_small.card_face_120075 { background-image: url('/image/m_/120075.png'); }
+.hero_card_pic_small.card_face_120076 { background-image: url('/image/m_/120076.png'); }
+.hero_card_pic_small.card_face_120077 { background-image: url('/image/m_/120077.png'); }
+.hero_card_pic_small.card_face_120078 { background-image: url('/image/m_/120078.png'); }
+.hero_card_pic_small.card_face_120079 { background-image: url('/image/m_/120079.png'); }
+.hero_card_pic_small.card_face_120080 { background-image: url('/image/m_/120080.png'); }
+.hero_card_pic_small.card_face_120082 { background-image: url('/image/m_/120082.png'); }
+.hero_card_pic_small.card_face_120083 { background-image: url('/image/m_/120083.png'); }
+.hero_card_pic_small.card_face_120084 { background-image: url('/image/m_/120084.png'); }
+.hero_card_pic_small.card_face_120085 { background-image: url('/image/m_/120085.png'); }
+.hero_card_pic_small.card_face_120086 { background-image: url('/image/m_/120086.png'); }
+.hero_card_pic_small.card_face_120087 { background-image: url('/image/m_/120087.png'); }
+.hero_card_pic_small.card_face_120088 { background-image: url('/image/m_/120088.png'); }
+.hero_card_pic_small.card_face_120089 { background-image: url('/image/m_/120089.png'); }
+.hero_card_pic_small.card_face_120090 { background-image: url('/image/m_/120090.png'); }
+.hero_card_pic_small.card_face_120091 { background-image: url('/image/m_/120091.png'); }
+.hero_card_pic_small.card_face_120092 { background-image: url('/image/m_/120092.png'); }
+.hero_card_pic_small.card_face_120093 { background-image: url('/image/m_/120093.png'); }
+.hero_card_pic_small.card_face_120094 { background-image: url('/image/m_/120094.png'); }
+.hero_card_pic_small.card_face_120095 { background-image: url('/image/m_/120095.png'); }
+.hero_card_pic_small.card_face_120096 { background-image: url('/image/m_/120096.png'); }
+.hero_card_pic_small.card_face_120097 { background-image: url('/image/m_/120097.png'); }
+.hero_card_pic_small.card_face_120098 { background-image: url('/image/m_/120098.png'); }
+.hero_card_pic_small.card_face_120099 { background-image: url('/image/m_/120099.png'); }
+.hero_card_pic_small.card_face_120101 { background-image: url('/image/m_/120101.png'); }
+.hero_card_pic_small.card_face_120102 { background-image: url('/image/m_/120102.png'); }
+.hero_card_pic_small.card_face_120103 { background-image: url('/image/m_/120103.png'); }
+.hero_card_pic_small.card_face_120104 { background-image: url('/image/m_/120104.png'); }
+.hero_card_pic_small.card_face_120105 { background-image: url('/image/m_/120105.png'); }
+.hero_card_pic_small.card_face_120106 { background-image: url('/image/m_/120106.png'); }
+.hero_card_pic_small.card_face_120107 { background-image: url('/image/m_/120107.png'); }
+.hero_card_pic_small.card_face_120108 { background-image: url('/image/m_/120108.png'); }
+.hero_card_pic_small.card_face_120109 { background-image: url('/image/m_/120109.png'); }
+.hero_card_pic_small.card_face_120110 { background-image: url('/image/m_/120110.png'); }
+.hero_card_pic_small.card_face_120111 { background-image: url('/image/m_/120111.png'); }
+.hero_card_pic_small.card_face_120112 { background-image: url('/image/m_/120112.png'); }
+.hero_card_pic_small.card_face_120113 { background-image: url('/image/m_/120113.png'); }
+.hero_card_pic_small.card_face_120114 { background-image: url('/image/m_/120114.png'); }
+.hero_card_pic_small.card_face_120115 { background-image: url('/image/m_/120115.png'); }
+.hero_card_pic_small.card_face_120116 { background-image: url('/image/m_/120116.png'); }
+.hero_card_pic_small.card_face_120117 { background-image: url('/image/m_/120117.png'); }
+.hero_card_pic_small.card_face_120118 { background-image: url('/image/m_/120118.png'); }
+.hero_card_pic_small.card_face_120119 { background-image: url('/image/m_/120119.png'); }
+.hero_card_pic_small.card_face_120120 { background-image: url('/image/m_/120120.png'); }
+.hero_card_pic_small.card_face_120121 { background-image: url('/image/m_/120121.png'); }
+.hero_card_pic_small.card_face_120122 { background-image: url('/image/m_/120122.png'); }
+.hero_card_pic_small.card_face_120123 { background-image: url('/image/m_/120123.png'); }
+.hero_card_pic_small.card_face_120124 { background-image: url('/image/m_/120124.png'); }
+.hero_card_pic_small.card_face_120125 { background-image: url('/image/m_/120125.png'); }
+.hero_card_pic_small.card_face_120126 { background-image: url('/image/m_/120126.png'); }
+.hero_card_pic_small.card_face_120127 { background-image: url('/image/m_/120127.png'); }
+.hero_card_pic_small.card_face_120128 { background-image: url('/image/m_/120128.png'); }
+.hero_card_pic_small.card_face_120129 { background-image: url('/image/m_/120129.png'); }
+.hero_card_pic_small.card_face_120130 { background-image: url('/image/m_/120130.png'); }
+.hero_card_pic_small.card_face_120131 { background-image: url('/image/m_/120131.png'); }
+.hero_card_pic_small.card_face_120132 { background-image: url('/image/m_/120132.png'); }
+.hero_card_pic_small.card_face_120133 { background-image: url('/image/m_/120133.png'); }
+.hero_card_pic_small.card_face_120134 { background-image: url('/image/m_/120134.png'); }
+.hero_card_pic_small.card_face_120135 { background-image: url('/image/m_/120135.png'); }
+.hero_card_pic_small.card_face_120136 { background-image: url('/image/m_/120136.png'); }
+.hero_card_pic_small.card_face_120137 { background-image: url('/image/m_/120137.png'); }
+.hero_card_pic_small.card_face_120138 { background-image: url('/image/m_/120138.png'); }
+.hero_card_pic_small.card_face_120139 { background-image: url('/image/m_/120139.png'); }
+.hero_card_pic_small.card_face_120140 { background-image: url('/image/m_/120140.png'); }
+.hero_card_pic_small.card_face_120141 { background-image: url('/image/m_/120141.png'); }
+.hero_card_pic_small.card_face_120142 { background-image: url('/image/m_/120142.png'); }
+.hero_card_pic_small.card_face_120143 { background-image: url('/image/m_/120143.png'); }
+.hero_card_pic_small.card_face_120144 { background-image: url('/image/m_/120144.png'); }
+.hero_card_pic_small.card_face_120145 { background-image: url('/image/m_/120145.png'); }
+.hero_card_pic_small.card_face_120146 { background-image: url('/image/m_/120146.png'); }
+.hero_card_pic_small.card_face_120147 { background-image: url('/image/m_/120147.png'); }
+.hero_card_pic_small.card_face_120148 { background-image: url('/image/m_/120148.png'); }
+.hero_card_pic_small.card_face_120149 { background-image: url('/image/m_/120149.png'); }
+.hero_card_pic_small.card_face_120150 { background-image: url('/image/m_/120150.png'); }
+.hero_card_pic_small.card_face_120151 { background-image: url('/image/m_/120151.png'); }
+.hero_card_pic_small.card_face_120152 { background-image: url('/image/m_/120152.png'); }
+.hero_card_pic_small.card_face_120153 { background-image: url('/image/m_/120153.png'); }
+.hero_card_pic_small.card_face_120154 { background-image: url('/image/m_/120154.png'); }
+.hero_card_pic_small.card_face_120155 { background-image: url('/image/m_/120155.png'); }
+.hero_card_pic_small.card_face_120157 { background-image: url('/image/m_/120157.png'); }
+.hero_card_pic_small.card_face_120158 { background-image: url('/image/m_/120158.png'); }
+.hero_card_pic_small.card_face_120159 { background-image: url('/image/m_/120159.png'); }
+.hero_card_pic_small.card_face_120161 { background-image: url('/image/m_/120161.png'); }
+.hero_card_pic_small.card_face_120162 { background-image: url('/image/m_/120162.png'); }
+.hero_card_pic_small.card_face_120163 { background-image: url('/image/m_/120163.png'); }
+.hero_card_pic_small.card_face_120164 { background-image: url('/image/m_/120164.png'); }
+.hero_card_pic_small.card_face_120165 { background-image: url('/image/m_/120165.png'); }
+.hero_card_pic_small.card_face_120166 { background-image: url('/image/m_/120166.png'); }
+.hero_card_pic_small.card_face_120167 { background-image: url('/image/m_/120167.png'); }
+.hero_card_pic_small.card_face_120168 { background-image: url('/image/m_/120168.png'); }
+.hero_card_pic_small.card_face_120169 { background-image: url('/image/m_/120169.png'); }
+.hero_card_pic_small.card_face_120170 { background-image: url('/image/m_/120170.png'); }
+.hero_card_pic_small.card_face_120171 { background-image: url('/image/m_/120171.png'); }
+.hero_card_pic_small.card_face_120172 { background-image: url('/image/m_/120172.png'); }
+.hero_card_pic_small.card_face_120173 { background-image: url('/image/m_/120173.png'); }
+.hero_card_pic_small.card_face_120174 { background-image: url('/image/m_/120174.png'); }
+.hero_card_pic_small.card_face_120175 { background-image: url('/image/m_/120175.png'); }
+.hero_card_pic_small.card_face_120176 { background-image: url('/image/m_/120176.png'); }
+.hero_card_pic_small.card_face_120177 { background-image: url('/image/m_/120177.png'); }
+.hero_card_pic_small.card_face_120178 { background-image: url('/image/m_/120178.png'); }
+.hero_card_pic_small.card_face_120179 { background-image: url('/image/m_/120179.png'); }
+.hero_card_pic_small.card_face_120181 { background-image: url('/image/m_/120181.png'); }
+.hero_card_pic_small.card_face_120182 { background-image: url('/image/m_/120182.png'); }
+.hero_card_pic_small.card_face_120183 { background-image: url('/image/m_/120183.png'); }
+.hero_card_pic_small.card_face_120184 { background-image: url('/image/m_/120184.png'); }
+.hero_card_pic_small.card_face_120185 { background-image: url('/image/m_/120185.png'); }
+.hero_card_pic_small.card_face_120187 { background-image: url('/image/m_/120187.png'); }
+.hero_card_pic_small.card_face_120188 { background-image: url('/image/m_/120188.png'); }
+.hero_card_pic_small.card_face_120190 { background-image: url('/image/m_/120190.png'); }
+.hero_card_pic_small.card_face_120191 { background-image: url('/image/m_/120191.png'); }
+.hero_card_pic_small.card_face_120192 { background-image: url('/image/m_/120192.png'); }
+.hero_card_pic_small.card_face_120193 { background-image: url('/image/m_/120193.png'); }
+.hero_card_pic_small.card_face_120194 { background-image: url('/image/m_/120194.png'); }
+.hero_card_pic_small.card_face_120195 { background-image: url('/image/m_/120195.png'); }
+.hero_card_pic_small.card_face_120196 { background-image: url('/image/m_/120196.png'); }
+.hero_card_pic_small.card_face_120197 { background-image: url('/image/m_/120197.png'); }
+.hero_card_pic_small.card_face_120198 { background-image: url('/image/m_/120198.png'); }
+.hero_card_pic_small.card_face_120199 { background-image: url('/image/m_/120199.png'); }
+.hero_card_pic_small.card_face_120200 { background-image: url('/image/m_/120200.png'); }
+.hero_card_pic_small.card_face_120201 { background-image: url('/image/m_/120201.png'); }
+.hero_card_pic_small.card_face_120202 { background-image: url('/image/m_/120202.png'); }
+.hero_card_pic_small.card_face_120203 { background-image: url('/image/m_/120203.png'); }
+.hero_card_pic_small.card_face_120204 { background-image: url('/image/m_/120204.png'); }
+.hero_card_pic_small.card_face_120205 { background-image: url('/image/m_/120205.png'); }
+.hero_card_pic_small.card_face_120206 { background-image: url('/image/m_/120206.png'); }
+.hero_card_pic_small.card_face_120207 { background-image: url('/image/m_/120207.png'); }
+.hero_card_pic_small.card_face_120208 { background-image: url('/image/m_/120208.png'); }
+.hero_card_pic_small.card_face_120209 { background-image: url('/image/m_/120209.png'); }
+.hero_card_pic_small.card_face_120210 { background-image: url('/image/m_/120210.png'); }
+.hero_card_pic_small.card_face_120211 { background-image: url('/image/m_/120211.png'); }
+.hero_card_pic_small.card_face_120212 { background-image: url('/image/m_/120212.png'); }
+.hero_card_pic_small.card_face_120213 { background-image: url('/image/m_/120213.png'); }
+.hero_card_pic_small.card_face_120214 { background-image: url('/image/m_/120214.png'); }
+.hero_card_pic_small.card_face_120216 { background-image: url('/image/m_/120216.png'); }
+.hero_card_pic_small.card_face_120218 { background-image: url('/image/m_/120218.png'); }
+.hero_card_pic_small.card_face_120220 { background-image: url('/image/m_/120220.png'); }
+.hero_card_pic_small.card_face_120221 { background-image: url('/image/m_/120221.png'); }
+.hero_card_pic_small.card_face_120222 { background-image: url('/image/m_/120222.png'); }
+.hero_card_pic_small.card_face_120223 { background-image: url('/image/m_/120223.png'); }
+.hero_card_pic_small.card_face_120224 { background-image: url('/image/m_/120224.png'); }
+.hero_card_pic_small.card_face_120225 { background-image: url('/image/m_/120225.png'); }
+.hero_card_pic_small.card_face_120227 { background-image: url('/image/m_/120227.png'); }
+.hero_card_pic_small.card_face_120228 { background-image: url('/image/m_/120228.png'); }
+.hero_card_pic_small.card_face_120229 { background-image: url('/image/m_/120229.png'); }
+.hero_card_pic_small.card_face_120230 { background-image: url('/image/m_/120230.png'); }
+.hero_card_pic_small.card_face_120231 { background-image: url('/image/m_/120231.png'); }
+.hero_card_pic_small.card_face_120232 { background-image: url('/image/m_/120232.png'); }
+.hero_card_pic_small.card_face_120233 { background-image: url('/image/m_/120233.png'); }
+.hero_card_pic_small.card_face_120234 { background-image: url('/image/m_/120234.png'); }
+.hero_card_pic_small.card_face_120235 { background-image: url('/image/m_/120235.png'); }
+.hero_card_pic_small.card_face_120236 { background-image: url('/image/m_/120236.png'); }
+.hero_card_pic_small.card_face_120237 { background-image: url('/image/m_/120237.png'); }
+.hero_card_pic_small.card_face_120238 { background-image: url('/image/m_/120238.png'); }
+.hero_card_pic_small.card_face_120239 { background-image: url('/image/m_/120239.png'); }
+.hero_card_pic_small.card_face_120240 { background-image: url('/image/m_/120240.png'); }
+.hero_card_pic_small.card_face_120241 { background-image: url('/image/m_/120241.png'); }
+.hero_card_pic_small.card_face_120242 { background-image: url('/image/m_/120242.png'); }
+.hero_card_pic_small.card_face_120243 { background-image: url('/image/m_/120243.png'); }
+.hero_card_pic_small.card_face_120244 { background-image: url('/image/m_/120244.png'); }
+.hero_card_pic_small.card_face_120245 { background-image: url('/image/m_/120245.png'); }
+.hero_card_pic_small.card_face_120246 { background-image: url('/image/m_/120246.png'); }
+.hero_card_pic_small.card_face_120247 { background-image: url('/image/m_/120247.png'); }
+.hero_card_pic_small.card_face_120248 { background-image: url('/image/m_/120248.png'); }
+.hero_card_pic_small.card_face_120249 { background-image: url('/image/m_/120249.png'); }
+.hero_card_pic_small.card_face_120250 { background-image: url('/image/m_/120250.png'); }
+.hero_card_pic_small.card_face_120251 { background-image: url('/image/m_/120251.png'); }
+.hero_card_pic_small.card_face_120252 { background-image: url('/image/m_/120252.png'); }
+.hero_card_pic_small.card_face_120253 { background-image: url('/image/m_/120253.png'); }
+.hero_card_pic_small.card_face_120254 { background-image: url('/image/m_/120254.png'); }
+.hero_card_pic_small.card_face_120255 { background-image: url('/image/m_/120255.png'); }
+.hero_card_pic_small.card_face_120256 { background-image: url('/image/m_/120256.png'); }
+.hero_card_pic_small.card_face_120257 { background-image: url('/image/m_/120257.png'); }
+.hero_card_pic_small.card_face_120258 { background-image: url('/image/m_/120258.png'); }
+.hero_card_pic_small.card_face_120259 { background-image: url('/image/m_/120259.png'); }
+.hero_card_pic_small.card_face_120260 { background-image: url('/image/m_/120260.png'); }
+.hero_card_pic_small.card_face_120261 { background-image: url('/image/m_/120261.png'); }
+.hero_card_pic_small.card_face_120262 { background-image: url('/image/m_/120262.png'); }
+.hero_card_pic_small.card_face_120263 { background-image: url('/image/m_/120263.png'); }
+.hero_card_pic_small.card_face_120264 { background-image: url('/image/m_/120264.png'); }
+.hero_card_pic_small.card_face_120265 { background-image: url('/image/m_/120265.png'); }
+.hero_card_pic_small.card_face_120266 { background-image: url('/image/m_/120266.png'); }
+.hero_card_pic_small.card_face_120267 { background-image: url('/image/m_/120267.png'); }
+.hero_card_pic_small.card_face_120268 { background-image: url('/image/m_/120268.png'); }
+.hero_card_pic_small.card_face_120269 { background-image: url('/image/m_/120269.png'); }
+.hero_card_pic_small.card_face_120270 { background-image: url('/image/m_/120270.png'); }
+.hero_card_pic_small.card_face_120271 { background-image: url('/image/m_/120271.png'); }
+.hero_card_pic_small.card_face_120272 { background-image: url('/image/m_/120272.png'); }
+.hero_card_pic_small.card_face_120273 { background-image: url('/image/m_/120273.png'); }
+.hero_card_pic_small.card_face_120274 { background-image: url('/image/m_/120274.png'); }
+.hero_card_pic_small.card_face_120275 { background-image: url('/image/m_/120275.png'); }
+.hero_card_pic_small.card_face_120276 { background-image: url('/image/m_/120276.png'); }
+.hero_card_pic_small.card_face_120277 { background-image: url('/image/m_/120277.png'); }
+.hero_card_pic_small.card_face_120278 { background-image: url('/image/m_/120278.png'); }
+.hero_card_pic_small.card_face_120279 { background-image: url('/image/m_/120279.png'); }
+.hero_card_pic_small.card_face_120280 { background-image: url('/image/m_/120280.png'); }
+.hero_card_pic_small.card_face_120281 { background-image: url('/image/m_/120281.png'); }
+.hero_card_pic_small.card_face_120282 { background-image: url('/image/m_/120282.png'); }
+.hero_card_pic_small.card_face_120283 { background-image: url('/image/m_/120283.png'); }
+.hero_card_pic_small.card_face_120284 { background-image: url('/image/m_/120284.png'); }
+.hero_card_pic_small.card_face_120285 { background-image: url('/image/m_/120285.png'); }
+.hero_card_pic_small.card_face_120286 { background-image: url('/image/m_/120286.png'); }
+.hero_card_pic_small.card_face_120287 { background-image: url('/image/m_/120287.png'); }
+.hero_card_pic_small.card_face_120288 { background-image: url('/image/m_/120288.png'); }
+.hero_card_pic_small.card_face_120289 { background-image: url('/image/m_/120289.png'); }
+.hero_card_pic_small.card_face_120290 { background-image: url('/image/m_/120290.png'); }
+.hero_card_pic_small.card_face_120291 { background-image: url('/image/m_/120291.png'); }
+.hero_card_pic_small.card_face_120292 { background-image: url('/image/m_/120292.png'); }
+.hero_card_pic_small.card_face_120293 { background-image: url('/image/m_/120293.png'); }
+.hero_card_pic_small.card_face_120294 { background-image: url('/image/m_/120294.png'); }
+.hero_card_pic_small.card_face_120295 { background-image: url('/image/m_/120295.png'); }
+.hero_card_pic_small.card_face_120296 { background-image: url('/image/m_/120296.png'); }
+.hero_card_pic_small.card_face_120297 { background-image: url('/image/m_/120297.png'); }
+.hero_card_pic_small.card_face_120298 { background-image: url('/image/m_/120298.png'); }
+.hero_card_pic_small.card_face_120299 { background-image: url('/image/m_/120299.png'); }
+.hero_card_pic_small.card_face_120300 { background-image: url('/image/m_/120300.png'); }
+.hero_card_pic_small.card_face_120301 { background-image: url('/image/m_/120301.png'); }
+.hero_card_pic_small.card_face_120302 { background-image: url('/image/m_/120302.png'); }
+.hero_card_pic_small.card_face_120303 { background-image: url('/image/m_/120303.png'); }
+.hero_card_pic_small.card_face_120304 { background-image: url('/image/m_/120304.png'); }
+.hero_card_pic_small.card_face_120305 { background-image: url('/image/m_/120305.png'); }
+.hero_card_pic_small.card_face_120306 { background-image: url('/image/m_/120306.png'); }
+.hero_card_pic_small.card_face_120307 { background-image: url('/image/m_/120307.png'); }
+.hero_card_pic_small.card_face_120308 { background-image: url('/image/m_/120308.png'); }
+.hero_card_pic_small.card_face_120309 { background-image: url('/image/m_/120309.png'); }
+.hero_card_pic_small.card_face_120310 { background-image: url('/image/m_/120310.png'); }
+.hero_card_pic_small.card_face_120311 { background-image: url('/image/m_/120311.png'); }
+.hero_card_pic_small.card_face_120312 { background-image: url('/image/m_/120312.png'); }
+.hero_card_pic_small.card_face_120313 { background-image: url('/image/m_/120313.png'); }
+.hero_card_pic_small.card_face_120314 { background-image: url('/image/m_/120314.png'); }
+
+.hero_card_pic_small.card_face_120315 { background-image: url('/image/m_/120315.png'); }
+.hero_card_pic_small.card_face_120316 { background-image: url('/image/m_/120316.png'); }
+.hero_card_pic_small.card_face_120317 { background-image: url('/image/m_/120317.png'); }
+.hero_card_pic_small.card_face_120318 { background-image: url('/image/m_/120318.png'); }
+.hero_card_pic_small.card_face_120319 { background-image: url('/image/m_/120319.png'); }
+.hero_card_pic_small.card_face_120320 { background-image: url('/image/m_/120320.png'); }
+.hero_card_pic_small.card_face_120321 { background-image: url('/image/m_/120321.png'); }
+.hero_card_pic_small.card_face_120322 { background-image: url('/image/m_/120322.png'); }
+.hero_card_pic_small.card_face_120323 { background-image: url('/image/m_/120323.png'); }
+.hero_card_pic_small.card_face_120324 { background-image: url('/image/m_/120324.png'); }
+.hero_card_pic_small.card_face_120325 { background-image: url('/image/m_/120325.png'); }
+.hero_card_pic_small.card_face_120326 { background-image: url('/image/m_/120326.png'); }
+.hero_card_pic_small.card_face_120327 { background-image: url('/image/m_/120327.png'); }
+.hero_card_pic_small.card_face_120328 { background-image: url('/image/m_/120328.png'); }
+.hero_card_pic_small.card_face_120329 { background-image: url('/image/m_/120329.png'); }
+.hero_card_pic_small.card_face_120330 { background-image: url('/image/m_/120330.png'); }
+.hero_card_pic_small.card_face_120331 { background-image: url('/image/m_/120331.png'); }
+.hero_card_pic_small.card_face_120332 { background-image: url('/image/m_/120332.png'); }
+.hero_card_pic_small.card_face_120333 { background-image: url('/image/m_/120333.png'); }
+.hero_card_pic_small.card_face_120334 { background-image: url('/image/m_/120334.png'); }
+.hero_card_pic_small.card_face_120335 { background-image: url('/image/m_/120335.png'); }
+.hero_card_pic_small.card_face_120336 { background-image: url('/image/m_/120336.png'); }
+.hero_card_pic_small.card_face_120337 { background-image: url('/image/m_/120337.png'); }
+.hero_card_pic_small.card_face_120338 { background-image: url('/image/m_/120338.png'); }
+.hero_card_pic_small.card_face_120339 { background-image: url('/image/m_/120339.png'); }
+.hero_card_pic_small.card_face_120340 { background-image: url('/image/m_/120340.png'); }
+.hero_card_pic_small.card_face_120341 { background-image: url('/image/m_/120341.png'); }
+.hero_card_pic_small.card_face_120342 { background-image: url('/image/m_/120342.png'); }
+.hero_card_pic_small.card_face_120343 { background-image: url('/image/m_/120343.png'); }
+.hero_card_pic_small.card_face_120344 { background-image: url('/image/m_/120344.png'); }
+.hero_card_pic_small.card_face_120345 { background-image: url('/image/m_/120345.png'); }
+.hero_card_pic_small.card_face_120346 { background-image: url('/image/m_/120346.png'); }
+.hero_card_pic_small.card_face_120347 { background-image: url('/image/m_/120347.png'); }
+.hero_card_pic_small.card_face_120348 { background-image: url('/image/m_/120348.png'); }
+.hero_card_pic_small.card_face_120349 { background-image: url('/image/m_/120349.png'); }
+.hero_card_pic_small.card_face_120350 { background-image: url('/image/m_/120350.png'); }
+.hero_card_pic_small.card_face_120351 { background-image: url('/image/m_/120351.png'); }
+.hero_card_pic_small.card_face_120352 { background-image: url('/image/m_/120352.png'); }
+.hero_card_pic_small.card_face_120353 { background-image: url('/image/m_/120353.png'); }
+.hero_card_pic_small.card_face_120354 { background-image: url('/image/m_/120354.png'); }
+.hero_card_pic_small.card_face_120355 { background-image: url('/image/m_/120355.png'); }
+.hero_card_pic_small.card_face_120356 { background-image: url('/image/m_/120356.png'); }
+.hero_card_pic_small.card_face_120357 { background-image: url('/image/m_/120357.png'); }
+.hero_card_pic_small.card_face_120358 { background-image: url('/image/m_/120358.png'); }
+.hero_card_pic_small.card_face_120359 { background-image: url('/image/m_/120359.png'); }
+.hero_card_pic_small.card_face_120360 { background-image: url('/image/m_/120360.png'); }
+.hero_card_pic_small.card_face_120361 { background-image: url('/image/m_/120361.png'); }
+.hero_card_pic_small.card_face_120362 { background-image: url('/image/m_/120362.png'); }
+.hero_card_pic_small.card_face_120363 { background-image: url('/image/m_/120363.png'); }
+.hero_card_pic_small.card_face_120364 { background-image: url('/image/m_/120364.png'); }
+.hero_card_pic_small.card_face_120367 { background-image: url('/image/m_/120367.png'); }
+.hero_card_pic_small.card_face_120365 { background-image: url('/image/m_/120365.png'); }
+.hero_card_pic_small.card_face_120366 { background-image: url('/image/m_/120366.png'); }
+.hero_card_pic_small.card_face_120368 { background-image: url('/image/m_/120368.png'); }
+.hero_card_pic_small.card_face_120369 { background-image: url('/image/m_/120369.png'); }
+.hero_card_pic_small.card_face_120370 { background-image: url('/image/m_/120370.png'); }
+.hero_card_pic_small.card_face_120371 { background-image: url('/image/m_/120371.png'); }
+.hero_card_pic_small.card_face_120372 { background-image: url('/image/m_/120372.png'); }
+.hero_card_pic_small.card_face_120373 { background-image: url('/image/m_/120373.png'); }
+.hero_card_pic_small.card_face_120374 { background-image: url('/image/m_/120374.png'); }
+.hero_card_pic_small.card_face_120375 { background-image: url('/image/m_/120375.png'); }
+.hero_card_pic_small.card_face_120376 { background-image: url('/image/m_/120376.png'); }
+.hero_card_pic_small.card_face_120377 { background-image: url('/image/m_/120377.png'); }
+.hero_card_pic_small.card_face_120378 { background-image: url('/image/m_/120378.png'); }
+.hero_card_pic_small.card_face_120379 { background-image: url('/image/m_/120379.png'); }
+.hero_card_pic_small.card_face_120380 { background-image: url('/image/m_/120380.png'); }
+.hero_card_pic_small.card_face_120381 { background-image: url('/image/m_/120381.png'); }
+.hero_card_pic_small.card_face_120382 { background-image: url('/image/m_/120382.png'); }
+.hero_card_pic_small.card_face_120383 { background-image: url('/image/m_/120383.png'); }
+.hero_card_pic_small.card_face_120384 { background-image: url('/image/m_/120384.png'); }
+.hero_card_pic_small.card_face_120385 { background-image: url('/image/m_/120385.png'); }
+.hero_card_pic_small.card_face_120386 { background-image: url('/image/m_/120386.png'); }
+.hero_card_pic_small.card_face_120387 { background-image: url('/image/m_/120387.png'); }
+.hero_card_pic_small.card_face_120388 { background-image: url('/image/m_/120388.png'); }
+.hero_card_pic_small.card_face_120389 { background-image: url('/image/m_/120389.png'); }
+.hero_card_pic_small.card_face_120390 { background-image: url('/image/m_/120390.png'); }
+.hero_card_pic_small.card_face_120391 { background-image: url('/image/m_/120391.png'); }
+.hero_card_pic_small.card_face_120392 { background-image: url('/image/m_/120392.png'); }
+.hero_card_pic_small.card_face_120393 { background-image: url('/image/m_/120393.png'); }
+.hero_card_pic_small.card_face_120394 { background-image: url('/image/m_/120394.png'); }
+.hero_card_pic_small.card_face_120395 { background-image: url('/image/m_/120395.png'); }
+.hero_card_pic_small.card_face_120396 { background-image: url('/image/m_/120396.png'); }
+.hero_card_pic_small.card_face_120397 { background-image: url('/image/m_/120397.png'); }
+.hero_card_pic_small.card_face_120398 { background-image: url('/image/m_/120398.png'); }
+.hero_card_pic_small.card_face_120399 { background-image: url('/image/m_/120399.png'); }
+.hero_card_pic_small.card_face_120400 { background-image: url('/image/m_/120400.png'); }
+.hero_card_pic_small.card_face_120401 { background-image: url('/image/m_/120401.png'); }
+.hero_card_pic_small.card_face_120402 { background-image: url('/image/m_/120402.png'); }
+.hero_card_pic_small.card_face_120403 { background-image: url('/image/m_/120403.png'); }
+.hero_card_pic_small.card_face_120404 { background-image: url('/image/m_/120404.png'); }
+.hero_card_pic_small.card_face_120405 { background-image: url('/image/m_/120405.png'); }
+.hero_card_pic_small.card_face_120406 { background-image: url('/image/m_/120406.png'); }
+.hero_card_pic_small.card_face_120407 { background-image: url('/image/m_/120407.png'); }
+.hero_card_pic_small.card_face_120408 { background-image: url('/image/m_/120408.png'); }
+.hero_card_pic_small.card_face_120409 { background-image: url('/image/m_/120409.png'); }
+.hero_card_pic_small.card_face_120410 { background-image: url('/image/m_/120410.png'); }
+.hero_card_pic_small.card_face_120411 { background-image: url('/image/m_/120411.png'); }
+.hero_card_pic_small.card_face_120412 { background-image: url('/image/m_/120412.png'); }
+.hero_card_pic_small.card_face_120413 { background-image: url('/image/m_/120413.png'); }
+.hero_card_pic_small.card_face_120414 { background-image: url('/image/m_/120414.png'); }
+.hero_card_pic_small.card_face_120415 { background-image: url('/image/m_/120415.png'); }
+.hero_card_pic_small.card_face_120416 { background-image: url('/image/m_/120416.png'); }
+.hero_card_pic_small.card_face_120417 { background-image: url('/image/m_/120417.png'); }
+.hero_card_pic_small.card_face_120418 { background-image: url('/image/m_/120418.png'); }
+.hero_card_pic_small.card_face_120419 { background-image: url('/image/m_/120419.png'); }
+.hero_card_pic_small.card_face_120420 { background-image: url('/image/m_/120420.png'); }
+.hero_card_pic_small.card_face_120421 { background-image: url('/image/m_/120421.png'); }
+.hero_card_pic_small.card_face_120422 { background-image: url('/image/m_/120422.png'); }
+.hero_card_pic_small.card_face_120423 { background-image: url('/image/m_/120423.png'); }
+.hero_card_pic_small.card_face_120424 { background-image: url('/image/m_/120424.png'); }
+.hero_card_pic_small.card_face_120425 { background-image: url('/image/m_/120425.png'); }
+.hero_card_pic_small.card_face_120426 { background-image: url('/image/m_/120426.png'); }
+.hero_card_pic_small.card_face_120427 { background-image: url('/image/m_/120427.png'); }
+.hero_card_pic_small.card_face_120428 { background-image: url('/image/m_/120428.png'); }
+.hero_card_pic_small.card_face_120429 { background-image: url('/image/m_/120429.png'); }
+.hero_card_pic_small.card_face_120430 { background-image: url('/image/m_/120430.png'); }
+.hero_card_pic_small.card_face_120431 { background-image: url('/image/m_/120431.png'); }
+.hero_card_pic_small.card_face_120432 { background-image: url('/image/m_/120432.png'); }
+.hero_card_pic_small.card_face_120433 { background-image: url('/image/m_/120433.png'); }
+.hero_card_pic_small.card_face_120434 { background-image: url('/image/m_/120434.png'); }
+.hero_card_pic_small.card_face_120435 { background-image: url('/image/m_/120435.png'); }
+.hero_card_pic_small.card_face_120436 { background-image: url('/image/m_/120436.png'); }
+.hero_card_pic_small.card_face_120437 { background-image: url('/image/m_/120437.png'); }
+.hero_card_pic_small.card_face_120438 { background-image: url('/image/m_/120438.png'); }
+.hero_card_pic_small.card_face_120439 { background-image: url('/image/m_/120439.png'); }
+.hero_card_pic_small.card_face_120440 { background-image: url('/image/m_/120440.png'); }
+.hero_card_pic_small.card_face_120441 { background-image: url('/image/m_/120441.png'); }
+.hero_card_pic_small.card_face_120442 { background-image: url('/image/m_/120442.png'); }
+.hero_card_pic_small.card_face_120443 { background-image: url('/image/m_/120443.png'); }
+.hero_card_pic_small.card_face_120444 { background-image: url('/image/m_/120444.png'); }
+.hero_card_pic_small.card_face_120445 { background-image: url('/image/m_/120445.png'); }

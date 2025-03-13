@@ -1,0 +1,102 @@
+<h2>큐빅패키지 로그</h2>
+
+<hr />
+
+<fieldset id="lord_search_by_lord_name_form" class="cpn_search_form" style="float:left;">
+    <legend>군주명 검색</legend>
+    <div>
+        <input type="text" id="lord_name" value="{{ _SESSION['selected_lord']['lord_name'] }}" />
+        <input type="button" id="do_search_lord_name" value="&nbsp;검색&nbsp;" /><br/>
+    </div>
+</fieldset>
+<fieldset id="lord_search_by_lord_name_form" class="cpn_search_form" style="float:left;width:200px;">
+    <legend>구매번호 검색</legend>
+    <div>
+        <input type="text" id="bill_chargeno" value="" style="width:150px;" />
+        <input type="button" id="do_search_bill_chargeno" value="&nbsp;검색&nbsp;" /><br/>
+    </div>
+</fieldset>
+
+<div style="clear:both;"></div>
+<br />
+
+<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_lord_qbig_flow" dir="ltr" style="width:100%; display:none;">
+    <div class="ui-jqgrid-view" id="gview_lord_own_terr_list" style="width: 100%;">
+        <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+            <span class="ui-jqgrid-title">큐빅 흐름</span>
+        </div>
+        <div class="ui-jqgrid-bdiv" style=" width: 100%; ">
+            <div style="position:relative;">
+                <div></div>
+                <table id="lord_non_reward_quest" style="width:1054px; text-align:center; table-layout:fixed;" class="jqGridTable ui-jqgrid-btable" cellSpacing="0" cellPadding="0" border="0">
+                    <thead>
+                    <tr class="ui-jqgrid-labels">
+                        <th class="ui-state-default ui-th-column ui-th-ltr">군주명</th>
+                        <th class="ui-state-default ui-th-column ui-th-ltr">가입 시 지급</th>
+                        <th class="ui-state-default ui-th-column ui-th-ltr">실제 충전</th>
+                        <th class="ui-state-default ui-th-column ui-th-ltr">충전 보너스</th>
+                        <th class="ui-state-default ui-th-column ui-th-ltr">전체 사용</th>
+                        <th class="ui-state-default ui-th-column ui-th-ltr">남은 큐빅</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="ui-widget-content jqgrow ui-row-ltr">
+                        <td style="text-align:center;"><span id="qbig_flow_lord_name"></span></td>
+                        <td style="text-align:center;"><span id="qbig_flow_cash_regist"></span></td>
+                        <td style="text-align:center;"><span id="qbig_flow_incr_cash"></span></td>
+                        <td style="text-align:center;"><span id="qbig_flow_bonus_cash"></span></td>
+                        <td style="text-align:center;"><span id="qbig_flow_desc_spent"></span></td>
+                        <td style="text-align:center;"><span id="qbig_flow_remain_cash"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<br />
+
+<div id="search_result">
+</div>
+
+<div id="confirm_qb_pack_refund" title="큐빅 환불 기능">
+    <h3>기본 정보</h3>
+    <hr />
+    <strong>큐빅팩pk</strong> : <span id="qb_pack_qbi_pac_pk"></span><br />
+    <strong>구매시간</strong> : <span id="qb_pack_buy_dt"></span><br />
+    <strong>스토어타입</strong> : <span id="qb_pack_store"></span><br />
+    <strong>큐빅팩타입</strong> : <span id="qb_pack_type"></span><br />
+    <strong>구매번호</strong> : <span id="qb_pack_bill_chargeno"></span><br />
+    <strong>환불상태</strong> : <span id="qb_pack_yn_refund"></span><br />
+    <div id="qb_pack_refund_data">
+        <strong>환불시간</strong> : <span id="qb_pack_refund_dt"></span><br />
+    </div>
+    <br />
+    <h3>환불 사유</h3>
+    <hr />
+    <div>
+        <select id="qb_pack_refund_type">
+            <option value="">없음</option>
+            <option value="CANCEL">거래 취소</option>
+            <option value="REFUND">환불</option>
+            <option value="HACKING">해킹</option>
+            <option value="ETC">기타</option>
+            <option value="TEST">테스트</option>
+        </select>
+        <br />
+        <br />
+    </div>
+    <h3>고객 정보 (고객명 및 연락처)</h3>
+    <hr />
+    <div>
+        <textarea id="qb_pack_refund_info" style="width:600px; height:64px;"></textarea>
+        <br />
+        <br />
+    </div>
+    <h3>비고 (기타 대응정보)</h3>
+    <hr />
+    <div>
+        <textarea id="qb_pack_refund_description" style="width:600px; height:64px;"></textarea>
+    </div>
+</div>

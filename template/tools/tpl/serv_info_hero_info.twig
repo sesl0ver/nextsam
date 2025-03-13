@@ -1,0 +1,47 @@
+<h2>영웅 검색</h2>
+
+<hr />
+
+<fieldset class="cpn_search_form">
+	<legend>영웅 고유키</legend>
+	<div>
+		<input type="text" id="hero_pk" value="" /> <input type="button" id="do_search_hero" value="&nbsp;검색&nbsp;" /><br/>
+	</div>
+</fieldset>
+
+<br/>
+
+<div id="search_hero_result">
+	<table class="hero_base">
+		<tbody>
+		<tr>
+			<td class="result_hero_image" rowspan="4"></td>
+			<td class="title">영웅이름</td>
+			<td class="result_hero_name"></td>
+			<td class="title">소유 군주 PK</td>
+			<td class="result_hero_lord_pk"></td>
+		</tr>
+		<tr>
+			<td class="title">베이스 PK</td>
+			<td class="result_hero_m_hero_base_pk"></td>
+			<td class="title">영웅 위치</td>
+			<td class="result_hero_posi_pk"></td>
+		</tr>
+		<tr>
+			<td class="title">영웅 PK</td>
+			<td class="result_hero_m_hero_pk"></td>
+			<td class="title">영웅 상태</td>
+			<td class="result_hero_status"></td>
+		</tr>
+		<tr>
+			<td class="title">레어도</td>
+			<td class="result_hero_rare_type"></td>
+			<td class="title">영웅 레벨</td>
+			<td class="result_hero_level"></td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<script type="text/javascript" src='/m_/cache/ns_m.hero.js'></script>
+<script type="text/javascript" src='/m_/cache/ns_m.hero_base.js'></script>

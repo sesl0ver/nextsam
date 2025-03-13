@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+#ns_dialog_item .wrapper_sub_top_button {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+#ns_dialog_item .ns_panel_tab{
+    position: relative;
+    top: -2px;
+}
+
+#ns_dialog_item .content_item_list_wrap {
+    width: 320px;
+    margin: 10px auto;
+}
+
+#ns_dialog_item_buy {
+    z-index: 2456;
+}
+
+#ns_dialog_item_buy table th,
+#ns_dialog_item_buy table td {
+    width: 50%;
+}
+#ns_dialog_item_buy .item_image {
+    margin-bottom: 5px;
+}
+
+#ns_dialog_item_buy .item_description {
+    padding: 0 5px;
+    width: 220px;
+}
+
+#ns_dialog_item_buy #item_buy_amount_group {
+    gap: 4px;
+    align-items: center;
+}
+
+#ns_dialog_item_buy input.ns_input_test{
+    position: relative;
+    display: inline-block;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #384556;
+    background: #000000;
+    color: white;
+}
+
+#ns_dialog_item_buy #item_buy_slide_group label {
+    position:relative;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    line-height: 39px;
+    gap: 4px;
+}
+
+#ns_dialog_item_buy #item_buy_slide_group [name="develop_slide"] {
+    width: 70%;
+}

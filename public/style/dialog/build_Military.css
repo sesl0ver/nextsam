@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+#ns_dialog_build_Military {
+
+}
+
+#ns_dialog_build_Military {
+    & .build_Military_tab_move_troops .ns_table_common>thead>tr {
+        & th:first-child,
+        & th:nth-child(2),
+        & th:nth-child(3),
+        & th:nth-child(4) {
+            width: 19%;
+        }
+
+        & th:last-child{
+            width:24%;
+        }
+    }
+
+    & .build_Military_tab_enemy_march_troops .ns_table_common>thead>tr{
+        & th:first-child,
+        & th:nth-child(2),
+        & th:nth-child(3),
+        & th:nth-child(4) {
+            width: 19%;
+        }
+
+        & th:last-child{
+            width:24%;
+        }
+    }
+
+    & .build_Military_tab_own_army .ns_table_common>thead>tr {
+        & th:first-child {
+            width: 40%;
+        }
+        & th:nth-child(2),
+        & th:nth-child(3){
+            width: 30%;
+        }
+    }
+
+    & .build_Military_tab_camp_army .ns_table_common>thead>tr {
+        & th:first-child,
+        & th:nth-child(3) {
+            width: 35%;
+        }
+
+        & th:nth-child(2),
+        & th:nth-child(4) {
+            width: 15%;
+        }
+    }
+}
+
+#ns_dialog_build_Military .ns_panel_sub_top.ns_panel_flex > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+#ns_button_build_speedup_Military {
+    width: 120px;
+}
+
+#ns_dialog_build_Military #ns_button_build_assign_Military,
+#ns_dialog_build_Military #ns_button_build_no_assign_Military {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 121px;
+}
+
+#ns_dialog_build_Military .hero_card_sm.ns_panel_flex {
+    width: 120px;
+}

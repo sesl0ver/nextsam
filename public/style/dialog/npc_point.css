@@ -1,0 +1,14 @@
+@charset "utf-8";
+
+#ns_dialog_npc_point table {
+    margin: 0 auto;
+}
+
+#ns_dialog_npc_point .npc_point_position_wrap td {
+    width: 45px;
+}
+
+
+#ns_dialog_npc_point table .button_middle_2 {
+    width: 64px;
+}

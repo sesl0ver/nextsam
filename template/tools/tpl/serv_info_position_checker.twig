@@ -1,0 +1,50 @@
+<?php
+if (!isset($_SESSION) || !isset($_SESSION['gm_active']))
+{
+	// 세션이 설정되지 않은 경우 이 파일을 볼 수없음.
+	header("HTTP/1.0 404 Not Found");
+	exit(1);
+}
+// DB 접속을 위한 상수 선언
+define('GAME_PGSQL_IP', $_SESSION['selected_server']['db_ip']);
+define('GAME_PGSQL_PORT', $_SESSION['selected_server']['db_port']);
+define('GAME_PGSQL_DB', 'qbegame');
+define('GAME_PGSQL_USER', $_SESSION['selected_server']['db_account']);
+define('GAME_PGSQL_PASS', $_SESSION['selected_server']['db_password']);
+define('GAME_PGSQL_PERSISTENT', true);
+
+define('GM_LOG_PGSQL_IP', $_SESSION['selected_server']['log_db_ip']);
+define('GM_LOG_PGSQL_PORT', $_SESSION['selected_server']['log_db_port']);
+define('GM_LOG_PGSQL_DB', $_SESSION['selected_server']['log_db_name']);
+define('GM_LOG_PGSQL_USER', $_SESSION['selected_server']['log_db_account']);
+define('GM_LOG_PGSQL_PASS', $_SESSION['selected_server']['log_db_password']);
+define('GM_LOG_PGSQL_PERSISTENT', true);
+
+require_once_classes(Array('CPgsql'));
+
+$Db = new CPgsql('GAME');
+?>
+<h2>영지 오류 체크</h2>
+<hr />
+<br />
+1. 소유주 없는 군주 영지 (유령 영지)<br />
+유령 영지 수 : <span class="ghost_count"></span><br />
+<div class="ghost_list"></div>
+<button id="position_error_reset">오류 수정</button>
+<hr />
+<script>
+$(document).ready(function(){
+	$('#position_error_reset').mouseup(function(){
+		$.post('/admin/gm/api/positionCheck', {}, function(data){
+			if (data.result === 'fail') {
+				alert(data.msg);
+				return false;
+			} else {
+				alert(data.msg);
+				document.location.reload();
+			}
+		}, 'json');
+
+	});
+});
+</script>

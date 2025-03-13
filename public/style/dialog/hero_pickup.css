@@ -1,0 +1,594 @@
+@charset "utf-8";
+
+#ns_dialog_hero_pickup .hero_pickup_rule_wrap {
+    position: absolute;
+    top: 110px;
+    left: 50px;
+    width: 360px;
+    padding: 10px;
+    font-size: .7rem;
+    z-index: 1;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_rule_wrap p {
+    margin: 15px 10px;
+}
+
+#ns_dialog_hero_pickup .button_tooltip_close {
+    position: absolute;
+    right: -6px;
+    top: -6px;
+}
+
+#ns_dialog_hero_pickup .content_pickup_subtitle {
+    position: relative;
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    width: 100%;
+    height: 42px;
+    background-image: url("/image/ui/subtitle_end.png"), url("/image/ui/subtitle.png");
+    background-repeat: no-repeat, no-repeat;
+    background-position: top right, top left;
+    background-size: 181px 42px, 443px 42px;
+    z-index: 1;
+}
+
+#ns_dialog_hero_pickup .content_pickup_subtitle .button_toggle_description {
+    margin: auto auto auto 10px;
+}
+
+#ns_dialog_hero_pickup .content_pickup_subtitle .pickup_resource {
+    position: relative;
+    display: flex;
+    margin: auto 0;
+    width: 100px;
+    height: 20px;
+    background-color: #000;
+    border-radius: 7px;
+    border-bottom: 1px solid #696969;
+    line-height: 20px;
+    font-size: .75rem;
+}
+
+#ns_dialog_hero_pickup .content_pickup_subtitle > div:nth-child(3) {
+    margin-right: 5px;
+}
+
+#ns_dialog_hero_pickup .content_pickup_subtitle .pickup_charge_icon {
+    top: -4px;
+    left: -4px;
+}
+
+#ns_dialog_hero_pickup .content_pickup_subtitle .pickup_item_500075,
+#ns_dialog_hero_pickup .content_pickup_subtitle .pickup_item_500103,
+#ns_dialog_hero_pickup .content_pickup_subtitle .pickup_qbig {
+    flex: auto;
+    line-height: 20px;
+    margin-right: 5px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list {
+    padding: 0 5px;
+}
+
+#ns_dialog_hero_pickup .button_pickup_submit {
+    display: flex;
+    flex-direction: column;
+    width: 85px;
+}
+
+#ns_dialog_hero_pickup .pickup_item .item_image {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type {
+    position: relative;
+    width: 433px;
+    height: 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.normal_hero {
+    background: url("/image/ui/dialog/etc/banner_normal_hero.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120448 {
+    background: url("/image/ui/dialog/etc/banner_superb_120448.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120135 {
+    background: url("/image/ui/dialog/etc/banner_superb_120135.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120008 {
+    background: url("/image/ui/dialog/etc/banner_superb_120008.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120032 {
+    background: url("/image/ui/dialog/etc/banner_superb_120032.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120047 {
+    background: url("/image/ui/dialog/etc/banner_superb_120047.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120121 {
+    background: url("/image/ui/dialog/etc/banner_superb_120121.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120324 {
+    background: url("/image/ui/dialog/etc/banner_superb_120324.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120447 {
+    background: url("/image/ui/dialog/etc/banner_superb_120447.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120145 {
+    background: url("/image/ui/dialog/etc/banner_superb_120145.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120027 {
+    background: url("/image/ui/dialog/etc/banner_superb_120027.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120051 {
+    background: url("/image/ui/dialog/etc/banner_superb_120051.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120130 {
+    background: url("/image/ui/dialog/etc/banner_superb_120130.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120046 {
+    background: url("/image/ui/dialog/etc/banner_superb_120046.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.hero_120025 {
+    background: url("/image/ui/dialog/etc/banner_superb_120025.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_type.none {
+    background: url("/image/ui/dialog/etc/banner_coming_soon.png") no-repeat;
+    background-size: 433px 201px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_buttons {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    top: 125px;
+    right: 10px;
+    width: 260px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_remain_time {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    width: 90px;
+    text-align: right;
+    text-shadow: 0 1px 1px #000;
+    border-radius: 10px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .pickup_remain_count {
+    position: absolute;
+    width: 180px;
+    bottom: 12px;
+    right: 50px;
+    text-align: center;
+    text-shadow: 0 1px 1px #000;
+    border-radius: 10px;
+}
+
+#ns_dialog_hero_pickup .hero_pickup_list .button_pickup_preview {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    cursor: pointer;
+}
+
+#ns_dialog_hero_pickup .pickup_buttons .ticket_wrap {
+    margin: 2px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    font-size: .68rem;
+    width: 85px;
+    height: 15px;
+    background: url("/image/ui/dialog/etc/banner_icon_bg.png") no-repeat;
+    background-size: 85px 15px;
+}
+
+#ns_dialog_hero_pickup .pickup_buttons .ticket_icon_1 {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 15px;
+    background: url("/image/icon/icon_ticket_1.png") no-repeat;
+    background-size: 12px 15px;
+    vertical-align: middle;
+}
+
+#ns_dialog_hero_pickup .pickup_buttons .ticket_icon_2,
+#ns_dialog_hero_pickup .pickup_buttons .ticket_icon_3 {
+    position: relative;
+    display: inline-block;
+    width: 12px;
+    height: 15px;
+    background: url("/image/icon/icon_ticket_2.png") no-repeat;
+    background-size: 12px 15px;
+    vertical-align: middle;
+}
+
+
+/* hero_pickup_card */
+#ns_dialog_hero_pickup_card .card_slot {
+    display: flex;
+    width: 100%;
+}
+
+#ns_dialog_hero_pickup_card .card_slot .hero_card {
+    position: relative;
+    margin: auto;
+}
+
+#ns_dialog_hero_pickup_card .hero_card .hero_card_back {
+    display: none;
+}
+
+#ns_dialog_hero_pickup_card .hero_card .hero_card_cover
+{
+    position: absolute;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    z-index: 1;
+}
+
+#ns_dialog_hero_pickup_card .hero_card .hero_card_cover.flipping {
+    transform: rotateY(180deg);
+}
+
+#ns_dialog_hero_pickup_card .hero_card .hero_card_front.hide_face::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 277px;
+    height: 353px;
+    background-color: #ffffff;
+    content: " ";
+    z-index: 1;
+    transform: scale(105%);
+    filter: blur(5px);
+}
+
+#ns_dialog_hero_pickup_card .hero_card.appear {
+    animation: appear_card .125s linear 1 forwards;
+}
+
+#ns_dialog_hero_pickup_card .hero_card.disappear {
+    animation: disappear_card .125s linear 1 forwards;
+}
+
+@keyframes appear_card {
+    0% {
+        transform: translateY(-300px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes disappear_card {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(300px);
+        opacity: 0;
+    }
+}
+
+#ns_dialog_hero_pickup_card .hero_card_front {
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+#ns_dialog_hero_pickup_card .hero_card_front.flipping {
+    transform: rotateY(180deg);
+}
+
+#ns_dialog_hero_pickup_card .hero_card_border.border {
+    position: absolute;
+    z-index: 0;
+    top: -3px;
+    left: -3px;
+    width: 287px;
+    height: 363px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: blur 2.5s linear infinite;
+}
+
+#ns_dialog_hero_pickup_card .hero_card_border.border::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    width: 287px;
+    height: 363px;
+    background: linear-gradient(45deg, white, lightgray, lightslategray, darkgray, dimgray, dimgray, darkgray, lightslategray, lightgray, white);
+    background-size: 400%;
+    animation: rotate 30s linear infinite;
+}
+
+#ns_dialog_hero_pickup_card .hero_card_border.border.rare_4::before {
+    background: linear-gradient(45deg, orange, orange, darkorange, coral, orangered, orangered, coral, darkorange, orange, orange) !important;
+}
+
+#ns_dialog_hero_pickup_card .hero_card_border.border.rare_5::before {
+    background: linear-gradient(45deg, purple, purple, rebeccapurple, mediumpurple, plum, plum, mediumpurple, rebeccapurple, purple, purple) !important;
+}
+
+#ns_dialog_hero_pickup_card .hero_card_border.border.rare_6::before {
+    background: linear-gradient(45deg, indianred, indianred, red, orangered, crimson, crimson, orangered, red, indianred, indianred) !important;
+}
+
+#ns_dialog_hero_pickup_card .hero_card_border.border.rare_7::before {
+    background: linear-gradient(45deg, palegoldenrod, palegoldenrod, gold, goldenrod, darkgoldenrod, darkgoldenrod, goldenrod, gold, palegoldenrod, palegoldenrod) !important;
+}
+
+#ns_dialog_hero_pickup_card .hero_card_border.border::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 6px;
+    top: 6px;
+    width: calc(100% - 12px);
+    height: calc(100% - 12px);
+    background: rgba(255, 255, 255, .25);
+    border-radius: 5px;
+}
+
+@keyframes blur {
+    0% {
+        filter: blur(55px);
+    }
+    50% {
+        filter: blur(35px);
+    }
+    100% {
+        filter: blur(55px);
+    }
+}
+
+@keyframes rotate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: 400% 0;
+    }
+}
+
+#ns_dialog_hero_pickup_card .hero_card_effect.neon {
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    width: calc(277px + 6px);
+    height: calc(353px + 6px);
+    background-color: rgba(255, 255, 255, 1);
+    animation: neon .75s ease-in-out 1;
+    z-index: 2;
+    border-radius: 5px;
+    box-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+    0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+    0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+}
+
+@keyframes neon {
+    0% {
+        box-shadow: none;
+    }
+    15% {
+        box-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+        0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+        0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+    }
+    30% {
+        box-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+        0 0 5px var(--shadow-color-light), 0 0 15px var(--shadow-color-light), 0 0 25px var(--shadow-color-light),
+        0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 60px var(--shadow-color), 0 0 80px var(--shadow-color), 0 0 110px var(--shadow-color), 0 0 210px var(--shadow-color);
+    }
+    45% {
+        box-shadow: -1px -1px 1px var(--shadow-color-light), -1px 1px 1px var(--shadow-color-light), 1px -1px 1px var(--shadow-color-light), 1px 1px 1px var(--shadow-color-light),
+        0 0 3px var(--shadow-color-light), 0 0 10px var(--shadow-color-light), 0 0 20px var(--shadow-color-light),
+        0 0 30px var(--shadow-color), 0 0 40px var(--shadow-color), 0 0 50px var(--shadow-color), 0 0 70px var(--shadow-color), 0 0 100px var(--shadow-color), 0 0 200px var(--shadow-color);
+    }
+    80% {
+        background-color: rgba(255, 255, 255, 1);
+    }
+    100% {
+        box-shadow: none;
+        background-color: rgba(255, 255, 255, 0);
+    }
+}
+
+#ns_dialog_hero_pickup_card .hero_card_effect.shine {
+    position: absolute;
+    width: 277px;
+    height: 353px;
+    background: linear-gradient(0deg, #ffffff, #cccccc);
+    overflow: hidden;
+}
+
+#ns_dialog_hero_pickup_card .hero_card_effect.shine::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -100%;
+    background: rgba(255, 255, 255, .35);
+    transform: rotate(45deg);
+    width: 250px;
+    height: 800px;
+    z-index: 1;
+    animation: shine .125s linear 1;
+    filter: blur(7px);
+}
+
+@keyframes shine {
+    0% {
+        top: -100%;
+    }
+    50% {
+        top: 0;
+    }
+    100% {
+        top: 100%;
+    }
+}
+
+#ns_button_hero_pickup_card_skip {
+    position: absolute;
+    right: 60px;
+    top: 90px;
+    width: 100px;
+    font-size: 1rem;
+}
+
+/* hero_pickup_result */
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap {
+    display: flex;
+    margin: 50px auto;
+    align-items: center;
+    justify-content: center;
+    flex-flow: wrap;
+    gap: 20px;
+}
+
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small {
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeout .125s ease-out 1 forwards;
+}
+
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(2),
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(2) .frame_effect {
+    animation-delay: .1s !important;
+}
+
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(3),
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(3) .frame_effect {
+    animation-delay: .15s !important;
+}
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(4),
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(4) .frame_effect {
+    animation-delay: .2s !important;
+}
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(5),
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(5) .frame_effect {
+    animation-delay: .25s !important;
+}
+
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(6),
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(6) .frame_effect {
+    animation-delay: .3s !important;
+}
+
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(7),
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(7) .frame_effect {
+    animation-delay: .35s !important;
+}
+
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(8),
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(8) .frame_effect {
+    animation-delay: .4s !important;
+}
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(9),
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(9) .frame_effect {
+    animation-delay: .45s !important;
+}
+
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(10),
+#ns_dialog_hero_pickup_result .hero_pickup_result_wrap .hero_card_small:nth-child(10) .frame_effect {
+    animation-delay: .5s !important;
+}
+
+@keyframes fadeout {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* hero_pickup_preview */
+#ns_dialog_hero_pickup_preview .preview_list {
+    justify-items: center;
+    gap: 10px 0;
+    margin: 10px 0;
+}
+
+#ns_dialog_hero_pickup_preview .preview_float_buttons {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    opacity: .7;
+    z-index: 1;
+}
+
+#ns_dialog_hero_pickup_preview .preview_float_buttons > span {
+    border: 1px solid #ffffff;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: #333333;
+}

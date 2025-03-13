@@ -1,0 +1,101 @@
+@charset "utf-8";
+
+#ns_dialog_counter_job_list {
+
+}
+
+#ns_dialog_counter_job_list .ns_panel_basic {
+    margin: 0;
+}
+
+#ns_dialog_counter_job_list .ns_panel_most {
+    padding-top:10px;
+}
+
+#ns_dialog_counter_job_list .content_counter_job_tab > div {
+    line-height: 25px;
+}
+
+#ns_dialog_counter_job_list .content_title_bar {
+    height: 24px;
+    padding-left: 5px;
+    margin: 5px 8px;
+    background-size: 94% 30px, 15px 30px, 15px 30px
+}
+
+#ns_dialog_counter_job_list .title_bar {
+    padding-left: 30px;
+    width: calc(100% - 52px);
+    height: 24px;
+    background-size: 24px 24px;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    color: #FED33C;
+    font-size: .75rem;
+    line-height: 24px;
+    text-shadow: 0 1px 2px #000000;
+}
+
+#ns_dialog_counter_job_list .content_construction .title_bar { background-image: url('/image/icon/counter_icon_C.png'); }
+#ns_dialog_counter_job_list .content_technique .title_bar { background-image:url('/image/icon/counter_icon_T.png'); }
+#ns_dialog_counter_job_list .content_explorer .title_bar { background-image:url('/image/icon/counter_icon_H.png'); }
+#ns_dialog_counter_job_list .content_army .title_bar { background-image:url('/image/icon/counter_icon_E.png'); }
+#ns_dialog_counter_job_list .content_fortification .title_bar { background-image:url('/image/icon/counter_icon_F.png'); }
+#ns_dialog_counter_job_list .content_our_troop .title_bar { background-image:url('/image/icon/counter_icon_X.png'); }
+#ns_dialog_counter_job_list .content_enemy_troop .title_bar { background-image:url('/image/icon/counter_icon_Y.png'); }
+
+#ns_dialog_counter_job_list .content_list > div
+{
+    position: relative;
+    height: 30px;
+    line-height: 30px;
+    margin: 0 15px;
+    color: #FFFFFF;
+    font-size: .75rem;
+}
+
+#ns_dialog_counter_job_list .button_small_1 {
+    text-shadow: 0 -1px #64350B;
+}
+
+/*#ns_dialog_counter_job_list .cont_list_left
+{
+    position: absolute;
+    left:0;
+}
+
+#ns_dialog_counter_job_list .cont_list_right
+{
+    position: absolute;
+    right:0;
+}
+
+
+#ns_dialog_counter_job_list .content_list > div:first-child
+{
+    border-top: 0;
+}
+
+#ns_dialog_counter_job_list .cont_list_right span:nth-child(1)
+{
+    position: relative;
+    right:0;
+}
+
+#ns_dialog_counter_job_list .cont_list_right span:nth-child(2)
+{
+    position: relative;
+    right:0;
+    margin-right:3px;
+}
+
+#ns_dialog_counter_job_list .arrow
+{
+    top:3px;
+    margin-right:2px;
+}
+
+#ns_dialog_counter_job_list .btn_speedup2
+{
+    top:4px;
+}*/

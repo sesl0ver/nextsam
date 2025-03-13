@@ -1,0 +1,30 @@
+@charset "utf-8";
+
+#ns_dialog_qbig {
+    z-index: 2555;
+}
+
+#ns_dialog_qbig table tbody tr {
+    position: relative;
+    display: flex;
+    padding: 0 15px;
+    margin: 13px 7px;
+    color: #FFFFFF;
+    background: url('/image/ui/quest_2_bg.png') no-repeat;
+    background-size: 425px 45px;
+    height: 45px;
+    line-height: 45px;
+}
+
+#ns_dialog_qbig table tbody td {
+    border-bottom: none !important;
+}
+
+#ns_dialog_qbig .button_checkbox {
+    vertical-align: middle;
+}
+
+#ns_dialog_qbig .text_qbig_amount {
+    color: #8871FF !important;
+    vertical-align: middle;
+}

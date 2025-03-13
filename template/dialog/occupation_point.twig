@@ -1,0 +1,173 @@
+<div id="ns_dialog_occupation_point">
+    <span id="ns_button_occupation_point_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('occupation_figure') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_occupation_point_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_occupation_point_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="occupation_rule_wrap ns_panel_tooltip hide">
+                <div class="ns_panel_tooltip_header">
+                    <div class="ns_panel_tooltip_header_l"></div>
+                    <div class="ns_panel_tooltip_header_c"></div>
+                    <div class="ns_panel_tooltip_header_r">
+                        <span id="ns_button_occupation_tooltip_close"></span>
+                    </div>
+                </div>
+                <div class="personal_rule">
+                <p>- {{ i18n.t('occupation_personal_rule') }}</p>
+                <p>- {{ i18n.t('occupation_personal_rule_2') }}</p>
+                </div>
+                <p class="alliance_rule">- {{ i18n.t('occupation_alliance_rule') }}</p>
+                <p>- {{ i18n.t('occupation_rule_1') }}</p>
+                <p>- {{ i18n.t('occupation_rule_2') }}</p>
+            </div>
+
+            <div class="ns_panel_tab ns_panel_grid_2">
+                <span id="ns_button_occupation_point_tab_ranking">{{ i18n.t('alliance_ranking') }}</span>
+                <span id="ns_button_occupation_point_tab_goal">{{ i18n.t('personal_goal') }}</span>
+            </div>
+
+            <div class="content">
+
+                <div class="ranking_tab_wrap">
+                    <div class="ns_panel_margin_xx ns_panel_flex">
+                        <div class="ns_panel_build_button_left">{{ i18n.t('remain_time') }}: <span class="occupation_rank_time"></span></div>
+                        <div class="ns_panel_build_button_right">
+                            <span id="ns_button_occupation_reward"></span>
+                            <span id="ns_button_occupation_rule"></span>
+                        </div>
+                    </div>
+
+                    <div class="ranking_description">
+                        <span>{{ i18n.t('ranking_description') }}</span>
+                    </div>
+
+                    <div class="ranking_wrap">
+                        <div class="ns_panel_margin_xx ns_panel_margin_yy">
+                            <table class="ns_table_common width-full">
+                                <thead>
+                                <tr>
+                                    <th class="width-20">{{ i18n.t('ranking') }}</th>
+                                    <th>{{ i18n.t('affiliated_alliance') }}</th>
+                                    <th class="width-20">{{ i18n.t('alliance_captain') }}</th>
+                                    <th class="width-20">{{ i18n.t('occupation_point') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="my_alliance_point">
+                                    <td><span id="ns_button_ally_information_my"></span><span class="my_rank"></span></td>
+                                    <td><span class="my_ally_name"></span></td>
+                                    <td><span class="my_ally_lord"></span></td>
+                                    <td><span class="my_ally_point"></span></td>
+                                </tr>
+                                <tr class="no_alliance_point">
+                                    <td colspan="4"><span></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="ns_panel_margin_xx ns_panel_margin_yy">
+                            <table class="ns_table_common width-full">
+                                <thead>
+                                <tr>
+                                    <th class="width-15">{{ i18n.t('ranking') }}</th>
+                                    <th>{{ i18n.t('affiliated_alliance') }}</th>
+                                    <th class="width-20">{{ i18n.t('alliance_captain') }}</th>
+                                    <th class="width-10">{{ i18n.t('alliance_member_count') }}</th>
+                                    <th class="width-15">{{ i18n.t('lord_power') }}</th>
+                                    <th class="width-15">{{ i18n.t('occupation_point') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="ranking_list">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <div class="reward_wrap">
+                        <div class="ns_panel_margin_xx ns_panel_margin_yy">
+                            <table class="ns_table_common width-full">
+                                <thead>
+                                <tr>
+                                    <th class="width-30">{{ i18n.t('affiliated_alliance_ranking') }}</th>
+                                    <th>{{ i18n.t('reward') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><span id="ns_button_ally_information_my"></span><span class="my_reward_rank"></span></td>
+                                    <td class="my_reward_item"></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <div class="ns_panel_margin_xx ns_panel_margin_yy">
+                            <table class="ns_table_common width-full">
+                                <thead>
+                                <tr>
+                                    <th class="width-30">{{ i18n.t('ranking') }}</th>
+                                    <th>{{ i18n.t('reward') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="reward_list">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="goal_tab_wrap hide">
+                    <div class="ns_panel_margin_xx ns_panel_flex">
+                        <div class="ns_panel_build_button_left">{{ i18n.t('remain_time') }}: <span class="occupation_goal_time"></span></div>
+                        <div class="ns_panel_build_button_right">
+                            <span id="ns_button_occupation_goal_rule"></span>
+                        </div>
+                    </div>
+
+                    <div class="ranking_description">
+                        <span>{{ i18n.t('occupation_point_refresh_rule') }}</span>
+                    </div>
+
+                    <div class="ns_panel_margin_xx ns_panel_margin_yy">
+                        <table class="ns_table_common width-full">
+                            <thead>
+                            <tr>
+                                <th colspan="2">{{ i18n.t('my_ocuupation_point') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="my_occupation_point"></span></td>
+                                <td class="width-30"><span id="ns_button_occupation_point_refresh">{{ i18n.t('to_update') }}</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="ns_panel_margin_xx ns_panel_margin_yy">
+                        <table class="ns_table_common width-full">
+                            <thead>
+                            <tr>
+                                <th class="width-20">{{ i18n.t('occupation_point') }}</th>
+                                <th colspan="2">{{ i18n.t('reward') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="goal_list">
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

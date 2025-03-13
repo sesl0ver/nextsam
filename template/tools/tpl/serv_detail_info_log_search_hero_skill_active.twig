@@ -1,0 +1,49 @@
+<h2>영웅 스킬 발동 로그 검색</h2>
+<hr />
+
+<div class="log_search_box">
+    <fieldset class="search_box">
+        <legend>검색기간</legend>
+        <input type="text" id="search_time_start" value="" /> ~ <input type="text" id="search_time_end" value="" />
+    </fieldset>
+
+    <fieldset class="search_box">
+        <legend>군주명 검색</legend>
+        <input type="text" id="lord_name" value="{{ _SESSION['selected_lord']['lord_name'] }}" />
+    </fieldset>
+
+    <fieldset class="search_box">
+        <legend>좌표 검색</legend>
+        X <input type="text" id="offset_x" class="offset" maxlength="3" /> / Y <input type="text" id="offset_y" class="offset" maxlength="3" />
+    </fieldset>
+
+    <fieldset class="search_box">
+        <legend>검색 분류 지정</legend>
+        <ul class="log_checkbox">
+            {% set array = {
+                decrease_loyalty: '민심 방어',
+                none_battle: '호통',
+                protect: '약탈 보호'
+            } %}
+            {% for key, value in array  %}
+                <li><input type='checkbox' value='{{ key }}' id='search_type_{{ key }}' /> <label for='search_type_{{ key }}'>{{ value }}</label></li>
+            {% endfor %}
+        </ul>
+    </fieldset>
+    <button id="search_log" style="">검색</button>
+    <button id="search_log_add" style="">추가<br />검색</button>
+</div>
+
+<div class="log_description">검색된 결과는 500건까지 우선 표시됩니다. 추가 검색 버튼을 누르면 500건씩 추가됩니다.<br/>가능하면 군주명이나 좌표를 반드시 입력해주십시오.</div>
+
+<br/>
+
+<div id="search_result">
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script type="text/javascript" src='/m_/cache/ns_m.hero_skil.js'></script>
+<script type="text/javascript" src='/m_/cache/ns_m.hero.js'></script>

@@ -1,0 +1,125 @@
+<h2>통합 공지</h2>
+<hr />
+
+<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_lord_intro" dir="ltr" style="width: 371px; ">
+	<div class="ui-jqgrid-view" id="gview_lord_intro" style="width: 371px; ">
+		<div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+			<span class="ui-jqgrid-title">통합 공지 캐싱 상태</span>
+		</div>
+		<div class="ui-jqgrid-bdiv" style="width: 371px; ">
+			<div style="position:relative;">
+				<div></div>
+				<table id="notice_list" style="width: 371px; text-align:center; table-layout:fixed;" class="jqGridTable ui-jqgrid-btable" cellSpacing="0" cellPadding="0" border="0">
+					<thead>
+					<tr class="ui-jqgrid-labels" style="text-align:center;">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none; height:24px;">서버명</th>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none; height:24px;">IP</th>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none;">캐싱 상태</th>
+					</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<hr/>
+
+<table id="serv_detail_info_integrate_notice" class="jqGridTable">
+</table>
+<div id="pager_serv_detail_info_integrate_notice"></div>
+
+<br />
+
+<div style="text-align:right;">
+	<button id="write_integrate_notice" style="padding:0.4em;">&nbsp;통합 공지 작성&nbsp;</button>
+	<button id="modify_integrate_notice" style="padding:0.4em;">&nbsp;통합 공지 수정&nbsp;</button>
+	<button id="delete_integrate_notice" style="padding:0.4em;">&nbsp;통합 공지 삭제&nbsp;</button>
+	<button id="cache_integrate_notice" style="padding:0.4em;">&nbsp;통합 공지 캐싱&nbsp;</button>
+</div>
+
+<div id="write_integrate_notice_form" title="통합 공지 작성">
+	<div>
+		<div>
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">공지 내용</div>
+			<div><input type="text" id="integrate_notice_title" style="width:278px;" /></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">링크 주소</div>
+			<div><input type="text" id="integrate_notice_content" style="width:278px;" /></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">타입</div>
+			<div><select id="integrate_notice_type">
+				<option value="N">일반</option>
+			</select></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">공지 시작</div>
+			<div><input type="text" id="integrate_notice_start_dt" /></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">공지 종료</div>
+			<div><input type="text" id="integrate_notice_end_dt" /></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">순번</div>
+			<div><input type="text" id="integrate_notice_ordernum" style="width:278px;" /></div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+</div>
+
+<hr />
+
+<h2>주의</h2>
+<ol style="margin-left:24px;margin-top:10px;">
+	<li>순번은 오름차순입니다.</li>
+	<li>최상위 4개의 공지 내용만이 게임으로 공지됩니다.</li>
+	<li>캐싱된 상태에서는 변경된 내용이 있다 해도 반영되지 않습니다. 공지가 변경되면 무조건 다시 캐싱하여 주십시오.</li>
+	<li>캐싱되지 않은 상태에서는 통합 공지를 직접 가져오게 되므로 공지가 변경되면 바로 반영됩니다.</li>
+</ol>
+
+<div id="modify_integrate_notice_form" title="통합 공지  수정">
+	<div>
+		<div>
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">공지 내용</div>
+			<div><input type="text" id="integrate_modify_title" style="width:278px;" /></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">링크 주소</div>
+			<div><input type="text" id="integrate_modify_content" style="width:278px;" /></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">타입</div>
+			<div><select id="integrate_modify_type">
+				<option value="N">일반</option>
+			</select></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">공지 시작</div>
+			<div><input type="text" id="integrate_modify_start_dt" /></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">공지 종료</div>
+			<div><input type="text" id="integrate_modify_end_dt" /></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">순번</div>
+			<div><input type="text" id="integrate_modify_ordernum" style="width:278px;" /></div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+</div>

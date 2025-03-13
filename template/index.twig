@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=480, user-scalable=no" />
+    <title>{{ i18n.t('game_title_name') }}</title>
+    <script src='{{ resources_cdn }}/minify/ext.min.js?v={{ version }}'></script>
+    <script>
+        let ns_web_version = '{{ version }}';
+    </script>
+    <script src='{{ resources_cdn }}/minify/main.min.js?v={{ version }}'></script>
+    <script>
+        ns_chat.init('{{ default_chat_host }}', {{ default_chat_port }});
+        ns_auth.only_platform_mode = {{ PLATFORM_MODE }};
+        ns_i18n.setResource(`{{ text_resource }}`);
+    </script>
+    <link type="text/css" rel="stylesheet" href="{{ resources_cdn }}/minify/style.min.css?v={{ version }}" />
+</head>
+<body>
+<div id="main_stage">
+    {% include '_skeleton.twig' %}
+    {% include 'common.twig' %}
+    {% include 'main_ui.twig' %}
+    {% include 'world.twig' %}
+    {% include 'territory.twig' %}
+    {% include 'dialog/build_Template.twig' %}
+    {% for dialog in dialog_template %}
+        {% if dialog not in dialog_except %}
+            {% include 'dialog/' ~ dialog ~ '.twig' %}
+        {% endif %}
+    {% endfor %}
+</div>
+<script>
+    let ns_cs = new nsCS();
+    ns_engine.cfg.app_platform = '{{ platform }}';
+    [...document.querySelectorAll("*")].forEach( el =>
+        el.addEventListener('contextmenu', e => e.preventDefault())
+    );
+</script>
+<script src='{{ resources_cdn }}/minify/sub.min.js?v={{ version }}'></script>
+<script src='{{ resources_cdn }}/minify/dialog.min.js?v={{ version }}'></script>
+<script src='{{ resources_cdn }}/minify/m_.min.js?v={{ version }}'></script>
+</body>
+</html>

@@ -1,0 +1,243 @@
+<!-- 기존의 login, modify, provision, pwforgot, regist 통합 - 굳이 나눌 필요성이 없다. -->
+
+<!-- 회원 기능 -->
+<div id="ns_dialog_member_login">
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title"><span class="content_title">로그인</span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_flex_column">
+                    <form class="member_form ns_panel_flex_column">
+                        <div><label for="login_id">아 이 디</label><input type="text" id="login_id" /></div>
+                        <div><label for="login_pw">패스워드</label><input type="password" id="login_pw" autoComplete="off" /></div>
+                    </form>
+                    <span id="ns_button_member_login_submit">로그인</span>
+                    <!-- span id="ns_button_member_login_email_save">이메일 저장</span -->
+                    <span id="ns_button_member_login_create">회원가입</span>
+                    <!-- span id="ns_button_member_login_password_forgot">비밀번호 찾기</span -->
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+
+<!-- div id="ns_dialog_member_modify" style="display:none;">
+    <div class="dlg_header">
+        <div class="dlg_title"><span class="cont_title">정보변경</span></div>
+        <div class="dlg_header_left"><span id="qbw_btn_qb_member_modify_close"></span></div>
+    </div>
+    <div class="dlg_content">
+        <div class="cont" style="min-width:320px;">
+
+            <div class="qbwpan_Sub_Top cont_pan_top" style="display:none;">
+                <span class="cont_qb_member_title">▶ 양식을 입력해 주세요.</span>
+            </div>
+
+            <div class="qbwpan_Basic cont_background cont_pan_normal" style="display:none;">
+                <div class="cont_qb_member_wrap">
+                    <div class="cont_qb_member_subwrap">
+                        <span class="cont_qb_member_subtitle">아 이 디</span> <span class="cont_email" style="font-weight:bold;"></span>
+                    </div>
+                    <div class="cont_qb_member_subwrap">
+                        <div><span class="cont_qb_member_subtitle">메일 수신여부</span> <span id="qbw_btn_modify_send_email_check">정기메일, 이벤트 메일 등 뉴스레터 수신</span></div>
+                    </div>
+                    <div class="cont_qb_member_subwrap">
+                        <div><span class="cont_qb_member_subtitle">비밀번호 변경</span> <span id="qbw_btn_modify_newpw">변경할 경우에만 선택하세요.</span></div>
+                    </div>
+                </div>
+                <div class="hr_division_brown"></div>
+
+                <div class="cont_newpw_wrap">
+                    <div class="cont_qb_member_wrap">
+                        <div class="cont_qb_member_subwrap">
+                            <div><span class="cont_qb_member_subtitle">현재 비밀번호</span> <input type="password" id="cont_modify_pw" class="" title="password" /></div>
+                        </div>
+                        <div class="cont_qb_member_subwrap">
+                            <div><span class="cont_qb_member_subtitle">신규 비밀번호</span> <input type="password" id="cont_modify_newpw" class="" title="password" /></div>
+                        </div>
+                        <div class="cont_qb_member_subwrap">
+                            <div><span class="cont_qb_member_subtitle">비밀번호 확인</span> <input type="password" id="cont_modify_newpw_verify" class="" title="password" /></div>
+                        </div>
+                    </div>
+                    <div class="hr_division_brown"></div>
+                </div>
+
+                <div class="cont_qb_member_wrap" style="padding-top:10px;">
+                    <span id="qbw_btn_qb_member_modify_submit">변경 완료</span>
+                </div>
+
+                <div class="hr_division_brown" style="margin-top:10px;"></div>
+
+                <div class="cont_qb_member_wrap" style="padding-top:10px;">
+                    <span id="qbw_btn_qb_member_modify_withdraw">회원 탈퇴</span>
+                </div>
+
+            </div>
+
+            <div class="qbwpan_Basic cont_background cont_pan_band" style="display:none; margin-top:22px;">
+                <div class="cont_qb_member_wrap">
+                    <div class="cont_qb_member_subwrap">
+                        <span class="cont_qb_member_subtitle">밴드회원번호</span> <span class="cont_userkey" style="font-weight:bold;">-</span>
+                    </div>
+                </div>
+
+                <div style="margin-top:12px; text-align:center;"><span id="qbw_btn_qb_member_modify_band_logout"></span></div>
+                <div style="margin-top:8px; text-align:center;"><span id="qbw_btn_qb_member_modify_band_withdraw">게 임 탈 퇴</span></div>
+            </div>
+
+        </div>
+    </div>
+    <div class="dlg_footer"></div>
+</div -->
+
+
+<!-- div id="ns_dialog_member_provision" style="display:none;">
+    <div class="dlg_header">
+        <div class="dlg_title"><span class="cont_title">약관 안내</span></div>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <div class="qbwpan_Sub_Top">
+                <span class="cont_qb_member_title">▶ 이용 약관 및 개인 정보 취급 방침 안내</span>
+            </div>
+
+            <div class="qbwpan_Basic cont_background">
+                <div class="cont_provision_wrap">
+                    <div class="cont_provision_title"><div style="float:left;">이용 약관</div><div style="float:right;"><u id="qbw_btn_provision_policy_link">자세히 보기</u></div><div style="clear:both;"></div></div>
+                    <!--  <span id="qbw_btn_provision_policy"></span>  -- >
+                    <textarea id="cont_provision_policy_desc" readonly="readonly">
+본 약관은 ㈜이모션플러스(이하 회사)가 “컴퓨터” 및 “모바일 기기”를 통해 제공하는 게임 및 이에 부수된 제반 서비스(이하 "게임서비스")의 이용과 관련하여 회사와 회원 간의 권리, 의무 및 책임사항, 기타 필요한 사항을 규정함을 목적으로 합니다.
+
+ - 이용약관 자세히 보기로 전문 확인이 가능합니다. -
+
+    </textarea>
+                    <div class="cont_provision_btn"><span id="qbw_btn_provision_policy_check">동의합니다.</span></div>
+                </div>
+
+                <div class="hr_division_brown"></div>
+
+                <div class="cont_provision_wrap">
+                    <div class="cont_provision_title"><div style="float:left;">개인 정보 취급 방침</div><div style="float:right;"><u id="qbw_btn_provision_privacy_link">자세히 보기</u></div><div style="clear:both;"></div></div>
+                    <!--  <span id="qbw_btn_provision_privacy"></span>-- >
+                    <textarea id="cont_provision_privacy_desc" readonly="readonly">
+① ㈜이모션플러스(이하 "회사")는 회원의 개인정보를 중요시하며, 정보통신망 이용촉진 및 정보보호 등에 관한 법률 및 개인정보보호법 등 정보통신서비스
+제공자가 준수하여야 할 관련 법령상의 개인정보보호 규정을 준수하고 있습니다.
+
+② 회사는 개인정보처리방침을 통하여 회원이 제공하는 개인정보가 어떠한 용도와 방식으로 이용되고 있으며, 개인정보보호를 위해 어떠한 조치가 취해지고
+있는지 알려드립니다.
+
+③ 회사는 필요에 의하여 개인정보처리방침을 개정하는 경우 개정된 사항을 홈페이지 공지사항을 통해 고지하고 홈페이지 첫 화면에 공개함으로써 회원들이
+언제든지 용이하게 볼 수 있도록 조치하고 있습니다.
+
+ - 개인 정보 취급 방침 자세히 보기로 전문 확인이 가능합니다. -
+    </textarea>
+                    <div class="cont_provision_btn"><span id="qbw_btn_provision_privacy_check">동의합니다.</span></div>
+                </div>
+                <div class="cont_provision_wrap">
+                    <span id="qbw_btn_provision_assent">약관 동의</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="dlg_footer"></div>
+</div>
+
+
+<div id="ns_dialog_member_pwforgot" style="display:none;">
+    <div class="dlg_header">
+        <div class="dlg_title"><span class="cont_title">비밀번호 찾기</span></div>
+        <div class="dlg_header_left"><span id="qbw_btn_qb_member_pwforgot_close"></span></div>
+    </div>
+    <div class="dlg_content">
+        <div class="cont" style="min-width:320px;">
+
+
+            <div class="qbwpan_Sub_Top">
+                <span class="cont_qb_member_title">▶ 이메일 주소를 입력해 주세요.</span>
+            </div>
+
+            <div class="qbwpan_Basic cont_background">
+                <div class="cont_qb_member_wrap">
+                    <div class="cont_qb_member_subwrap">
+                        <span class="cont_qb_member_subtitle">이메일 주소</span> <input type="email" id="cont_pwforgot_email" class="" title="email" />
+                    </div>
+                </div>
+                <div class="hr_division_brown"></div>
+                <div class="cont_qb_member_wrap">
+                    <p class="cont_qb_member_pwforgot_info">가입시 기입한 이메일 주소를 입력해 주세요. 해당 주소로 발송된 인증코드로 새로운 비밀번호를 설정 할 수 있습니다.</p>
+                </div>
+                <div class="hr_division_brown"></div>
+
+                <div class="cont_verify_wrap">
+                    <div class="cont_qb_member_wrap">
+                        <div class="cont_qb_member_subwrap">
+                            <div><span class="cont_qb_member_subtitle">인증코드</span> <input type="tel" id="cont_pwforgot_code" class="" title="verify code" /></div>
+                        </div>
+                        <div class="cont_qb_member_subwrap">
+                            <div><span class="cont_qb_member_subtitle">신규 비밀번호</span> <input type="password" id="cont_pwforgot_pw" class="" title="password" /></div>
+                        </div>
+                        <div class="cont_qb_member_subwrap">
+                            <div><span class="cont_qb_member_subtitle">비밀번호 확인</span> <input type="password" id="cont_pwforgot_pw_verify" class="" title="password" /></div>
+                        </div>
+                    </div>
+                    <div class="hr_division_brown"></div>
+                </div>
+
+                <div class="cont_qb_member_wrap" style="padding-top:10px;">
+                    <span id="qbw_btn_qb_member_pwforgot_submit">이메일로 인증코드 요청</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="dlg_footer"></div>
+</div -->
+
+
+<div id="ns_dialog_member_create">
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title"><span class="content_title">회원가입</span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_sub_top">
+                    <span class="content_member_title">▶ 회원가입 양식을 입력해 주세요.</span>
+                </div>
+
+                <div class="ns_panel_basic">
+                    <div class="ns_panel_flex_column">
+                        <form  class="member_form ns_panel_flex_column">
+                            <div>
+                                <label for="create_email">아 이 디</label> <input type="email" id="create_email" class="" />
+                            </div>
+
+                            <div>
+                                <label for="create_password">비밀번호</label> <input type="password" id="create_password" autoComplete="off" class="" />
+                            </div>
+
+                            <div>
+                                <label for="create_password_verify">비밀번호 확인</label> <input type="password" id="create_password_verify" autoComplete="off" class="" />
+                            </div>
+                        </form>
+
+                        <span id="ns_button_member_create_submit">계정 생성 완료</span>
+                        <span id="ns_button_member_create_cancel">닫기</span>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

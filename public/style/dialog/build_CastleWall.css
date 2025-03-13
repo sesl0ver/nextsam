@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+#ns_dialog_build_CastleWall {
+
+}
+
+#ns_dialog_build_CastleWall div.ns_panel_sub_top.ns_panel_flex > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+#ns_button_build_speedup_CastleWall {
+    width: 120px;
+}
+
+#ns_dialog_build_CastleWall .ns_panel_grid_2 {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+#ns_dialog_build_CastleWall .ns_panel_grid_2>div{
+    line-height: 20px;
+}
+
+#ns_dialog_build_CastleWall .content_card_title {
+    font-weight: bold;
+    color: #91A1B0;
+    line-height: 19px;
+    padding-left: 2px;
+}
+
+#ns_dialog_build_CastleWall .content_card_empty > div:first-child {
+    width: 92px;
+    height: 121px;
+}
+
+#ns_dialog_build_CastleWall .content_card_empty > div:last-child {
+    width: 308px;
+}
+
+#ns_dialog_build_CastleWall .content_assign_effect {
+    margin-left: 8px;
+}
+
+#ns_dialog_build_CastleWall .content_assign_effect > p:first-child {
+    font-weight: bold;
+    color: #91A1B0;
+    /*text-shadow: 1px 1px 2px #F0E8D1;*/
+    margin-left: 4px;
+}
+
+#ns_dialog_build_CastleWall .content_assign_effect .build_description_assign {
+    margin: 3px 4px 0 4px;
+    color: #91A1B0;
+}
+
+#ns_dialog_build_CastleWall .content_assign_effect .build_description_assign_footnote {
+    margin: 3px 4px 0 4px;
+    color: #c4591e;
+}
+
+#ns_dialog_build_CastleWall .build_CastleWall_tab_assign table {
+    width: 100%;
+}
+
+#ns_dialog_build_CastleWall .build_CastleWall_tab_assign th,
+#ns_dialog_build_CastleWall .build_CastleWall_tab_assign td {
+    line-height: 20px;
+}
+
+#ns_dialog_build_CastleWall .content_card {
+    position: relative;
+}
+
+#ns_dialog_build_CastleWall .fortification_cache_wrap {
+    margin: 0 auto;
+    width: 320px;
+}
+
+
+
+
+#ns_dialog_build_CastleWall #ns_button_concurr_speedup_build_CastleWall {
+    margin: 0 7px 0 0 ;
+}
+
+#ns_dialog_build_CastleWall_fort_installation {
+    z-index: 2354;
+}
+
+#ns_dialog_build_CastleWall_fort_installation .develop_image {
+    border: 1px solid #C9C9C9;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+}
+
+#ns_dialog_build_CastleWall_fort_installation .develop_description {
+    color: #b4d2ec;
+}
+
+#ns_dialog_build_CastleWall_fort_installation .content_develop_trans {
+    padding: 8px 8px;
+    text-align: center;
+    color: #91A1B0;
+    line-height: 22px;
+}
+
+#ns_dialog_build_CastleWall_fort_installation .ns_panel_flex_item_auto {
+    text-align: left;
+}
+
+#ns_dialog_build_CastleWall_fort_installation .fort_amount_wrapper,
+#ns_dialog_build_CastleWall_fort_disperse .wrapper_fort_disperse_amount{
+    gap: 6px;
+    align-items: center;
+    justify-content: center;
+}
+
+#ns_dialog_build_CastleWall_fort_installation .wrapper_fort_installation label,
+#ns_dialog_build_CastleWall_fort_disperse .wrapper_fort_disperse_amount_slider label{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+#ns_dialog_build_CastleWall_fort_installation .wrapper_fort_installation label input,
+#ns_dialog_build_CastleWall_fort_disperse .wrapper_fort_disperse_amount_slider label input{
+    width: 70%;
+}
+
+#ns_dialog_build_CastleWall_fort_installation .button_special {
+    width: 180px;
+}
+
+#ns_dialog_build_CastleWall_fort_disperse .ns_panel_heavy {
+    padding: 0 10px;
+}

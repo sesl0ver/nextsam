@@ -1,0 +1,43 @@
+<div id="ns_dialog_chat">
+    <span id="ns_button_chat_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('chatting') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_chat_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_chat_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_tab ns_panel_grid_3 width-full">
+                <span id="ns_button_chat_tab_public">{{ i18n.t('public') }}</span>
+                <span id="ns_button_chat_tab_alliance">{{ i18n.t('alliance') }}</span>
+                <!-- span id="ns_button_chat_tab_whisper">귓속말</span -->
+                <span id="ns_button_chat_tab_notification">{{ i18n.t('notification') }}</span>
+            </div>
+
+            <div class="content ns_panel_flex_column">
+
+                <div class="ns_panel_margin_xx width-full">
+                    <div class="ns_panel_most ns_panel_trans_top text_align_center">
+                        <span class="text_table_title">{{ i18n.t('chat_description') }}</span>
+                    </div>
+                </div>
+                <div class="ns_panel_flex width-full">
+                    <label>
+                        <input type="text" name="chat_message" autocomplete="off" maxlength="60" class="ns_panel_flex_item_auto">
+                    </label>
+                    <span id="ns_button_chat_submit" class="ns_panel_flex_right">{{ i18n.t('enter') }}</span>
+                </div>
+
+                <div class="chat_list_wrap width-full">
+                    <div class="chat_list_body public">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

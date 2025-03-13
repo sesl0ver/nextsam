@@ -1,0 +1,35 @@
+<h2>일괄 군주 검색</h2>
+<hr />
+	<div style="float:left;">
+	<table>
+	  <tr>
+	    <td><label for="file">검색키워드<br /> (엔터로 구분)</label></td>
+	    <td><textarea name="lord_name" style="height:300px; width:300px;"></textarea></td>
+	  </tr>
+	  <tr>
+	    <td><label for="text">서버선택</label></td>
+	    <td><select name="search_server_pk">
+				{% for k, v in _SESSION['server_list'] %}
+					<option value="{{ v['server_pk'] }}">{{ v['server_name'] }}</option>
+				{% endfor %}
+			</select></td>
+	  </tr>
+	  <tr>
+	    <td><label for="text">검색타입</label></td>
+	    <td>
+			<select name="search_type">
+				<option value="lord_name">군주명</option>
+				<option value="lord_pk">군주번호</option>
+				<option value="web_id">웹ID</option>
+				<option value="uuid">UUID</option>
+			</select></td>
+	  </tr>
+	  <tr>
+	    <td colspan="2" style="text-align:center;"><button id="submit">검색하기</button></td>
+	  </tr>
+	</table>
+	</div>
+
+	<div id="result" style="float:right;width:600px;height:600px;overflow:auto;border:1px solid #666;">
+	</div>
+	<div style="clear:both;"></div>

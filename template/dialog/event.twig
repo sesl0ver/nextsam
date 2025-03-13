@@ -1,0 +1,197 @@
+
+<!--------------------------- 공지 및 이벤트 --------------------------->
+<div id="ns_dialog_notice">
+    <span id="ns_button_notice_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('notice') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_notice_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_notice_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_main_event">
+    <span id="ns_button_main_event_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('event') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_main_event_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_main_event_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+                <div class="main_event_list">
+                    <div id="ns_button_banner_treasure_event" class="banner_image treasure_event"></div>
+                    <div id="ns_button_banner_time_buff_event" class="banner_image time_buff_event"></div>
+
+                    <div id="ns_button_banner_event_04" class="banner_image event_04"></div> <!-- 황건적 보상 2배 -->
+                    <div id="ns_button_banner_event_05" class="banner_image event_05"></div> <!-- 한정 퀘스트 -->
+                    <div id="ns_button_banner_event_06" class="banner_image event_06"></div> <!-- 일반 조합 확률업 -->
+
+                    <div id="ns_button_banner_hero_pickup_event" class="banner_image hero_pickup_event"></div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!--------------------------- 출석 이벤트 --------------------------->
+<div id="ns_dialog_attendance_event">
+    <span id="ns_button_attendance_event_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('attendance_check_event') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_attendance_event_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_attendance_event_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_margin_xx">
+
+                    <div class="ns_panel_basic ns_panel_margin_10 text_align_center">
+                        <div class="ns_panel_margin_yy" id="attendance_desc">
+                            {{ i18n.t('attendance_check_event_description_1') | raw }}
+                        </div>
+                        <div class="ns_panel_margin_yy" id="attendance_caution">
+                            {{ i18n.t('attendance_check_event_description_2') | raw }}
+                        </div>
+                    </div>
+
+                    <div class="text_align_center">
+                        <div class="reward_tbody_wrap">
+
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_attendance_event_close_sub">{{ i18n.t('dont_open_again_open') }}</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!--------------------------- 버프 이벤트 --------------------------->
+
+<div id="ns_dialog_time_buff_event">
+    <span id="ns_button_time_buff_event_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('daily_buff_event') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_time_buff_event_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_time_buff_event_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="time_buff_rule_wrap ns_panel_tooltip hide">
+                <div class="ns_panel_tooltip_header">
+                    <div class="ns_panel_tooltip_header_l"></div>
+                    <div class="ns_panel_tooltip_header_c"></div>
+                    <div class="ns_panel_tooltip_header_r">
+                        <span id="ns_button_time_buff_tooltip_close"></span>
+                    </div>
+                </div>
+                <p>- {{ i18n.t('time_buff_rule_1') }}</p>
+                <p>- {{ i18n.t('time_buff_rule_2') }}</p>
+                <p>- {{ i18n.t('time_buff_rule_3') }}</p>
+            </div>
+
+            <div class="content">
+                <div class="ns_panel_margin_xx ns_panel_margin_y ns_panel_flex">
+                    <div class="ns_panel_build_button_left">{{ i18n.t('remain_time') }}: <span class="remain_time">-</span></div>
+                    <div class="ns_panel_build_button_right">
+                        <span id="ns_button_time_buff_tooltip"></span>
+                    </div>
+                </div>
+
+                <div class="ns_panel_heavy ns_panel_margin_10 time_buff_description">
+                    <span class="use_description"></span>
+                </div>
+
+                <div class="ns_panel_margin_10 time_buff_bottom_description">
+                    {{ i18n.t('remaining_count') }}: <span class="use_count">-</span><br />
+                    <span class="refresh_description"></span>
+                </div>
+
+                <div class="time_buff_wrap">
+                    <div class="item_wrap row1"></div>
+                    <div class="item_wrap row2"></div>
+                    <div class="item_wrap row3"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!--------------------------- 보물 찾기 이벤트 --------------------------->
+
+<div id="ns_dialog_treasure_event">
+    <span id="ns_button_treasure_event_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('treasure_event') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_treasure_event_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_treasure_event_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="treasure_event_rule_wrap ns_panel_tooltip hide">
+                <div class="ns_panel_tooltip_header">
+                    <div class="ns_panel_tooltip_header_l"></div>
+                    <div class="ns_panel_tooltip_header_c"></div>
+                    <div class="ns_panel_tooltip_header_r">
+                        <span id="ns_button_treasure_event_tooltip_close"></span>
+                    </div>
+                </div>
+                <p>- {{ i18n.t('treasure_event_rule_1') }}</p>
+                <p>- {{ i18n.t('treasure_event_rule_2') }}</p>
+                <p>- {{ i18n.t('treasure_event_rule_3') }}</p>
+            </div>
+
+            <div class="content">
+                <div class="ns_panel_margin_xx ns_panel_margin_y ns_panel_flex">
+                    <div class="ns_panel_build_button_left">{{ i18n.t('remain_time') }}: <span class="remain_time">-</span></div>
+                    <div class="ns_panel_build_button_right">
+                        <span id="ns_button_treasure_event_tooltip"></span>
+                    </div>
+                </div>
+
+                <div class="treasure_event_title"></div>
+
+                <div>
+                    <div class="material_list"></div>
+                    <div class="button_wrap">
+                        <span id="ns_button_treasure_reward">{{ i18n.t('treasure_hunt') }}</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

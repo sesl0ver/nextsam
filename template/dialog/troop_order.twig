@@ -1,0 +1,215 @@
+<div id="ns_dialog_troop_order">
+    <span id="ns_button_troop_order_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_troop_order_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_troop_order_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_sub_top ns_panel_flex">
+                    <div class="ns_panel_build_button_left ns_panel_flex_item_auto">
+                    </div>
+                    <div class="ns_panel_build_button_right ns_panel_flex_item_auto">
+                        <div class="troop_order_preset_wrap">
+                            <span id="ns_button_preset_slot_manage">️</span>
+                            <div class="slot_page_1">
+                                <span id="ns_button_preset_shortcut_1">1</span>
+                                <span id="ns_button_preset_shortcut_2">2</span>
+                                <span id="ns_button_preset_shortcut_3">3</span>
+                                <span id="ns_button_preset_shortcut_4">4</span>
+                                <span id="ns_button_preset_shortcut_5">5</span>
+                            </div>
+                            <div class="slot_page_2 hide">
+                                <span id="ns_button_preset_shortcut_6">6</span>
+                                <span id="ns_button_preset_shortcut_7">7</span>
+                                <span id="ns_button_preset_shortcut_8">8</span>
+                                <span id="ns_button_preset_shortcut_9">9</span>
+                                <span id="ns_button_preset_shortcut_10">10</span>
+                            </div>
+                            <span id="ns_button_preset_slot_change">️</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ns_panel_margin_5">
+
+                    <table class="ns_table_common_3">
+                        <tbody>
+                        <tr id="content_captain_area_row">
+                            <td class="width-20 ns_panel_table_title content_hero">{{ i18n.t('troop_captain') }}</td>
+                            <td colspan="3" class="content_captain_area">
+                                <div class="ns_panel_flex">
+                                    <div class="ns_panel_flex_item_middle ns_panel_position_relative">
+                                        <div class="content_hero_sm"></div>
+                                        <div id="ns_button_troop_order_hero_captain"></div>
+                                    </div>
+                                    <div class="vr_hero_card_sm ns_panel_flex_item_auto"></div>
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_hero_empty_effect_sm">
+                                            <p>{{ i18n.t('troop_orders_description_2') }}</p>
+                                        </div>
+                                        <div class="content_hero_effect_sm">
+                                            <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa"></span></p>
+                                            <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </td>
+                        </tr>
+                        <tr id="content_director_area_row">
+                            <td class="width-20 ns_panel_table_title content_hero">{{ i18n.t('troop_director') }}</td>
+                            <td colspan="3" class="content_director_area">
+                                <div class="ns_panel_flex">
+                                    <div class="ns_panel_flex_item_middle ns_panel_position_relative">
+                                        <div class="content_hero_sm"></div>
+                                        <div id="ns_button_troop_order_hero_director"></div>
+                                    </div>
+                                    <div class="vr_hero_card_sm ns_panel_flex_item_auto"></div>
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_hero_empty_effect_sm">
+                                            <p>{{ i18n.t('troop_orders_description_3') }}</p>
+                                        </div>
+                                        <div class="content_hero_effect_sm">
+                                            <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa"></span></p>
+                                            <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr id="content_staff_area_row">
+                            <td class="width-20 ns_panel_table_title content_hero">{{ i18n.t('troop_staff') }}</td>
+                            <td colspan="3" class="content_staff_area">
+                                <div class="ns_panel_flex">
+                                    <div class="ns_panel_flex_item_middle ns_panel_position_relative">
+                                        <div class="content_hero_sm"></div>
+                                        <div id="ns_button_troop_order_hero_staff"></div>
+                                    </div>
+                                    <div class="vr_hero_card_sm ns_panel_flex_item_auto"></div>
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_hero_empty_effect_sm">
+                                            <p>{{ i18n.t('troop_orders_description_4') }}</p>
+                                        </div>
+                                        <div class="content_hero_effect_sm">
+                                            <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa"></span></p>
+                                            <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                </div>
+
+                <div class="ns_panel_margin_5 troop_order_army_list_wrap">
+                    <table class="ns_table_common_3">
+                        <tbody class="troop_order_army_list">
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ns_panel_margin_5">
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th class="width-20">{{ i18n.t('troop_morale') }}</th>
+                            <th class="width-20">{{ i18n.t('appropriate_troop_army') }}</th>
+                            <th>{{ i18n.t('dispatched_troop_army') }}</th>
+                            <th class="width-20">{{ i18n.t('transport_capacity') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><span class="content_army_fighting_spirit">0</span></td>
+                            <td><span class="content_army_population_suggest">0</span></td>
+                            <td><span class="content_army_population_curr">0</span><span>/300,000</span></td>
+                            <td><span class="content_troop_capacity_possible">0</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="ns_panel_margin_5 troop_order_resource_wrap">
+
+                    </div>
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th class="width-50">{{ i18n.t('camp_time') }}</th>
+                            <th>{{ i18n.t('arrival_expectation') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <span id="ns_button_troop_order_camp_time_h_input">0</span>
+                                <span class="content_dst_posi_info_text">{{ i18n.t('hour') }}</span>
+                                <span id="ns_button_troop_order_camp_time_m_input">0</span>
+                                <span class="content_dst_posi_info_text">{{ i18n.t('minutes') }}</span>
+                            </td>
+                            <td><span class="content_arrival_dt">0</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ns_panel_margin_5 text_align_center">
+                    <span id="ns_button_troop_order_do">{{ i18n.t('going_to_war') }}<br /><span class="content_move_time">0</span></span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+
+<div id="ns_dialog_troop_order_preset">
+    <span id="ns_button_troop_order_preset_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_troop_order_preset_close"></span>
+                <span class="content_pop_title">{{ i18n.t('troop_preset') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="preset_slot_page_1">
+                    <div class="preset_slot slot_1"><span id="ns_button_preset_slot_1"></span><span class="preset_number">1</span><span class="preset_title">{{ i18n.t('preset_temp_title') }}</span></div>
+                    <div class="preset_slot slot_2"><span id="ns_button_preset_slot_2"></span><span class="preset_number">2</span><span class="preset_title">{{ i18n.t('empty_slot') }}</span></div>
+                    <div class="preset_slot slot_3"><span id="ns_button_preset_slot_3"></span><span class="preset_number">3</span><span class="preset_title">{{ i18n.t('empty_slot') }}</span></div>
+                    <div class="preset_slot slot_4"><span id="ns_button_preset_slot_4"></span><span class="preset_number">4</span><span class="preset_title">{{ i18n.t('empty_slot') }}</span></div>
+                    <div class="preset_slot slot_5"><span id="ns_button_preset_slot_5"></span><span class="preset_number">5</span><span class="preset_title">{{ i18n.t('empty_slot') }}</span></div>
+                </div>
+                <div class="preset_slot_page_2 hide">
+                    <div class="preset_slot slot_6"><span id="ns_button_preset_slot_6"></span><span class="preset_number">6</span><span class="preset_title">{{ i18n.t('empty_slot') }}</span></div>
+                    <div class="preset_slot slot_7"><span id="ns_button_preset_slot_7"></span><span class="preset_number">7</span><span class="preset_title">{{ i18n.t('empty_slot') }}</span></div>
+                    <div class="preset_slot slot_8"><span id="ns_button_preset_slot_8"></span><span class="preset_number">8</span><span class="preset_title">{{ i18n.t('empty_slot') }}</span></div>
+                    <div class="preset_slot slot_9"><span id="ns_button_preset_slot_9"></span><span class="preset_number">9</span><span class="preset_title">{{ i18n.t('empty_slot') }}</span></div>
+                    <div class="preset_slot slot_10"><span id="ns_button_preset_slot_10"></span><span class="preset_number">10</span><span class="preset_title">{{ i18n.t('empty_slot') }}</span></div>
+                </div>
+
+                <div class="preset_page_wrap">
+                    <span id="ns_button_preset_page_prev"></span>
+                    <label><input name="preset_title" class="button_input" value="" /></label>
+                    <span id="ns_button_preset_page_next"></span>
+                </div>
+
+                <div class="button_area">
+                    <span id="ns_button_preset_save">{{ i18n.t('save') }}</span>
+                    <span id="ns_button_preset_load">{{ i18n.t('load') }}</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

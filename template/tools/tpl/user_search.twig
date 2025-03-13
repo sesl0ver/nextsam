@@ -1,0 +1,37 @@
+
+<h2>군주 검색</h2>
+<hr />
+
+<fieldset id="target_server_select" class="cpn_search_form" style="float : left; width : 250px;">
+    <legend>대상 서버</legend>
+    <input type="radio" value="all" name="target_server" id="target_server_all" checked="checked"/> <label for="target_server_all">전체 서버</label>
+    <input type="radio" value="select" name="target_server" id="target_server_select_one"/> <label for="target_server_select_one">특정 서버</label>
+    <label for="target_server_list"></label><select id="target_server_list" disabled="disabled">
+        <option value="">서버 선택</option>
+    </select>
+</fieldset>
+
+<fieldset id="lord_search_form" class="cpn_search_form" style="width:250px; float : left; margin-left : 12px;">
+    <legend>검색어 입력</legend>
+    <div>
+        <label for="search_type"></label><select id="search_type">
+            <option value="lord_name">군주명</option>
+            <option value="web_id">계정 ID</option>
+            <option value="lord_pk">군주pk</option>
+            <option value="territory">영지명</option>
+            <option value="posi_pk">좌표검색</option>
+            <!-- option value="udid">UDID</option -->
+            <!-- option value="email">이메일</option -->
+            <!-- option value="band_id">밴드유저키</option -->
+            <!-- option value="device_id">휴대폰번호</option -->
+        </select>
+        <label for="search_keyword"></label><input type="text" id="search_keyword" />
+        <input type="button" id="do_search_button" value="&nbsp;검색&nbsp;" /><br />
+    </div>
+</fieldset>
+<br style="clear : both;" />
+<!-- p style="margin:5px 0">※ 전화번호 검색에 경우 맨 앞자리를 0 이 아닌 82로 검색하여야 합니다. (- 제외)<br />예) 820112345678 (O), 01012345678 (X)</p -->
+<br/>
+
+<div id="search_result">
+</div>

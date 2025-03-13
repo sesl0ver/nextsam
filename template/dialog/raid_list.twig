@@ -1,0 +1,158 @@
+
+<div id="qbw_dlg_raid_list" style="display:none;">
+    <div class="dlg_header">
+        <div class="dlg_title"><span class="cont_title">황건 섬멸전</span></div>
+        <div class="dlg_header_left"><span id="qbw_btn_raid_list_close"></span></div>
+        <div class="dlg_header_right"><!--<span id="qbw_btn_game_help_Raid"></span>--><span id="qbw_btn_raid_list_closeAll"></span></div>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <table class="qbwpan_Tab">
+                <tbody>
+                <tr>
+                    <td width="50%"><span id="qbw_btn_raid_tab_progress">진행</span></td>
+                    <td width="50%"><span id="qbw_btn_raid_tab_conclusion">종료</span></td>
+                </tr>
+                </tbody>
+            </table>
+
+            <div class="qbwpan_Trans">
+
+                <div class="qbwpan_Sub_Top">
+                    <div class="qbwpan_float_left" style="width: 60%;">
+                        <span id="qbw_btn_raid_list_prev">&nbsp;</span>
+                        <span class="text_page_paging">
+      <span class="cont_curr_page">0</span>&nbsp;/&nbsp;<span class="cont_total_page">0</span>
+    </span>
+                        <span id="qbw_btn_raid_list_next">&nbsp;</span>
+                        <span id="qbw_btn_raid_list_sort">-</span>
+                    </div>
+                    <div class="qbwpan_float_right cont_total_count_desc" style="width: 40%;">황건적 요새 (<span class="cont_total_count">0</span>)&nbsp;&nbsp;</div>
+                    <div class="qbwpan_clear_both"></div>
+                </div>
+
+                <div class="cont_raid_list_warp">
+                    <!-- 섬멸전 리스트 -->
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="dlg_footer"></div>
+</div>
+
+<div id="qbw_dlg_raid_result" style="display:none;">
+    <div class="dlg_header">
+        <div class="dlg_title"><span class="cont_title">황건 섬멸전 전투 기록</span></div>
+        <div class="dlg_header_left"><span id="qbw_btn_raid_result_close"></span></div>
+        <div class="dlg_header_right"><span id="qbw_btn_raid_result_closeAll"></span></div>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <div class="cont_raid_result_title">황건적 요새 정보</div>
+            <div class="qbwpan_Most qbwpan_Trans">
+                <div class="cont_hero">
+                    <div class="cont_captain_hero btn_hero_empty_captain"></div>
+                    <div class="cont_director_hero btn_hero_empty_director"></div>
+                    <div class="cont_staff_hero btn_hero_empty_staff"></div>
+                </div>
+            </div>
+
+            <div class="qbwpan_Trans cont_raid_result_info">
+                <table class="qbwtbl_Common5">
+                    <tbody>
+                    <tr>
+                        <td>{{ i18n.t('level') }}</td>
+                        <td><span class="cont_raid_level"></span></td>
+                        <td>발생자</td>
+                        <td><span class="cont_raid_name"></span></td>
+                    </tr>
+                    <tr>
+                        <td>{{ i18n.t('status') }}</td>
+                        <td><span class="cont_raid_status"></span></td>
+                        <td>남은 시간</td>
+                        <td><span class="cont_raid_remain_time"></span></td>
+                    </tr>
+                    <tr>
+                        <td>병력수</td>
+                        <td><span class="cont_raid_total_army"></span></td>
+                        <td>남은 병력수</td>
+                        <td><span class="cont_raid_remain_army"></span></td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="hr_division_brown"></div>
+            <div class="cont_raid_result_title">섬멸전 참여 정보</div>
+            <div class="qbwpan_Trans cont_raid_result_ranking">
+                <table class="qbwtbl_Common">
+                    <thead>
+                    <tr>
+                        <th>{{ i18n.t('order_of_ranking')}}</th>
+                        <th>{{ i18n.t('lord_name') }}</th>
+                        <th>적 피해</th>
+                        <th>전투횟수</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <div class="dlg_footer"></div>
+</div>
+
+<div id="qbw_dlg_raid_band_list" style="display:none;">
+    <div class="dlg_header">
+        <div class="dlg_title"><span class="cont_title">도움 요청하기</span></div>
+        <div class="dlg_header_left"><span id="qbw_btn_raid_band_list_close"></span></div>
+        <div class="dlg_header_right"><span id="qbw_btn_raid_band_list_closeAll"></span></div>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <div class="qbwpan_Basic cont_background">
+
+                <div class="qbwpan_Sub_Top">
+                    <div class="qbwpan_float_left">
+                        <span id="qbw_btn_raid_band_list_prev">&nbsp;</span>
+                        <span class="text_page_paging">
+      <span class="cont_curr_page">0</span>&nbsp;/&nbsp;<span class="cont_total_page">0</span>
+    </span>
+                        <span id="qbw_btn_raid_band_list_next">&nbsp;</span>
+                    </div>
+                    <div class="qbwpan_float_right">
+                        <span id="qbw_btn_raid_band_list_alli">개인동맹</span>
+                    </div>
+                    <div class="qbwpan_clear_both"></div>
+                </div>
+
+                <div class="cont_raid_band_list_desc">도움 요청 시 황건섬멸 지원령을 보내 줄 수 있습니다.</div>
+
+                <div class="cont_event_listener_wrap">
+                    <!-- span id="qbw_btn_raid_band_list_event_listener"></ --->
+                    <table class="qbwtbl_Common">
+                        <thead>
+                        <tr>
+                            <th class="col1">친구</th>
+                            <th class="col2">등급</th>
+                            <th class="col3">{{ i18n.t('lord_name') }}</th>
+                            <th class="col4">{{ i18n.t('lord_power') }}</th>
+                            <th class="col5">관계</th>
+                        </tr>
+                        </thead>
+                        <tbody class="cont_tbody">
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="dlg_footer"></div>
+</div>

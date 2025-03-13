@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+#ns_dialog_member_login {
+    z-index: 2555;
+}
+
+#ns_dialog_member_login .member_form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#ns_dialog_member_login input {
+    height: 22px;
+    margin: 2px 0;
+}
+
+#ns_dialog_member_login label {
+    display: inline-block;
+    width: 60px;
+    text-align: center;
+}
+
+#ns_dialog_member_login .button_special {
+    width: 180px;
+}
+
+#ns_dialog_member_create {
+    z-index: 2556;
+}
+
+#ns_dialog_member_create .member_form {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+#ns_dialog_member_create input {
+    height: 22px;
+    margin: 2px 0;
+}
+
+#ns_dialog_member_create label {
+    display: inline-block;
+    width: 80px;
+    text-align: center;
+}
+
+#ns_dialog_member_create .button_special {
+    width: 180px;
+}

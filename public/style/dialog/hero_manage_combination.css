@@ -1,0 +1,203 @@
+@charset "utf-8";
+
+#ns_dialog_hero_manage_combination .content {
+    height: 100%;
+}
+
+#ns_dialog_hero_manage_combination .content .ns_panel_flex_column {
+    height: 100%;
+}
+
+#ns_dialog_hero_manage_combination .ns_table_common tbody > tr {
+    height: 30px;
+}
+
+#ns_dialog_hero_manage_combination .combination_list_scroll {
+    overflow: hidden;
+    height: 100%;
+}
+
+#ns_dialog_hero_manage_combination .material_wrap {
+    position: relative;
+    width: 92px;
+    height: 121px;
+    filter: drop-shadow(0px 0px 0px black);
+}
+
+#ns_dialog_hero_manage_combination .material_wrap *,
+.content_hero_no_select *,
+.material_wrap *,
+.hero_card_skill_slot * {
+    pointer-events: none;
+}
+
+#ns_dialog_hero_manage_combination .material_wrap.card_wrap_filter {
+    filter: brightness(.7) grayscale(1) drop-shadow(2px 4px 6px black);
+}
+
+#ns_dialog_hero_manage_combination .material_wrap.hero_card_selected {
+    position: relative;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+#ns_dialog_hero_manage_combination .material_wrap.hero_card_selected .hero_card_small {
+    filter: brightness(.5);
+}
+
+#ns_dialog_hero_manage_combination .material_wrap.hero_card_selected::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 121px;
+    background: url("/image/hero/card_select_frame.png") no-repeat 0 0;
+    background-size: 92px 121px;
+    content: ' ';
+}
+
+#ns_dialog_hero_manage_combination .skill_box.skill_selected {
+    filter: brightness(.7) grayscale(1);
+}
+
+#ns_dialog_hero_manage_combination .common_combination_wrap {
+    gap: 20px;
+}
+
+#ns_dialog_hero_manage_combination .combination_list_wrap,
+#ns_dialog_hero_manage_combination .skill_combination_wrap {
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+#ns_dialog_hero_manage_combination .special_combination_wrap {
+    gap: 2px;
+}
+
+#ns_dialog_hero_manage_combination .combination_list_wrap.ns_panel_grid_2 {
+    gap: 0;
+    width: 320px;
+    margin: 0 auto;
+    place-items: center;
+}
+
+
+#ns_dialog_hero_manage_combination .special_main_wrap {
+    display: grid;
+    grid-template: "a b b b" auto
+                   "c d d d" 20px / 1fr 1fr 1fr 1fr;
+    padding-top: 10px;
+}
+
+#ns_dialog_hero_manage_combination .special_main_wrap div:first-child {
+    grid-area: a;
+}
+
+#ns_dialog_hero_manage_combination .special_main_wrap div:nth-child(2) {
+    grid-area: b;
+}
+
+#ns_dialog_hero_manage_combination .special_main_wrap div:nth-child(3) {
+    grid-area: c;
+}
+
+/*#ns_dialog_hero_manage_combination .special_main_wrap div:nth-child(4) {
+    grid-area: d;
+}*/
+
+#ns_dialog_hero_manage_combination .special_main_wrap div:last-child {
+    grid-area: d;
+}
+
+#ns_dialog_hero_manage_combination .hero_exp_gauge {
+    display: inline-block;
+    position: relative;
+    width: 330px;
+    height: 14px;
+    background: url('/image/ui/sub/xp_b_gauge_l.png') no-repeat left 0, url('/image/ui/sub/xp_b_gauge_r.png') no-repeat right 0 , url('/image/ui/sub/xp_b_gauge.png') repeat-x center 0;
+    background-size:1px 14px, 1px 14px, 1px 14px;
+    /*filter: drop-shadow(1px 1px 1px black);*/
+}
+
+#ns_dialog_hero_manage_combination .hero_exp_bar {
+    position: absolute;
+    display: inline-block;
+    top: 2px;
+    left: 1px;
+    height: 10px;
+    background-size:1px 10px;
+    background-repeat:repeat-x;
+}
+
+#ns_dialog_hero_manage_combination .hero_exp_text {
+    position: absolute;
+    display: inline-block;
+    top: 2px;
+    left: 1px;
+    width: 100%;
+    height: 10px;
+    font-size: .6rem;
+    line-height: 11px;
+    text-align: center;
+    background-size:1px 10px;
+    background-repeat:repeat-x;
+    z-index: 1;
+}
+
+#ns_dialog_hero_manage_combination .hero_exp_bar.current {
+    background-image:url('/image/ui/sub/xp_y_gauge.png');
+}
+
+#ns_dialog_hero_manage_combination .hero_exp_bar.next {
+    background-image:url('/image/ui/sub/xp_r_gauge.png');
+}
+
+
+#ns_dialog_hero_manage_combination .button_special {
+    width: 120px;
+}
+
+#ns_dialog_hero_manage_combination .hero_card_skill_slot {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-size: 45px 45px;
+    background-repeat: no-repeat;
+    background-image: url('/image/card/skill_box_0.png');
+}
+
+#ns_dialog_hero_manage_combination .combination_list_wrap .skill_image {
+    position: absolute;
+    top: 33px;
+    left: 13px;
+}
+
+#ns_dialog_hero_manage_combination .combination_list_wrap .skill_title {
+    padding: 5px 10px 2px 15px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#ns_dialog_hero_manage_combination .skill_combination_wrap .skill_image,
+#ns_dialog_hero_manage_combination .skill_combination_wrap .skill_image .skill_rare_type {
+    width: 45px;
+    height: 45px;
+    background-size: 45px 45px !important;
+}
+
+#ns_dialog_hero_manage_combination .combination_list_wrap .skill_list_detail {
+    position: absolute;
+    right: 14px;
+    top: 52px;
+    text-align: right;
+    color: #FFFFFF;
+    line-height: 14px;
+}
+
+#ns_dialog_hero_manage_combination .combination_list_wrap .skill_list_detail>div:nth-child(2) {
+    color: #4EBEFF;
+}
+
+
+

@@ -1,0 +1,197 @@
+<div id="ns_dialog_setting">
+    <span id="ns_button_setting_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('game_setting') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_setting_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_setting_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_yy ns_panel_margin_xx text_align_center">
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th colspan="4">{{ i18n.t('sound') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="width-20"><span>{{ i18n.t('background_sound') }}</span></td>
+                            <td><input name="sound_bgm_slide" type="range" value="0" min="0" max="0" class="slider" /></td>
+                            <td class="width-10"><span class="sound_bgm_value button_input">0</span></td>
+                            <td class="width-15"><span id="ns_button_setting_sound_bgm"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>{{ i18n.t('sound_effect') }}</span></td>
+                            <td><input name="sound_effect_slide" type="range" value="0" min="0" max="0" class="slider" /></td>
+                            <td><span class="sound_effect_value button_input">0</span></td>
+                            <td><span id="ns_button_setting_sound_effect"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th colspan="4">{{ i18n.t('game') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td class="width-30"><span>{{ i18n.t('connect_advice') }}</span></td>
+                            <td class="width-20"><span id="ns_button_setting_counsel_connect"></span></td>
+                            <td class="width-30"><span>{{ i18n.t('command_advice') }}</span></td>
+                            <td><span id="ns_button_setting_counsel_action"></span></td>
+                        </tr>
+                        <tr>
+                            <td><span>{{ i18n.t('building_title_options') }}</span></td>
+                            <td><span id="ns_button_setting_building_title"></span></td>
+                            <td><!-- span>언어 설정</span --></td>
+                            <td><span id="ns_button_setting_language_change">-</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="ns_panel_pop_button ns_panel_trans">
+                    <span id="ns_button_setting_submit">{{ i18n.t('save') }}</span>
+                </div>
+
+                <div>
+                    <p class="game_version">Version: {{ version }}</p>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+
+<!--
+<div id="qbw_dlg_setting" style="display:none;">
+<div class="dlg_header">
+<div class="dlg_title"><span class="cont_title">게임설정</span></div>
+<div class="dlg_header_left"><span id="qbw_btn_setting_close"></span></div>
+<div class="dlg_header_right"><span id="qbw_btn_setting_closeAll"></span></div>
+</div>
+<div class="dlg_content">
+<div class="cont">
+
+<div class="hr_brown"></div>
+
+<div class="qbwpan_Sub_Top">
+    <span class="cont_qb_member_title">▶ 게임 설정 후 저장을 하여야 실제로 적용됩니다.</span>
+</div>
+
+<div class="qbwpan_TransBottom">
+    <div class="qbwpan_Trans" style="text-align:center;">
+        <span id="qbw_btn_setting_submit">저장하기</span>
+    </div>
+</div>
+<div class="qbwpan_TransTop" style="padding-top: 12px;">
+    <span class="text_status" style="margin-left:8px;">진언창 설정</span>
+</div>
+<div class="qbwpan_TransTop" style="padding-top: 4px; margin-left:16px;">
+    <span id="qbw_btn_setting_counsel_connect">일반 진언창</span><div class="cont_pn_desc">접속시 마다 뜨는 진언창</div>
+    <span id="qbw_btn_setting_counsel_action">액션 진언창</span><div class="cont_pn_desc" style="border-bottom:0;">영웅 액션시 마다 뜨는 진언창</div>
+</div>
+
+<div style="padding-top:8px;">
+    <div class="hr_division_brown"></div>
+</div>
+
+
+<div class="qbwpan_TransTop" style="padding-top: 12px;">
+    <span class="text_status" style="margin-left:8px;">사운드 설정</span>
+</div>
+<div class="qbwpan_TransTop" style="padding-top: 4px; margin-left:16px;">
+    <span id="qbw_btn_setting_sound_bgm">배경음</span>
+    <span id="qbw_btn_setting_sound_effect">효과음</span>
+</div>
+
+<div style="padding-top:8px;">
+    <div class="hr_division_brown"></div>
+</div>
+
+<div class="cont_mobile_only">
+    <div class="qbwpan_TransTop" style="padding-top: 12px;">
+        <div style="float:left;"><span class="text_status" style="margin-left:8px;">주간(9~21)/야간(21~8) 광고성 Push 수신동의 [선택]</span></div>
+        <div style="float:right;">
+            <span id="qbw_btn_setting_all_push">알림</span>
+        </div>
+        <div style="clear:both;"></div>
+    </div>
+
+    <div class="qbwpan_TransTop" style="padding-top: 8px; margin-left:16px;">
+        <div style="float:left;"><span class="cont_pn_title">공지 및 이벤트</span></div>
+        <div style="float:right;">
+            <span id="qbw_btn_setting_pn_event_t1">주간</span>
+            <span id="qbw_btn_setting_pn_event_t2">야간</span>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="cont_pn_desc">게임에 관련된 공지사항, 이벤트</div>
+    </div>
+
+    <div class="qbwpan_TransTop" style="padding-top: 8px; margin-left:16px;">
+        <div style="float:left;"><span class="cont_pn_title">보고서</span></div>
+        <div style="float:right;">
+            <span id="qbw_btn_setting_pn_report_t1">주간</span>
+            <span id="qbw_btn_setting_pn_report_t2">야간</span>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="cont_pn_desc">공격 및 방어 전투 결과, 적 영지 정찰 결과 및 공격해 오는 적 정보</div>
+    </div>
+
+    <div class="qbwpan_TransTop" style="padding-top: 8px; margin-left:16px;">
+        <div style="float:left;"><span class="cont_pn_title">외교서신</span></div>
+        <div style="float:right;">
+            <span id="qbw_btn_setting_pn_advice_t1">주간</span>
+            <span id="qbw_btn_setting_pn_advice_t2">야간</span>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="cont_pn_desc">타 군주 외교 서신, 초보자 보호 해제, 추천코드</div>
+    </div>
+
+    <div class="qbwpan_TransTop" style="padding-top: 8px; margin-left:16px;">
+        <div style="float:left;"><span class="cont_pn_title">영지관리</span></div>
+        <div style="float:right;">
+            <span id="qbw_btn_setting_pn_terr_t1">주간</span>
+            <span id="qbw_btn_setting_pn_terr_t2">야간</span>
+        </div>
+        <div style="clear:both;"></div>
+        <div class="cont_pn_desc">건설, 태학 기술 개발, 영웅 탐색, 병사 훈련 및 치료 완료</div>
+    </div>
+</div>
+
+<div class="qbwpan_Trans">
+    <div class="hr_division_brown"></div>
+    <div style="text-align:center;">
+        <p class="text_status"><span class="cont_pn_night_srt"></span>시 부터 <span class="cont_pn_night_end"></span>시 까지 야간으로 설정되어 있습니다.</p>
+    </div>
+    <div style="text-align:center;">
+        <p class="text_status"><span id="qbw_btn_setting_pn_night_srt"></span> 시 부터 <span id="qbw_btn_setting_pn_night_end"></span> 시 까지</p>
+    </div>
+    <div style="text-align:center;">
+        <p class="cont_pn_desc">0시~23시까지 시간 설정 가능</p>
+    </div>
+    <div class="hr_division_brown"></div>
+</div>
+<div class="qbwpan_TransBottom">
+  <div class="qbwpan_Trans" style="text-align:center;">
+    <span id="qbw_btn_setting_submit">저장하기</span>
+  </div>
+  <div style="text-align:center;">
+    <span class="cont_conf_id" style="color:rgb(184, 167, 132);">&nbsp;</span>
+  </div>
+  <div class="cont_secret" style="display:none; text-align:center;">
+    <span id="qbw_btn_setting_secret_chatPkReset">채팅리셋</span>
+  </div>
+</div>
+        </div>
+    </div>
+    <div class="dlg_footer"></div>
+</div>
+-->

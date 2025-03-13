@@ -1,0 +1,40 @@
+@charset "utf-8";
+
+#ns_dialog_troop_view {
+    z-index: 2351;
+}
+
+#ns_dialog_troop_view .troop_table {
+    width: 436px;
+    border-spacing: 0;
+}
+
+.ns_table_common.army_table td:nth-child(1),
+.ns_table_common.army_table td:nth-child(3),
+.ns_table_common.resource_table td:nth-child(1),
+.ns_table_common.resource_table td:nth-child(3),
+.ns_table_common.status_table td:nth-child(1),
+.ns_table_common.status_table td:nth-child(3)
+{
+    background-color: #314465;
+    font-weight: bold;
+}
+
+.ns_table_common.army_table td:nth-child(2),
+.ns_table_common.army_table td:nth-child(4),
+.ns_table_common.resource_table td:nth-child(2),
+.ns_table_common.resource_table td:nth-child(4),
+.ns_table_common.status_table td:nth-child(2),
+.ns_table_common.status_table td:nth-child(4)
+{
+    background-color: #141D26;
+    font-weight: bold;
+}
+
+.ns_table_common.army_table > tr{
+    border-top: 1px solid #768CB5;
+}
+
+.ns_table_common.army_table > tr:last-child{
+    border-bottom: 1px solid #768CB5;
+}

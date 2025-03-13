@@ -1,0 +1,163 @@
+<div id="ns_dialog_hero_manage_combination">
+    <span id="ns_button_hero_manage_combination_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('combine') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_hero_manage_combination_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_hero_manage_combination_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_tab ns_panel_grid_3 width-full">
+                <span id="ns_button_hero_manage_combination_tab_special">{{ i18n.t('special_combine') }}</span>
+                <span id="ns_button_hero_manage_combination_tab_common">{{ i18n.t('basic_combine') }}</span>
+                <span id="ns_button_hero_manage_combination_tab_skill">{{ i18n.t('skill_combine') }}</span>
+            </div>
+
+            <div class="content">
+
+                <div class="ns_panel_flex_column">
+
+                    <div class="ns_panel_basic ns_panel_margin_x">
+
+                        <div class="tab_common_wrap">
+                            <div class="ns_panel_most ns_panel_trans_top text_align_center">
+                                <span class="text_status">{{ i18n.t('hero_basic_combine_description') | raw }}</span>
+                            </div>
+
+                            <div class="ns_panel_most ns_panel_trans_top text_align_center">
+                                <span class="text_result">-</span>
+                            </div>
+
+                            <div class="ns_panel_most ns_panel_trans">
+                                <div class="common_combination_wrap ns_panel_flex ns_panel_flex ns_panel_flex_center">
+                                    <span id="ns_button_common_material_1"></span>
+                                    <span id="ns_button_common_material_2"></span>
+                                    <span id="ns_button_common_material_3"></span>
+                                    <span id="ns_button_common_material_4"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab_special_wrap">
+                            <div class="special_main_wrap">
+                                <!-- div class="ns_panel_most ns_panel_trans_top text_align_center">
+                                    <span class="text_status">특수 조합에 사용할 메인 영웅 및 재료 영웅을 선택해 주세요.<br />조합 시 메인 영웅의 레벨을 높일 수 있습니다.</span>
+                                </div -->
+                                <div class="ns_panel_grid_center">
+                                    <span id="ns_button_special_main_hero"></span>
+                                </div>
+                                <div>
+                                    <div class="unselect_main_hero_wrap">
+                                        <div class="text_align_center ns_panel_margin_yy">
+                                            <span class="text_gray_with_shadow"> {{ i18n.t('hero_special_combine_hero_choose') }} <span class="text_red">({{ i18n.t('essential') }})</span></span>
+                                        </div>
+                                        <p class="text_align_center text_gray_with_shadow">{{ i18n.t('hero_special_combine_description') | raw }}</p>
+                                    </div>
+                                    <div class="selected_main_hero_wrap">
+                                        <table class="ns_table_common">
+                                            <thead>
+                                            <tr>
+                                                <th class="width-20">{{ i18n.t('stats_leadership') }}</th>
+                                                <th class="width-20">{{ i18n.t('stats_military_force') }}</th>
+                                                <th class="width-20">{{ i18n.t('stats_intellect') }}</th>
+                                                <th class="width-20">{{ i18n.t('stats_politics') }}</th>
+                                                <th>{{ i18n.t('stats_charm') }}</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td><span class="hero_leadership">-</span><span class="bonus_leadership text_green"></span></td>
+                                                <td><span class="hero_mil_force">-</span><span class="bonus_mil_force text_green"></span></td>
+                                                <td><span class="hero_intellect">-</span><span class="bonus_intellect text_green"></span></td>
+                                                <td><span class="hero_politics">-</span><span class="bonus_politics text_green"></span></td>
+                                                <td><span class="hero_charm">-</span><span class="bonus_charm text_green"></span></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+
+                                        <table class="ns_table_common">
+                                            <thead>
+                                            <tr>
+                                                <th>{{ i18n.t('required_enhance_item_special') }} ({{ i18n.t('current_storage') }})</th>
+                                                <th>{{ i18n.t('combine_count') }}</th>
+                                                <th>{{ i18n.t('required_resource_gold') }} ({{ i18n.t('current_storage') }})</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr>
+                                                <td class="width-33"><span class="hero_item">0</span> (<span class="hero_item_have">0</span>)</td>
+                                                <td><span class="hero_special_count">0</span></td>
+                                                <td class="width-33"><span class="hero_gold">0</span> (<span class="hero_gold_have">0</span>)</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                                <div class="text_gray_with_shadow ns_panel_grid_center">
+                                    <span>{{ i18n.t('hero_level') }} : </span><span class="main_hero_level">0</span>
+                                </div>
+                                <div class="ns_panel_grid_center">
+                            <span class="hero_exp_gauge">
+                                <span class="hero_exp_text"></span>
+                                <span class="hero_exp_bar next"></span>
+                                <span class="hero_exp_bar current"></span>
+                            </span>
+                                </div>
+                            </div>
+
+                            <div class="hr_division_brown"></div>
+
+                            <div class="ns_panel_most ns_panel_trans ns_panel_margin_xx">
+                                <div class="ns_panel_flex text_gray_with_shadow">
+                                    <div class="ns_panel_flex_item_auto"><span>{{ i18n.t('material_hero') }}</span> <span class="select_material_count">0</span><span>/ 10</span></div>
+                                    <div class="ns_panel_flex_right"><span>{{ i18n.t('combine_exp') }} :</span> <span class="select_material_total_acquire_exp">0</span></div>
+                                </div>
+                            </div>
+
+                            <div class="ns_panel_heavy ns_panel_margin_10 content_build_level_desc">
+                                {{ i18n.t('exp_ratio') }} : <span class="text_light_green">{{ i18n.t('same') }}</span> 3배, <span class="text_light_green">{{ i18n.t('friendship') }}</span> 2배, <span class="text_yellow">{{ i18n.t('hostile') }}</span> 0.9배
+                            </div>
+
+                        </div>
+
+                        <div class="tab_skill_wrap">
+                            <div class="ns_panel_most ns_panel_trans_top text_align_center">
+                                <span class="text_status">{{ i18n.t('hero_skill_combine_description') | raw }}</span>
+                            </div>
+
+                            <div class="ns_panel_most ns_panel_trans">
+                                <div class="skill_combination_wrap ns_panel_flex ns_panel_flex_center">
+                                    <span id="ns_button_skill_material_1"></span>
+                                    <span id="ns_button_skill_material_2"></span>
+                                    <span id="ns_button_skill_material_3"></span>
+                                    <span id="ns_button_skill_material_4"></span>
+                                    <span id="ns_button_skill_material_5"></span>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="ns_panel_pop_button">
+                            <span id="ns_button_hero_manage_combination_do_combination">{{ i18n.t('combine') }}</span>
+                            <span id="ns_button_hero_manage_combination_clear">{{ i18n.t('initialization') }}</span>
+                        </div>
+
+                    </div>
+
+                    <div class="combination_list_scroll ns_panel_most ns_panel_trans">
+                        <div class="combination_list_wrap ns_panel_grid_4 ns_panel_flex">
+                        </div>
+                    </div>
+
+                </div>
+
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+

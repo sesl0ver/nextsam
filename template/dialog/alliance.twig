@@ -1,0 +1,700 @@
+<div id="ns_dialog_alliance">
+    <span id="ns_button_alliance_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('alliance') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_alliance_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_alliance_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_tab alliance_main_tab ns_panel_grid_2">
+                <span id="ns_button_alliance_tab_join">{{ i18n.t('alliance_join') }}</span> <!-- 동맹이 없는 경우 -->
+                <span id="ns_button_alliance_tab_make">{{ i18n.t('alliance_creation') }}</span> <!-- 동맹이 없는 경우 -->
+                <span id="ns_button_alliance_tab_info">{{ i18n.t('alliance_status') }}</span> <!-- 동맹이 있는 경우 -->
+                <span id="ns_button_alliance_tab_manage">{{ i18n.t('alliance_manage') }}</span> <!-- 동맹이 있는 경우 -->
+            </div>
+
+            <div class="content">
+
+                <div class="ns_panel_most ns_panel_trans tab_make_wrap">
+
+                    <div class="ns_panel_most ns_panel_trans_top text_align_center">
+                        <span class="text_status">{{ i18n.t('alliance_create_need_gold') }}</span>
+                    </div>
+
+                    <div class="ns_panel_most ns_panel_trans">
+                        <div class="text_align_center content_header_wrapper text_gray">
+                            <span>{{ i18n.t('alliance_name') }}</span> <span class="text_description">{{ i18n.t('alliance_name_condition') }}</span></div>
+                        <div class="text_align_center">
+                            <label><input type="text" name="alliance_title" maxlength="6" value="" class="alliance_title" /></label>
+                        </div>
+
+                    </div>
+
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_alliance_make">{{ i18n.t('alliance_creation') }}</span>
+                    </div>
+
+                </div>
+
+                <div class="ns_panel_most ns_panel_trans tab_join_wrap">
+
+                    <div class="ns_panel_most ns_panel_trans_top text_align_center">
+                        <span class="text_status">{{ i18n.t('search_for_ally_name') }}</span>
+                    </div>
+
+                    <div class="ns_panel_most ns_panel_trans">
+                        <div class="text_align_center content_header_wrapper text_gray">
+                            <span>{{ i18n.t('alliance_search') }}</span> <span class="text_description">({{ i18n.t('alliance_name_condition') }})</span>
+                        </div>
+                        <div class="text_align_center">
+                            <label><input type="text" name="alliance_search_title" maxlength="6" value="" class="alliance_search_title" /></label>
+                        </div>
+                    </div>
+
+
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_alliance_search">{{ i18n.t('search') }}</span>
+                    </div>
+
+                    <div class="ns_panel_margin_xx">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('ranking') }}</th>
+                                <th>{{ i18n.t('alliance_name') }}</th>
+                                <th>{{ i18n.t('lord') }}</th>
+                                <th>{{ i18n.t('alliance_member') }}</th>
+                                <th>{{ i18n.t('lord_power') }}</th>
+                                <th>{{ i18n.t('attack_point_short') }}</th>
+                                <th>{{ i18n.t('defense_point_short') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="search_list_tbody">
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="tab_info_wrap">
+                    <div class="ns_panel_tab alliance_sub_tab ns_panel_grid_3">
+                        <span id="ns_button_alliance_sub_tab_info">{{ i18n.t('alliance_information') }}</span>
+                        <span id="ns_button_alliance_sub_tab_member_list">{{ i18n.t('alliance_member_list') }}</span>
+                        <span id="ns_button_alliance_sub_tab_war_list">{{ i18n.t('alliance_war_history') }}</span>
+                    </div>
+                    <div class="ns_panel_most ns_panel_trans sub_tab_info_wrap">
+                        <div class="ns_panel_margin_xx">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th colspan="2">{{ i18n.t('alliance_information') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td class="width-50">{{ i18n.t('alliance_name') }}</td>
+                                    <td><span class="info_title"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('alliance_captain') }}</td>
+                                    <td><span class="info_lord_name"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('ranking') }}</td>
+                                    <td><span class="info_rank"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('alliance_member_count') }}</td>
+                                    <td><span class="info_member_count"></span> / <span class="info_member_max"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('lord_power') }}</td>
+                                    <td><span class="info_power"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('attack_point') }}</td>
+                                    <td><span class="info_attack_point"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('defense_point') }}</td>
+                                    <td><span class="info_defence_point"></span></td>
+                                </tr>
+                                </tbody>
+                                <thead>
+                                <tr>
+                                    <th colspan="2">{{ i18n.t('alliance_notice') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td colspan="2"><div class="info_alliance_notice ns_panel_margin_yy">-</div></td>
+                                </tr>
+                                </tbody>
+                                <thead>
+                                <tr>
+                                    <th colspan="2">{{ i18n.t('alliance_introduce') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td colspan="2"><div class="info_alliance_introduce ns_panel_margin_yy">-</div></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="ns_panel_most ns_panel_trans sub_tab_member_list_wrap">
+
+                        <div class="ns_panel_margin_xx">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th>{{ i18n.t('alliance_office') }}</th>
+                                    <th>{{ i18n.t('lord_name') }}</th>
+                                    <th>{{ i18n.t('ranking') }}</th>
+                                    <th>{{ i18n.t('lord_power') }}</th>
+                                    <th>{{ i18n.t('alliance_grade') }}</th>
+                                    <th>{{ i18n.t('territory') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="member_list_tbody">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="ns_panel_most ns_panel_trans sub_tab_war_list_wrap">
+
+                        <div class="ns_panel_margin_xx">
+
+                            <div class="ns_panel_most ns_panel_trans_top text_align_center">
+                                <span class="text_status">{{ i18n.t('alliance_war_log_description') }}</span>
+                            </div>
+
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th>{{ i18n.t('type') }}</th>
+                                    <th>{{ i18n.t('subject') }}</th>
+                                    <th>{{ i18n.t('time') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="war_list_tbody">
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="ns_panel_margin_yy ns_panel_most tab_manage_wrap">
+                    <div class="alliance_button_wrap ns_panel_flex ns_panel_flex_center">
+                        <span id="ns_button_alliance_manage_invite">{{ i18n.t('alliance_invite') }}</span>
+                        <span id="ns_button_alliance_manage_join_access">{{ i18n.t('alliance_join_access') }}</span>
+                        <span id="ns_button_alliance_manage_grade">{{ i18n.t('alliance_grade_manage') }}</span>
+                        <span id="ns_button_alliance_manage_introduce">{{ i18n.t('alliance_introduce_change') }}</span>
+                        <span id="ns_button_alliance_manage_diplomacy">{{ i18n.t('alliance_diplomacy_manage') }}</span>
+                        <span id="ns_button_alliance_manage_letter">{{ i18n.t('alliance_letter') }}</span>
+                        <span id="ns_button_alliance_manage_resignation">{{ i18n.t('alliance_resignation') }}</span>
+                        <span id="ns_button_alliance_manage_drop_out">{{ i18n.t('alliance_drop_out') }}</span>
+                        <span id="ns_button_alliance_manage_member_increase_item">{{ i18n.t('alliance_oath') }}</span>
+                        <span id="ns_button_alliance_manage_close_down">{{ i18n.t('alliance_close_down') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- 동맹 정보 -->
+<div id="ns_dialog_alliance_other_info">
+    <span id="ns_button_alliance_other_info_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_alliance_other_info_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_alliance_other_info_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <div class="ns_panel_most ns_panel_trans">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th colspan="2">{{ i18n.t('alliance_information') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="width-50">{{ i18n.t('alliance_captain') }}</td>
+                                <td><span class="info_lord_name"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('ranking') }}</td>
+                                <td><span class="info_rank"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('alliance_member_count') }}</td>
+                                <td><span class="info_now_member_count"></span>/<span class="info_max_member_count"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('lord_power') }}</td>
+                                <td><span class="info_power"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('attack_point') }}</td>
+                                <td><span class="info_attack_point"></span></td>
+                            </tr>
+                            <tr>
+                                <td>{{ i18n.t('defense_point') }}</td>
+                                <td><span class="info_defence_point"></span></td>
+                            </tr>
+                            </tbody>
+                            <tbody class="alliance_diplomacy_wrap">
+                            <tr>
+                                <th colspan="2">{{ i18n.t('alliance_diplomacy') }}</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <div class="alliance_button_wrap ns_panel_flex ns_panel_flex_center ns_panel_margin_yy">
+                                        <span id="ns_button_alliance_diplomacy_friendship">{{ i18n.t('friendship') }}</span>
+                                        <span id="ns_button_alliance_diplomacy_neutrality">{{ i18n.t('neutrality') }}</span>
+                                        <span id="ns_button_alliance_diplomacy_hostile">{{ i18n.t('hostile') }}</span>
+                                        <span id="ns_button_alliance_diplomacy_delete">{{ i18n.t('termination') }}</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            </tbody>
+                            <tbody>
+                            <tr>
+                                <th colspan="2">{{ i18n.t('lord_introduce') }}</th>
+                            </tr>
+                            <tr>
+                                <td colspan="2"><div class="info_alliance_introduce">-</div></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="ns_panel_pop_button">
+                            <span id="ns_button_alliance_join_request">{{ i18n.t('alliance_apply_membership') }}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- 동맹 가입 승인 -->
+<div id="ns_dialog_alliance_join_access">
+    <span id="ns_button_alliance_join_access_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('alliance_join_access_list') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_alliance_join_access_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_alliance_join_access_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_10">
+                        <div class="ns_panel_most ns_panel_trans text_align_center">
+                            <span class="text_status">{{ i18n.t('alliance_join_access_information') }}</span>
+                        </div>
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('ranking') }}</th>
+                                <th>{{ i18n.t('lord_name') }}</th>
+                                <th>{{ i18n.t('lord_power') }}</th>
+                                <th>{{ i18n.t('alliance_grade') }}</th>
+                                <th>{{ i18n.t('alliance_request_date') }}</th>
+                                <th>{{ i18n.t('manage') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="join_access_list_tbody">
+
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- 동맹 초대 -->
+<div id="ns_dialog_alliance_invite">
+    <span id="ns_button_alliance_invite_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('alliance_invite') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_alliance_invite_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_alliance_invite_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_most ns_panel_trans_top text_align_center">
+                    <span class="text_status">{{ i18n.t('alliance_join_search_description') }}</span>
+                </div>
+
+                <div class="ns_panel_most ns_panel_trans">
+                    <div class="ns_panel_basic">
+
+                        <div class="ns_panel_most ns_panel_trans">
+                            <div class="text_align_center content_header_wrapper text_gray">
+                                <span>{{ i18n.t('alliance_search') }}</span> <span class="text_description">({{ i18n.t('alliance_name_condition') }})</span>
+                            </div>
+                            <div class="text_align_center">
+                                <label><input type="text" name="lord_name_search" maxlength="6" value="" class="lord_name_search" /></label>
+                            </div>
+                        </div>
+
+                        <div class="ns_panel_pop_button">
+                            <span id="ns_button_alliance_search_lord_name">{{ i18n.t('search') }}</span>
+                        </div>
+
+                        <div class="ns_panel_margin_xx">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th class="width-20">{{ i18n.t('ranking') }}</th>
+                                    <th>{{ i18n.t('lord_name') }}</th>
+                                    <th class="width-25">{{ i18n.t('lord_power') }}</th>
+                                    <th class="width-20">{{ i18n.t('alliance_grade') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="search_lord_list_tbody">
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- 동맹 직책 관리-->
+<div id="ns_dialog_alliance_manage_grade">
+    <span id="ns_button_alliance_manage_grade_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('alliance_grade_manage') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_alliance_manage_grade_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_alliance_manage_grade_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_most ns_panel_trans_top text_align_center">
+                    <span class="text_status">{{ i18n.t('alliance_grade_change_description') }}</span>
+                </div>
+
+                <div class="ns_panel_most ns_panel_trans">
+                    <div class="ns_panel_basic ns_panel_margin_xx">
+
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('alliance_office') }}</th>
+                                <th>{{ i18n.t('lord_name') }}</th>
+                                <th>{{ i18n.t('ranking') }}</th>
+                                <th>{{ i18n.t('lord_power') }}</th>
+                                <th>{{ i18n.t('alliance_grade') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="grade_manage_list_tbody">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- 동맹 외교 -->
+<div id="ns_dialog_alliance_diplomacy">
+    <span id="ns_button_alliance_diplomacy_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('alliance_diplomacy') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_alliance_diplomacy_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_alliance_diplomacy_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_most ns_panel_trans">
+                    <div class="ns_panel_basic ns_panel_margin_xx">
+
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('ranking') }}</th>
+                                <th>{{ i18n.t('alliance_name') }}</th>
+                                <th>{{ i18n.t('alliance_captain') }}</th>
+                                <th>{{ i18n.t('lord_power') }}</th>
+                                <th>{{ i18n.t('alliance_member') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="diplomacy_list_tbody">
+
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- 동맹 서신 -->
+<div id="ns_dialog_alliance_letter">
+    <span id="ns_button_alliance_letter_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('alliance_letter') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_alliance_letter_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_alliance_letter_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_margin_xx">
+
+                    <table class="ns_table_common">
+                        <tbody>
+                        <tr>
+                            <td class="text_align_left">
+                                <span class="text_cadet_gray text_weight_bold">{{ i18n.t('recipients') }}</span> <span class="text_description text_white">({{ i18n.t('alliance_all_letter_description') }})</span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="ns_panel_flex">
+                                    <div class="letter_from ns_panel_flex_item_auto">&nbsp;{{ i18n.t('alliance_member_total') }}</div>
+                                    <span class="ns_panel_flex_item_auto button_middle_2 disable">{{ i18n.t('add') }}</span>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text_align_left"><span class="text_cadet_gray text_weight_bold">{{ i18n.t('subject') }}</span> <span class="text_description text_white">({{ i18n.t('alliance_letter_subject_condition') }})</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label class="ns_panel_flex"><input type="text" name="alliance_letter_title" value="" class="alliance_letter_title" /></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="text_align_left"><span class="text_cadet_gray text_weight_bold">{{ i18n.t('content') }}</span> <span class="text_description text_white">({{ i18n.t('alliance_letter_content_condition') }})</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label>
+                                    <textarea name="alliance_letter_content" class="alliance_letter_content"></textarea>
+                                </label>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_alliance_letter_send">{{ i18n.t('send') }}</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<!-- 동맹 정보 수정 -->
+<div id="ns_dialog_alliance_introduce_change">
+    <span id="ns_button_alliance_introduce_change_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('alliance_introduce_change') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_alliance_introduce_change_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_alliance_introduce_change_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_margin_xx">
+                    <table class="ns_table_common">
+                        <tbody>
+                        <tr>
+                            <th class="width-33">{{ i18n.t('alliance_name') }}<br /><span class="text_description">({{ i18n.t('alliance_name_condition') }})</span></th>
+                            <td>
+                                <label><input type="text" name="alliance_title" value="" class="alliance_title" /></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>{{ i18n.t('alliance_introduce') }}<br /><span class="text_description">({{ i18n.t('alliance_letter_intro_condition') }})</span></th>
+                            <td>
+                                <label><textarea name="alliance_introduce" class="alliance_introduce"></textarea></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>{{ i18n.t('alliance_notice') }}<br /><span class="text_description">({{ i18n.t('alliance_letter_notice_condition') }})</span></th>
+                            <td>
+                                <label><textarea name="alliance_notice" class="alliance_notice"></textarea></label>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_alliance_introduce_change_send">{{ i18n.t('alliance_introduce_change') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_alliance_search_lord" style="display:none;">
+    <div class="dlg_header">
+        <div id="ns_button_alliance_search_lord_close"></div>
+        <span class="cont_pop_title">{{ i18n.t('lord_search') }}</span>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <div class="qbwtbl_Common">
+                <table cellspacing="1">
+                    <thead>
+                    <tr>
+                        <th>군주 이름</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td style="height:40px;">
+                            <span>군주 검색</span>
+                            <input name="letter_find_lord" value="" class="cont_find_lord" />
+                            <span id="ns_button_alliance_search_lord_find_lord">검색</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>신청하고자 하는 군주의 이름을 입력해주세요.</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+            <div class="cont_event_listener_wrap">
+                <span id="ns_button_alliance_find_lord_event_listener"></span>
+                <div class="qbwtbl_Common">
+                    <table cellspacing="1" class="cont_list">
+                        <thead>
+                        <tr>
+                            <th>{{ i18n.t('lord_name') }}</th>
+                            <th>{{ i18n.t('lord_power') }}</th>
+                            <th>{{ i18n.t('ranking') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dialog_footer"></div>
+</div>
+
+<div id="ns_dialog_letter_receiver_alliance" style="display:none;">
+    <div class="dlg_header"><span id="ns_button_letter_receiver_alliance_close"></span><span class="cont_pop_title"></span></div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <div class="qbwpan_Sub_Top">
+                <div class="qbwpan_float_left">
+                    <div class="cont_page_type">
+                        <span id="ns_button_letter_receiver_alliance_prev">&nbsp;</span>
+                        <span class="text_page_paging">
+        <span class="cont_page_curr">0</span>&nbsp;/&nbsp;<span class="cont_page_total">0</span>
+      </span>
+                        <span id="ns_button_letter_receiver_alliance_next">&nbsp;</span>
+                        <span id="ns_button_letter_receiver_alliance_sort">-</span>&nbsp;&nbsp;
+                        <span id="ns_button_letter_receiver_all_lord_checked">{{ i18n.t('total') }}</span>
+                    </div>
+                </div>
+                <div class="qbwpan_float_right">
+                    <div class="cont_page_type">
+                        <span class="text_table_title">{{ i18n.t('alliance') }}(<span class="cont_alliance_member_cnt"></span>)</span>
+                    </div>
+                </div>
+                <div class="qbwpan_clear_both"></div>
+            </div>
+
+            <div class="cont_list_area cont_event_listener_wrap">
+                <span id="ns_button_letter_receiver_alliance_list_event_listener" ></span>
+
+                <table class="qbwtbl_Common cont_alliance_info">
+                <thead>
+                <tr>
+                    <th class="col1">&nbsp;</th>
+                    <th class="col2">{{ i18n.t('lord_name') }}</th>
+                    <th class="col3">{{ i18n.t('alliance_grade') }}</th>
+                    <th class="col4">{{ i18n.t('territory') }}</th>
+                    <th class="col5">{{ i18n.t('lord_power') }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                </table>
+                <div class="hr_division_brown"></div>
+            </div>
+
+            <div class="qbwpan_pop_btn">
+                <span id="ns_button_letter_receiver_alliance_ok">{{ i18n.t('ok') }}</span>
+            </div>
+
+        </div>
+    </div>
+    <div class="dialog_footer"></div>
+</div>

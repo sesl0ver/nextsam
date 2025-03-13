@@ -1,0 +1,43 @@
+<h2>서버 점검</h2>
+
+<hr />
+
+<div>
+현재 서버 점검 상태 여부 : <span id="now_inspect_state"></span>
+</div>
+
+<br />
+
+<div style="text-align:right;">
+	<button id="inspect_on" style="padding:0.4em;">점검 중으로 설정</button>
+	<button id="inspect_off" style="padding:0.4em;">점검 중에서 해제</button>
+	<button id="open_all_user_kick_form" style="padding:0.4em">전체 유저킥 실행</button>
+</div>
+
+<br />
+
+<h3>점검 중에도 접근이 허용된 ip 주소 목록</h3>
+<hr />
+<div style="padding: 5px">현재 IP: <span class="current_ip"></span></div>
+<table id="serv_info_access_allow_ip" class="jqGridTable">
+</table>
+
+<br />
+
+<div style="text-align:right;">
+	<button id="add_allow_ip" style="padding:0.4em;">접근 허용할 ip 추가</button>
+</div>
+
+<div id="add_access_allow_ip_form" title="점검 중에도 접근을 허용할 ip 추가하기">
+	<h3>허용할 ip 주소</h3>
+	<hr />
+	<div>
+		<input type="text" id="access_allow_ip_input" />
+	</div>
+</div>
+
+<div id="all_user_kick_form" title="전체 유저킥 실행">
+	<h3>전체 유저킥 실행 사유</h3>
+	<hr />
+	<textarea id="all_user_kick_cause" style="width: 100%; height: 50px;"></textarea>
+</div>

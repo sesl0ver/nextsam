@@ -1,0 +1,586 @@
+<!-- skeleton - only hide -->
+<div class="hide">
+    <div id="hero_card_sm_skeleton" class="hero_card_sm">
+        <div class="ns_panel_flex">
+            <div class="hero_card_sm_image ns_panel_flex_item_auto"></div>
+            <div class="hero_card_sm_desc ns_panel_flex_item_auto">
+                <p class="hero_card_sm_name"></p>
+                <p>
+                    <span class="hero_card_sm_rare"></span>
+                    <span class="hero_card_sm_level">Lv. 0</span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="hero_card_small_skeleton" class="hero_card_small">
+        <div class="hero_card_effect"></div>
+        <div class="hero_card_opacity"></div>
+        <div class="hero_card_frame">
+            <div class="hero_card_selector"></div>
+            <div class="hero_card_group_display"></div>
+            <div class="hero_card_status"></div>
+            <div class="hero_card_warning"></div>
+            <div class="hero_card_status_desc"><span></span></div>
+            <div class="hero_card_name"></div>
+            <div class="hero_card_level"></div>
+        </div>
+    </div>
+
+    <div id="hero_card_detail_skeleton" class="hero_card_detail ns_panel_flex">
+        <div class="content_card"></div>
+        <div class="hero_card_detail_status_wrap">
+            <div class="hero_card_gauge_wrap ns_panel_flex">
+                <span class="status_title">{{ i18n.t('stats_leadership') }}</span>
+                <div class="hero_card_gauge leadership"><span class="status_gauge"></span><div class="status_value"></div></div>
+            </div>
+            <div class="hero_card_gauge_wrap ns_panel_flex">
+                <span class="status_title">{{ i18n.t('stats_military_force') }}</span>
+                <div class="hero_card_gauge mil_force"><span class="status_gauge"></span><div class="status_value"></div></div>
+            </div>
+            <div class="hero_card_gauge_wrap ns_panel_flex">
+                <span class="status_title">{{ i18n.t('stats_intellect') }}</span>
+                <div class="hero_card_gauge intellect"><span class="status_gauge"></span><div class="status_value"></div></div>
+            </div>
+            <div class="hero_card_gauge_wrap ns_panel_flex">
+                <span class="status_title">{{ i18n.t('stats_politics') }}</span>
+                <div class="hero_card_gauge politics"><span class="status_gauge"></span><div class="status_value"></div></div>
+            </div>
+            <div class="hero_card_gauge_wrap ns_panel_flex">
+                <span class="status_title">{{ i18n.t('stats_charm') }}</span>
+                <div class="hero_card_gauge charm"><span class="status_gauge"></span><div class="status_value"></div></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="hero_card_skeleton" class="hero_card">
+
+        <div class="hero_card_border"></div>
+        <div class="hero_card_effect"></div>
+        <div class="hero_card_cover">
+            <div class="hero_card_wrap"></div>
+        </div>
+
+        <div class="hero_card_front">
+            <div class="hero_card_wrap">
+                <div class="hero_card_adv_emblem"></div>
+                <div class="hero_card_level"></div>
+                <div class="hero_card_status"></div>
+                <div class="hero_card_named"></div>
+                <div class="hero_card_name"></div>
+                <div class="hero_card_pic"></div>
+                <div class="hero_card_forces"></div>
+                <div class="hero_card_group"></div>
+                <div class="hero_card_rare"></div>
+
+                <div class="hero_card_small_skill_slot">
+                    {% for i in range(1, 6) %}
+                        <div class="hero_card_slot_{{ i }}"></div>
+                    {% endfor %}
+                </div>
+
+                <div class="hero_card_stat_val leadership">0</div>
+                <div class="hero_card_stat_val mil_force">0</div>
+                <div class="hero_card_stat_val intellect">0</div>
+                <div class="hero_card_stat_val politics">0</div>
+                <div class="hero_card_stat_val charm">0</div>
+
+                <div class="hero_card_detail_status_wrap">
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th>{{ i18n.t('abilites') }}</th>
+                            <th class="width-15">{{ i18n.t('basics') }}</th>
+                            <th class="width-15">{{ i18n.t('enhance') }}</th>
+                            <th class="width-15">{{ i18n.t('officer') }}</th>
+                            <th class="width-15">{{ i18n.t('skill') }}</th>
+                            <th class="width-15">{{ i18n.t('bonus') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>{{ i18n.t('stats_leadership') }}</td>
+                            <td><span class="leadership basic"></span></td>
+                            <td><span class="leadership enchant"></span></td>
+                            <td><span class="leadership officer"></span></td>
+                            <td><span class="leadership skill"></span></td>
+                            <td><span class="leadership plusstat"></span></td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('stats_military_force') }}</td>
+                            <td><span class="mil_force basic"></span></td>
+                            <td><span class="mil_force enchant"></span></td>
+                            <td><span class="mil_force officer"></span></td>
+                            <td><span class="mil_force skill"></span></td>
+                            <td><span class="mil_force plusstat"></span></td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('stats_intellect') }}</td>
+                            <td><span class="intellect basic"></span></td>
+                            <td><span class="intellect enchant"></span></td>
+                            <td><span class="intellect officer"></span></td>
+                            <td><span class="intellect skill"></span></td>
+                            <td><span class="intellect plusstat"></span></td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('stats_politics') }}</td>
+                            <td><span class="politics basic"></span></td>
+                            <td><span class="politics enchant"></span></td>
+                            <td><span class="politics officer"></span></td>
+                            <td><span class="politics skill"></span></td>
+                            <td><span class="politics plusstat"></span></td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('stats_charm') }}</td>
+                            <td><span class="charm basic"></span></td>
+                            <td><span class="charm enchant"></span></td>
+                            <td><span class="charm officer"></span></td>
+                            <td><span class="charm skill"></span></td>
+                            <td><span class="charm plusstat"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="hero_card_back flipping">
+            <div class="hero_card_wrap">
+                <div class="hero_card_pic_small"></div>
+                <div class="hero_card_group"></div>
+                <div class="hero_card_name"></div>
+
+                <div class="hero_card_mil_aptitude_wrap">
+                    <div class="text_card_back_title">{{ i18n.t('military_aptitude') }}</div>
+                    <div class="hero_card_mil_aptitude">
+                        <div>
+                            <span class="text_card_back_subtitle">{{ i18n.t('infantry') }}</span>
+                            <span class="text_card_back_value infantry">D</span>
+                        </div>
+                        <div>
+                            <span class="text_card_back_subtitle">{{ i18n.t('spearmen') }}</span>
+                            <span class="text_card_back_value spearman">D</span>
+                        </div>
+                        <div>
+                            <span class="text_card_back_subtitle">{{ i18n.t('pikeman') }}</span>
+                            <span class="text_card_back_value pikeman">D</span>
+                        </div>
+                        <div>
+                            <span class="text_card_back_subtitle">{{ i18n.t('archer') }}</span>
+                            <span class="text_card_back_value archer">D</span>
+                        </div>
+                        <div>
+                            <span class="text_card_back_subtitle">{{ i18n.t('cavalry') }}</span>
+                            <span class="text_card_back_value horseman">D</span>
+                        </div>
+                        <div>
+                            <span class="text_card_back_subtitle">{{ i18n.t('siege') }}</span>
+                            <span class="text_card_back_value siege">D</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hero_card_back_buttons"></div>
+
+                <div class="hero_card_officer_title text_card_back_title">{{ i18n.t('officer') }}</div>
+                <div class="hero_card_officer_value text_card_back_value">-</div>
+                <div class="hero_card_loyalty_title text_card_back_title">{{ i18n.t('loyalty') }}</div>
+                <div class="hero_card_loyalty_value text_card_back_value">-</div>
+                <div class="hero_card_enchant_title text_card_back_title">{{ i18n.t('enhance') }}</div>
+                <div class="hero_card_enchant_value text_card_back_value">-</div>
+                <div class="hero_card_status_title text_card_back_title">{{ i18n.t('status') }}</div>
+                <div class="hero_card_status_value text_card_back_value">-</div>
+
+                <div class="hero_card_skill_list">
+                    <div class="hero_card_skill_slot"><div></div></div>
+                    <div class="hero_card_skill_slot"><div></div></div>
+                    <div class="hero_card_skill_slot"><div></div></div>
+                    <div class="hero_card_skill_slot"><div></div></div>
+                    <div class="hero_card_skill_slot"><div></div></div>
+                    <div class="hero_card_skill_slot"><div></div></div>
+                </div>
+
+                <div class="hero_card_skill_title text_card_back_title">{{ i18n.t('hero_skill') }}</div>
+
+                <div class="hero_card_description_title text_card_back_title">{{ i18n.t('hero_information') }}</div>
+                <div class="hero_card_description_wrap">
+                    <div class="hero_card_description text_card_back_value"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- div id="enchant_result_cover"></div>
+        <div id="enchant_result"><div class="cont_enchant_result_value"></div></div -->
+
+    </div>
+
+    <div id="hr_division_brown_skeleton" class="hr_division_brown"></div>
+
+    <div id="reward_box_skeleton" class="reward_box">
+        <div class="reward_title"></div>
+        <div class="reward_image"></div>
+        <div class="reward_box_detail">
+            <div class="reward_count"><span class="reward_amount">0</span></div>
+        </div>
+    </div>
+
+    <div id="item_box_skeleton" class="item_box">
+        <div class="item_title"></div>
+        <div class="item_image"></div>
+        <div class="item_box_detail">
+            <div class="item_count">&nbsp;</div>
+            <div class="item_price"><span class="qbig_amount"></span></div>
+        </div>
+    </div>
+
+    <div id="item_quick_use_list_skeleton" class="item_quick_use_list">
+        <div class="cont_item_quick_use_list ns_panel_flex">
+            <div class="use_item_image ns_panel_flex_item_auto"></div>
+            <div class="use_item_detail ns_panel_flex_item_auto">
+                <div class="use_item_title_wrap">
+                    <span class="use_item_title"></span> <span class="text_basic">({{ i18n.t('possession') }}: <span class="use_item_amount"></span>)</span>
+                    <div class="use_item_qbig_amount"></div>
+                </div>
+                <div class="quick_use_desc"></div>
+            </div>
+            <div class="button_big_1 ns_panel_flex_item_auto">{{ i18n.t('use') }}</div>
+        </div>
+        <div class="hr_division_brown"></div>
+    </div>
+
+    <div id="develop_list_skeleton" class="develop_list">
+        <div class="develop_list_title"></div>
+        <div class="develop_list_image"></div>
+        <div class="develop_list_detail">
+            <div class="develop_list_desc"></div>
+        </div>
+        <div class="develop_buttons ns_panel_flex">
+            <span class="develop_list_submit"></span><span class="develop_list_cancel"></span>
+        </div>
+    </div>
+
+    <div id="item_use_list_skeleton" class="item_use_list">
+        <div class="item_use_image">
+            <div class="item_use_rare_type"></div>
+        </div>
+        <div class="item_use_title"></div>
+        <div class="item_use_count"></div>
+    </div>
+
+    <div id="skill_list_skeleton" class="skill_box">
+        <div class="skill_title"></div>
+        <div class="skill_image"><div class="skill_rare_type"></div></div>
+        <div class="skill_list_detail">
+            <div>{{ i18n.t('possession') }}: <span class="skill_count">0</span></div>
+            <div>{{ i18n.t('hero_skill_need_slot') }}: <span class="skill_use_slot">0</span></div>
+        </div>
+    </div>
+
+    <div id="terr_info_buff_box_skeleton" class="buff_box">
+        <div class="ns_panel_flex">
+            <div class="ns_panel_flex_item_auto buff_icon_wrap"><span class="button_empty"><span class="buff_icon"></span></span></div>
+            <div class="ns_panel_flex_item_auto buff_description_wrap"><span class="buff_description"></span>/<span class="buff_left_time"></span></div>
+        </div>
+    </div>
+
+    <div id="job_list_box_skeleton" class="ns_panel_flex">
+        <div class="ns_panel_flex_item_auto"><span class="arrow"><span></span></span></div>
+        <div class="ns_panel_flex_right"><span>-</span></div>
+    </div>
+
+    <table id="report_info_wrap_skeleton" class="ns_table_common_2">
+        <thead>
+        <tr>
+            <th><span class="report_sub_title"></span></th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><div class="report_list_info"></div></td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div id="report_box_skeleton" class="report_box">
+        <div class="item_image"></div>
+        <div class="report_box_title_wrap"><span class="report_box_title"></span></div>
+        <div><span class="num_prev">0</span></div>
+        <div><span class="num_loss text_red">0</span></div>
+    </div>
+
+    <div id="report_army_box_skeleton" class="report_box">
+        <div class="item_image"></div>
+        <div><span class="report_box_title"></span></div>
+        <div><span class="num_total">0</span></div>
+        <div><span class="num_remain text_green">0</span></div>
+        <div><span class="num_injury text_yellow">0</span></div>
+        <div><span class="num_dead text_red">0</span></div>
+    </div>
+
+    <table id="report_hero_skill_skeleton" class="ns_table_common">
+        <tbody>
+        <tr>
+            <th class="width-25">{{ i18n.t('attacker_captain') }}</th>
+            <td class="att_captain width-25">-</td>
+            <th class="width-25">{{ i18n.t('defender_captain') }}</th>
+            <td class="def_captain width-25">-</td>
+        </tr>
+        <tr>
+            <th>{{ i18n.t('attacker_director') }}</th>
+            <td class="att_director">-</td>
+            <th>{{ i18n.t('defender_director') }}</th>
+            <td class="def_director">-</td>
+        </tr>
+        <tr>
+            <th>{{ i18n.t('attacker_staff') }}</th>
+            <td class="att_staff">-</td>
+            <th>{{ i18n.t('defender_staff') }}</th>
+            <td class="def_staff">-</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div id="attendance_box_skeleton" class="attendance_box">
+        <div class="attendance_order_panel">
+            <p class="attendance_title"></p>
+        </div>
+        <div class="attendance_reward_panel">
+            <div class="item_image"></div>
+            <div class="item_count">
+                <p class="reward_count"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="skeleton_hero_skill_box_list" class="hero_skill_box_list">
+        <div class="cont_hero_skill_box_list ns_panel_flex">
+            <div class="skill_image ns_panel_flex_item_auto"><div class="skill_rare_type"></div></div>
+            <div class="cont_hero_skill_box_detail ns_panel_flex_item_auto">
+                <div class="cont_skill_box_title_wrap">
+                    <span class="hero_skill_title"></span> <span class="hero_skill_use_slot">0</span>
+                </div>
+                <div class="hero_skill_description"></div>
+            </div>
+        </div>
+        <div class="hr_division_brown"></div>
+    </div>
+
+    <div id="hero_manage_item_skeleton">
+        <div class="card_slot"></div>
+        <div class="hero_state text_align_center"></div>
+    </div>
+
+    <div id="package_wrap_skeleton" class="ns_panel_flex_column package_main_wrap">
+        <div class="ns_panel_flex_column package_sub_wrap">
+            <div class="package_limit_time">&nbsp;<span>{{ i18n.t('until_end_sale') }}:</span> <span class="limit_time"></span></div>
+            <div class="ns_panel_flex package_main_item_wrap">
+                <div class="item_wrap">
+                    <span class="item_image"></span>
+                </div>
+                <div class="ns_panel_flex_column">
+                    <span class="item_title"></span>
+                    <div class="item_description"></div>
+                </div>
+            </div>
+            <div class="package_sub_item_title">{{ i18n.t('product_composition') }}</div>
+            <div class="package_sub_item_wrap ns_panel_flex"></div>
+        </div>
+    </div>
+
+    <div id="skeleton_report_battle" class="width-full ns_panel_flex_column">
+        <div class="battle_result_image"></div>
+        <div class="width-full ns_panel_flex ns_panel_margin_yy">
+            <div class="area_attack width-full ns_panel_flex_column">
+                <div class="result"></div>
+                <div class="position"></div>
+                <div class="hero"></div>
+                <div class="army">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th class="width-40">{{ i18n.t('troop_armys') }}</th>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <th>{{ i18n.t('dead') }}</th>
+                            <td class="dead">0</td>
+                        </tr>
+                        <tr>
+                            <th>{{ i18n.t('injury') }}</th>
+                            <td class="injury">0</td>
+                        </tr>
+                        <tr>
+                            <th>{{ i18n.t('remaining') }}</th>
+                            <td class="remain">0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="area_defence width-full ns_panel_flex_column">
+                <div class="result"></div>
+                <div class="position"></div>
+                <div class="hero"></div>
+                <div class="army">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <th class="width-40">{{ i18n.t('troop_armys') }}</th>
+                            <td class="total">0</td>
+                        </tr>
+                        <tr>
+                            <th>{{ i18n.t('dead') }}</th>
+                            <td class="dead">0</td>
+                        </tr>
+                        <tr>
+                            <th>{{ i18n.t('injury') }}</th>
+                            <td class="injury">0</td>
+                        </tr>
+                        <tr>
+                            <th>{{ i18n.t('remaining') }}</th>
+                            <td class="remain">0</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="skeleton_pickup_area_wrap">
+        <span class="button_pickup_preview"></span>
+        <div class="pickup_remain_time"><span></span></div>
+        <div class="pickup_buttons"></div>
+        <div class="pickup_remain_count">
+            <span class="remain_description"></span>
+        </div>
+    </div>
+
+    <div id="skeleton_valley_wrap" class="valley_wrap">
+        <div class="tile_wrap">
+            <span class="tile_image_wrap">
+                <span class="tile_image"></span>
+            </span>
+            <span class="valley_title"></span>
+            <span class="valley_posi_pk"></span>
+
+            <div class="valley_wrap_bottom">
+                <span class="button_small_1">{{ i18n.t('details') }}</span>
+                <span class="button_small_2">{{ i18n.t('give_up') }}</span>
+            </div>
+        </div>
+        <div class="valley_info">
+            <table class="ns_table_common width-full">
+                <thead>
+                <tr>
+                    <th colspan="2">{{ i18n.t('production_resource') }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td colspan="2"><span class="production_desc"></span></td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                    <th class="width-50">{{ i18n.t('remain_occupation_point') }}</th>
+                    <th>{{ i18n.t('acquisition_occupation_point') }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td><span class="current_point"></span></td>
+                    <td><span class="hours_point"></span></td>
+                </tr>
+                </tbody>
+                <thead>
+                <tr>
+                    <th colspan="2">{{ i18n.t('dispatch_hero') }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td colspan="2"><span class="troop_hero"></span></td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+
+
+    <table id="skeleton_troop_order_army">
+        <tr>
+            <td class="ns_panel_table_title"><span class="item_image"></span></td>
+            <td class="ns_panel_table_title"><span class="army_title"></span><br /><span class="content_category content_mil_text_D">D</span><br /><span class="army_amount"></span></td>
+            <td><label><input name="develop_slider" type="range" value="0" min="1" max="100" class="slider" step="1"></label></td>
+            <td><span class="button_set_max"></span></td>
+            <td><label><input name="number" class="content_input_number" /></label></td>
+        </tr>
+    </table>
+
+
+    <table id="skeleton_troop_order_resource_attack" class="ns_table_common">
+        <thead>
+        <tr>
+            <th class="width-30">{{ i18n.t('required_resource_food') }}</th>
+            <th class="width-30">{{ i18n.t('resource_food_in_stock') }}</th>
+            <th>{{ i18n.t('food_procurement') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td><span class="content_troop_food">0</span></td>
+            <td><span class="ns_resource_food_curr">0</span></td>
+            <td>
+                <span data-button="troop_order_resource_food" class="button_input">0</span>
+                <span data-button="troop_order_resource_food_updown" class="button_arrow_updown"></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table id="skeleton_troop_order_resource_transport" class="ns_table_common">
+        <thead>
+        <tr>
+            <th colspan="5">{{ i18n.t('transport_resources') }}</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td class="width-20">
+                <span class="resource_condition food"></span><br />
+                <span data-button="troop_order_resource_food" class="button_input">0</span><span data-button="troop_order_resource_food_updown" class="button_arrow_updown"></span>
+            </td>
+            <td class="width-20">
+                <span class="resource_condition lumber"></span><br />
+                <span data-button="troop_order_resource_lumber" class="button_input">0</span><span data-button="troop_order_resource_lumber_updown" class="button_arrow_updown"></span>
+            </td>
+            <td class="width-20">
+                <span class="resource_condition horse"></span><br />
+                <span data-button="troop_order_resource_horse" class="button_input">0</span><span data-button="troop_order_resource_horse_updown" class="button_arrow_updown"></span>
+            </td>
+            <td class="width-20">
+                <span class="resource_condition iron"></span><br />
+                <span data-button="troop_order_resource_iron" class="button_input">0</span><span data-button="troop_order_resource_iron_updown" class="button_arrow_updown"></span>
+            </td>
+            <td>
+                <span class="resource_condition gold"></span><br />
+                <span data-button="troop_order_resource_gold" class="button_input">0</span><span data-button="troop_order_resource_gold_updown" class="button_arrow_updown"></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <div id="skeleton_time_buff_item" class="time_buff_item">
+        <div class="item_image"></div>
+        <span class="time_buff_title"></span>
+        <span class="time_buff_button">{{ i18n.t('use') }}</span>
+    </div>
+
+    <div id="skeleton_treasure_item" class="treasure_item">
+        <span class="item_title"></span>
+        <span class="item_count"></span>
+    </div>
+</div>

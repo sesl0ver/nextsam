@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=480, user-scalable=no" />
+    <title>임시 로그인 페이지</title>
+    <style>
+        table {
+            border-spacing: 0;
+            border-bottom: 1px solid #999;
+            border-right: 1px solid #999;
+        }
+        table th, td {
+            border-top: 1px solid #999;
+            border-left: 1px solid #999;
+            padding: 5px;
+        }
+    </style>
+    <script type="text/javascript" src="/tools/js/jquery.min.js"></script>
+    <script type="text/javascript" src='/js_ext/axios.min.js'></script>
+    <script>
+        let ns_web_version  = 'gm';
+        let ns_cs = { m: {} }; // 마스터데이터용
+    </script>
+    <script type="text/javascript" src='/js_ext/big.min.js'></script>
+    <script type="text/javascript" src='/m_/cache/ns_m.item.js'></script>
+    <script type="text/javascript" src='/js_ext/axios.min.js'></script>
+    <script type="text/javascript" src='/js/ns_auth.js'></script>
+    <script type="text/javascript" src='/js/ns_engine.js'></script>
+    <script type="text/javascript" src='/js/ns_timer.js'></script>
+    <script type="text/javascript" src='/js/ns_global.js'></script>
+    <script type="text/javascript" src='/js/ns_xhr.js'></script>
+    <script type="text/javascript" src='/js/ns_math.js'></script>
+    <script type="text/javascript" src='/js/ns_util.js'></script>
+    <script type="text/javascript" src='/js/ns_i18n.js'></script>
+    <script>
+        const returnCheck = (_data) =>
+        {
+            ns_xhr.xhrProgress(false);
+            let _return = _data['ns_xhr_return'];
+            switch (_return.code) {
+                case 'error':
+                    alert(_return.message);
+                    return false;
+                default:
+                    return true;
+            }
+        }
+
+        $(() => {
+            let uuid = new nsObject('#uuid');
+            let token_button = new nsObject('#request_token');
+
+            token_button.setEvent('mouseup', () => {
+                if (! uuid.value()) {
+                    alert('uuid를 입력하세요.');
+                    return;
+                }
+                let uuid_value = uuid.value();
+                let request_id = ns_util.generateUuid();
+                let params = new URLSearchParams();
+                params.append('uuid', uuid_value);
+                params.append('request_id', request_id);
+                ns_xhr.post('/dev/signature', params, (_data, _status) => {
+                    if (! returnCheck(_data)) {
+                        return;
+                    }
+                    _data = _data['ns_xhr_return']['add_data'];
+                    let signature = _data['signature'];
+                    let params = new URLSearchParams();
+                    params.append('uuid', uuid_value);
+                    params.append('platform', 'ONGATE'); // 임시
+                    params.append('request_id', request_id);
+                    params.append('signature', signature);
+                    ns_xhr.post('/api/auth/requestToken', params, (_data, _status) => {
+                        if (! returnCheck(_data)) {
+                            return;
+                        }
+                        _data = _data['ns_xhr_return']['add_data'];
+                        document.location.href = `/?token=${_data['token']}&uuid=${uuid.value()}`;
+                    });
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<div id="main_stage">
+    <table>
+        <tbody>
+        <tr>
+            <th><label for="uuid">uuid</label></th><td><input type="text" id="uuid" /></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: right">
+                <button id="request_token">게임시작</button>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

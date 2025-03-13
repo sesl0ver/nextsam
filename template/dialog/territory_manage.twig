@@ -1,0 +1,188 @@
+<div id="ns_dialog_territory_manage">
+    <span id="ns_button_territory_manage_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('territory_manage') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_territory_manage_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_territory_manage_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_tab ns_panel_grid_5">
+                <span id="ns_button_territory_manage_tab_terr">{{ i18n.t('territory') }}</span>
+                <span id="ns_button_territory_manage_tab_reso">{{ i18n.t('resource') }}</span>
+                <span id="ns_button_territory_manage_tab_prod">{{ i18n.t('production_value') }}</span>
+                <span id="ns_button_territory_manage_tab_army">{{ i18n.t('troop') }}</span>
+                <span id="ns_button_territory_manage_tab_fort">{{ i18n.t('defense') }}</span>
+            </div>
+
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_trans ns_panel_margin_10">
+                    <div class="tab_terr">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th class="width-25">{{ i18n.t('territory_title') }}</th>
+                                <th class="width-25">{{ i18n.t('population') }}/{{ i18n.t('idle_population') }}</th>
+                                <th class="width-25">{{ i18n.t('public_sentiment') }}</th>
+                                <th>세율</th>
+                                <!-- th>관리</th -->
+                            </tr>
+                            </thead>
+                            <tbody class="main">
+
+                            </tbody>
+                        </table>
+
+                        <table class="ns_table_common_2">
+                            <thead>
+                            <tr>
+                                <th class="width-20-th">{{ i18n.t('construction') }}</th>
+                                <th class="width-20-th">{{ i18n.t('skill') }}</th>
+                                <th class="width-20-th">{{ i18n.t('exploration') }}</th>
+                                <th class="width-20-th">{{ i18n.t('training') }}</th>
+                                <th>{{ i18n.t('defense') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="sub">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab_reso">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th class="width-50">{{ i18n.t('territory_title') }}</th>
+                                <th>{{ i18n.t('resource_gold') }}/{{ i18n.t('storage_limit') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="main">
+
+                            </tbody>
+                        </table>
+
+                        <table class="ns_table_common_2">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('resource') }}</th>
+                                <th class="width-40">{{ i18n.t('amount_resources') }}</th>
+                                <th class="width-40">{{ i18n.t('storage_limit') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="sub">
+                            <tr>
+                                <td><span class="resource_condition food"></span></td>
+                                <td><span class="current_resource food"></span></td>
+                                <td><span class="storage_limit food"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="resource_condition horse"></span></td>
+                                <td><span class="current_resource horse"></span></td>
+                                <td><span class="storage_limit horse"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="resource_condition lumber"></span></td>
+                                <td><span class="current_resource lumber"></span></td>
+                                <td><span class="storage_limit lumber"></span></td>
+                            </tr>
+                            <tr>
+                                <td><span class="resource_condition iron"></span></td>
+                                <td><span class="current_resource iron"></span></td>
+                                <td><span class="storage_limit iron"></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab_prod">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th class="width-50">{{ i18n.t('territory_title') }}</th>
+                                <th>{{ i18n.t('resource_gold_production') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="main">
+
+                            </tbody>
+                        </table>
+
+                        <table class="ns_table_common_2">
+                            <thead>
+                            <tr>
+                                <th class="width-25">{{ i18n.t('resource_food_production') }}</th>
+                                <th class="width-25">{{ i18n.t('resource_horse_production') }}</th>
+                                <th class="width-25">{{ i18n.t('resource_lumber_production') }}</th>
+                                <th>{{ i18n.t('resource_iron_production') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="sub">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab_army">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th class="width-25">{{ i18n.t('territory_title') }}</th>
+                                <th class="width-25">{{ i18n.t('total_number_of_troops') }}</th>
+                                <th class="width-25">{{ i18n.t('my_number_of_troops') }}</th>
+                                <th>{{ i18n.t('support_number_of_troops') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="main">
+
+                            </tbody>
+                        </table>
+
+                        <table class="ns_table_common_2">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('military') }}</th>
+                                <th class="width-33">{{ i18n.t('our_forces') }}</th>
+                                <th class="width-33">{{ i18n.t('support_forces') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="sub">
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="tab_fort">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th class="width-50">{{ i18n.t('territory_title') }}</th>
+                                <th>{{ i18n.t('castle_wall') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="main">
+
+                            </tbody>
+                        </table>
+
+                        <table class="ns_table_common_2">
+                            <thead>
+                            <tr>
+                                <th class="width-25">{{ i18n.t('remain_space') }}</th>
+                                <th class="width-25">{{ i18n.t('fort_title_420001') }}</th>
+                                <th class="width-25">{{ i18n.t('fort_title_420002') }}</th>
+                                <th>{{ i18n.t('fort_title_420003') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody class="sub">
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

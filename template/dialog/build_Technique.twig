@@ -1,0 +1,230 @@
+<div id="ns_dialog_build_Technique">
+    <span id="ns_button_build_Technique_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+                <span class="content_level"></span>
+                <span class="content_upgrading">&nbsp;&nbsp;{{ i18n.t('construction_upgrading') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_build_Technique_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_build_Technique_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_sub_top ns_panel_flex">
+                <div class="ns_panel_build_button_left ns_panel_flex_item_auto">
+                    <!-- span id="ns_button_build_desc_Technique"></span -->
+                    <span id="ns_button_build_move_Technique">{{ i18n.t('building_move') }}</span>
+                </div>
+                <div class="ns_panel_build_button_left ns_panel_flex_item_auto">
+                </div>
+                <div class="ns_panel_build_button_right ns_panel_flex_item_auto">
+                    <!-- ##### BUIL_BTN_RIGHT ##### -->
+                </div>
+            </div>
+
+            <div class="content">
+
+                <!-- ########## -->
+
+                <div class="ns_panel_basic content_build_desc_wrap">
+                    <div class="ns_panel_contents_padding">
+
+                        <div class="content_build_desc">
+
+                            <p class="content_build_desc_def"></p>
+                            <p class="content_build_desc_footnote"></p>
+                            <!-- ##### HERO_ASSIGN_1 ##### -->
+                            <div class="ns_panel_trans content_build_desc_vr">
+                                <div class="hr_normal_line "></div>
+                            </div>
+
+                            <div class="content_card_empty ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto ns_panel_position_relative">
+                                    <span class="button_hero_no_assign"></span>
+                                    <span id="ns_button_build_no_assign_Technique"></span>
+                                </div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_assign_effect">
+                                        <p>{{ i18n.t('hero_assign_add_effect') }}</p>
+                                        <p class="content_build_desc_assign"></p>
+                                        <p class="content_build_desc_assign_footnote"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content_card ns_panel_flex">
+                                <div class="ns_panel_position_relative ns_panel_flex_item_auto">
+                                    <div class="content_hero_detail"></div>
+                                    <span id="ns_button_build_assign_Technique"></span>
+                                </div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_effect">
+                                        <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa"></span></p>
+                                        <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ##### HERO_ASSIGN_1 ##### -->
+                        </div>
+                        <!-- ##### HERO_ASSIGN_2 ##### -->
+                        <div class="content_build_desc_sm">
+
+                            <div class="content_card_sm_empty ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="hero_card_sm ns_panel_flex">
+                                        <div class="hero_card_sm_image ns_panel_flex_item_auto"></div>
+                                        <div class="hero_card_sm_desc ns_panel_flex_item_auto">
+                                            <p class="hero_card_sm_name">{{ i18n.t('assign') }}</p>
+                                            <p class="hero_card_sm_level">{{ i18n.t('none') }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vr_hero_card_sm ns_panel_flex_item_auto"></div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_effect_sm">
+                                        <p><span></span><span class="content_build_desc_assign_sm"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content_card_sm ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_sm"></div>
+                                </div>
+                                <div class="ns_panel_flex_item_auto vr_hero_card_sm"></div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_effect_sm">
+                                        <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa_sm"></span></p>
+                                        <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill_sm"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- ##### HERO_ASSIGN_2 ##### -->
+                    </div>
+                </div>
+
+                <div class="ns_panel_heavy ns_panel_margin_10 content_build_level_desc">
+                </div>
+
+                <div class="ns_panel_trans">
+                    <div class="ns_panel_build_upgrade content_build_cons">
+                        <div><span class="content_build_construct_hero">-</span><br /><span class="content_build_left_time">-</span></div>
+                        <div class="ns_panel_trans">
+                            <span id="ns_button_build_speedup_Technique">{{ i18n.t('encourage') }}</span>
+                            <!-- <span id="ns_button_buil_cancel_Technique">취소</span> -->
+                        </div>
+                    </div>
+                    <div class="ns_panel_build_upgrade content_build_upgrade">
+                        <span id="ns_button_build_upgrade_Technique">{{ i18n.t('upgrade') }}</span>
+                    </div>
+                    <!-- ##### MULTI_NAVI ##### --><div class="ns_panel_build_upgrade content_build_cons_multi">
+                        <span id="ns_button_build_prev_Technique">&nbsp;</span> <span id="ns_button_build_cons_Technique">{{ i18n.t('add_construction') }} (<span class="content_page_curr">0</span>/<span class="content_page_total">0</span>)</span> <span id="ns_button_build_next_Technique">&nbsp;</span>
+                    </div><!-- ##### MULTI_NAVI ##### -->
+                    <div class="ns_panel_build_upgrade content_build_max_level">
+                        <!-- <p>최고 레벨 건설 완료</p> -->
+                    </div>
+                </div>
+
+                <!-- ########## -->
+
+                <div class="ns_panel_heavy ns_panel_margin_10">
+                    <div class="ns_panel_trans">
+                        <div class="content_concurr_body ns_panel_flex">
+                            <div class="ns_panel_flex_item_auto">
+                                <span class="content_concurr_title"></span>
+                            </div>
+                            <div class="ns_panel_flex_right">
+                                <!-- <span id="ns_button_concurr_cancel_buil_Technique"></span> -->
+                                <span class="content_concurr_time">{{ i18n.t('calculating') }}</span>
+                                <span id="ns_button_concurr_speedup_build_Technique">{{ i18n.t('encourage') }}</span>
+                            </div>
+                        </div>
+                        <div class="content_concurr_idle">{{ i18n.t('not_in_researches') }}</div>
+                    </div>
+                </div>
+
+                <div class="ns_panel_trans">
+                    <div class="technique_cache_wrap ns_panel_grid_2"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+
+<div id="ns_dialog_tech_upgrade">
+    <span id="ns_button_tech_upgrade_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+                <span class="content_level"></span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_tech_upgrade_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_tech_upgrade_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <div class="ns_panel_flex_info">
+                        <div class="item_image"></div>
+                        <div class="target_description_wrap">
+                            <span class="item_description"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ns_panel_heavy ns_panel_margin_xx">
+                    <div class="target_level_description"></div>
+                </div>
+
+                <div class="ns_panel_trans_top ns_panel_time_info text_align_center">
+                    <span class="content_build_time_title">{{ i18n.t('time_required') }}</span>
+                    <span class="content_build_time"></span>
+                </div>
+
+                <div class="ns_panel_trans_top text_align_center">
+                    <span id="ns_button_tech_upgrade_submit">{{ i18n.t('start_choose_hero') }}</span>
+                </div>
+
+                <div class="ns_panel_trans_top text_align_center">
+                    <span id="ns_button_tech_upgrade_submit_now">-</span>
+                </div>
+
+                <div class="ns_panel_trans_top text_align_center">
+                    <span id="ns_button_tech_upgrade_submit_auto">{{ i18n.t('start_immediately') }} ({{ i18n.t('auto_choose_hero') }})</span>
+                </div>
+
+                <div class="ns_panel_trans_top text_align_center">
+                    <span class="text_table_title">{{ i18n.t('performance_conditions') }}</span>
+                </div>
+
+                <div class="ns_panel_trans ns_panel_margin_xx">
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th>{{ i18n.t('category') }}</th>
+                            <th>{{ i18n.t('requirement') }}</th>
+                            <th>{{ i18n.t('current_storage') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+

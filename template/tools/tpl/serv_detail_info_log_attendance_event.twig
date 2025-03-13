@@ -1,0 +1,28 @@
+<h2>출석 이벤트 검색</h2>
+
+<hr />
+
+<fieldset id="time_interval_set" class="cpn_search_form" style="float : left; width : 270px;">
+    <legend>검색기간</legend>
+    <input type="text" id="search_time_start" value="{{ search_time_start }}" /> ~ <input type="text" id="search_time_end" value="{{ search_time_end }}" />
+</fieldset>
+
+<fieldset id="lord_search_by_account_form" class="cpn_search_form" style="float : left; width:106px; margin-left : 12px;">
+    <legend>군주명 검색</legend>
+    <input type="text" id="lord_name" value="{{ _SESSION['selected_lord']['lord_name'] }}" />
+</fieldset>
+
+<div style="float : left; margin-left : 12px; margin-top:10px;">
+    <button id="search_log" style="padding:4px 12px; width:80px;height:48px;">검색</button>
+    <button id="search_log_add" style="padding:4px 12px; width:80px;height:48px">추가보기</button>
+</div>
+
+<br style="clear : both;" />
+<br/>
+
+<div style="padding:8px;background-color:#c0c0c0;border:1px solid #eee;font-weight:bold;text-align:center;">검색된 결과는 500건까지 우선 표시됩니다. 추가 보기 버튼을 누르면 500건씩 추가됩니다.<br/>가능하면 군주명이나 좌표를 반드시 입력해주십시오.</div>
+
+<br/>
+
+<div id="search_result" style="z-index:98;">
+</div>

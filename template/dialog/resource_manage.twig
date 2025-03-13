@@ -1,0 +1,46 @@
+<div id="ns_dialog_resource_manage">
+    <span id="ns_button_resource_manage_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('resources_use') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_resource_manage_close"></span></div>
+            <div class="dialog_header_right"></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_tab ns_panel_grid_5">
+                <span id="ns_button_resource_manage_tab_food"><span class="resource_condition food"></span></span>
+                <span id="ns_button_resource_manage_tab_horse"><span class="resource_condition horse"></span></span>
+                <span id="ns_button_resource_manage_tab_lumber"><span class="resource_condition lumber"></span></span>
+                <span id="ns_button_resource_manage_tab_iron"><span class="resource_condition iron"></span></span>
+                <span id="ns_button_resource_manage_tab_gold"><span class="resource_condition gold"></span></span>
+            </div>
+
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <table class="ns_table_common width-full">
+                        <thead>
+                        <tr>
+                            <th class="width-50">{{ i18n.t('current_resource_value') }}</th>
+                            <th>{{ i18n.t('remain_resource_value') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><span class="resource_manage_current">0</span></td>
+                            <td><span class="resource_manage_remaining">0</span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ns_panel_trans resource_item_list ns_panel_grid_2">
+                </div>
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

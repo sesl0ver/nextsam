@@ -1,0 +1,36 @@
+@charset "utf-8";
+
+#ns_dialog_build_Medical {
+
+}
+
+#ns_dialog_build_Medical div.ns_panel_sub_top.ns_panel_flex > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+#ns_button_build_speedup_Medical {
+    width: 120px;
+}
+
+#ns_dialog_build_Medical #ns_button_concurr_medical_speedup {
+    margin: 0 7px 0 0;
+}
+
+#ns_dialog_build_Medical .medical_army_cache_wrap {
+    width: 320px;
+    margin: 0 auto;
+}
+
+#ns_dialog_build_Medical .ns_panel_heavy .ns_panel_trans {
+    height:22px;
+    line-height:22px;
+}
+
+#ns_dialog_build_Medical .ns_panel_heavy .ns_panel_trans .ns_panel_flex_right {
+    height:22px;
+    line-height:22px;
+}
+
+#ns_dialog_build_Medical .hero_card_sm.ns_panel_flex{
+    width:120px;
+}

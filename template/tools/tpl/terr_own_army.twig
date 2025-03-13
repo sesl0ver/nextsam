@@ -1,0 +1,63 @@
+
+<h2>[{{ _SESSION['selected_terr']['title'] }}] 영지 보유 병력 현황</h2>
+<hr />
+<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_lord_own_terr_list" dir="ltr" style="width: 100%; ">
+	<div class="ui-jqgrid-view" id="gview_lord_own_terr_list" style="width: 100%; ">
+		<div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+			<span class="ui-jqgrid-title">영지 보유 병력 현황</span>
+		</div>
+		<div class="ui-jqgrid-bdiv" style="width: 100%; ">
+			<div style="position:relative;">
+				<div></div>
+				<table id="lord_army_detail_statistics_list" style="width: 100%; table-layout:fixed;" class="jqGridTable ui-jqgrid-btable" cellSpacing="0" cellPadding="0" border="0">
+					<thead>
+					<tr class="ui-jqgrid-labels">
+						<th class="ui-state-default ui-th-column ui-th-ltr">병과</th>
+						<th class="ui-state-default ui-th-column ui-th-ltr">소속 병력</th>
+						<th class="ui-state-default ui-th-column ui-th-ltr">영지 내 주둔 병력</th>
+						<th class="ui-state-default ui-th-column ui-th-ltr">주둔/행군 병력</th>
+						<th class="ui-state-default ui-th-column ui-th-ltr">부상병</th>
+					</tr>
+					</thead>
+					<tbody>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>
+
+<br/>
+
+<div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_lord_own_terr_list" dir="ltr" style="width: 100%; ">
+	<div class="ui-jqgrid-view" id="gview_lord_own_terr_list" style="width: 100%; ">
+		<div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+			<span class="ui-jqgrid-title">영지 보유 방어 시설 현황</span>
+		</div>
+		<div class="ui-jqgrid-bdiv" style="width: 100%; ">
+			<div style="position:relative;">
+				<div></div>
+				<table id="lord_own_terr_list" style="width: 100%; table-layout:fixed;" class="jqGridTable ui-jqgrid-btable" cellSpacing="0" cellPadding="0" border="0">
+					<tbody>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none; text-align:center;">함정</th>
+						<td style='text-align:center;' id="fort_trap"></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none; text-align:center;">목책</th>
+						<td style='text-align:center;' id="fort_abatis"></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none; text-align:center;">망루</th>
+						<td style='text-align:center;' id="fort_tower"></td>
+					</tr>
+					<tr class="ui-widget-content jqgrow ui-row-ltr">
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none; text-align:center;">설치 최대 공간</th>
+						<td style='text-align:center;' id="fort_wall_vacancy_max"></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none; text-align:center;">설치 공간 소모량</th>
+						<td style='text-align:center;' id="fort_wall_vacancy_curr"></td>
+						<th class="ui-state-default ui-th-column ui-th-ltr" style="border-left:none; border-top:none; text-align:center;">잔여 설치 공간</th>
+						<td style='text-align:center;' id="fort_wall_vacancy_remain"></td>
+					</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

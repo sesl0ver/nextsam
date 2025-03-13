@@ -1,0 +1,199 @@
+@charset "utf-8";
+
+#ns_dialog_item_quick_use {
+    z-index: 2450;
+}
+
+#ns_dialog_item_quick_use .content_item_use_progress {
+    padding: 5px 10px;
+    height: 60px;
+}
+
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon{
+    position:absolute;
+    left: 28px;
+    top: 10px;
+    width:54px;
+    height:56px;
+    background: url('/image/icon/200100_1.png');
+}
+
+#ns_dialog_item_quick_use .content_item_use_progress .wrapper_remain_time {
+    position:relative;
+    background: url('/image/ui/gauge_status.png');
+    width:320px;
+    height:34px;
+    left: 60px;
+    top: 12px;
+}
+
+#ns_dialog_item_quick_use .wrapper_remain_time .wrapper_progress_bar {
+    position: relative;
+    height: 26px;
+    left: 5px;
+    top: 3px;
+}
+
+#ns_dialog_item_quick_use .wrapper_remain_time .wrapper_progress_bar {
+    max-width: 310px;
+}
+
+#ns_dialog_item_quick_use .wrapper_remain_time .wrapper_progress_bar .progress_color {
+    background: linear-gradient(180deg, rgb(12,75,14) 2%,rgb(86,217,56) 5%, rgb(86, 217, 56) 40%, rgb(28, 180,25) 60%, rgb(28, 180, 25) 94%, rgb(12, 75, 15) 100%);
+    width:100%;
+    height:100%;
+}
+
+#ns_dialog_item_quick_use .content_item_use_progress .wrapper_remain_time_text{
+    position: absolute;
+    line-height: 34px;
+    width: 100%;
+    left:0;
+    top:0;
+    text-align: center;
+    text-shadow: 0px 1px 2px black;
+}
+#ns_dialog_item_quick_use .content_item_use_progress .wrapper_remain_time_text .remain_time_text {
+    color:#FED33C;
+    font-weight:bold;
+    text-shadow: 0 1px 2px black;
+}
+
+#ns_dialog_item_quick_use .ns_panel_flex {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#ns_dialog_item_quick_use .item_quick_use_list * {
+    pointer-events: none;
+}
+
+#ns_dialog_item_quick_use .item_description {
+    padding: 0 5px;
+}
+
+#ns_dialog_item_quick_use .use_item_title_wrap {
+    display: flex;
+}
+
+#ns_dialog_item_quick_use .use_item_title {
+    font-weight: bold;
+    color: #C38F5D;
+}
+
+#ns_dialog_item_quick_use .use_item_qbig_amount {
+    display: inline-block;
+    flex: 0 0 0;
+    margin: 0 0 0 auto;
+    padding-left: 17px;
+    height: 17px;
+    line-height: 17px;
+    background: url('/image/icon/icon_qbig.png') no-repeat;
+    background-size: 17px 17px;
+    color: #8871FF;
+    font-weight: bold;
+}
+
+#ns_dialog_item_quick_use .use_item_detail {
+    width: calc(100% - 100px);
+}
+
+#ns_dialog_item_quick_use .use_item_image {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #4C453B;
+    margin:0 3px 4px 3px;
+    background-size: 50px 50px;
+}
+
+#ns_dialog_item_quick_use .button_big_1 {
+    margin: auto 2px auto auto;
+}
+
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200100_1 { background-image: url('/image/icon/200100_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200100_2 { background-image: url('/image/icon/200100_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200100_3 { background-image: url('/image/icon/200100_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200200_1 { background-image: url('/image/icon/200200_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200200_2 { background-image: url('/image/icon/200200_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200200_3 { background-image: url('/image/icon/200200_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200300_1 { background-image: url('/image/icon/200300_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200300_2 { background-image: url('/image/icon/200300_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200300_3 { background-image: url('/image/icon/200300_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200400_1 { background-image: url('/image/icon/200400_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200400_2 { background-image: url('/image/icon/200400_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200400_3 { background-image: url('/image/icon/200400_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200500_1 { background-image: url('/image/icon/200500_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200500_2 { background-image: url('/image/icon/200500_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200500_3 { background-image: url('/image/icon/200500_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200600_1 { background-image: url('/image/icon/200600_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200600_2 { background-image: url('/image/icon/200600_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200600_3 { background-image: url('/image/icon/200600_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200700_1 { background-image: url('/image/icon/200700_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200700_2 { background-image: url('/image/icon/200700_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200700_3 { background-image: url('/image/icon/200700_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200800_1 { background-image: url('/image/icon/200800_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200800_2 { background-image: url('/image/icon/200800_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200800_3 { background-image: url('/image/icon/200800_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200900_1 { background-image: url('/image/icon/200900_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200900_2 { background-image: url('/image/icon/200900_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_200900_3 { background-image: url('/image/icon/200900_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201000_1 { background-image: url('/image/icon/201000_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201000_2 { background-image: url('/image/icon/201000_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201000_3 { background-image: url('/image/icon/201000_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201100_1 { background-image: url('/image/icon/201100_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201100_2 { background-image: url('/image/icon/201100_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201100_3 { background-image: url('/image/icon/201100_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201200_1 { background-image: url('/image/icon/201200_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201200_2 { background-image: url('/image/icon/201200_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201200_3 { background-image: url('/image/icon/201200_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201300_1 { background-image: url('/image/icon/201300_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201300_2 { background-image: url('/image/icon/201300_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201300_3 { background-image: url('/image/icon/201300_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201400_1 { background-image: url('/image/icon/201400_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201400_2 { background-image: url('/image/icon/201400_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201400_3 { background-image: url('/image/icon/201400_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201500_1 { background-image: url('/image/icon/201500_1.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201500_2 { background-image: url('/image/icon/201500_2.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_201500_3 { background-image: url('/image/icon/201500_3.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_300100 { background-image: url('/image/icon/300100.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_300200 { background-image: url('/image/icon/300200.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_300300 { background-image: url('/image/icon/300300.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_300400 { background-image: url('/image/icon/300400.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_300500 { background-image: url('/image/icon/300500.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_300600 { background-image: url('/image/icon/300600.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_300700 { background-image: url('/image/icon/300700.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_300800 { background-image: url('/image/icon/300800.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_300900 { background-image: url('/image/icon/300900.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_301000 { background-image: url('/image/icon/301000.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_301100 { background-image: url('/image/icon/301100.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_301200 { background-image: url('/image/icon/301200.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_301300 { background-image: url('/image/icon/301300.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_301400 { background-image: url('/image/icon/301400.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_301500 { background-image: url('/image/icon/301500.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_301600 { background-image: url('/image/icon/301600.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_301700 { background-image: url('/image/icon/301700.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_301800 { background-image: url('/image/icon/301800.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_301900 { background-image: url('/image/icon/301900.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_302000 { background-image: url('/image/icon/302000.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_302100 { background-image: url('/image/icon/302100.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_302200 { background-image: url('/image/icon/302200.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_302300 { background-image: url('/image/icon/302300.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_302400 { background-image: url('/image/icon/302400.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410001 { background-image: url('/image/icon/410001.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410002 { background-image: url('/image/icon/410002.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410003 { background-image: url('/image/icon/410003.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410004 { background-image: url('/image/icon/410004.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410005 { background-image: url('/image/icon/410005.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410006 { background-image: url('/image/icon/410006.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410007 { background-image: url('/image/icon/410007.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410008 { background-image: url('/image/icon/410008.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410009 { background-image: url('/image/icon/410009.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410010 { background-image: url('/image/icon/410010.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410011 { background-image: url('/image/icon/410011.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410012 { background-image: url('/image/icon/410012.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410013 { background-image: url('/image/icon/410013.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_410014 { background-image: url('/image/icon/410014.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_420001 { background-image: url('/image/icon/420001.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_420002 { background-image: url('/image/icon/420002.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_420003 { background-image: url('/image/icon/420003.png') !important;}
+#ns_dialog_item_quick_use .content_item_use_progress .progress_target_icon.SRC_withdraw { background-image: url('/image/icon/icon_withdraw.png') !important;}

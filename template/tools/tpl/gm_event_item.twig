@@ -1,0 +1,37 @@
+<h2>이벤트 아이템 지급 페이지</h2>
+<hr />
+<div style="float:left;">
+	<table>
+		<tr>
+			<td><label for="file">군주명<br /> (엔터로 구분)</label></td>
+			<td><textarea name="lord_name" style="height:300px; width:300px;"></textarea></td>
+		</tr>
+		<tr>
+			<td><label for="text">서버선택</label></td>
+			<td><select name="target_server_pk">
+					{% for k, v in _SESSION['server_list'] %}
+						<option value="{{ v['server_pk'] }}">{{ v['server_name'] }}</option>
+					{% endfor %}
+				</select></td>
+		</tr>
+		<tr>
+			<td><label for="text">지급 아이템</label></td>
+			<td><select name="m_item_pk">
+					{% for k, v in _M['ITEM'] %}
+						<option value="{{ v['m_item_pk'] }}">{{ v['title'] }}</option>
+					{% endfor %}
+				</select> <input type="text" name="search_item" value="" /> <button id="search_item_btn">검색</button></td>
+		</tr>
+		<tr>
+			<td><label for="text">아이템 개수</label></td>
+			<td><input type="number" name="item_count" value="0" min="0" max="99" /></td>
+		</tr>
+		<tr>
+			<td colspan="2" style="text-align:center;"><button id="submit">지급하기</button></td>
+		</tr>
+	</table>
+</div>
+
+<div id="result" style="float:right;width:600px;height:600px;overflow:auto;border:1px solid #666;">
+</div>
+<div style="clear:both;"></div>

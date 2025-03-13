@@ -1,0 +1,315 @@
+<h2>전투 로그 검색</h2>
+<hr />
+
+<div class="log_search_box">
+    <fieldset class="search_box">
+        <legend>검색기간</legend>
+        <input type="text" id="search_time_start" value="" /> ~ <input type="text" id="search_time_end" value="" />
+    </fieldset>
+
+    <fieldset class="search_box">
+        <legend>군주명 검색</legend>
+        <input type="text" id="lord_name" value="{{ _SESSION['selected_lord']['lord_name'] }}" />
+    </fieldset>
+
+    <fieldset class="search_box">
+        <legend>좌표 검색</legend>
+        X <input type="text" id="offset_x" class="offset" maxlength="3" /> / Y <input type="text" id="offset_y" class="offset" maxlength="3" />
+    </fieldset>
+
+    <fieldset class="search_box">
+        <legend>검색 분류 지정</legend>
+        <ul class="log_checkbox">
+            {% set array = {
+                battle_attack: '공격 전투',
+                battle_defence: '방어 전투',
+                scout: '정찰'
+            } %}
+            {% for key, value in array  %}
+                <li><input type='checkbox' value='{{ key }}' id='search_type_{{ key }}' /> <label for='search_type_{{ key }}'>{{ value }}</label></li>
+            {% endfor %}
+        </ul>
+    </fieldset>
+    <button id="search_log" style="">검색</button>
+    <button id="search_log_add" style="">추가<br />검색</button>
+</div>
+
+<div class="log_description">검색된 결과는 500건까지 우선 표시됩니다. 추가 검색 버튼을 누르면 500건씩 추가됩니다.<br/>가능하면 군주명이나 좌표를 반드시 입력해주십시오.</div>
+
+<br/>
+
+<div id="search_result">
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<div id="content_json_info">
+    <div class="background"></div>
+    <div class="cover">
+        <table>
+            <tbody>
+            <tr>
+                <th style="height:3em;">전투 유형</th>
+                <td id="battle_def_type"></td>
+                <th>성문 개방 여부</th>
+                <td id="battle_def_wall"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">전투 승리</th>
+                <td id="unit_battle_winner"></td>
+                <th>본대 전투 총 합수</th>
+                <td id="unit_battle_final_scene"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">감소된 방어측 민심</th>
+                <td id="loyalty_desc"></td>
+                <th>잔여 방어측 민심</th>
+                <td id="loyalty_final"></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <table>
+            <tbody>
+            <tr>
+                <th colspan="5" style="height:3em;">점령 여부</th>
+            </tr>
+            <tr>
+                <td colspan="5" style="height:3em;" id="is_occupation"></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <table>
+            <tbody>
+            <tr>
+                <th style="height:3em;">일기토 정보</th>
+                <th>일기토 총 합수</th>
+                <td id="hero_battle_battle_turn"></td>
+                <th>일기토 승리</th>
+                <td id="hero_battle_win"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">출전 영웅</th>
+                <th colspan="2">공격측</th>
+                <th colspan="2">수비측</th>
+            </tr>
+            <tr>
+                <td style="height:3em;">주장</td>
+                <td colspan="2" id="att_captain_desc"></td>
+                <td colspan="2" id="def_captain_desc"></td>
+            </tr>
+            <tr>
+                <td style="height:3em;">부장</td>
+                <td colspan="2" id="att_director_desc"></td>
+                <td colspan="2" id="def_director_desc"></td>
+            </tr>
+            <tr>
+                <td style="height:3em;">참모</td>
+                <td colspan="2" id="att_staff_desc"></td>
+                <td colspan="2" id="def_staff_desc"></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <table>
+            <tbody>
+            <tr>
+                <th rowspan="2">부대 정보</th>
+                <th colspan="2" style="height:3em;">공격측</th>
+                <th colspan="2">수비측</th>
+            </tr>
+            <tr>
+                <th style="height:3em;">사망</th>
+                <th>잔여</th>
+                <th>사망</th>
+                <th>잔여</th>
+            </tr>
+            <tr>
+                <th style="height:3em;">성벽</th>
+                <td id="att_wall_die"></td>
+                <td id="att_wall_remain"></td>
+                <td id="def_wall_die"></td>
+                <td id="def_wall_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">함정</th>
+                <td id="att_trap_die"></td>
+                <td id="att_trap_remain"></td>
+                <td id="def_trap_die"></td>
+                <td id="def_trap_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">목책</th>
+                <td id="att_abatis_die"></td>
+                <td id="att_abatis_remain"></td>
+                <td id="def_abatis_die"></td>
+                <td id="def_abatis_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">망루</th>
+                <td id="att_tower_die"></td>
+                <td id="att_tower_remain"></td>
+                <td id="def_tower_die"></td>
+                <td id="def_tower_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">민병</th>
+                <td id="att_worker_die"></td>
+                <td id="att_worker_remain"></td>
+                <td id="def_worker_die"></td>
+                <td id="def_worker_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">보병</th>
+                <td id="att_infantry_die"></td>
+                <td id="att_infantry_remain"></td>
+                <td id="def_infantry_die"></td>
+                <td id="def_infantry_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">극병</th>
+                <td id="att_pikeman_die"></td>
+                <td id="att_pikeman_remain"></td>
+                <td id="def_pikeman_die"></td>
+                <td id="def_pikeman_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">창병</th>
+                <td id="att_spearman_die"></td>
+                <td id="att_spearman_remain"></td>
+                <td id="def_spearman_die"></td>
+                <td id="def_spearman_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">정찰병</th>
+                <td id="att_scout_die"></td>
+                <td id="att_scout_remain"></td>
+                <td id="def_scout_die"></td>
+                <td id="def_scout_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">궁병</th>
+                <td id="att_archer_die"></td>
+                <td id="att_archer_remain"></td>
+                <td id="def_archer_die"></td>
+                <td id="def_archer_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">기병</th>
+                <td id="att_horseman_die"></td>
+                <td id="att_horseman_remain"></td>
+                <td id="def_horseman_die"></td>
+                <td id="def_horseman_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">수송병</th>
+                <td id="att_transporter_die"></td>
+                <td id="att_transporter_remain"></td>
+                <td id="def_transporter_die"></td>
+                <td id="def_transporter_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">중갑보병</th>
+                <td id="att_armed_infantry_die"></td>
+                <td id="att_armed_infantry_remain"></td>
+                <td id="def_armed_infantry_die"></td>
+                <td id="def_armed_infantry_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">중갑기병</th>
+                <td id="att_armed_horseman_die"></td>
+                <td id="att_armed_horseman_remain"></td>
+                <td id="def_armed_horseman_die"></td>
+                <td id="def_armed_horseman_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">노궁병</th>
+                <td id="att_bowman_die"></td>
+                <td id="att_bowman_remain"></td>
+                <td id="def_bowman_die"></td>
+                <td id="def_bowman_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">공성추</th>
+                <td id="att_battering_ram_die"></td>
+                <td id="att_battering_ram_remain"></td>
+                <td id="def_battering_ram_die"></td>
+                <td id="def_battering_ram_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">투석기</th>
+                <td id="att_catapult_die"></td>
+                <td id="att_catapult_remain"></td>
+                <td id="def_catapult_die"></td>
+                <td id="def_catapult_remain"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">팔륜누차</th>
+                <td id="att_adv_catapult_die"></td>
+                <td id="att_adv_catapult_remain"></td>
+                <td id="def_adv_catapult_die"></td>
+                <td id="def_adv_catapult_remain"></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <table>
+            <tbody>
+            <tr>
+                <th>약탈자원</th>
+                <th style="height:3em;">수비측 보유량</th>
+                <th>공격측 약탈량</th>
+            </tr>
+            <tr>
+                <th style="height:3em;">황금</th>
+                <td id="plunder_gold_own"></td>
+                <td id="plunder_gold_get"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">식량</th>
+                <td id="plunder_food_own"></td>
+                <td id="plunder_food_get"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">우마</th>
+                <td id="plunder_horse_own"></td>
+                <td id="plunder_horse_get"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">목재</th>
+                <td id="plunder_lumber_own"></td>
+                <td id="plunder_lumber_get"></td>
+            </tr>
+            <tr>
+                <th style="height:3em;">철강</th>
+                <td id="plunder_iron_own"></td>
+                <td id="plunder_iron_get"></td>
+            </tr>
+            </tbody>
+        </table>
+        <br/>
+        <table>
+            <tbody>
+            <tr>
+                <th colspan="5" style="height:3em;">획득 아이템</th>
+            </tr>
+            <tr>
+                <td colspan="5" style="height:3em;" id="reward"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<div id="scout_json_info">
+    <div class="background"></div>
+    <div class="cover">
+    </div>
+</div>
+
+<script type="text/javascript" src='/m_/cache/ns_m.army.js'></script>
+<script type="text/javascript" src='/m_/cache/ns_m.fort.js'></script>
+<script type="text/javascript" src='/m_/cache/ns_m.hero.js'></script>

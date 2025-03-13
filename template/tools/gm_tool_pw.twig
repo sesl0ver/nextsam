@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>NEXT 삼국지 GM TOOL</title>
+
+    <link rel="stylesheet" type="text/css" href="/tools/css/page/gm.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/page/base.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/page/layout.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/page/component.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/jquery-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/ui.jqgrid.css" />
+    <link rel="stylesheet" type="text/css" href="/tools/css/jquery.datetimepicker.min.css" />
+
+    <script type="text/javascript" src="/tools/js/moment.min.js"></script>
+    <script type="text/javascript" src="/tools/js/moment-timezone-with-data.js"></script>
+    <script type="text/javascript" src="/tools/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/tools/js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="/tools/js/jquery-ui-timepicker-addon.min.js"></script>
+    <script type="text/javascript" src="/tools/js/jquery.datetimepicker.full.min.js"></script>
+    <script type="text/javascript" src="/tools/js/jquery.jqGrid.min.js"></script>
+
+    <script type="text/javascript" src='/js_ext/axios.min.js'></script>
+
+    <script type="text/javascript" src="/tools/js/page/common.js"></script>
+    <script type="text/javascript" src="/tools/js/page/request_func.js"></script>
+
+    <style>
+        .ui-jqgrid tr.jqgrow td {font-weight: normal; overflow: hidden; white-space: normal !important; height:22px; padding: 0 2px 0 2px;border-bottom-width: 1px; border-bottom-color: inherit; border-bottom-style: solid;}
+        .ui-jqgrid .ui-jqgrid-titlebar { padding-left : 0.8em; font-size : 11pt; }
+        .ui-jqgrid .ui-jqgrid-titlebar span { font-size : 11pt; }
+    </style>
+
+    <script>
+        $.datetimepicker.setLocale('ko');
+        //<![CDATA[
+        let gm_info = {
+            'view_name' : '{{ params['view'] }}',
+            'selected_server_pk' : '{{ _SESSION['selected_server']['server_pk'] }}',
+            'selected_server_ip' : '{{ _SESSION['selected_server']['db_ip'] }}',
+            'selected_server_domain' : '{{ _SESSION['selected_server']['set_domain'] }}',
+            'selected_lord_pk' : '{{ _SESSION['selected_lord']['lord_pk'] }}',
+            'selected_posi_pk' : '{{ _SESSION['selected_terr']['posi_pk']}}',
+            'lord_selected' : {{ _SESSION['selected_lord'] ? 'true' : 'false' }},
+            'terr_selected' : {{ _SESSION['selected_terr'] ? 'true' : 'false' }},
+            'loaded_timestamp' : {{ time }},
+            'ts' : 0,
+            'opened_left_menu_idx': {{ opened_left_menu_idx }}
+        }
+
+        let ns_web_version  = 'gm';
+        let ns_cs = { m: {} }; // 마스터데이터용
+    </script>
+
+    <script type="text/javascript" src='/js_ext/big.min.js'></script>
+    <script type="text/javascript" src='/m_/cache/ns_m.item.js'></script>
+    <script type="text/javascript" src='/js_ext/axios.min.js'></script>
+    <script type="text/javascript" src='/js/ns_auth.js'></script>
+    <script type="text/javascript" src='/js/ns_engine.js'></script>
+    <script type="text/javascript" src='/js/ns_timer.js'></script>
+    <script type="text/javascript" src='/js/ns_global.js'></script>
+    <script type="text/javascript" src='/js/ns_xhr.js'></script>
+    <script type="text/javascript" src='/js/ns_math.js'></script>
+    <script type="text/javascript" src='/js/ns_util.js'></script>
+    <script type="text/javascript" src='/js/ns_i18n.js'></script>
+    <script>
+        ns_i18n.setResource(`{{ text_resource }}`);
+    </script>
+</head>
+<body id="main_stage">
+
+<div id="frame">
+    <div id="header">
+        <h1>Next 삼국지 GM TOOL</h1>
+        <div class="time_area">
+            <span id="server_time"></span>
+        </div>
+        <div id="gm_info">
+            <h4>GM 정보 : {{ _SESSION['gm_id'] }}</h4>
+            <ul style="list-style-type : none;">
+                <li class="bullet"><a href="/admin/gm/change_pw">비번변경</a></li>
+                <li class="bullet"><a href="/admin/gm/logout">로그아웃</a></li>
+                <li class="bullet" id="gm_permission">권한정보</li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div id="navi" class="cpn_box">{{ navi_path | raw }} &gt; Change password</div>
+        <div id="login" class="cpn_box">
+            <fieldset class="cpn_inp">
+                <legend>Project Next 삼국지 GM Tool</legend>
+                <div class="relatvie_block">
+                    <span class="input_title">이전 비밀번호 :&nbsp;</span><input type="text" name="prev_pw" id="prev_pw" /><div class="float_clear" />
+                    <span class="input_title">새로운 비밀번호 :&nbsp;</span><input type="password" name="new_pw" id="new_pw" /><div class="float_clear" />
+                    <span class="input_title">비밀번호 확인 :&nbsp;</span><input type="password" name="cf_pw" id="cf_pw" /><div class="float_clear" />
+                    <button id="do_change_pw">&nbsp;&nbsp;비밀번호 변경&nbsp;&nbsp;</button>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+
+    <!-- div id="gm_permition_info" style="display : none;">
+        <ul style="list-style-type : none; width : 100px;">
+            <li class="<?php echo ($_SESSION['gm_permit']['NOTICE'] === true) ? 'checked' : 'not'; ?>">공지</li>
+            <li class="<?php echo ($_SESSION['gm_permit']['BLOCK'] === true) ? 'checked' : 'not'; ?>">제재</li>
+            <li class="<?php echo ($_SESSION['gm_permit']['LOG'] === true) ? 'checked' : 'not'; ?>">로그 조회</li>
+            <li class="<?php echo ($_SESSION['gm_permit']['CHEAT'] === true) ? 'checked' : 'not'; ?>">치트툴</li>
+            <li class="<?php echo ($_SESSION['gm_permit']['SMONITOR'] === true) ? 'checked' : 'not'; ?>">서버 모니터링</li>
+            <li class="<?php echo ($_SESSION['gm_permit']['SCOMMAND'] === true) ? 'checked' : 'not'; ?>">서버 명령</li>
+            <li class="<?php echo ($_SESSION['gm_permit']['ENQUINARY'] === true) ? 'checked' : 'not'; ?>">일반 조회</li>
+        </ul>
+    </div -->
+    <div style="height : 40px; line-height : 30px; text-align : center;">
+        Copyright &copy; <span style="font-weight : bold; color : #d9a20f; font-family : arial, serif;">NextLv</span>. All rights reserved.
+    </div>
+</div>
+<br/>
+
+<script type="text/javascript" src="/tools/js/common/gm_log.js"></script>
+<script>
+$(() => {
+
+    $('#do_change_pw').mouseup(function(){
+        let prev_pw = $.trim($('#prev_pw').val());
+        let new_pw = $.trim($('#new_pw').val());
+        let cf_pw = $.trim($('#cf_pw').val());
+
+        if (prev_pw.length < 1)
+        {
+            alert('이전에 사용하던 비밀번호를 입력해주세요.');
+            $('#prev_pw')[0].focus();
+            return false;
+        }
+
+        if (new_pw.length < 1)
+        {
+            alert('바뀔 비밀번호를 입력해주세요.');
+            $('#new_pw')[0].focus();
+            return false;
+        }
+
+        if (cf_pw.length < 1)
+        {
+            alert('바뀔 비밀번호를 다시 입력해주세요.');
+            $('#cf_pw')[0].focus();
+            return false;
+        }
+
+        if (new_pw !== cf_pw)
+        {
+            alert('새로운 비밀번호와 확인을 위해 입력한 비밀번호가 일치하지 않습니다.');
+            $('#cf_pw').val('');
+            $('#cf_pw')[0].focus();
+            return false;
+        }
+
+        if (prev_pw.match(new_pw))
+        {
+            alert('이전 비밀번호와 새로운 비밀번호가 같을 수 없습니다.');
+            $('#prev_pw').val('');
+            $('#new_pw').val('');
+            $('#cf_pw').val('');
+            $('#prev_pw')[0].focus();
+            return false;
+        }
+
+        let post_data =  {'type' : 'change_pw', 'prev_pw' : prev_pw, 'new_pw' : new_pw, 'cf_pw' : cf_pw};
+        $.post('/admin/gm/changePassword', post_data, function(data){
+            // 로그인 요청 콜백
+            if (data.result == 'ok')
+            {
+                alert('비밀번호가 변경되었습니다.');
+                document.location.href = '/admin/gm';
+                return;
+            } else if (data.result == 'fail') {
+                if (data.msg == 'prev_pw_not_matched')
+                {
+                    alert('이전에 사용하던 비밀번호가 다릅니다. 확인해주세요.');
+                    $('#prev_pw').val('');
+                    $('#prev_pw')[0].focus();
+                    return false;
+                } else if (data.msg == 'not_matched_new_password') {
+                    alert('새로운 비밀번호와 확인을 위해 입력한 비밀번호가 일치하지 않습니다.');
+                    $('#new_pw').val('');
+                    $('#cf_pw').val('');
+                    $('#new_pw')[0].focus();
+                    return false;
+                } else if (data.msg == 'prev_pw_equal_new_pw') {
+                    alert('이전 비밀번호와 새로운 비밀번호가 같을 수 없습니다.');
+                    $('#prev_pw').val('');
+                    $('#new_pw').val('');
+                    $('#cf_pw').val('');
+                    $('#prev_pw')[0].focus();
+                    return false;
+                } else {
+                    alert(data.msg);
+                    return false;
+                }
+            }
+        }, 'json');
+    });
+});
+</script>
+</body>
+</html>

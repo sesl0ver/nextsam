@@ -1,0 +1,59 @@
+<h2>[ {{ _SESSION['selected_server']['server_name'] }} ] 이벤트 일정 관리 툴</h2>
+<hr />
+<table id="event_manage_list" class="jqGridTable">
+</table>
+<div id="pager_event_manage_list"></div>
+
+<div id="write_event_manage_form" title="이벤트 등록">
+	<div>
+		<div>
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">메모</div>
+			<div><input type="text" id="event_manage_title" style="width:278px;" /></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">시작일</div>
+			<div><input type="text" id="event_manage_start_dt" value="<?php echo date('Y-m-d 00:00:00');?>" /></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">종료일</div>
+			<div><input type="text" id="event_manage_end_dt" value="<?php echo date('Y-m-d 23:59:59');?>" /></div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">아이템</div>
+			<div>
+				{% set item_type_array = {
+					0: { display_type: 'P', title: '증가' },
+					1: { display_type: 'S', title: '단축' },
+					2: { display_type: 'L', title: '증가' },
+					3: { display_type: 'D', title: '증가' },
+					4: { display_type: 'B', title: '증가' },
+					5: { display_type: 'H', title: '증가' }
+				} %}
+				<select id="event_manage_item_type">
+					{% for k,v in item_type_array %}
+						<option value="{{ v['display_type'] }}">{{ v['title'] }}</option>
+					{% endfor %}
+				</select>
+				<select id="event_manage_item">
+				</select>
+			</div>
+			<div style="clear:both;"></div>
+		</div>
+		<div style="margin-top:6px;">
+			<div style="width:60px;float:left;text-align:right;font-weight:bold;padding-right:12px;">수량</div>
+			<div><input type="text" id="event_manage_item_cnt" value="1" /></div>
+			<div style="clear:both;"></div>
+		</div>
+	</div>
+</div>
+
+<br/>
+
+<div style="text-align:right;">
+	<button id="write_event_manage_btn" style="padding:0.4em">이벤트 작성</button>
+	<button id="modify_event_manage_btn" style="padding:0.4em">이벤트 수정</button>
+	<button id="delete_event_manage_btn" style="padding:0.4em">이벤트 삭제</button>
+</div>

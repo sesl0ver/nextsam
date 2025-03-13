@@ -1,0 +1,31 @@
+@charset "utf-8";
+
+#ns_dialog_item_use {
+    z-index: 2356;
+}
+
+#ns_dialog_item_use .ns_panel_flex {
+    margin-bottom: 5px;
+}
+
+#ns_dialog_item_use .item_description {
+    padding: 0 5px;
+}
+
+#ns_dialog_item_use table .col1 {
+    width: 50%;
+}
+
+#ns_dialog_item_use .wrap_range_input label {
+    position: relative;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    line-height: 39px;
+    gap: 4px;
+}
+
+#ns_dialog_item_use input[name=item_use_slider] {
+    width: 60%;
+}

@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+#ns_dialog_build_Market {
+
+}
+
+#ns_dialog_build_Market div.ns_panel_sub_top.ns_panel_flex > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+#ns_dialog_build_Market .market_list_warp {
+    width: 320px;
+    margin: 0 auto;
+}
+
+#ns_button_build_speedup_Market {
+    width: 120px;
+}
+
+#ns_dialog_build_Market_buy .item_image {
+    margin-bottom: 5px;
+}
+
+#ns_dialog_build_Market_buy .item_description {
+    padding: 0 5px;
+    width: 320px;
+}
+
+#ns_dialog_build_Market_buy table .content_shop_item {
+    display: none;
+}
+
+#ns_dialog_build_Market_buy table.show_shop .content_shop_item {
+    display: table-cell;
+}
+#ns_dialog_build_Market_buy .ns_panel_pop_button .button_default {
+    width: 80px;
+    margin: 0 20px;
+}

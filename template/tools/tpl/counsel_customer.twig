@@ -1,0 +1,67 @@
+<h2>문의 접수</h2>
+<hr />
+<select id="list_type">
+	<option value="">전체문의</option>
+	<option value="N">미완료문의</option>
+	<option value="Y">완료문의</option>
+</select>
+<select id="list_type2">
+	<option value="">전체</option>
+	<option value="gameplay">게임 실행</option>
+    <option value="payment">결제 관련</option>
+    <option value="hacking">계정 도용/해킹</option>
+    <option value="etc">기타</option>
+</select>
+<input type="text" id="search_keyword" value="" />
+<button id="sort_btn">검색하기</button>
+
+<div id="search_result" style="margin-top:10px;">
+<table id="counsel_customer" class="jqGridTable">
+</table>
+<div id="pager_counsel_customer"></div>
+</div>
+
+<style type="text/css">
+#view_counsel table { table-layout:fixed; border-collapse:collapse; border:1px solid #000; width:100%; text-align:center; }
+#view_counsel th, #view_counsel td { border : 1px solid #000; padding:.4em; }
+#view_counsel th { width:8em; }
+</style>
+
+<div id="view_counsel" title="문의 접수 상세 보기">
+<table style="">
+  <tbody>
+    <tr>
+      <th>문의 번호</th>
+      <td><p class="coun_pk"></p></td>
+      <th>문의 유형</th>
+      <td><p class="type"></p></td>
+    </tr>
+    <tr>
+      <th>군주명</th>
+      <td><p class="lord_name"></p></td>
+      <th>Account PK</th>
+      <td><p class="acco_pk"></p></td>
+    </tr>
+    <tr>
+      <th>브라우저</th>
+      <td><p class="user_agent"></p></td>
+      <th>해상도</th>
+      <td><p class="resolution"></p></td>
+    </tr>
+    <tr>
+      <th>이메일</th>
+      <td><p class="email"></p></td>
+      <th>문의 시간</th>
+      <td><p class="send_dt"></p></td>
+    </tr>
+    <tr>
+      <th>문의 제목</th>
+      <td colspan="3"><p class="subject" style="text-align:left;"></p></td>
+    </tr>
+    <tr>
+      <th style="height:200px;">문의 내용</th>
+      <td colspan="3"><pre class="content" style="width:100%;height:100%;text-align:left;"></pre></td>
+    </tr>
+  </tbody>
+</table>
+</div>

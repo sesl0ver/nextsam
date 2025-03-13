@@ -1,0 +1,1160 @@
+@charset "utf-8";
+
+/* display */
+.show {
+
+}
+
+.open .dialog_wrap {
+    animation: open .15s ease-in-out 1 forwards;
+}
+
+@keyframes open {
+    0% {
+        transform: scale(30%);
+    }
+    75% {
+        transform: scale(105%);
+    }
+    80% {
+        transform: scale(95%);
+    }
+    85% {
+        transform: scale(103%);
+    }
+    90% {
+        transform: scale(98%);
+    }
+    95% {
+        transform: scale(101%);
+    }
+    100% {
+        backface-visibility: hidden;
+        transform: scale(100%) translateZ(0);
+    }
+}
+
+.hide {
+    display: none !important;
+    pointer-events: none !important;
+}
+
+/* dialog_trans */
+.dialog_trans {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2350;
+}
+
+/* dialog_full */
+.dialog_full {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2250;
+}
+
+.dialog_full .dialog_header {
+    display: block;
+    position: relative;
+    height: 60px;
+    line-height: 46px;
+    background: url('/image/ui/dialog/dialog_full/dlg_full_upper_l.png') no-repeat top left,
+                url('/image/ui/dialog/dialog_full/dlg_full_upper_r.png') no-repeat top right,
+                url('/image/ui/dialog/dialog_full/dlg_full_upper.png') no-repeat top center;
+    background-size: 117px 60px, 117px 60px, calc(100% - 234px) 60px;
+    text-align:center;
+    color: #FFFFFF;
+    font-weight: bold;
+    z-index: 1;
+}
+
+.dialog_full .dialog_header_left {
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    width: 45px;
+    height: 46px;
+    padding-top: 2px;
+    z-index: 3;
+    text-align: center;
+}
+
+.dialog_full .dialog_header_right {
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    width: 45px;
+    height: 46px;
+    padding-top: 2px;
+    z-index: 3;
+    text-align: center;
+}
+
+.dialog_full .dialog_title {
+    position: relative;
+    margin: 0 auto;
+    padding: 5px 0;
+    width: 240px;
+    height: 40px;
+    z-index: 2;
+    text-align: center;
+    text-shadow: 0 2px 1px #000;
+}
+
+.dialog_full .dialog_title .content_title{
+    vertical-align: middle;
+    color: #FFF;
+}
+
+.dialog_full .dialog_content {
+    display: block;
+    top: -6px;
+    padding: 0 10px;
+    position: relative;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_full/dlg_full_side_l.png') no-repeat top left,
+                url('/image/ui/dialog/dialog_full/dlg_full_side_r.png') no-repeat top right;
+    background-size: 60px calc(100% - 34px), 60px calc(100% - 34px);
+    width: auto;
+    height: calc(100% - 66px);
+}
+
+.dialog_full .dialog_content::before {
+    display: block;
+    position: absolute;
+    height: calc(100% - 4px);
+    content: ' ';
+    background: url('/image/ui/bg/dot_tile_bg_2.png') repeat;
+    background-size: 40px 40px;
+    left: 9px;
+    right: 9px;
+    top: 0;
+    z-index: -1;
+}
+
+.dialog_full .content {
+    z-index: 0;
+}
+
+.dialog_full .dialog_footer {
+    display: block;
+    position: relative;
+    bottom: 59px;
+    width: 100%;
+    height: 61px;
+    pointer-events: none;
+    background: url('/image/ui/dialog/dialog_full/dlg_full_lower.png') no-repeat bottom 1% center,
+                url('/image/ui/dialog/dialog_full/dlg_full_lower_l.png') no-repeat bottom 1% left,
+                url('/image/ui/dialog/dialog_full/dlg_full_lower_r.png') no-repeat bottom 1% right;
+    background-size:calc(100% - 120px) 61px, 60px 61px, 60px 61px;
+}
+
+/*TODO 크기를 공용으로 쓰는 부분, 확인 후 별도 분리 필요! */
+.dialog_full.size-full .dialog_content .content {
+    padding-bottom: 100px;
+    min-height: calc(100% - 140px);
+}
+
+.dialog_full.size-large .dialog_content .content {
+    padding-bottom: 40px;
+    background-size: 65px 65px;
+}
+
+
+/* dialog_pop */
+.dialog_pop {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 2350;
+}
+
+.dialog_pop .dialog_header {
+    display: block;
+    position: relative;
+    height: 39px;
+    line-height: 34px;
+    text-align: center;
+    font-weight: bold;
+    font-size: .8rem;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px #B28A59, -1px -1px 1px #472400;
+    margin-bottom: -3px;
+}
+
+.dialog_pop .dialog_pop_header {
+    display: block;
+    position: relative;
+    width: auto;
+    height: 45px;
+    line-height: 23px;
+    background: url('/image/ui/dialog/dialog_pop/hdr_l.png') no-repeat center left,
+                url('/image/ui/dialog/dialog_pop/hdr_r.png') no-repeat center right,
+                url('/image/ui/dialog/dialog_pop/hdr_bg.png') no-repeat center center;
+    background-size: 36px 45px, 36px 45px, calc(100% - 70px) 45px;
+    content: ' ';
+    z-index: 1;
+}
+
+.dialog_pop .content_pop_title {
+    position: relative;
+    line-height: 32px;
+    text-shadow: 1px 1px #000;
+}
+
+.dialog_pop .dialog_content {
+    display: block;
+    position: relative;
+    width: auto;
+    max-height: 70vh;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_pop/con_l.png') repeat-y left top,
+                url('/image/ui/dialog/dialog_pop/con_r.png') repeat-y right top,
+                url('/image/ui/bg/dot_tile_bg_1.png') repeat  left top;
+    background-size: 17px 5px, 17px 5px, 40px 40px;
+    margin: 0 4px;
+}
+
+.dialog_pop .dialog_content .content {
+    padding: 5px;
+    font-size: .75rem;
+    color: #FFF;
+    margin:0 8px;
+    min-height: 100%;
+}
+
+.dialog_pop .dialog_footer
+{
+    display: block;
+    position: relative;
+    height: 21px;
+    background: url('/image/ui/dialog/dialog_pop/bot_l.png') no-repeat left top,
+                url('/image/ui/dialog/dialog_pop/bot_r.png') no-repeat right top,
+                url('/image/ui/dialog/dialog_pop/bot_bg.png') no-repeat center top;
+    background-size: 17px 21px, 17px 21px, calc(100% - 34px) 21px;
+    margin: -9px 4px 0 4px;
+}
+
+/* dialog_package */
+.dialog_package {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 2468;
+}
+
+.dialog_package .dialog_header {
+    display: block;
+    position: relative;
+    width: 452px;
+    height: 39px;
+    line-height: 34px;
+    text-align: center;
+    font-weight: bold;
+    font-size: .8rem;
+    color: #FFFFFF;
+    text-shadow: 1px 1px 1px #B28A59, -1px -1px 1px #472400;
+    margin-bottom: -3px;
+}
+
+.dialog_package .dialog_pop_header {
+    display: block;
+    position: relative;
+    width: 452px;
+    height: 45px;
+    background-image: url("/image/ui/pop_limited_product.png");
+    background-size: 452px 402px;
+    background-repeat: no-repeat;
+    line-height: 23px;
+    content: ' ';
+    z-index: 1;
+}
+
+.dialog_package .content_pop_title {
+    position: relative;
+    line-height: 46px;
+    text-shadow: 0 2px 1px #000;
+    font-size: 1rem;
+}
+
+.dialog_package .dialog_content {
+    display: block;
+    position: relative;
+    width: 452px;
+    height: 350px !important;
+    overflow: hidden;
+    background-image: url("/image/ui/pop_limited_product.png");
+    background-size: 452px 402px;
+    background-position: 0 -36px;
+    background-repeat: no-repeat;
+}
+
+.dialog_package .dialog_content .content {
+    font-size: .75rem;
+    color: #FFF;
+    margin:0 8px;
+    height:100%;
+}
+
+.dialog_package .dialog_footer
+{
+    display: block;
+    position: relative;
+    width: 452px;
+    height: 16px;
+    background-image: url("/image/ui/pop_limited_product.png");
+    background-size: 452px 402px;
+    background-position: 0 bottom;
+    background-repeat: no-repeat;
+}
+
+/* dialog_sub */
+.dialog_sub {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% * 0.8);
+    z-index: 2250;
+}
+
+.dialog_sub .dialog_header::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 3px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_sub/top_left.png') no-repeat;
+    content: ' ';
+}
+
+.dialog_sub .dialog_header {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_sub/top_bg.png');
+    font-size: .8rem;
+    color: #fcdc80;
+    text-shadow: 0 1px 1px #bba25f;
+    font-weight: bold;
+}
+
+.dialog_sub .dialog_header::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 3px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_sub/top_right.png') no-repeat;
+    content: ' ';
+}
+
+.dialog_sub .dialog_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dialog_sub .dialog_content::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_sub/mid_left.png') repeat-y;
+    content: ' ';
+}
+
+.dialog_sub .dialog_content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    word-break: break-all;
+    background: url('/image/ui/bg/paper_tile_bg.png') repeat;
+}
+
+.dialog_sub .dialog_content::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_sub/mid_right.png') repeat-y;
+    content: ' ';
+}
+
+.dialog_sub .dialog_footer::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 6px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_sub/bot_left.png') no-repeat;
+    content: ' ';
+}
+
+.dialog_sub .dialog_footer {
+    position: relative;
+    width: 100%;
+    height: 3px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_sub/bot_bg.png');
+}
+
+.dialog_sub .dialog_footer::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 3px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_sub/bot_right.png') no-repeat;
+    content: ' ';
+}
+
+.dialog_normal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% * 0.8);
+    z-index: 2450;
+}
+
+.dialog_normal .dialog_header::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 29px;
+    height: 29px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_normal/top_left.png') no-repeat;
+    content: ' ';
+}
+
+.dialog_normal .dialog_header {
+    position: relative;
+    width: 100%;
+    height: 29px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_normal/top_bg.png');
+    font-size: .8rem;
+    color: #fcdc80;
+    text-shadow: 0 1px 1px #bba25f;
+    font-weight: bold;
+}
+
+.dialog_normal .dialog_header::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 44px;
+    height: 29px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_normal/top_right.png') no-repeat;
+    content: ' ';
+}
+
+.dialog_normal .dialog_title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dialog_normal .dialog_content::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 100%;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_normal/mid_left.png') repeat-y;
+    content: ' ';
+}
+
+.dialog_normal .dialog_content {
+    position: relative;
+    width: 100%;
+    max-height: 100%;
+    overflow: hidden;
+    word-break: break-all;
+    background: url('/image/ui/bg/paper_tile_bg.png') repeat;
+}
+
+.dialog_normal .dialog_content::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 100%;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_normal/mid_right.png') repeat-y;
+    content: ' ';
+}
+
+.dialog_normal .dialog_content .content {
+    font-size: .75rem;
+}
+
+.dialog_normal .dialog_footer::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 6px;
+    height: 6px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_normal/bot_left.png') no-repeat;
+    content: ' ';
+}
+
+.dialog_normal .dialog_footer {
+    position: relative;
+    width: 100%;
+    height: 6px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_normal/bot_bg.png');
+}
+
+.dialog_normal .dialog_footer::after {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 6px;
+    height: 6px;
+    overflow: hidden;
+    background: url('/image/ui/dialog/dialog_normal/bot_right.png') no-repeat;
+    content: ' ';
+}
+
+
+/* dialog_normal_hero_select */
+.dialog_normal_hero_select {
+    position: absolute;
+    top: 141px;
+    left: 66px;
+    width: 618px;
+    z-index: 2350;
+}
+.dialog_action {
+    z-index: 2700;
+}
+
+/* dialog size */
+.size-small,
+.size-medium,
+.size-large,
+.size-card,
+.size-keypad,
+.size-counsel,
+.size-goto {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+}
+.size-full {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .8);
+}
+
+.size-action {
+}
+
+.size-card .dialog_wrap {
+    margin: auto;
+    width: 277px;
+}
+
+.size-keypad .dialog_wrap {
+    margin: auto;
+    width: 300px;
+}
+
+.size-counsel .dialog_wrap {
+    margin: auto;
+    width: 337px;
+    height: 164px;
+    background:url('/image/ui/dialog/etc/counsel.png') no-repeat;
+    background-size: 337px 164px;
+    z-index: 2700;
+}
+
+.dialog_action .dialog_wrap {
+    margin: auto;
+    border-radius: 5px;
+    width: 241px;
+    height: 34px;
+    background: rgba(0, 0, 0, .8);
+    z-index: 2750;
+}
+
+.size-small .dialog_wrap {
+    margin: auto;
+    width: 66%;
+    max-width: 316px;
+}
+
+.size-medium .dialog_wrap {
+    margin: auto;
+    width: 80%;
+    max-width: 384px;
+}
+
+.size-large .dialog_wrap {
+    margin: auto;
+    width: 94%;
+    height: 94%;
+    max-width: 452px;
+}
+
+.size-full .dialog_wrap {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    max-width: 480px;
+}
+
+.size-goto .dialog_wrap {
+    margin: auto;
+    width: 100%;
+    height: 100px;
+    max-width: 240px;
+}
+
+.size-small .dialog_content,
+.size-medium .dialog_content,
+.size-large .dialog_content,
+.size-full .dialog_content,
+.size-keypad .dialog_content,
+.size-goto .dialog_content {
+    height: calc(100% - 54px);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-size: .75rem !important;
+}
+
+/* 신규 유형 다이얼로그 - dialog_build */
+
+.dialog_building {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2250;
+}
+
+.dialog_building .dialog_wrap{
+    position: relative;
+}
+.dialog_building .dialog_wrap::before{
+    position: absolute;
+    display: inline-block;
+    width: calc(100% - 18px);
+    height: calc(100% - 18px);
+    background: url('/image/ui/bg/dot_tile_bg_2.png') repeat center;
+    background-size: 40px 40px;
+    content:' ';
+    left: 9px;
+    top: 9px;
+}
+
+.dialog_building .dialog_header_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 45px;
+    height: 46px;
+    padding-top: 2px;
+    z-index: 3;
+    text-align: center;
+}
+
+.dialog_building .dialog_header {
+    display: block;
+    position: relative;
+    height: 55px;
+    line-height: 46px;
+    background: url('/image/ui/dialog/dialog_building/popb_upper_l.png') no-repeat top left,
+    url('/image/ui/dialog/dialog_building/popb_upper_r.png') no-repeat top right,
+    url('/image/ui/dialog/dialog_building/popb_upper.png') no-repeat center center;
+    background-size: 42px 55px, 42px 55px, calc(100% - 82px)  55px;
+    text-align:center;
+    color: #dce7f1;
+    font-weight: bold;
+    z-index:1;
+}
+
+/* 전용 닫기 버튼 */
+.dialog_building .button_back {
+    position:relative;
+    display: inline-block;
+    width: 46px;
+    height: 47px;
+    line-height: 47px;
+    background: url('/image/button/button_popb_close.png') no-repeat;
+    background-size: 46px 141px;
+    content:' ';
+    left: 5px;
+    top: -5px;
+}
+
+.dialog_building .dialog_title {
+    position: relative;
+    display: flow;
+    width: auto;
+    height: 55px;
+    margin: 0 70px;
+    text-align: center;
+    background: url('/image/ui/dialog/dialog_building/popb_title_L.png') no-repeat top left, url('/image/ui/dialog/dialog_building/popb_title_R.png') no-repeat top right, url('/image/ui/dialog/dialog_building/popb_title.png') no-repeat center center;
+    background-size: 30px 55px, 30px 55px, calc(100% - 58px) 55px;
+    line-height: 55px;
+    color: #FFEBD4;
+    top: 2px;
+    padding: 0px 30px;
+    text-shadow: 0px 2px 2px #000;
+}
+
+/* 홈버튼은 아예 숨기나? 확인 필요. */
+.dialog_building .button_close_all {
+    display: none;
+    pointer-events: none;
+}
+
+.dialog_building .dialog_content {
+    position:relative;
+    background: url('/image/ui/dialog/dialog_building/popb_side_l.png') no-repeat center left,
+    url('/image/ui/dialog/dialog_building/popb_side_r.png') no-repeat center right;
+    background-size: 42px 100%, 42px 100%;
+    margin-top: -2px;
+    padding: 0 10px;
+    overflow: hidden;
+    height: calc(100% - 64px);
+}
+
+.dialog_building .ns_panel_sub_top {
+    background: url('/image/ui/sub/paper_tile_top.png') repeat-x top center;
+    background-size: 45px 40px;
+    width: auto;
+    padding: 0px 10px;
+    height: 40px;
+    position: relative;
+}
+
+.dialog_building .dialog_footer {
+    position: absolute;
+    background: url('/image/ui/dialog/dialog_building/popb_lower_l.png') no-repeat bottom left,
+    url('/image/ui/dialog/dialog_building/popb_lower_r.png') no-repeat bottom right,
+    url('/image/ui/dialog/dialog_building/popb_lower.png') no-repeat bottom center;
+    background-size: 39px 39px, 39px 39px, calc(100% - 76px) 39px;
+    height:39px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+/* dialog_select_box */
+.dialog_select_box {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    z-index: 2350;
+}
+
+.dialog_select_box .dialog_content .content {
+    font-size: .75rem;
+    background: url('/image/ui/bg/dot_tile_bg_1.png') repeat;
+    background-size: 40px 40px;
+    color: #ffffff;
+    height:100%;
+}
+
+/* panel */
+.ns_panel_white {
+    margin: 5px;
+    border: 1px solid #000;
+    background-color: #ffffff;
+    box-shadow: 0 1px 2px 1px #0000008a;
+    border-radius: 4px;
+}
+
+.ns_panel_basic {
+    margin: 0;
+}
+
+.ns_panel_flex {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.ns_panel_flex_gap_5 {
+    gap: 5px;
+}
+
+.ns_panel_flex_center {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    flex-flow: wrap;
+}
+
+.ns_panel_inline_flex {
+    display: inline-flex;
+}
+
+.ns_panel_flex_column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+.ns_panel_flex_item_auto {
+    flex: 0 0 auto;
+}
+
+.ns_panel_flex_item_middle {
+    display: flex;
+    align-items: center;
+}
+
+.ns_panel_flex_info {
+    display: flex;
+    position: relative;
+    gap: 0 10px;
+    padding: 5px 10px;
+}
+
+.ns_panel_flex_info>div:first-child{
+    margin: auto;
+    flex: 0 0 auto;
+}
+
+.ns_panel_flex_info>div:last-child{
+    display: inline-flex;
+    position: relative;
+    min-height: 65px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto;
+    flex-shrink: 1;
+}
+
+.ns_panel_contents_padding {
+    width: 400px;
+    margin: auto;
+    padding-top: 8px;
+}
+
+.ns_panel_heavy {
+    background: #2b3c57;
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    width: auto;
+    height:auto;
+    line-height: 30px;
+    color: #B4D2EC;
+    font-weight: bold;
+    box-shadow: 0 1px 2px 0 #0008;
+}
+
+.ns_panel_margin_2
+{
+    margin: 2px;
+}
+
+.ns_panel_trans {
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+
+.ns_panel_trans_top {
+    padding-top: 4px;
+}
+
+.ns_panel_time_info {
+    background: url('/image/ui/sub/encounter_desc_bg.png') no-repeat center center;
+    background-size: 286px 24px;
+    margin: 16px 0;
+}
+
+.ns_panel_trans_bottom {
+    padding-bottom: 4px;
+}
+
+.ns_panel_most {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ns_panel_position_relative {
+    position: relative;
+    text-align: center;
+}
+
+.ns_panel_pop_button {
+    padding: 5px;
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+.ns_panel_tab {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.ns_panel_sub_top {
+    position: relative;
+    z-index: 1;
+}
+
+.ns_panel_table_title
+{
+    margin:5px 0 5px 0;
+    height: 30px;
+    width: auto;
+    background: url('/image/ui/sub/table_tile_bg.png') repeat;
+    background-size: 40px 40px;
+    padding: 5px 10px 5px 10px;
+    color: #B4D2EC;
+    border-radius: 3px;
+}
+
+.ns_panel_grid_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.ns_panel_grid_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.ns_panel_grid_4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.ns_panel_grid_5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.ns_panel_grid_6 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.ns_panel_grid_7 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.ns_panel_grid_center {
+    justify-self: center;
+    align-self: center;
+}
+
+.ns_panel_sub_top
+{
+    line-height: 42px;
+    height: 42px;
+    width: auto;
+    text-align: center;
+    background: url('/image/ui/subtitle_bg.png') no-repeat;
+    background-size: 480px 42px;
+    color: #B4D2EC;
+}
+
+.ns_panel_build_upgrade {
+    width: 300px;
+    margin: 10px auto;
+    min-width: 300px;
+    max-width: 0;
+    text-align:center;
+}
+
+.ns_panel_build_button_left {
+    height: 26px;
+    line-height: 26px;
+    margin: auto 0;
+}
+
+.ns_panel_build_button_right {
+    margin: auto 0 auto auto;
+    height:27px;
+    line-height: 27px;
+}
+
+.ns_panel_contents {
+    width: 96%;
+    margin: auto;
+}
+
+.ns_panel_margin_center {
+    margin: 0 auto;
+}
+
+.ns_panel_flex_middle {
+    margin: auto 0;
+}
+
+.ns_panel_margin_auto {
+    margin: auto;
+}
+
+.ns_panel_margin_top {
+    margin-top: 5px;
+}
+
+.ns_panel_margin_bottom {
+    margin-bottom: 5px;
+}
+
+.ns_panel_margin_top_x2 {
+    margin-top: 10px;
+}
+
+.ns_panel_margin_bottom_x2 {
+    margin-bottom: 10px;
+}
+
+.ns_panel_margin_y {
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.ns_panel_margin_yy {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.ns_panel_margin_x {
+    margin-left: 5px !important;
+    margin-right: 5px !important;
+}
+
+.ns_panel_margin_xx {
+    margin-left: 10px !important;
+    margin-right: 10px !important;
+}
+
+.ns_panel_margin_5 {
+    margin: 5px;
+}
+
+.ns_panel_margin_10{
+    margin: 10px;
+}
+
+.ns_panel_flex_left {
+    margin: auto auto auto 0;
+}
+
+.ns_panel_flex_right {
+    margin: auto 0 auto auto;
+}
+
+.ns_panel_flex_right_mr_5{
+    margin: auto 5px auto auto;
+}
+
+.ns_panel_full_contents {
+    margin: 2px;
+    min-width: 308px;
+    max-width: 100%;
+}
+
+.ns_panel_pop_button {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.ns_panel_tooltip {
+    background:
+            url("/image/ui/dialog/etc/tooltip_lower_l.png") no-repeat bottom left, url("/image/ui/dialog/etc/tooltip_lower_r.png") no-repeat bottom right, url("/image/ui/dialog/etc/tooltip_lower.png") repeat-x bottom center,
+            url("/image/ui/dialog/etc/tooltip_side_l.png") repeat-y top left, url("/image/ui/dialog/etc/tooltip_side_r.png") repeat-y top right,
+            url("/image/ui/bg/dot_tile_bg_3.png");
+    background-size:
+            14px 14px, 14px 14px, 1px 14px,
+            14px 14px, 14px 14px,
+            40px 40px;
+}
+
+.ns_panel_tooltip > .ns_panel_tooltip_header {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 14px;
+    background: url("/image/ui/bg/dot_tile_bg_3.png");
+    background-size: 40px 40px;
+}
+
+.ns_panel_tooltip > .ns_panel_tooltip_header .ns_panel_tooltip_header_l {
+    height: 14px;
+    background: url("/image/ui/dialog/etc/tooltip_upper_l.png") no-repeat top left, url("/image/ui/dialog/etc/tooltip_upper.png") repeat-x top center;
+    background-size: 14px 14px, 1px 14px;
+    flex: 1 0 auto;
+}
+
+.ns_panel_tooltip > .ns_panel_tooltip_header .ns_panel_tooltip_header_c {
+    width: 71px;
+    height: 14px;
+    background: url("/image/ui/dialog/etc/tooltip_upper_center.png") no-repeat top center;
+    background-size: 71px 14px;
+}
+
+.ns_panel_tooltip > .ns_panel_tooltip_header .ns_panel_tooltip_header_r {
+    height: 14px;
+    background: url("/image/ui/dialog/etc/tooltip_upper_r.png") no-repeat top right, url("/image/ui/dialog/etc/tooltip_upper.png") repeat-x top center;
+    background-size: 14px 14px, 1px 14px;
+    flex: 1 0 auto;
+}
+
+/* dialog_goto_search */
+.dialog_goto_search {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2250;
+}
+
+.dialog_goto_search .button_round_close {
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    z-index: 1;
+}
+
+.dialog_goto_search .dialog_wrap{
+    position: relative;
+}

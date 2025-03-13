@@ -1,0 +1,478 @@
+<div id="ns_dialog_build_CastleWall">
+    <span id="ns_button_build_CastleWall_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+                <span class="content_level"></span>
+                <span class="content_upgrading">&nbsp;&nbsp;{{ i18n.t('construction_upgrading') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_build_CastleWall_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_build_CastleWall_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_sub_top ns_panel_flex">
+                <div class="ns_panel_build_button_left ns_panel_flex_item_auto">
+                    <!-- span id="ns_button_build_desc_CastleWall"></span -->
+                </div>
+                <div class="ns_panel_build_button_left ns_panel_flex_item_auto">
+                </div>
+                <div class="ns_panel_build_button_right ns_panel_flex_item_auto">
+                    <!-- ##### BUIL_BTN_RIGHT ##### -->
+                </div>
+            </div>
+
+            <div class="content">
+
+                <!-- ########## -->
+
+                <div class="ns_panel_basic content_build_desc_wrap">
+                    <div class="ns_panel_contents_padding">
+
+                        <div class="content_build_desc">
+
+                            <p class="content_build_desc_def"></p>
+                            <p class="content_build_desc_footnote"></p>
+                            <!-- ##### HERO_ASSIGN_1 ##### -->
+                            <div class="ns_panel_trans content_build_desc_vr">
+                                <div class="hr_normal_line "></div>
+                            </div>
+
+                            <div class="content_card_empty ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto ns_panel_position_relative">
+                                    <span class="button_hero_no_assign"></span>
+                                    <span id="ns_button_build_no_assign_CastleWall"></span>
+                                </div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_assign_effect">
+                                        <p>{{ i18n.t('hero_assign_add_effect') }}</p>
+                                        <p class="content_build_desc_assign"></p>
+                                        <p class="content_build_desc_assign_footnote"></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content_card ns_panel_flex">
+                                <div class="ns_panel_position_relative ns_panel_flex_item_auto">
+                                    <div class="content_hero_detail"></div>
+                                    <span id="ns_button_build_assign_CastleWall"></span>
+                                </div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_effect">
+                                        <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa"></span></p>
+                                        <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ##### HERO_ASSIGN_1 ##### -->
+                        </div>
+                        <!-- ##### HERO_ASSIGN_2 ##### -->
+                        <div class="content_build_desc_sm">
+
+                            <div class="content_card_sm_empty ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="hero_card_sm ns_panel_flex">
+                                        <div class="hero_card_sm_image ns_panel_flex_item_auto"></div>
+                                        <div class="hero_card_sm_desc ns_panel_flex_item_auto">
+                                            <p class="hero_card_sm_name">{{ i18n.t('assign') }}</p>
+                                            <p class="hero_card_sm_level">{{ i18n.t('none') }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="vr_hero_card_sm ns_panel_flex_item_auto"></div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_effect_sm">
+                                        <p><span></span><span class="content_build_desc_assign_sm"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="content_card_sm ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_sm"></div>
+                                </div>
+                                <div class="vr_hero_card_sm ns_panel_flex_item_auto"></div>
+                                <div class="ns_panel_flex_item_auto">
+                                    <div class="content_hero_effect_sm">
+                                        <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa_sm"></span></p>
+                                        <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill_sm"></span></p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!-- ##### HERO_ASSIGN_2 ##### -->
+                    </div>
+                </div>
+
+                <div class="ns_panel_heavy ns_panel_margin_10 content_build_level_desc">
+                </div>
+
+                <div class="ns_panel_trans">
+                    <div class="ns_panel_build_upgrade content_build_cons">
+                        <div><span class="content_build_construct_hero">-</span><br /><span class="content_build_left_time">-</span></div>
+                        <div class="ns_panel_trans">
+                            <span id="ns_button_build_speedup_CastleWall">{{ i18n.t('encourage') }}</span>
+                            <!-- <span id="ns_button_buil_cancel_CastleWall">취소</span> -->
+                        </div>
+                    </div>
+                    <div class="ns_panel_build_upgrade content_build_upgrade">
+                        <span id="ns_button_build_upgrade_CastleWall">{{ i18n.t('upgrade') }}</span>
+                    </div>
+                    <!-- ##### MULTI_NAVI ##### --><div class="ns_panel_build_upgrade content_build_cons_multi">
+                        <span id="ns_button_build_prev_CastleWall">&nbsp;</span>
+                        <span id="ns_button_build_cons_CastleWall">{{ i18n.t('add_construction') }} (<span class="content_page_curr">0</span>/<span class="content_page_total">0</span>)</span>
+                        <span id="ns_button_build_next_CastleWall">&nbsp;</span>
+                    </div><!-- ##### MULTI_NAVI ##### -->
+                    <div class="ns_panel_build_upgrade content_build_max_level">
+                        <!-- <p>최고 레벨 건설 완료</p> -->
+                    </div>
+                </div>
+
+                <!-- ########## -->
+
+                <div class="ns_panel_tab ns_panel_grid_2 ns_panel_margin_xx">
+                    <span id="ns_button_build_CastleWall_tab_assign">{{ i18n.t('assign_setting') }}</span>
+                    <span id="ns_button_build_CastleWall_tab_fortification">{{ i18n.t('defense_facilities_install') }}</span>
+                </div>
+
+                <div class="build_CastleWall_tab_assign ns_panel_margin_xx">
+
+                    <div class="ns_panel_heavy ns_panel_margin_yy">
+                        <div class="ns_panel_trans">
+                            <div class="ns_panel_contents text_yellow text_align_center">
+                                <table>
+                                    <tbody>
+                                    <tr>
+                                        <th class="width-25"><span class="text_light_green">{{ i18n.t('troop_morale') }}</span></th>
+                                        <td class="width-25"><span class="content_troop_fighting_spirit">100</span></td>
+                                        <th class="width-25"><span class="text_light_green">{{ i18n.t('my_number_of_troops') }}</span></th>
+                                        <td class="width-25"><span class="content_troop_total_army">0</span></td>
+                                    </tr>
+                                    <tr>
+                                        <th class="width-25"><span class="text_light_green">{{ i18n.t('total_number_of_troops') }}</span></th>
+                                        <td class="width-25"><span class="content_troop_my_army">0</span></td>
+                                        <th class="width-25"><span class="text_light_green">{{ i18n.t('support_number_of_troops') }}</span></th>
+                                        <td class="width-25"><span class="content_troop_alli_army">0</span></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_basic captain_card_wrap">
+                        <div class="ns_panel_contents_padding">
+                            <div>
+                                <span class="content_card_title">{{ i18n.t('troop_captain') }}</span>
+                            </div>
+
+                            <div class="content_card_wrap">
+                                <div class="content_card_empty ns_panel_flex">
+                                    <div class="ns_panel_flex_item_auto">
+                                        <span id="ns_button_build_CastleWall_no_assign_captain"></span>
+                                    </div>
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_assign_effect">
+                                            <p>{{ i18n.t('hero_assign_add_effect') }}</p>
+                                            <p class="build_description_assign"></p>
+                                            <p class="build_description_assign_footnote"></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content_card ns_panel_flex">
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_hero_detail"></div>
+                                        <span id="ns_button_build_CastleWall_assign_captain"></span>
+                                    </div>
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_hero_effect">
+                                            <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa"></span></p>
+                                            <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_basic director_card_wrap">
+                        <div class="ns_panel_contents_padding">
+                            <div>
+                                <span class="content_card_title">{{ i18n.t('troop_director') }}</span>
+                            </div>
+
+                            <div class="content_card_wrap">
+                                <div class="content_card_empty ns_panel_flex">
+                                    <div class="ns_panel_flex_item_auto">
+                                        <span id="ns_button_build_CastleWall_no_assign_director"></span>
+                                    </div>
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_assign_effect">
+                                            <p>{{ i18n.t('hero_assign_add_effect') }}</p>
+                                            <p class="build_description_assign"></p>
+                                            <p class="build_description_assign_footnote"></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content_card ns_panel_flex">
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_hero_detail"></div>
+                                        <span id="ns_button_build_CastleWall_assign_director"></span>
+                                    </div>
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_hero_effect">
+                                            <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa"></span></p>
+                                            <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_basic staff_card_wrap">
+                        <div class="ns_panel_contents_padding">
+                            <div>
+                                <span class="content_card_title">{{ i18n.t('troop_staff') }}</span>
+                            </div>
+
+                            <div class="content_card_wrap">
+                                <div class="content_card_empty ns_panel_flex">
+                                    <div class="ns_panel_flex_item_auto">
+                                        <span id="ns_button_build_CastleWall_no_assign_staff"></span>
+                                    </div>
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_assign_effect">
+                                            <p>{{ i18n.t('hero_assign_add_effect') }}</p>
+                                            <p class="build_description_assign"></p>
+                                            <p class="build_description_assign_footnote"></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="content_card ns_panel_flex">
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_hero_detail"></div>
+                                        <span id="ns_button_build_CastleWall_assign_staff"></span>
+                                    </div>
+                                    <div class="ns_panel_flex_item_auto">
+                                        <div class="content_hero_effect">
+                                            <p><span>{{ i18n.t('abilites') }} : </span><span class="content_applied_capa"></span></p>
+                                            <p><span>{{ i18n.t('skill') }} : </span><span class="content_applied_skill"></span></p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="build_CastleWall_tab_fortification">
+
+                    <div class="ns_panel_heavy ns_panel_margin_10">
+                        <div class="ns_panel_trans">
+                            <div class="content_concurr_body ns_panel_flex">
+                                <div class="ns_panel_flex_item_auto">
+                                    <span class="content_concurr_title"></span>
+                                </div>
+                                <div class="ns_panel_flex_right">
+                                    <span class="content_concurr_time">{{ i18n.t('calculating') }}</span>
+                                    <span id="ns_button_concurr_speedup_build_CastleWall">{{ i18n.t('encourage') }}</span>
+                                    {#<span id="ns_button_concurr_cancel_build_CastleWall"></span>#}
+                                </div>
+                            </div>
+                            <div class="content_concurr_idle">{{ i18n.t('not_in_install') }}</div>
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_trans ns_panel_margin_yy">
+                        <div class="fortification_cache_wrap ns_panel_grid_2"></div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_build_CastleWall_fort_installation">
+    <span id="ns_button_build_CastleWall_fort_installation_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+                <span class="content_level"></span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_build_CastleWall_fort_installation_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_build_CastleWall_fort_installation_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <div class="ns_panel_flex_info">
+                        <div class="develop_image"></div>
+                        <div class="develop_description"></div>
+                    </div>
+                </div>
+
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th>{{ i18n.t('category') }}</th>
+                            <th>{{ i18n.t('requirement') }}</th>
+                            <th>{{ i18n.t('current_storage') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table_fort_installation">
+
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="ns_panel_full_contents">
+                    <div class="content_side_pattern_bg">
+                        <div class="content_center">
+                            <div class="content_develop_trans">
+                                <div class="ns_panel_flex fort_amount_wrapper">
+                                    <span class="text_cadet_gray">{{ i18n.t('number_of_installations') }}</span>
+                                    <input class="amount_field" type="number" />
+                                    <span class="text_cadet_gray"> / </span>
+                                    <span id="ns_button_fort_installation_amount_max"> 0 </span>
+                                    <div class="ns_panel_flex_item_auto">
+                                        <span>{{ i18n.t('current_storage') }} :</span> <span class="develop_current text_green">0</span><br />
+                                        <span>{{ i18n.t('maximum_storage') }} :</span> <span class="develop_max text_green">0</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="ns_panel_margin_center">
+                                <div class="content_develop_trans wrapper_fort_installation">
+                                    <label>
+                                        <span id="ns_button_fort_installation_amount_decrease"></span>
+                                        <input name="develop_slider" type="range" class="slider" />
+                                        <span id="ns_button_fort_installation_amount_increase"></span>
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="content_develop_trans">
+                                <span class="content_build_time_title">{{ i18n.t('time_required') }} : </span>
+                                <span class="content_build_time"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ns_panel_pop_button ns_panel_trans">
+                    <span id="ns_button_fort_installation_submit">{{ i18n.t('execution') }}</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_build_CastleWall_fort_disperse">
+    <span id="ns_button_build_CastleWall_fort_disperse_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_pop_title"></span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_build_CastleWall_fort_disperse_close"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="ns_panel_basic">
+                <div class="ns_panel_trans ns_panel_margin_10">
+
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th class="col1">{{ i18n.t('category') }}</th>
+                            <th class="col2">{{ i18n.t('recovery_amount') }}</th>
+                            <th class="col3">{{ i18n.t('current_storage') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody class="content_disperse_table">
+                        <tr>
+                            <td class="col1">{{ i18n.t('resource_food') }}</td>
+                            <td class="col2 content_disperse_food">-</td>
+                            <td class="col3 ns_resource_food_curr">-</td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('resource_horse') }}</td>
+                            <td class="content_disperse_horse">-</td>
+                            <td class="ns_resource_horse_curr">-</td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('resource_lumber') }}</td>
+                            <td class="content_disperse_lumber">-</td>
+                            <td class="ns_resource_lumber_curr">-</td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('resource_iron') }}</td>
+                            <td class="content_disperse_iron">-</td>
+                            <td class="ns_resource_iron_curr">-</td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('resource_gold') }}</td>
+                            <td class="content_disperse_gold">-</td>
+                            <td class="ns_territory_gold_curr">-</td>
+                        </tr>
+                        <tr>
+                            <td>{{ i18n.t('installation_space') }}</td>
+                            <td class="content_disperse_vacancy">-</td>
+                            <td class="ns_territory_wall_vacancy_curr">-</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="ns_panel_trans ns_panel_margin_yy">
+                        <div class="ns_panel_heavy">{{ i18n.t('number_of_dismantling') }}</div>
+                        <div class="ns_panel_flex_center ns_panel_margin_yy wrapper_fort_disperse_amount">
+                            <input class="amount_field" type="number"/>
+                            <span> / </span>
+                            <span id="ns_button_fort_disperse_max_amount"></span>
+                        </div>
+                        <div class="ns_panel_flex_center wrapper_fort_disperse_amount_slider">
+                            <label>
+                                <span id="ns_button_castle_fort_disperse_decrease"></span>
+                                <input class="slider" name="develop_slider" type="range" />
+                                <span id="ns_button_castle_fort_disperse_increase"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_contents_box">
+                        <div class="ns_panel_margin_auto">
+                            <div class="content_desc_box text_align_center">
+                                <p>{{ i18n.t('fort_disperse_description') | raw }}</p>
+                            </div>
+                            <div class="ns_panel_pop_button">
+                                <span id="ns_button_fort_disperse_submit">{{ i18n.t('execution') }}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+

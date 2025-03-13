@@ -1,0 +1,145 @@
+<div id="ns_dialog_hero_pickup">
+    <span id="ns_button_hero_pickup_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('hero_pickup') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_hero_pickup_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_hero_pickup_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="hero_pickup_rule_wrap ns_panel_tooltip hide">
+                <div class="ns_panel_tooltip_header">
+                    <div class="ns_panel_tooltip_header_l"></div>
+                    <div class="ns_panel_tooltip_header_c"></div>
+                    <div class="ns_panel_tooltip_header_r">
+                        <span id="ns_button_pickup_tooltip_close"></span>
+                    </div>
+                </div>
+                <p>- {{ i18n.t('hero_pickup_pity_description_1') }}</p>
+                <p>- {{ i18n.t('hero_pickup_pity_description_2') | raw }}</p>
+                <p>- {{ i18n.t('hero_pickup_pity_description_3') }}</p>
+            </div>
+
+            <div class="text_align_right content_pickup_subtitle">
+                <span id="ns_button_pickup_tooltip" class="button_toggle_description"></span>
+                <span id="ns_button_pickup_item_buy_500075">
+                            <span class="hero_ticket_500075">0</span>
+                        </span>
+                <span id="ns_button_pickup_item_buy_500103">
+                            <span class="hero_ticket_500103">0</span>
+                        </span>
+                <span id="ns_button_pickup_qbig_buy" class="button_charge_qbig_common">
+                            <span class="ns_qbig"></span>
+                        </span>
+            </div>
+
+            <div class="content">
+                <div class="ns_panel_basic">
+                    <div class="ns_panel_margin_yy">
+                        <div class="hero_pickup_list">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_hero_pickup_card">
+    <span id="ns_button_hero_pickup_card_sub_close"></span>
+    <span id="ns_button_hero_pickup_card_skip">Skip</span>
+    <div class="dialog_wrap">
+        <div class="content">
+            <div class="ns_panel_flex width-full">
+                <div class="card_slot"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ns_dialog_hero_pickup_result">
+    <span id="ns_button_hero_pickup_result_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('hero_pickup_result') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_hero_pickup_result_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_hero_pickup_result_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+                <div class="ns_panel_basic">
+                    <div class="hero_pickup_result_wrap"></div>
+                </div>
+
+                <div class="content_padding text_align_center">
+                    <span id="ns_button_hero_pickup_more">{{ i18n.t('hero_pickup_continue') }}</span>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_hero_pickup_preview">
+    <span id="ns_button_hero_pickup_preview_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('hero_pickup_preview') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_hero_pickup_preview_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_hero_pickup_preview_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="preview_float_buttons">
+                <span id="ns_button_hero_pickup_preview_top">↑</span>
+                <span id="ns_button_hero_pickup_preview_bottom">↓</span>
+            </div>
+
+            <div class="ns_panel_tab ns_panel_grid_2">
+                <span id="ns_button_preview_type_1">{{ i18n.t('hero_pickup_normal') }}</span>
+                <span id="ns_button_preview_type_2">{{ i18n.t('hero_pickup_special') }}</span>
+            </div>
+
+            <div class="content">
+                <div class="ns_panel_basic">
+                    <div class="ns_panel_tab ns_panel_grid_7">
+                        {% for i in range(1, 7) %}
+                            <span id="ns_button_preview_rare_{{ i }}">★{{ i }}</span>
+                        {% endfor %}
+                    </div>
+                    {% for i in range(1, 7) %}
+                        <div class="hero_acquired_rate_1_{{ i }} ns_panel_margin_yy text_align_center hide">
+                            ★{{ i }} {{ i18n.t('appearance_rate') }} : {{ _M['HERO_ACQUIRED_RARE']['NORMAL']['1'][i]['rate'] }}%
+                        </div>
+                        <div class="hero_acquired_rate_2_{{ i }} ns_panel_margin_yy text_align_center hide">
+                            ★{{ i }} {{ i18n.t('appearance_rate') }} : {{ _M['HERO_ACQUIRED_RARE']['EXCEL']['1'][i]['rate'] }}%
+                        </div>
+                    {% endfor %}
+                    {% for i in range(1, 7) %}
+                        <div class="preview_list rare_{{ i }} ns_panel_grid_4 ns_panel_grid_center hide">
+                            {% for _hero in _M['HERO_BASE'] | sort((a, b) => a.name <=> b.name) | filter(h => h.type != 'K' and h.rare_type == i) %}
+                                <div class="hero_card_small hero_card_{{ _hero['m_hero_base_pk'] }}" id="ns_button_preview_hero_{{ _hero['m_hero_base_pk'] }}">
+                                    <div class="hero_card_frame hero_rare{{ _hero['rare_type'] }}">
+                                        <div class="hero_card_name">{{ _hero['name'] }}</div>
+                                        <div class="hero_card_level">1</div>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

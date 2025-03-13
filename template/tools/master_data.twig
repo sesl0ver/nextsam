@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <title>QM Master Data Tool</title>
+    <link href="/tools/css/bootstrap.css" rel="stylesheet">
+    <link href="/tools/css/bootstrap-responsive.css" rel="stylesheet">
+    <style>
+        body {
+            padding-top: 20px;
+        }
+
+        .modal {
+            left: 10%;
+            width: 80%;
+            margin-left: 0;
+        }
+    </style>
+    <script type="text/javascript">
+        let target = null;
+        let stage = 0;
+        let start_idx = 0;
+        let strict_file = [
+            'm_condition.txt',
+            'm_army.txt',
+            'm_building.txt',
+            'm_hero_assign.txt',
+            'm_building_hero_assign.txt',
+            'm_hero_skill.txt',
+            'm_building_hero_skill.txt',
+            'm_building_level.txt',
+            'm_cmd.txt',
+            'm_cmd_hero_assign.txt',
+            'm_cmd_hero_skill.txt',
+            'm_encounter_range.txt',
+            'm_fortification.txt',
+            'm_hero_base.txt',
+            'm_gachapon.txt',
+            'm_hero.txt',
+            'm_hero_acquired_enchant_plusstat.txt',
+            'm_hero_acquired_level.txt',
+            'm_hero_acquired_plusstat.txt',
+            'm_hero_acquired_rare.txt',
+            'm_hero_acquired_restriction.txt',
+            'm_hero_acquired_skill.txt',
+            'm_hero_assign_effect.txt',
+            'm_hero_collection.txt',
+            'm_hero_collection_combi.txt',
+            'm_hero_collection_combi_acquired_level.txt',
+            'm_item.txt',
+            'm_hero_collection_combi_item.txt',
+            'm_hero_combination_level.txt',
+            'm_hero_combination_rare.txt',
+            'm_hero_encounter_hero_level.txt',
+            'm_hero_exp.txt',
+            'm_hero_skill_cmd_rate.txt',
+            'm_hero_skill_effect.txt',
+            'm_hero_skill_exp.txt',
+            'm_item_effect.txt',
+            'm_item_random_rate.txt',
+            'm_mil_aptitude.txt',
+            'm_npc_building.txt',
+            'm_npc_hero.txt',
+            'm_npc_reward.txt',
+            'm_npc_territory.txt',
+            'm_npc_troop.txt',
+            'm_occupation_reward.txt',
+            'm_officer.txt',
+            'm_package.txt',
+            'm_pickup.txt',
+            'm_point.txt',
+            'm_point_npc_troop.txt',
+            'm_point_reward.txt',
+            'm_point_reward_item.txt',
+            'm_position_area.txt',
+            'm_position.txt',
+            'm_preference.txt',
+            'm_productivity_building.txt',
+            'm_productivity_valley.txt',
+            'm_providence.txt',
+            'm_qbig_pack.txt',
+            'm_quest.txt',
+            'm_social_gift.txt',
+            'm_social_invite_reward.txt',
+            'm_social_request.txt',
+            'm_technique.txt',
+            'm_technique_effect.txt',
+            'm_technique_level.txt',
+            'm_troop.txt',
+            'm_forbidden_word.txt',
+            'm_reserved_word.txt',
+            'm_npc_building.txt',
+            'm_counsel_connect.txt',
+            'm_counsel_action.txt',
+            'm_need_resource.txt',
+            'm_npc_ann_reward.txt'
+        ];
+
+        let g_query = {};
+        let g_files = [];
+        let g_filenames = [];
+
+        function processUpload() {
+            for (; start_idx < strict_file.length; start_idx++) {
+                let filename = strict_file[start_idx];
+                let row = g_filenames.indexOf(filename);
+                if (row == -1) {
+                    continue;
+                }
+
+                /*
+                        let reader = new FileReader();
+                        reader.readAsText(g_files[row], 'UTF-8');
+                        reader.onload = function(event) {
+                            start_idx++;
+                            let result = event.target.result;
+                            startUpload(row, filename, result);
+                        }
+                */
+                start_idx++;
+                let result = g_files[row].data;
+                startUpload(row, filename, result);
+
+                return;
+            }
+
+            let upload = $('#upload');
+            upload.removeClass('disabled');
+            upload.text('쿼리 테스트');
+
+            stage = 1;
+        }
+
+        function startUpload(row, filename, data) {
+            let target_table = filename.substr(0, filename.lastIndexOf('.'));
+            let post_data = {
+                type: 'tool',
+                target_table: target_table,
+                master_data: data
+            }
+
+            let td = $('#main-table').find('tr').eq(row).find('td');
+            td.eq(4).text('전송중');
+
+            let insert = 0;
+            let update = 0;
+            let deleted = 0;
+
+            $.post('/admin/tools/api/uploadFile', post_data, function(data) {
+                data = data.replace(/<br \/>/g, "\n");
+
+                data = $('<DIV>').html(data).text();
+                data = data.split('\n');
+                data.splice(0,1);
+                g_query[filename] = data;
+
+                $.each(data, function(idx, line) {
+                    if (line.match(/^INSERT /)) {
+                        insert++;
+                    }
+                    else if (line.match(/^UPDATE /)) {
+                        update++;
+                    }
+                    else if (line.match(/^DELETE /)) {
+                        deleted++;
+                    }
+                });
+
+                td.eq(1).text(insert);
+                td.eq(2).text(update);
+                td.eq(3).text(deleted);
+
+                td.eq(4).text('완료');
+
+                console.log(data);
+                processUpload();
+            });
+        }
+
+        function processQueryTest() {
+            $("[name='status']").text('테스트');
+
+            let post_data = {
+                filenames: [],
+                query: []
+            }
+
+            for (let i = 0; i < strict_file.length; i++) {
+                let file = strict_file[i];
+                let index = g_filenames.indexOf(file);
+                if (index == -1) {
+                    continue;
+                }
+
+                post_data.filenames.push(file);
+                post_data.query.push(g_query[file].join('\n'));
+            }
+
+            console.log(post_data);
+
+            $.post('/admin/tools/api/queryTest', post_data, function(data) {
+                $("[name='status']").text('미실행');
+
+                if (data.status == 'ERROR') {
+                    alert(data.message);
+                }
+
+                if (data.status == 'OK') {
+                    stage = 2;
+                    $('#upload').text('쿼리 생성');
+                    $('#upload').removeClass('disabled');
+                }
+
+                $.each(data.success, function(idx, name) {
+                    let row = g_filenames.indexOf(name);
+                    let td = $('#main-table').find('tr').eq(row).find('td');
+                    td.eq(4).text('성공');
+                });
+
+                $.each(data.failed, function(idx, name) {
+                    let row = g_filenames.indexOf(name);
+                    let td = $('#main-table').find('tr').eq(row).find('td');
+                    td.eq(4).text('실패');
+                });
+
+            }, 'json');
+        }
+
+        function processQueryCreate() {
+            let post_data = {
+                comment: $('#update_comment').val(),
+                filenames: [],
+                query: []
+            }
+
+            for (let i = 0; i < strict_file.length; i++) {
+                let file = strict_file[i];
+                let index = g_filenames.indexOf(file);
+                if (index == -1) {
+                    continue;
+                }
+
+                post_data.filenames.push(file);
+                post_data.query.push(g_query[file].join('\n'));
+            }
+
+            $.post('/admin/tools/api/queryCreate', post_data, function(data) {
+                if (data.status != 'OK') {
+                    alert('생성실패');
+
+                    $('#upload').removeClass('disabled');
+
+                    return false;
+                }
+
+                $("[name='status']").text('생성');
+                $("#upload").text('쿼리 실행');
+
+                target = data.now;
+                stage = 3;
+
+                $('#upload').removeClass('disabled');
+            }, 'json');
+        }
+
+        function processQueryRun() {
+            let post_data = {
+                target: target
+            }
+
+            $.post('/admin/tools/api/queryRun', post_data, function(data) {
+                if (data.status == 'OK') {
+                    $('#upload').text('성공');
+                    $("[name='status']").text('완료');
+                }
+                else {
+                    $('#upload').text('실패');
+                    $("[name='status']").text('실패');
+                }
+            }, 'json');
+        }
+
+
+        window.addEventListener('DOMContentLoaded', function () {
+            /*
+                let dropbox = $(document);
+                dropbox.bind('dragenter', function() {
+                    return false;
+                });
+
+                dropbox.bind('dragover', function() {
+                    return false;
+                });
+
+                dropbox.bind('dragend', function() {
+                    return false;
+                });
+
+                dropbox.bind('dragleave', function(e) {
+                    return false;
+                });
+
+                dropbox.bind('drop', function(e) {
+                    e.preventDefault();
+
+                    if (stage != 0 || $('#upload').hasClass('disabled')) {
+                        alert('파일을 추가 할 수 없습니다.');
+                        return false;
+                    }
+
+                    let evt = e.originalEvent;
+                    let files = evt.dataTransfer.files
+                    for (let i = 0; i < files.length; i++) {
+                        let file = files[i];
+                        if (g_filenames.indexOf(file.name) > -1) {
+                            alert('같은 파일이 선택되어 있습니다.');
+                            return false;
+                        }
+
+                        if (strict_file.indexOf(file.name) == -1) {
+                            alert('올바르지 않은 파일명 입니다..');
+                            return false;
+                        }
+                    }
+
+                    for (let i = 0; i < files.length; i++) {
+                        let file = files[i];
+
+                        g_filenames.push(file.name);
+                        g_files.push(file);
+
+                        let tr = $('<TR>');
+                        tr.append($('<TD>').text(file.name));
+                        tr.append($('<TD>'));
+                        tr.append($('<TD>'));
+                        tr.append($('<TD>'));
+                        tr.append($('<TD>').attr('name', 'status').text('대기'));
+                        tr.append($('<TD>').append(
+                            $('<DIV>').addClass('btn btn-danger').text('삭제').data('filename', file.name).attr('name', 'remove-file')
+                        ));
+                        $('#main-table').append(tr);
+                    }
+
+                    return false;
+                });
+            */
+
+            $(document).on('click', "[name='remove-file']", function() {
+                if ($(this).hasClass('disabled')) {
+                    return false;
+                }
+
+                let ele = $(this);
+                let filename = ele.data('filename');
+
+                let idx = g_filenames.indexOf(filename);
+
+                g_files.splice(idx, 1);
+                g_filenames.splice(idx, 1);
+
+                ele.parent().parent().remove();
+            });
+
+            $('#upload').on('click', function() {
+                if ($(this).hasClass('disabled')) {
+                    return false;
+                }
+
+                let comment = $('#update_comment');
+                if (!comment.val() || comment.val().length == 0) {
+                    alert('코멘트를 입력해 주십시오.');
+                    return;
+                }
+
+                if (g_files.length == 0) {
+                    alert('파일을 선택해 주십시오');
+                    return;
+                }
+
+                comment.attr('disabled', true);
+                $('#add').addClass('disabled');
+                $('#upload').addClass('disabled');
+
+                $("[name='remove-file']").addClass('disabled');
+
+                if (stage == 0) {
+                    $(this).addClass('disabled');
+                    $(this).text('처리중');
+
+                    start_idx = 0;
+                    processUpload();
+                }
+                else if (stage == 1) {
+                    processQueryTest();
+                }
+                else if (stage == 2) {
+                    processQueryCreate();
+                }
+                else if (stage == 3) {
+                    processQueryRun();
+                }
+            });
+
+            $('#rollback').on('click', function() {
+                if ($(this).hasClass('disabled')) {
+                    return false;
+                }
+
+                target = null;
+                stage = 0;
+                g_query = {};
+
+                let tr = $('#main-table').find('tr');
+                $.each(tr, function(idx, ele) {
+                    $(ele).find('td').eq(1).text('');
+                    $(ele).find('td').eq(2).text('');
+                    $(ele).find('td').eq(3).text('');
+                    $(ele).find('td').eq(4).text('대기');
+
+                    $("[name='remove-file']").removeClass('disabled');
+                });
+
+                let upload = $('#upload');
+                upload.text('업로드');
+                upload.removeClass('disabled');
+                $('#add').removeClass('disabled');
+                $('#update_comment').removeAttr('disabled');
+            });
+
+            $('#save').on('click', function() {
+                let table_name = $('#table_name').val();
+                let table_data = $('#table_data').val();
+
+                if (table_name.length == 0 || table_data == 0) {
+                    alert('값이 입력되지 않았습니다.');
+                    return false;
+                }
+
+                table_name += '.txt';
+                let files = [{
+                    name: table_name,
+                    data: table_data
+                }] // evt.dataTransfer.files
+
+                for (let i = 0; i < files.length; i++) {
+                    let file = files[i];
+                    if (g_filenames.indexOf(file.name) > -1) {
+                        alert('같은 파일이 선택되어 있습니다.');
+                        return false;
+                    }
+
+                    if (strict_file.indexOf(file.name) == -1) {
+                        alert('올바르지 않은 파일명 입니다..');
+                        return false;
+                    }
+                }
+
+                for (let i = 0; i < files.length; i++) {
+                    let file = files[i];
+
+                    g_filenames.push(file.name);
+                    g_files.push(file);
+
+                    let tr = $('<TR>');
+                    tr.append($('<TD>').text( file.name.substr(0, file.name.lastIndexOf('.')) ));
+                    tr.append($('<TD>'));
+                    tr.append($('<TD>'));
+                    tr.append($('<TD>'));
+                    tr.append($('<TD>').attr('name', 'status').text('대기'));
+                    tr.append($('<TD>').append(
+                        $('<DIV>').addClass('btn btn-danger').html("<i class='icon-remove icon-white'></i>").data('filename', file.name).attr('name', 'remove-file')
+                    ));
+                    $('#main-table').append(tr);
+                }
+
+
+                $('#addTable').modal('hide');
+            });
+
+            $('#add').on('click', function() {
+                if ($(this).hasClass('disabled')) {
+                    return flalse;
+                }
+
+                $('#table_name').val('');
+                $('#table_data').val('');
+
+                $('#addTable').modal('show');
+            });
+
+            /*
+                for (let i = 0; i < 20; i++) {
+                    $('#main-table').append($("<tr><td>&nbsp;</td><td></td><td></td><td></td><td></td></tr>"));
+                }
+            */
+        });
+
+    </script>
+</head>
+
+<body>
+
+<div id="addTable" class="modal hide fade">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h3>테이블 에디터</h3>
+    </div>
+    <div class="modal-body">
+        <div class="input-prepend">
+            <span class="add-on">테이블</span>
+            <input class="span3" type="text" placeholder="m_table" id="table_name">
+        </div>
+        <textarea style="width:90%" id="table_data" rows=16></textarea>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" id="save"><i class="icon-ok icon-white"></i></button>
+    </div>
+</div>
+
+<div class="container">
+    <div class="input-prepend">
+        <span class="add-on">코멘트</span>
+        <input class="span10" type="text" id="update_comment">
+    </div>
+
+    <table class="table table-striped table-bordered" id="dropbox">
+        <thead>
+        <tr>
+            <th width="50%">파일명</th>
+            <th width="10%">추가</th>
+            <th width="10%">수정</th>
+            <th width="10%">삭제</th>
+            <th width="10%">상태</th>
+            <th width="10%">동작</th>
+        </tr>
+        </thead>
+        <tbody id="main-table">
+        </tbody>
+    </table>
+    <div class="row">
+		<span class="span6">
+			<button class="btn btn-danger btn-large" id="rollback"><i class="icon-refresh icon-white"></i> 초기화</button>
+		</span>
+        <span class="span6 text-right">
+			<button class="btn btn-info btn-large" id="add"><i class="icon-plus icon-white"></i></button>
+			<button class="btn btn-primary btn-large" id="upload">업로드</button>
+		</span>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+<script src="/tools/js/bootstrap.js"></script>
+</body>
+
+</html>
+
+
+

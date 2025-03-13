@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+#ns_dialog_lord_info {
+    z-index: 2253;
+}
+
+#ns_dialog_lord_info .button_default {
+    width: 120px;
+}
+
+#ns_dialog_lord_info .button_area {
+    width: 340px;
+    margin: 10px auto;
+    gap: 20px 20px;
+}
+
+#ns_dialog_lord_info .lord_info_intro,
+#ns_dialog_lord_info .alliance_info_intro {
+    word-wrap: break-word;
+    word-break: break-all;
+    padding: 5px 10px;
+}
+
+#ns_dialog_lord_info_lord_name_change {
+    z-index: 2750;
+}
+
+#ns_dialog_lord_info_lord_name_change input {
+    width: 80%;
+    height: 20px;
+    border:1px solid #BB8E35;
+    outline:1px solid #EABD67;
+    margin: 5px 0;
+}
+
+#ns_dialog_lord_info_lord_name_change .button_default {
+    width: 120px;
+}
+
+#ns_dialog_lord_info_card_change {
+    z-index: 2351;
+}
+
+#ns_dialog_lord_info_card_change .dialog_header {
+    color: #fcdc80;
+    text-shadow: 0 1px 1px #bba25f;
+    font-weight: bold;
+}
+
+#ns_dialog_lord_info_card_change .content_button_area {
+    text-align: center;
+}
+
+#ns_dialog_lord_info_card_change #ns_button_lord_card_change_submit {
+    width: 200px !important;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_card_change_status {
+    width: 301px;
+    height: 103px;
+    margin: 0 auto;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_card_change_status.lord_status_1 {
+    background: url('/image/lord/lord_create_status_01.jpg') no-repeat;
+    background-size: 301px 103px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_card_change_status.lord_status_2 {
+    background: url('/image/lord/lord_create_status_02.jpg') no-repeat;
+    background-size: 301px 103px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_card_change_status.lord_status_3 {
+    background: url('/image/lord/lord_create_status_03.jpg') no-repeat;
+    background-size: 301px 103px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_card_change_status.lord_status_4 {
+    background: url('/image/lord/lord_create_status_04.jpg') no-repeat;
+    background-size: 301px 103px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_card_change_status.lord_status_5 {
+    background: url('/image/lord/lord_create_status_05.jpg') no-repeat;
+    background-size: 301px 103px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_card_change_description {
+    margin: 0 auto;
+    width: 360px;
+    color: #000;
+    text-shadow: 0 0 4px white;
+    font-size: .9rem;
+    font-weight: bold;
+    opacity: .7;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select {
+    position: relative;
+    width: 320px;
+    height: 167px;
+    margin: 1em auto;
+    background: url('/image/lord/lord_create_face_bg.png') no-repeat;
+    background-size: 320px 167px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(1),
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(2),
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(3),
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(4),
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(5) {
+    position: absolute;
+    width: 64px;
+    height: 157px;
+    cursor: pointer;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(1) {
+    top: 0;
+    left: 0;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(1):hover {
+    background: url('/image/lord/lord_create_face_01.png') no-repeat !important;
+    background-size: 64px 157px !important;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(1).selected {
+    background: url('/image/lord/lord_selected_face_01.png') no-repeat;
+    background-size: 64px 157px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(2) {
+    top: 10px;
+    left: 64px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(2):hover {
+    background: url('/image/lord/lord_create_face_02.png') no-repeat !important;
+    background-size: 64px 157px !important;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(2).selected {
+    background: url('/image/lord/lord_selected_face_02.png') no-repeat;
+    background-size: 64px 157px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(3) {
+    top: 0;
+    left: 128px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(3):hover {
+    background: url('/image/lord/lord_create_face_03.png') no-repeat !important;
+    background-size: 64px 157px !important;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(3).selected {
+    background: url('/image/lord/lord_selected_face_03.png') no-repeat;
+    background-size: 64px 157px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(4) {
+    top: 10px;
+    left: 192px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(4):hover {
+    background: url('/image/lord/lord_create_face_04.png') no-repeat !important;
+    background-size: 64px 157px !important;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(4).selected {
+    background: url('/image/lord/lord_selected_face_04.png') no-repeat;
+    background-size: 64px 157px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(5) {
+    top: 0;
+    left: 256px;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(5):hover {
+    background: url('/image/lord/lord_create_face_05.png') no-repeat !important;
+    background-size: 64px 157px !important;
+}
+
+#ns_dialog_lord_info_card_change .content_lord_change_select > .content_lord_change_face:nth-child(5).selected {
+    background: url('/image/lord/lord_selected_face_05.png') no-repeat;
+    background-size: 64px 157px;
+}
+
+#ns_dialog_lord_intro_change,
+#ns_dialog_alliance_intro_change {
+    z-index: 2353;
+}
+
+#ns_dialog_lord_intro_change textarea,
+#ns_dialog_alliance_intro_change textarea {
+    width: 80%;
+    height: 160px;
+    border:1px solid #BB8E35;
+    outline:1px solid #EABD67;
+    margin: 2px 0;
+    resize: none;
+}

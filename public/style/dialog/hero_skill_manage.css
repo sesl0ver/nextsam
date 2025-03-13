@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+#ns_dialog_hero_skill_manage {
+    z-index: 2430;
+}
+
+#ns_dialog_hero_skill_manage .hero_skill_manage_list_wrap {
+    width: 320px;
+    margin: 0 auto;
+}
+
+#ns_dialog_hero_skill_manage .ns_panel_sub_top {
+    line-height:22px;
+    padding: 0 5px;
+}
+
+#ns_dialog_hero_skill_manage .text_page_paging {
+    line-height: 22px;
+    margin: 10px 5px;
+    vertical-align: top;
+}
+
+#ns_dialog_hero_skill_manage .skill_title {
+    padding: 7px 10px 0 15px;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#ns_dialog_hero_skill_manage .skill_image {
+    position: absolute;
+    top: 33px;
+    left: 13px;
+}
+
+#ns_dialog_hero_skill_manage .skill_list_detail{
+    position: absolute;
+    right: 14px;
+    top: 52px;
+    text-align: right;
+    color: #FFFFFF;
+    line-height: 14px;
+}
+
+#ns_dialog_hero_skill_manage .skill_list_detail>div:nth-child(2){
+    color: #4EBEFF;
+}
+
+#ns_dialog_hero_skill_manage .content_hero_wrap {
+    margin: 5px;
+}
+
+#ns_dialog_hero_skill_manage .content_hero_skill_wrap {
+    margin: auto 5px auto auto;
+}
+
+#ns_dialog_hero_skill_manage .hero_skill_slot_1,
+#ns_dialog_hero_skill_manage .hero_skill_slot_2,
+#ns_dialog_hero_skill_manage .hero_skill_slot_3,
+#ns_dialog_hero_skill_manage .hero_skill_slot_4,
+#ns_dialog_hero_skill_manage .hero_skill_slot_5,
+#ns_dialog_hero_skill_manage .hero_skill_slot_6 {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    margin: 5px;
+    background-image: url(/image/card/skill_box_0.png);
+    background-size: 45px 45px;
+    background-repeat: no-repeat;
+}
+
+#ns_button_hero_skill_manage_hero_list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: auto;
+}
+
+#ns_dialog_hero_skill_manage .hero_skill_image {
+    position: relative;
+    width: 45px;
+    height: 45px;
+    background-size: 45px 45px;
+    background-repeat: no-repeat;
+}
+
+#ns_dialog_hero_skill_manage .hero_skill_image.lock1 {
+    background-image: url('/image/card/skill_box_1.png');
+}
+
+#ns_dialog_hero_skill_manage .hero_skill_image.lock2 {
+    background-image: url('/image/card/skill_box_2.png');
+}
+
+#ns_dialog_hero_skill_manage .hero_skill_image.lock3 {
+    background-image: url('/image/card/skill_box_3.png');
+}
+
+#ns_dialog_hero_skill_manage .hero_skill_image.lock4 {
+    background-image: url('/image/card/skill_box_4.png');
+}
+
+#ns_dialog_hero_skill_manage .hero_skill_image.lock5 {
+    background-image: url('/image/card/skill_box_5.png');
+}
+
+
+#ns_dialog_hero_skill_manage_list {
+    z-index: 2450;
+}
+
+#ns_dialog_hero_skill_manage_list .content_hero_manage_table.stat .filter_stat,
+#ns_dialog_hero_skill_manage_list .content_hero_manage_table.officer .filter_officer,
+#ns_dialog_hero_skill_manage_list .content_hero_manage_table.army .filter_army {
+    display: table-cell;
+}
+
+#ns_dialog_hero_skill_manage_list .content_hero_manage_table.stat .filter_officer,
+#ns_dialog_hero_skill_manage_list .content_hero_manage_table.stat .filter_army,
+#ns_dialog_hero_skill_manage_list .content_hero_manage_table.army .filter_stat,
+#ns_dialog_hero_skill_manage_list .content_hero_manage_table.army .filter_officer,
+#ns_dialog_hero_skill_manage_list .content_hero_manage_table.officer .filter_stat,
+#ns_dialog_hero_skill_manage_list .content_hero_manage_table.officer .filter_army {
+    display: none;
+}
+
+#ns_dialog_hero_skill_manage_list .ns_panel_sub_top {
+    line-height: 22px;
+    padding: 0 10px;
+}
+
+#ns_dialog_hero_skill_detail {
+    z-index: 2455;
+}
+
+#ns_dialog_hero_skill_detail .skill_icon_wrapper{
+    margin: auto;
+}
+
+#ns_dialog_hero_skill_detail .skill_image {
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#ns_dialog_hero_skill_manage .rare_border_1::after,
+#ns_dialog_hero_skill_manage .rare_border_2::after,
+#ns_dialog_hero_skill_manage .rare_border_3::after,
+#ns_dialog_hero_skill_manage .rare_border_4::after {
+    width: 45px;
+    height: 45px;
+    background-size: 45px 45px;
+}
+
+/*#ns_dialog_hero_skill_detail .skill_description {*/
+/*    display: inline-block;*/
+/*}*/
+
+#ns_dialog_hero_skill_detail .ns_table_common.hide_col {
+    & .col1 {
+        display: none;
+    }
+
+    & .col2 {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+    }
+}
+
+#ns_dialog_hero_medal_prize_list {
+    z-index: 2450;
+}
+
+#ns_dialog_hero_medal_prize_list .item_quick_use_list * {
+    pointer-events: none;
+}
+
+#ns_dialog_hero_medal_prize_list .item_description {
+    padding: 0 5px;
+}
+
+#ns_dialog_hero_medal_prize_list .use_item_title_wrap {
+    display: flex;
+}
+
+#ns_dialog_hero_medal_prize_list .use_item_title {
+    font-weight: bold;
+    color: #543C25;
+}
+
+#ns_dialog_hero_medal_prize_list .use_item_detail {
+    width: 198px;
+}
+
+#ns_dialog_hero_medal_prize_list .use_item_image {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #4C453B;
+    background-size: 50px 50px;
+    margin:0 3px 4px 3px;
+}
+
+#ns_dialog_hero_medal_prize_list .button_big_1 {
+    margin: auto 2px auto auto;
+}

@@ -1,0 +1,106 @@
+<div id="ns_dialog_qbig">
+    <span id="ns_button_qbig_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('qbig_purchase') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_qbig_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_qbig_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_yy ns_panel_margin_xx text_align_center">
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th colspan="3">구매 큐빅 선택</th>
+                        </tr>
+                        </thead>
+                        <tbody class="qbig_pack_wrap">
+                        {% for prod_id, qbig in _M['QBIG_PACK'][platform] %}
+                        <tr>
+                            <td class="width-10"><span id="ns_button_qbig_pack_{{ prod_id }}" class="button_checkbox"></span></td>
+                            <td class="width-40 text_align_left"><span>{{ qbig['price'] | number_format }}원</span></td>
+                            <td class="width-50 text_align_left"><span class="text_qbig_amount">{{ qbig['qbig_buy'] | number_format }} + {{ qbig['qbig_bonus'] | number_format  }}</span></td>
+                        </tr>
+                        {% endfor %}
+                        </tbody>
+                        <thead>
+                        <tr>
+                            <th colspan="3">결제 수단</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="ns_panel_pop_button ns_panel_trans">
+                    준비 중 입니다.
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+<!--
+<div id="qbw_dlg_qbig" style="display:none;">
+    <div class="dlg_header">
+        <div class="dlg_title"><span class="cont_title">큐빅충전</span></div>
+        <div class="dlg_header_left"><span id="qbw_btn_qbig_close"></span></div>
+        <div class="dlg_header_right"><span id="qbw_btn_qbig_closeAll"></span></div>
+    </div>
+    <div class="dlg_content">
+        <div class="cont">
+
+            <div class="qbwpan_Sub_Top">
+                <div class="qbwpan_BuilBtnLeft">
+                    <span id="qbw_btn_move_item">아이템샵</span><span id="qbw_btn_move_myitem">보물창고</span>
+                </div>
+                <div class="qbwpan_BuilBtnRight">
+                    <span class="cont_item_qibg_amount qbw_qbig"></span>
+                </div>
+            </div>
+
+            <div class="qbwpan_Basic cont_background">
+                <div class="qbwpan_TransTop">
+                    <p class="cont_qbig_desc">구매한 큐빅 패키지는 구매한 군주만 사용이 가능하며<br />서버간의 큐빅 이동이나 사용자간 거래는 제한 됩니다.</p>
+                </div>
+
+                <div class=qbwpan_TransTop>
+                    <div class="hr_table_border"></div>
+                    <table class="qbwtbl_Common3">
+                        <tbody>
+                        <tr>
+                            <td class="col1 qbwpan_Table_Title">서버</td>
+                            <td class="col2"><span class="cont_server_name"></span></td>
+                            <td class="col3 qbwpan_Table_Title">군주명</td>
+                            <td class="col4"><span class="cont_lord_name"></span></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <div class="hr_table_border"></div>
+                </div>
+
+                <div class="qbwpan_TransTop cont_default_notice">
+                  <div class="cont_qbig_event"></div>
+                </div>
+
+                <div class="qbwpan_TransTop cont_googleplay_notice">
+                    <div class="cont_qbig_desc_left">서비스 종료가 예정되어 결제가 차단된 상태입니다.<br />게임 이용에 불편을 드려 죄송합니다.</div>
+                </div>
+
+                <div class="qbwpan_Trans">
+                    <div>
+                        <div class="cont_event_listener_wrap">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <div class="dlg_footer"></div>
+</div>
+-->

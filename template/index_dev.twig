@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=480, user-scalable=no" />
+    <title>{{ i18n.t('game_title_name') }}</title>
+    <script src='/js_ext/big.min.js?v={{ version }}'></script>
+    <script src='/js_ext/moment.min.js?v={{ version }}'></script>
+    <script src='/js_ext/moment-timezone-with-data.js?v={{ version }}'></script>
+    <script src='/js_ext/axios.min.js?v={{ version }}'></script>
+    <script src='/js_ext/socket.io.min.js?v={{ version }}'></script>
+    <script>
+        let ns_web_version = '{{ version }}';
+    </script>
+    <script src='/js/ns_math.js?v={{ version }}'></script>
+    <script src='/js/ns_util.js?v={{ version }}'></script>
+    <script src='/js/ns_sound.js?v={{ version }}'></script>
+    <script src='/js/ns_auth.js?v={{ version }}'></script>
+    <script src='/js/ns_engine.js?v={{ version }}'></script>
+    <script src='/js/ns_scroll.js?v={{ version }}'></script>
+    <script src='/js/ns_global.js?v={{ version }}'></script>
+    <script src='/js/ns_button.js?v={{ version }}'></script>
+    <script src='/js/ns_xhr.js?v={{ version }}'></script>
+    <script src='/js/ns_i18n.js?v={{ version }}'></script>
+    <script src='/js/ns_check_condition.js?v={{ version }}'></script>
+    <script src='/js/ns_cs.js?v={{ version }}'></script>
+    <script src='/js/ns_hero.js?v={{ version }}'></script>
+    <script src='/js/ns_card.js?v={{ version }}'></script>
+    <script src='/js/ns_hero_select.js?v={{ version }}'></script>
+    <script src='/js/ns_timer.js?v={{ version }}'></script>
+    <script src='/js/ns_dialog.js?v={{ version }}'></script>
+    <script src='/js/ns_castle.js?v={{ version }}'></script>
+    <script src='/js/ns_world.js?v={{ version }}'></script>
+    <script src='/js/ns_report.js?v={{ version }}'></script>
+    <script src='/js/ns_chat.js?v={{ version }}'></script>
+    <script>
+        ns_chat.init('{{ default_chat_host }}', {{ default_chat_port }});
+        ns_auth.only_platform_mode = {{ PLATFORM_MODE }};
+        ns_i18n.setResource(`{{ text_resource }}`);
+    </script>
+
+    {% for dialog in dialog_template %}
+        {% if dialog not in dialog_except %}
+            <link type="text/css" rel="stylesheet" href="/style/dialog/{{ dialog }}.css?v={{ version }}" />
+        {% endif %}
+    {% endfor %}
+
+    {% for style in style_cache %}
+        <link type="text/css" rel="stylesheet" href="/style/{{ style }}.css?v={{ version }}" />
+    {% endfor %}
+</head>
+<body>
+<div id="main_stage">
+    {% include '_skeleton.twig' %}
+    {% include 'common.twig' %}
+    {% include 'main_ui.twig' %}
+    {% include 'world.twig' %}
+    {% include 'territory.twig' %}
+    {% include 'dialog/build_Template.twig' %}
+    {% for dialog in dialog_template %}
+        {% if dialog not in dialog_except %}
+            {% include 'dialog/' ~ dialog ~ '.twig' %}
+        {% endif %}
+    {% endfor %}
+</div>
+<script src='/js/ns_button_common.js?v={{ version }}'></script>
+<script src='/js_dialog/build_Template.js?v={{ version }}'></script>
+{% for dialog in dialog_template %}
+    {% if dialog not in dialog_except %}
+        <script src='/js_dialog/{{ dialog }}.js?v={{ version }}'></script>
+    {% endif %}
+{% endfor %}
+<script>
+    let ns_cs = new nsCS();
+    ns_engine.cfg.app_platform = '{{ platform }}';
+</script>
+
+{% for cache in master_cache %}
+    <script src='/m_/cache/{{ cache }}?v={{ version }}'></script>
+{% endfor %}
+<script src='/js/ns_button_etc.js?v={{ version }}'></script>
+<script src='/js/ns_cs_instance.js?v={{ version }}'></script>
+<script src='/js/ns_tile.js?v={{ version }}'></script>
+<script src='/js/ns_toast.js?v={{ version }}'></script>
+<script src='/js/ns_quest.js?v={{ version }}'></script>
+<script src='/js/ns_text.js?v={{ version }}'></script>
+<script src='/js/ns_select_box.js?v={{ version }}'></script>
+</body>
+</html>

@@ -1,0 +1,248 @@
+
+<h2>[ {{ _SESSION['selected_lord']['lord_name'] }} ] 군주 보유 등용 중 영웅</h2>
+<hr />
+<table id="lord_own_hero" class="jqGridTable">
+</table>
+<div id="pager_lord_own_hero"></div>
+
+<div id="hero_slot_info">
+	<table style="border:1px solid #000000;border-collapse:collapse;width:100%;text-align:center;">
+		<tbody>
+		<tr>
+			<th style="padding:0.4em;">영웅 이름</th>
+			<td style="padding:0.4em;" class="hero_name"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">관직</th>
+			<td style="padding:0.4em;" class="hero_offi"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">충성</th>
+			<td style="padding:0.4em;" class="hero_loya"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">경험치</th>
+			<td style="padding:0.4em;" class="hero_exp"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">사용중인 슬롯 / 열려있는 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_count"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">1번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_1"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">2번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_2"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">3번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_3"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">4번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_4"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">5번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_5"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">6번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_6"></td>
+		</tr>
+		</tbody>
+	</table>
+	<br />
+
+	<table border="1" bordercolor="#000" style="border-collapse:collapse;width:100%;text-align:center;">
+		<tbody>
+		<tr>
+			<th style="padding:0.4em;">능력</th>
+			<td style="padding:0.4em;">기본</td>
+			<td style="padding:0.4em;">강화</td>
+			<td style="padding:0.4em;">각성</td>
+			<td style="padding:0.4em;">추가</td>
+			<td style="padding:0.4em;">스킬</td>
+			<td style="padding:0.4em;">관직</td>
+			<td style="padding:0.4em;">현재</td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">통솔</th>
+			<td style="padding:0.4em;" class="leadership_basic"></td>
+			<td style="padding:0.4em;" class="leadership_enchant"></td>
+			<td style="padding:0.4em;" class="lord_enchant"></td>
+			<td style="padding:0.4em;" class="leadership_plusstat"></td>
+			<td style="padding:0.4em;" class="leadership_skill"></td>
+			<td style="padding:0.4em;" class="stat_plus_leadership"></td>
+			<td style="padding:0.4em;" class="leadership"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">무력</th>
+			<td style="padding:0.4em;" class="mil_force_basic"></td>
+			<td style="padding:0.4em;" class="mil_force_enchant"></td>
+			<td style="padding:0.4em;" class="lord_enchant"></td>
+			<td style="padding:0.4em;" class="mil_force_plusstat"></td>
+			<td style="padding:0.4em;" class="mil_force_skill"></td>
+			<td style="padding:0.4em;" class="stat_plus_mil_force"></td>
+			<td style="padding:0.4em;" class="mil_force"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">지력</th>
+			<td style="padding:0.4em;" class="intellect_basic"></td>
+			<td style="padding:0.4em;" class="intellect_enchant"></td>
+			<td style="padding:0.4em;" class="lord_enchant"></td>
+			<td style="padding:0.4em;" class="intellect_plusstat"></td>
+			<td style="padding:0.4em;" class="intellect_skill"></td>
+			<td style="padding:0.4em;" class="stat_plus_intellect"></td>
+			<td style="padding:0.4em;" class="intellect"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">정치</th>
+			<td style="padding:0.4em;" class="politics_basic"></td>
+			<td style="padding:0.4em;" class="politics_enchant"></td>
+			<td style="padding:0.4em;" class="lord_enchant"></td>
+			<td style="padding:0.4em;" class="politics_plusstat"></td>
+			<td style="padding:0.4em;" class="politics_skill"></td>
+			<td style="padding:0.4em;" class="stat_plus_politics"></td>
+			<td style="padding:0.4em;" class="politics"></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">매력</th>
+			<td style="padding:0.4em;" class="charm_basic"></td>
+			<td style="padding:0.4em;" class="charm_enchant"></td>
+			<td style="padding:0.4em;" class="lord_enchant"></td>
+			<td style="padding:0.4em;" class="charm_plusstat"></td>
+			<td style="padding:0.4em;" class="charm_skill"></td>
+			<td style="padding:0.4em;" class="stat_plus_charm"></td>
+			<td style="padding:0.4em;" class="charm"></td>
+		</tr>
+		</tbody>
+	</table>
+	<div><button id="hero_manage_assign_CityHall" style="width:60px;height:30px;margin:5px;display:none;">대전배속</button><button id="hero_manage_dismiss" style="width:40px;height:30px;margin:5px;display:none;">해임</button><button id="hero_manage_unassign" style="width:60px;height:30px;margin:5px;display:none;">배속해제</button></div>
+</div>
+
+<div id="edit_hero_enchant">
+	<table border="1" bordercolor="#000" style="border-collapse:collapse;width:100%;text-align:center;">
+		<tbody>
+		<tr>
+			<th style="padding:0.4em;">통솔</th>
+			<td style="padding:0.4em;"><input type="text" id="leadership_ehchant" maxlength="2" style="width:40px;" /></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">무력</th>
+			<td style="padding:0.4em;"><input type="text" id="mil_force_ehchant" maxlength="2" style="width:40px;" /></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">지력</th>
+			<td style="padding:0.4em;"><input type="text" id="intellect_ehchant" maxlength="2" style="width:40px;" /></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">정치</th>
+			<td style="padding:0.4em;"><input type="text" id="politics_ehchant" maxlength="2" style="width:40px;" /></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">매력</th>
+			<td style="padding:0.4em;"><input type="text" id="charm_ehchant" maxlength="2" style="width:40px;" /></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">강화</th>
+			<td style="padding:0.4em;"><input type="text" id="hero_enchant_count" maxlength="2" style="width:40px;" /></td>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">각성</th>
+			<td style="padding:0.4em;"><input type="text" id="lord_enchant_count" maxlength="2" style="width:40px;" /></td>
+		</tr>
+		</tbody>
+	</table>
+	<br/>
+	<h3>사유 입력</h3>
+	<hr/>
+	<div>
+		<textarea id="edit_enchant_cause" style="width:370px;min-width:370px;max-width:370px; height:64px;"></textarea>
+	</div>
+</div>
+
+<div id="edit_hero_loyalty">
+	<table border="1" bordercolor="#000" style="border-collapse:collapse;width:100%;text-align:center;">
+		<tbody>
+		<tr>
+			<th style="padding:0.4em;">충성</th>
+			<td style="padding:0.4em;"><input type="text" id="hero_loyalty" /></td>
+		</tr>
+		</tbody>
+	</table>
+	<br/>
+	<h3>사유 입력</h3>
+	<hr/>
+	<div>
+		<textarea id="edit_loyalty_cause" style="width:370px;min-width:370px;max-width:370px; height:64px;"></textarea>
+	</div>
+</div>
+
+<div id="set_hero_skill">
+	<div>전체 슬롯 : <span class="total_slot"></span> / 사용중인 슬롯 : <span class="used_slot"></span></div>
+	<div>가용한 슬롯 : <span class="avail_slot"></span> / 필요한 슬롯 : <span class="need_slot"></span></div>
+	<hr />
+	{% set skill_type = { 'D': '개발', 'A': '배속', 'P': '성장', 'B': '전투', 'S': '특수' } %}
+	<select id="select_hero_skill">
+		{% for o in _M['HERO_SKILL'] | sort((a, b) => a.m_hero_skil_pk <=> b.m_hero_skil_pk) %}
+			<option value="{{ o['m_hero_skil_pk'] }}">Lv.{{ o['rare'] }} {{ o['title'] }} [{{ skill_type[o['type']] }}]</option>
+		{% endfor %}
+	</select>
+	<br />
+	<hr />
+	<h3>사유 입력</h3>
+	<hr/>
+	<div>
+		<textarea id="add_skill_cause" style="width:370px;min-width:370px;max-width:370px; height:64px;"></textarea>
+	</div>
+</div>
+
+<div id="unset_hero_skill">
+	<div>전체 슬롯 : <span class="total_slot"></span> / 사용중인 슬롯 : <span class="used_slot"></span></div>
+	<div>가용한 슬롯 : <span class="avail_slot"></span> / 필요한 슬롯 : <span class="need_slot"></span></div>
+	<hr />
+	<table border="1" bordercolor="#000" style="border-collapse:collapse;width:100%;text-align:center;">
+		<tbody>
+		<tr>
+			<th style="padding:0.4em;">1번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_1"></td>
+			<th style="padding:0.4em;"><button class="hero_slot_btn1" disabled="disabled" style="padding:2px;">해제</button></th>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">2번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_2"></td>
+			<th style="padding:0.4em;"><button class="hero_slot_btn2" disabled="disabled" style="padding:2px;">해제</button></th>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">3번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_3"></td>
+			<th style="padding:0.4em;"><button class="hero_slot_btn3" disabled="disabled" style="padding:2px;">해제</button></th>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">4번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_4"></td>
+			<th style="padding:0.4em;"><button class="hero_slot_btn4" disabled="disabled" style="padding:2px;">해제</button></th>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">5번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_5"></td>
+			<th style="padding:0.4em;"><button class="hero_slot_btn5" disabled="disabled" style="padding:2px;">해제</button></th>
+		</tr>
+		<tr>
+			<th style="padding:0.4em;">6번 슬롯</th>
+			<td style="padding:0.4em;" class="hero_slot_6"></td>
+			<th style="padding:0.4em;"><button class="hero_slot_btn6" disabled="disabled" style="padding:2px;">해제</button></th>
+		</tr>
+		</tbody>
+	</table>
+	<br />
+	<hr />
+	<h3>사유 입력</h3>
+	<hr/>
+	<div>
+		<textarea id="add_unskill_cause" style="width:370px;min-width:370px;max-width:370px; height:64px;"></textarea>
+	</div>
+</div>

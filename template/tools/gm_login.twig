@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>NEXT 삼국지 GM TOOL</title>
+
+    <link rel="stylesheet" type="text/css" href="/tools/css/page/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/tools/css/page/layout.css"/>
+    <link rel="stylesheet" type="text/css" href="/tools/css/page/component.css"/>
+
+    <script type="text/javascript" src="/tools/js/jquery.min.js"></script>
+</head>
+<body>
+
+<div id="frame">
+    <div id="header">
+        <h1>NEXT 삼국지 GM TOOL</h1>
+    </div>
+    <div id="content">
+        <div id="navi" class="cpn_box">Location &gt; Log-in</div>
+        <div id="login" class="cpn_box">
+            <form method="post" action="/admin/gm/login">
+            <fieldset class="cpn_inp">
+                <legend>Project Next 삼국지 GM Tool</legend>
+                <div class="relative_block">
+                    <label for="gm_id" class="input_title">ID :&nbsp;</label><input type="text" name="gm_id" id="gm_id" required /><div class="float_clear"></div>
+                    <label for="gm_pw" class="input_title">PW :&nbsp;</label><input type="password" name="gm_pw" id="gm_pw" required /><div class="float_clear"></div>
+                    <button id="do_login">&nbsp;&nbsp;Log-in&nbsp;&nbsp;</button>
+                </div>
+            </fieldset>
+            </form>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

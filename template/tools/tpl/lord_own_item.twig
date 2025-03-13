@@ -1,0 +1,122 @@
+<style>
+	#incr_item_form table {
+		float: left;
+		margin: 0 5px;
+	}
+	#incr_item_form table, #incr_item_form th, #incr_item_form td {
+		border: 1px solid black;
+		border-collapse: collapse;
+	}
+</style>
+
+<h2>[ {{ _SESSION['selected_lord']['lord_name'] }} ] 군주 보유 아이템</h2>
+<hr />
+<table id="lord_own_item" class="jqGridTable">
+</table>
+<div id="pager_lord_own_item"></div>
+
+<br/>
+
+<div style="text-align:right;">
+	<button id="decr_item" style="padding:0.4em;">&nbsp;아이템 회수&nbsp;</button>
+	<button id="incr_item" style="padding:0.4em;">&nbsp;아이템 지급&nbsp;</button>
+</div>
+
+<br/>
+
+<div id="decr_item_form" title="아이템 회수">
+	<div>
+
+<table class="item_list_table" border="1">
+	<thead>
+		<tr>
+			<th colspan="4">증가</th>
+			<th colspan="4">단축</th>
+			<th colspan="4">군주</th>
+			<th colspan="4">특수</th>
+			<th colspan="4">패키지</th>
+			<th colspan="4">영웅</th>
+		</tr>
+		<tr>
+			<th class="check"></th>
+			<th>아이템명</th>
+			<th>현재 수량</th>
+			<th class="input">회수할 수량</th>
+			<th class="check"></th>
+			<th>아이템명</th>
+			<th>현재 수량</th>
+			<th class="input">회수할 수량</th>
+			<th class="check"></th>
+			<th>아이템명</th>
+			<th>현재 수량</th>
+			<th class="input">회수할 수량</th>
+			<th class="check"></th>
+			<th>아이템명</th>
+			<th>현재 수량</th>
+			<th class="input">회수할 수량</th>
+			<th class="check"></th>
+			<th>아이템명</th>
+			<th>현재 수량</th>
+			<th class="input">회수할 수량</th>
+			<th class="check"></th>
+			<th>아이템명</th>
+			<th>현재 수량</th>
+			<th class="input">회수할 수량</th>
+		</tr>
+	</thead>
+	<tbody id="desc_item_lord_own_list">
+	</tbody>
+</table>
+
+	</div>
+	<br/>
+	<h3>사유 입력</h3>
+	<hr />
+	<div>
+		<textarea id="decr_item_cause" style="width:1295px;min-width:1295px;max-width:1295px; height:64px;"></textarea>
+	</div>
+</div>
+
+<div id="incr_item_form" title="아이템 지급">
+	<!--
+			<th colspan="3">증가</th>P
+			<th colspan="3">단축</th>S
+			<th colspan="3">군주</th>L
+			<th colspan="3">특수</th>D
+			<th colspan="3">패키지</th>B
+			<th colspan="3">영웅</th>H
+			<th colspan="3">큐빅</th>qbig
+	-->
+	{% set array = { P: '증가', S: '단축', L: '군주', D: '특수', B: '패키지', H: '영웅' } %}
+	{% for k, v in array %}
+	<table>
+		<thead>
+		<tr>
+			<th colspan="3">{{ v }}</th>
+		</tr>
+		<tr>
+			<th class="check"></th>
+			<th>아이템명</th>
+			<th class="input">수량</th>
+		</tr>
+		</thead>
+		<tbody>
+		{% for k, v in _M['ITEM'] | sort | filter(s => s.display_type == k and s.yn_use == 'Y') %}
+			<tr>
+				<td class="check"><input type='checkbox' value="{{ v.m_item_pk }}" /></td>
+				<td>{{ v.title }}</td>
+				<td class="input"><input type='number' id='m_item_{{ v.m_item_pk }}' min="0" max="99" value="0" style='width:40px' /></td>
+			</tr>
+		{% endfor %}
+		</tbody>
+	</table>
+	{% endfor %}
+
+	<div style="clear: both;"></div>
+	<br/>
+	<h3>사유 입력</h3>
+	<hr/>
+	<div>
+		<textarea id="incr_item_cause" style="width:1295px;min-width:1295px;max-width:1295px; height:64px;"></textarea>
+	</div>
+</div>

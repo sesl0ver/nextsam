@@ -1,0 +1,59 @@
+<h2>병력 로그 검색</h2>
+<hr />
+
+<div class="log_search_box">
+    <fieldset class="search_box">
+        <legend>검색기간</legend>
+        <input type="text" id="search_time_start" value="" /> ~ <input type="text" id="search_time_end" value="" />
+    </fieldset>
+
+    <fieldset class="search_box">
+        <legend>군주명 검색</legend>
+        <input type="text" id="lord_name" value="{{ _SESSION['selected_lord']['lord_name'] }}" />
+    </fieldset>
+
+    <fieldset class="search_box">
+        <legend>좌표 검색</legend>
+        X <input type="text" id="offset_x" class="offset" maxlength="3" /> / Y <input type="text" id="offset_y" class="offset" maxlength="3" />
+    </fieldset>
+
+    <fieldset class="search_box">
+        <legend>검색 분류 지정</legend>
+        <ul class="log_checkbox">
+            {% set array = {
+                training: '훈련 시작',
+                training_complete: '훈련 완료',
+                army_disperse: '병력 해산',
+                medical: '부상병 치료',
+                medical_complete: '치료 완료',
+                injury_army: '부상병 발생',
+                injury_disperse: '부상병 해산',
+                quest_army_reward: '퀘스트 병력 보상',
+                quest_fort_reward: '퀘스트 방어시설 보상',
+                decrease_troop: '병력 감소 (출병)',
+                increase_troop: '병력 증가 (복귀)',
+                decrease_battle: '병력 감소 (전투)',
+                decrease_battle_ally: '지원 병력 감소 (전투)',
+                increase_army_item: '병력 증가 (아이템)',
+                decrease_army_over: '병력 감소 (반란)',
+                decrease_army_all: '병력 감소 (전체)',
+            } %}
+            {% for key, value in array  %}
+                <li><input type='checkbox' value='{{ key }}' id='search_type_{{ key }}' /> <label for='search_type_{{ key }}'>{{ value }}</label></li>
+            {% endfor %}
+        </ul>
+    </fieldset>
+    <button id="search_log" style="">검색</button>
+    <button id="search_log_add" style="">추가<br />검색</button>
+</div>
+
+<div class="log_description">검색된 결과는 500건까지 우선 표시됩니다. 추가 검색 버튼을 누르면 500건씩 추가됩니다.<br/>가능하면 군주명이나 좌표를 반드시 입력해주십시오.</div>
+
+<br/>
+
+<div id="search_result">
+    <table>
+        <thead></thead>
+        <tbody></tbody>
+    </table>
+</div>

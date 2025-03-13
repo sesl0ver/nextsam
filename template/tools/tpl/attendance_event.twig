@@ -1,0 +1,48 @@
+<script type="text/javascript">
+    const attendance_remote = function (_type) {
+        $.post('/admin/gm/api/updateAttendance', {'action': _type}, function (data) {
+            if (data.result === 'ok') {
+                alert('정상적으로 처리되었습니다.');
+                location.reload();
+            }
+        }, 'json');
+    };
+
+    $(function(){
+	$('#attendance_event_init_btn')
+	.bind('mouseup', function(){
+		attendance_remote('init');
+	});
+
+	$('#attendance_event_yesterday_btn')
+	.bind('mouseup', function(){
+		attendance_remote('yesterday');
+	});
+
+	$('#attendance_event_plus_btn')
+	.bind('mouseup', function(){
+		attendance_remote('plus');
+	});
+
+	$('#attendance_event_minus_btn')
+	.bind('mouseup', function(){
+		attendance_remote('minus');
+	});
+});
+</script>
+<h2>[ {{ _SESSION['selected_lord']['lord_name'] }} ] 출석 체크 이벤트 현황</h2>
+<hr />
+
+<div>
+    현재 출석 일수 : <span class="attendance_cnt"></span>회<br />
+    최종 출석 일자 : <span class="attendance_dt"></span>
+    <br /><br />
+    <button id="attendance_event_init_btn">&nbsp;&nbsp;&nbsp;초기화&nbsp;&nbsp;&nbsp;</button>
+    <button id="attendance_event_yesterday_btn">&nbsp;&nbsp;&nbsp;하루전으로&nbsp;&nbsp;&nbsp;</button>
+    <button id="attendance_event_plus_btn">&nbsp;&nbsp;&nbsp;하루+&nbsp;&nbsp;&nbsp;</button>
+    <button id="attendance_event_minus_btn">&nbsp;&nbsp;&nbsp;하루-&nbsp;&nbsp;&nbsp;</button>
+    <br /><br />
+    ※ 초기화 및 하루전으로 버튼을 클릭하면 날짜는 하루 전으로 돌아가 다시 출석할 수 있게 됩니다. 상황에 맞게 사용하세요.<br />
+    ※ +, - 버튼을 클릭하면 최종 출석 일자 역시 클릭한 시간으로 갱신됩니다.<br />
+    ※ 출석일 수를 더하거나 빼더라도 보상은 지급되지 않습니다. 보상지급이 필요할 시 아이템 지급을 통해 지급하세요.
+</div>

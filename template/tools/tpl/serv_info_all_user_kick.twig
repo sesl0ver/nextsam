@@ -1,0 +1,30 @@
+<?php
+if (!isset($_SESSION) || !isset($_SESSION['gm_active']))
+{
+	// 세션이 설정되지 않은 경우 이 파일을 볼 수없음.
+	header("HTTP/1.0 404 Not Found");
+	exit(1);
+}
+$all_disabled = ' ';
+$select_disabled = ' ';
+
+if (!isset($_SESSION['server_list']) || count($_SESSION['server_list']) < 1)
+{
+	$all_disabled = " disabled='disabled' ";
+	$select_disabled = " disabled='disabled' ";
+}
+
+?>
+<h2>전체 유저킥</h2>
+
+<hr />
+
+<div>
+	<button id="open_all_user_kick_form" style="padding:0.4em">전체 유저킥 실행</button>
+</div>
+
+<div id="all_user_kick_form" title="전체 유저킥 실행">
+	<h3>전체 유저킥 실행 사유</h3>
+	<hr />
+	<textarea id="all_user_kick_cause" style=""></textarea>
+</div>

@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+#ns_dialog_hero_skill_box_list {
+
+}
+
+#ns_dialog_hero_skill_box_list .hero_skill_box_list {
+    position:relative;
+}
+
+#ns_dialog_hero_skill_box_list .hero_skill_box_list * {
+    pointer-events: none;
+}
+
+#ns_dialog_hero_skill_box_list .cont_hero_skill_box_list {
+    padding:1px 3px;
+}
+
+#ns_dialog_hero_skill_box_list .cont_hero_skill_box_btn {
+    float:left;
+    width:50px;
+    height:50px;
+}
+
+#ns_dialog_hero_skill_box_list .cont_hero_skill_box_img {
+    float:left;
+    width:45px;
+    height:45px;
+    background-size:45px 45px;
+}
+
+#ns_dialog_hero_skill_box_list .cont_hero_skill_box_rare_img {
+    position:absolute;
+    background-size:45px 45px
+}
+
+#ns_dialog_hero_skill_box_list .cont_hero_skill_box_detail {
+    float:left;
+    width:204px;
+    padding-left:4px;
+    margin-bottom:6px;
+    color:#767d85;
+    height:42px;
+}
+
+#ns_dialog_hero_skill_box_list .cont_skill_box_title_wrap {
+    font-weight:bold;
+    color:#ffffff;
+    line-height:17px;
+}

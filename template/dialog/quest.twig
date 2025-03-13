@@ -1,0 +1,110 @@
+<div id="ns_dialog_quest">
+    <span id="ns_button_quest_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('mission') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_quest_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_quest_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_tab ns_panel_grid_2">
+                <span id="ns_button_quest_tab_general">{{ i18n.t('general') }}</span>
+                <span id="ns_button_quest_tab_making">{{ i18n.t('production') }}</span>
+            </div>
+
+            <div class="content">
+
+                <div class="ns_panel_margin_yy">
+                    <div class="content_main_quest_list"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_quest_viewer">
+    <span id="ns_button_quest_viewer_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title"></span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_quest_viewer_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_quest_viewer_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+                <div class="ns_panel_sub_top">
+                    <span></span>
+                    <span class="content_sub_title"></span>
+                    <span id="ns_button_toggle_quest_description"></span>
+                </div>
+
+                <div class="ns_panel_basic">
+                    <div class="content_padding quest_description_wrap">
+                        <p class="content_quest_description"></p>
+                        <div class="hr_division_brown ns_panel_margin_y"></div>
+                    </div>
+
+                    <div class="content_padding">
+                        <span class="content_goal_title">{{ i18n.t('mission_condition') }}</span>
+                        <div class="content_goal_warp"></div>
+                    </div>
+
+                    <div class="content_padding_none_top">
+                        <span class="content_tip_title">{{ i18n.t('tip') }}</span>
+                        <div class="content_tip_warp"></div>
+                    </div>
+                </div>
+
+                <!-- 퀘스트 뷰어! -->
+
+                <div class="ns_panel_basic wrapper_quest_button">
+                    <div class="content_padding content_center">
+                        <span id="ns_button_quest_reward_submit">{{ i18n.t('receive_reward') }}</span>
+                        <span id="ns_button_quest_shortcut"></span>
+                    </div>
+                </div>
+
+                <div class="ns_panel_basic wrapper_quest_reward">
+                    <div class="ns_panel_most ns_panel_trans_top">
+                        <span class="text_quest_reward">{{ i18n.t('mission_reward') }}</span>
+                    </div>
+                    <div class="ns_panel_trans">
+                        <div class="content_reward_warp ns_panel_grid_2"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_reward_information">
+    <span id="ns_button_reward_information_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_reward_information_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_flex">
+                    <div class="item_image ns_panel_flex_item_auto"></div>
+                    <div class="item_description ns_panel_flex_right"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

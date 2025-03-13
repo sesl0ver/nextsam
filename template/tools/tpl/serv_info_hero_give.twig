@@ -1,0 +1,38 @@
+<h2>장수 지급</h2>
+
+<hr />
+
+<fieldset id="lord_search_by_lord_name_form" class="cpn_search_form">
+	<legend>군주명 검색</legend>
+	<div>
+		<input type="text" id="lord_name" value="{{ _SESSION['selected_lord']['lord_name'] }}" /> <input type="button" id="do_search_lord_name" value="&nbsp;검색&nbsp;" /><br/>
+	</div>
+</fieldset>
+
+<br/>
+
+<div id="search_result">
+</div>
+
+<div id="hero_give" title="장수 지급하기" style='float:left'>
+	<h3>장수 선택</h3>
+	<hr />
+	<select id='selected_hero_base_pk'>
+		<option>영웅 선택</option>
+		{% for k,v in _M['HERO_BASE'] | filter(m => m.type != 'K') | sort((a, b) => a.name <=> b.name) | sort((a, b) => a.rare_type - b.rare_type) %}
+			<option value="{{ v['m_hero_base_pk'] }}">[{{ v['m_hero_base_pk'] }}] ★{{ v['rare_type'] }} {{ v['name'] }}</option>
+		{% endfor %}
+	</select>
+	<br /><br />
+	<h3>레벨 선택</h3>
+	<hr />
+	<select id='hero_level'>
+		{% for i in range(1, 20) %}
+		<option value="{{ i }}">Lv.{{ i }}</option>
+		{% endfor %}
+	</select>
+<br /><br />
+<h3>사유</h3>
+<hr />
+<textarea id="cause" style="width:614px;height:60px;max-width:614px;min-width:614px;"></textarea>
+</div>

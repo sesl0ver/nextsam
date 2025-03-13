@@ -1,0 +1,142 @@
+@charset "utf-8";
+
+#ns_dialog_build_ReceptionHall {
+
+}
+
+#ns_dialog_build_ReceptionHall div.ns_panel_sub_top.ns_panel_flex > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+#ns_button_build_assign_ReceptionHall,
+#ns_button_build_no_assign_ReceptionHall {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 92px;
+    height: 121px;
+}
+
+#ns_dialog_build_ReceptionHall .ns_table_common>thead>tr {
+    & th:first-child {
+        width: 23%;
+    }
+
+    & th:not(:first-child){
+        width: 11%;
+    }
+}
+
+#ns_button_build_speedup_ReceptionHall {
+    width: 120px;
+}
+
+#ns_button_build_ReceptionHall_encounter_cancel {
+    margin-right: 5px;
+}
+
+#ns_dialog_build_ReceptionHall .button_select_box{
+    width: 110px;
+}
+
+#ns_dialog_build_ReceptionHall .hero_free_bid_off_description {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height:100%;
+    background-color: rgba(0, 0, 0, .6);
+    z-index:10;
+}
+
+#ns_dialog_build_ReceptionHall .item_resource_title {
+    margin:3px auto;
+    width:114px;
+    height:24px;
+    color:#fff;
+    text-align:center;
+    line-height:24px;
+}
+
+#ns_dialog_build_ReceptionHall .item_resource_description,
+#ns_dialog_build_ReceptionHall .invitation_description,
+#ns_dialog_build_ReceptionHall .progress_description,
+#ns_dialog_build_ReceptionHall .invitation_success_description {
+    margin:0 auto;
+    padding-bottom: 7px;
+    width:288px;
+    height:24px;
+    color:#FDD07D;
+    text-align:center;
+    line-height:24px;
+    background:url('/image/ui/sub/encounter_desc_bg.png') no-repeat;
+    background-size:288px 24px;
+}
+
+#ns_dialog_build_ReceptionHall .content_card {
+    position: relative;
+}
+
+#ns_dialog_build_ReceptionHall .encounter_type_invitation_success .hero_card_detail,
+#ns_dialog_build_ReceptionHall .encounter_type_hero .hero_card_detail {
+    margin: auto;
+}
+
+#ns_dialog_build_ReceptionHall .invitation_success {
+    position:absolute;
+    top: 30px;
+    left: 20px;
+    width:48px;
+    height:54px;
+    background:url('/image/ui/sub/invitation_success.png') no-repeat;
+    background-size:48px 54px;
+}
+
+#ns_dialog_build_ReceptionHall .invitation_failed {
+    position:absolute;
+    top: 30px;
+    left: 20px;
+    width:48px;
+    height:54px;
+    background:url('/image/ui/sub/invitation_failed.png') no-repeat;
+    background-size:48px 54px;
+}
+
+#ns_dialog_build_ReceptionHall .content .ns_panel_heavy {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#ns_dialog_build_ReceptionHall .hero_card_sm.ns_panel_flex {
+    width: 120px;
+}
+
+#ns_dialog_build_ReceptionHall .wrapper_reception_desc {
+    padding: 5px 0;
+    line-height: 20px;
+    text-align: center;
+}
+
+#ns_dialog_build_ReceptionHall #ns_button_build_ReceptionHall_encounter_get,
+#ns_dialog_build_ReceptionHall_bid #ns_button_hero_free_bid_submit{
+    width: 100px;
+}
+
+#ns_dialog_build_ReceptionHall #ns_button_build_ReceptionHall_encounter_do{
+    width: 140px;
+}
+#ns_dialog_build_ReceptionHall #ns_button_build_ReceptionHall_encounter_invitation,
+#ns_dialog_build_ReceptionHall #ns_button_build_ReceptionHall_encounter_re,
+#ns_dialog_build_ReceptionHall #ns_button_build_ReceptionHall_encounter_get {
+    width: 150px;
+}
+
+#ns_dialog_build_ReceptionHall .progress_hero {
+    margin: 10px 0;
+}
+
+#ns_dialog_build_ReceptionHall .encounter_description {
+    text-align: center;
+    margin: 15px 0 0 0;
+}

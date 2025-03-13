@@ -1,0 +1,160 @@
+@charset "utf-8";
+
+#ns_dialog_hero_card {
+    position: relative;
+    perspective: 600px;
+    z-index: 2355;
+}
+
+#ns_dialog_hero_card .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#ns_dialog_hero_card .hero_card_front
+{
+    position: absolute;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+#ns_dialog_hero_card  .hero_card_front.flipping {
+    transform: rotateY(180deg);
+}
+
+#ns_dialog_hero_card .hero_card_back
+{
+    position: absolute;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+#ns_dialog_hero_card  .hero_card_back.flipping {
+    transform: rotateY(180deg);
+}
+
+#ns_dialog_hero_card .card_slot {
+    margin: auto;
+    width: 277px;
+    height: 353px;
+}
+
+#ns_dialog_hero_card .card_bottom {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+}
+
+#ns_dialog_hero_card .hero_card_back_buttons {
+    position: relative;
+    top: 96px;
+    text-align: center;
+    z-index: 2;
+}
+
+/* button */
+.button_card_main {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 27px;
+    line-height: 24px;
+    padding: 0 10px 0 10px;
+    background: url('/image/button/button_hero_card_main_end.png') no-repeat right top,
+                url('/image/button/button_hero_card_main.png') repeat-x left top;
+    background-size: 5px 81px, 200px 81px;
+    text-align: center;
+    font-weight: bold;
+    font-size: .8rem;
+    color: #000;
+    text-shadow: 0 1px 1px #FFF;
+}
+.button_card_main.disable {
+    background-position: right -54px, 0 -54px;
+}
+
+.button_card_sub {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    height: 27px;
+    line-height: 27px;
+    padding: 0 10px 0 10px;
+    background: url('/image/button/button_hero_card_sub_end.png') no-repeat right top,
+                url('/image/button/button_hero_card_sub.png') repeat-x left top;
+    background-size: 5px 81px, 200px 81px;
+    text-align: center;
+    font-weight: bold;
+    font-size: .8rem;
+    color: #000;
+    text-shadow: 0 1px 1px #FFF;
+}
+
+.button_card_sub.disable {
+    background-position: right -54px, 0 -54px;
+    color: #706460;
+}
+
+.button_card_action {
+    display: inline-block;
+    position: relative;
+    width: 86px;
+    height: 29px;
+    line-height: 27px;
+    background: url('/image/button/button_card_action.png');
+    background-size: 86px 87px;
+    margin-right: 2px;
+    font-weight: bold;
+    font-size: .8rem;
+    text-shadow: 0 -1px 1px #000;
+}
+
+.button_card_action.disable {
+    color: #706460;
+    background-position:0 -58px;
+}
+
+#ns_dialog_card_prize,
+#ns_dialog_card_enchant,
+#ns_dialog_card_group {
+    z-index: 2440;
+}
+
+#ns_dialog_card_prize tbody td:nth-child(1) {
+    width: 90px;
+    height: 34px;
+}
+
+#ns_dialog_card_prize tbody td:nth-child(2) {
+    width: 20px;
+}
+
+#ns_dialog_card_prize tbody td:nth-child(3) {
+    width: 67px;
+}
+
+#ns_dialog_card_prize .card_prize_description {
+    line-height: 15px;
+    color: #767D85;
+    font-weight: bold;
+    text-align: center;
+}
+
+#ns_dialog_card_enchant .ns_table_common td{
+    border: 0;
+}
+
+#ns_dialog_card_enchant .button_default {
+    width: 80px;
+}
+
+#ns_dialog_card_enchant .button_select_box {
+    width: 100px;
+}

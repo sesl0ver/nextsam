@@ -1,0 +1,288 @@
+<div id="ns_dialog_lord_info">
+    <span id="ns_button_lord_info_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('lord_information') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_lord_info_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_lord_info_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_x">
+                    <div class="ns_panel_most ns_panel_trans">
+                        <div class="ns_panel_basic ns_panel_margin_xx" id="lord_info_basic_panel">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th colspan="2">{{ i18n.t('lord_information') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody class="lord_info_table">
+                                <tr class="content_lord_info_my1">
+                                    <td class="width-50">{{ i18n.t('lord_hero') }}</td><td><span class="lord_info_card"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('lord_grade') }}</td><td><span class="lord_info_level"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('alliance') }}</td><td><span class="lord_info_alliance"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('territory') }}</td><td><span class="lord_info_territory"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('ranking') }}</td><td><span class="lord_info_ranking"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('lord_power') }}</td><td><span class="lord_info_power"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('attack_point') }}</td><td><span class="lord_info_att_point"></span></td>
+                                </tr>
+                                <tr>
+                                    <td>{{ i18n.t('defense_point') }}</td><td><span class="lord_info_def_point"></span></td>
+                                </tr>
+                                <tr class="content_lord_info_my2">
+                                    <td>{{ i18n.t('army_point') }}</td><td><span class="lord_info_army_point"></span></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="button_area text_align_center ns_panel_grid_2">
+                                <span id="ns_button_lord_info_card_change">{{ i18n.t('lord_hero_change') }}</span>
+                                <span id="ns_button_lord_info_lord_name_change">{{ i18n.t('lord_name_change') }}</span>
+                                <span id="ns_button_lord_info_letter">{{ i18n.t('diplomatic_correspondence') }}</span>
+                                <span id="ns_button_lord_info_alliance_info">{{ i18n.t('alliance_information') }}</span>
+                                <span id="ns_button_lord_info_alliance_request">{{ i18n.t('alliance_invite') }}</span>
+                                <!-- <span id="ns_button_lord_info_alliance_request">개인 동맹 신청</span>
+                                <span id="ns_button_lord_info_alliance_delete">개인 동맹 파기</span> -->
+                                <span id="ns_button_lord_info_manage_transfer">{{ i18n.t('alliance_cede') }}</span>
+                                <span id="ns_button_lord_info_manage_expulsion">{{ i18n.t('expulsion') }}</span>
+                            </div>
+                        </div>
+
+                        <div class="ns_panel_basic ns_panel_margin_xx" id="lord_info_desc_panel">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th>{{ i18n.t('lord_introduce') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><div class="lord_info_intro">&nbsp;</div></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="button_area text_align_center">
+                                <span id="ns_button_lord_info_intro_change">{{ i18n.t('lord_introduce_change') }}</span>
+                            </div>
+                        </div>
+
+                        <div class="ns_panel_basic ns_panel_margin_xx" id="alliance_info_panel">
+                            <table class="ns_table_common">
+                                <thead>
+                                <tr>
+                                    <th>{{ i18n.t('alliance_greetings') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr>
+                                    <td><div class="alliance_info_intro">&nbsp;</div></td>
+                                </tr>
+                                </tbody>
+                            </table>
+
+                            <div class="button_area text_align_center">
+                                <span id="ns_button_alliance_info_intro_change">{{ i18n.t('alliance_greetings_change') }}</span>
+                            </div>
+
+                            <table class="ns_table_common lord_info_alliance_position">
+                                <thead>
+                                <tr>
+                                    <th>{{ i18n.t('territory_title') }}</th>
+                                    <th>{{ i18n.t('coordinates') }}</th>
+                                    <th>{{ i18n.t('distance') }}</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_lord_info_card_change">
+    <span id="ns_button_lord_info_card_change_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('lord_hero_change') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_lord_info_card_change_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_lord_info_card_change_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="content_lord_change_select">
+                    <div class="content_lord_change_face" data-lord="1"></div>
+                    <div class="content_lord_change_face" data-lord="2"></div>
+                    <div class="content_lord_change_face" data-lord="3"></div>
+                    <div class="content_lord_change_face" data-lord="4"></div>
+                    <div class="content_lord_change_face" data-lord="5"></div>
+                </div>
+
+                <div class="content_button_area">
+                    <span id="ns_button_lord_card_change_submit">{{ i18n.t('lord_hero_change') }}</span>
+                </div>
+
+                <div class="content_lord_create_info">
+                    <div class="content_lord_card_change_status"></div>
+                    <div class="content_lord_card_change_description"></div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_lord_info_lord_name_change">
+    <span id="ns_button_lord_info_lord_name_change_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_lord_info_lord_name_change_close"></span>
+                <span class="content_pop_title">{{ i18n.t('lord_name_change') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic">
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th class="width-50">{{ i18n.t('before_lord_name') }}</th>
+                            <th>{{ i18n.t('after_lord_name') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><span class="lord_name"></span></td>
+                            <td><label><input name="change_lord_name" value="" /><br />{{ i18n.t('lord_name_change_condition') }}</label></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">{{ i18n.t('lord_name_change_description') }}</td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_change_lord_name">{{ i18n.t('lord_name_change') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_lord_intro_change">
+    <span id="ns_button_lord_intro_change_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('lord_introduce_change') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_lord_intro_change_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_lord_intro_change_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <div class="ns_panel_most ns_panel_trans">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('lord_introduce') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>{{ i18n.t('lord_introduce_description') | raw }}</td>
+                            </tr>
+                            <tr>
+                                <td><label><textarea name="lord_intro_text"></textarea></label></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="ns_panel_pop_button">
+                            <span id="ns_button_lord_intro_change">{{ i18n.t('lord_introduce_change') }}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_alliance_intro_change">
+    <span id="ns_button_alliance_intro_change_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('alliance_greetings_change') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_alliance_intro_change_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_alliance_intro_change_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <div class="ns_panel_most ns_panel_trans">
+
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('alliance_greetings') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>{{ i18n.t('alliance_greetings_description') | raw }}</td>
+                            </tr>
+                            <tr>
+                                <td><label><textarea name="alliance_intro_text"></textarea></label></td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="ns_panel_pop_button">
+                            <span id="ns_button_alliance_intro_change">{{ i18n.t('alliance_greetings_change') }}</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

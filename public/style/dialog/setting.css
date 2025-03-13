@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+#ns_dialog_setting p.game_version {
+    color: #91A1B0;
+}
+
+#ns_button_setting_submit {
+    width: 140px;
+}

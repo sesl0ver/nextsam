@@ -1,0 +1,123 @@
+@charset "utf-8";
+#ns_dialog_hero_manage .hero_manage_sub_top {
+    color: #ffffff;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #000000;
+    padding-bottom: 4px;
+}
+
+#ns_dialog_hero_manage .hero_manage_list_wrap {
+    justify-items: center;
+    gap: 10px 10px;
+}
+
+#ns_dialog_hero_manage .hero_manage_list_wrap > div {
+    width: 92px;
+    position: relative;
+}
+
+#ns_dialog_hero_manage .hero_manage_list_wrap .empty_list_item {
+    margin: 15px 0;
+    grid-column: 1 / 5;
+    text-align: center;
+    color: #767D85;
+    text-shadow: 0 1px #000000;
+    font-weight: 700;
+}
+
+#ns_button_hero_manage_list_more {
+    width: 120px;
+}
+
+#ns_dialog_hero_manage .hero_manage_float_buttons {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    opacity: .7;
+    z-index: 1;
+}
+
+#ns_dialog_hero_manage .hero_manage_float_buttons > span {
+    border: 1px solid #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #ffffff;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    background: #333333;
+}
+
+#ns_dialog_hero_manage .content_hero_manage_table.stat .filter_stat,
+#ns_dialog_hero_manage .content_hero_manage_table.officer .filter_officer,
+#ns_dialog_hero_manage .content_hero_manage_table.army .filter_army {
+display: table-cell;
+}
+
+#ns_dialog_hero_manage .content_hero_manage_table.stat .filter_officer,
+#ns_dialog_hero_manage .content_hero_manage_table.stat .filter_army,
+#ns_dialog_hero_manage .content_hero_manage_table.army .filter_stat,
+#ns_dialog_hero_manage .content_hero_manage_table.army .filter_officer,
+#ns_dialog_hero_manage .content_hero_manage_table.officer .filter_stat,
+#ns_dialog_hero_manage .content_hero_manage_table.officer .filter_army {
+display: none;
+}
+
+#ns_dialog_hero_manage .content_group {
+display: inline-block;
+width: 12px;
+height: 12px;
+margin-bottom: -2px;
+margin-right: 2px;
+background-size: 72px 12px;
+background-repeat: no-repeat;
+background-image: url('/image/icon/hero_manage_group.gif');
+}
+
+#ns_dialog_hero_manage tbody .content_hero_name {
+width:20%;
+}
+
+#ns_dialog_hero_manage .ns_panel_sub_top {
+line-height: 22px;
+padding: 0 5px;
+}
+
+#ns_dialog_hero_manage .hero_manage_group_C {
+background-position:0 0;
+}
+
+#ns_dialog_hero_manage .hero_manage_group_D {
+background-position:-12px 0;
+}
+
+#ns_dialog_hero_manage .hero_manage_group_S {
+background-position:-24px 0;
+}
+
+#ns_dialog_hero_manage .hero_manage_group_E {
+background-position:-36px 0;
+}
+
+#ns_dialog_hero_manage .hero_manage_group_B {
+background-position:-48px 0;
+}
+
+#ns_dialog_hero_manage .hero_manage_group_T {
+background-position:-60px 0;
+}
+
+#ns_dialog_hero_manage .hero_card_small.same_hero {
+filter: grayscale(.75);
+}
+
+#ns_dialog_hero_manage .hero_card_status_assigned { background: url('/image/hero/status_assigned.png') no-repeat right top; background-size: 92px 121px; }
+#ns_dialog_hero_manage .hero_card_status_cmd_ing { background: url('/image/hero/status_cmd_ing.png') no-repeat right top; background-size: 92px 121px; }
+#ns_dialog_hero_manage .hero_card_status_not_cond { background: url('/image/hero/status_not_condition.png') no-repeat right top; background-size: 92px 121px; }
+#ns_dialog_hero_manage .hero_card_status_recommend { background: url('/image/hero/status_recommend.png') no-repeat right top; background-size: 92px 121px; }
+/*.hero_card_status_treatment { background: url('/image/hero/status_treatment.png') no-repeat right top; background-size: 92px 121px; }
+.hero_card_status_enchant {  }
+.hero_card_status_strike { background: url('/image/hero/status_strike.png') no-repeat right top; background-size: 92px 121px; }*/

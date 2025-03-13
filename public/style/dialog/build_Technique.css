@@ -1,0 +1,86 @@
+@charset "utf-8";
+
+#ns_dialog_build_Technique {
+
+}
+
+#ns_dialog_build_Technique div.ns_panel_sub_top.ns_panel_flex > div:nth-child(2) {
+    margin-left: 10px;
+}
+
+#ns_button_build_speedup_Technique {
+    width: 120px;
+}
+
+#ns_dialog_build_Technique .technique_cache_wrap {
+    width: 320px;
+    margin: 10px auto;
+}
+
+#ns_dialog_tech_upgrade .ns_table_common>thead>tr>th:nth-child(1) {
+    width: 30%;
+}
+
+#ns_dialog_tech_upgrade .ns_table_common>thead>tr>th:nth-child(2),
+#ns_dialog_tech_upgrade .ns_table_common>thead>tr>th:nth-child(3) {
+    width: 35%;
+}
+
+#ns_dialog_tech_upgrade .item_image {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px !important;
+}
+
+#ns_dialog_tech_upgrade .button_special {
+    width: 180px;
+}
+
+#ns_dialog_tech_upgrade .target_level_description{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 24px;
+    color : #B4D2EC;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+#ns_dialog_tech_upgrade .item_description {
+    color: #b4d2ec;
+    width: 100%;
+}
+
+#ns_dialog_build_Technique .hero_card_sm.ns_panel_flex {
+    width: 120px;
+}
+
+#ns_button_concurr_speedup_build_Technique {
+    margin: 0 7px 0 0;
+}
+
+.technique_image_agriculture { background-image:url('/image/m_/300100.png'); background-repeat:no-repeat;  }
+.technique_image_stock_farming { background-image:url('/image/m_/300200.png'); background-repeat:no-repeat;  }
+.technique_image_lumbering { background-image:url('/image/m_/300300.png'); background-repeat:no-repeat;  }
+.technique_image_mining { background-image:url('/image/m_/300400.png'); background-repeat:no-repeat;  }
+.technique_image_storage { background-image:url('/image/m_/300500.png'); background-repeat:no-repeat;  }
+.technique_image_construction { background-image:url('/image/m_/300600.png'); background-repeat:no-repeat;  }
+.technique_image_astronomy { background-image:url('/image/m_/300700.png'); background-repeat:no-repeat;  }
+.technique_image_paper { background-image:url('/image/m_/300800.png'); background-repeat:no-repeat;  }
+.technique_image_medicine { background-image:url('/image/m_/300900.png'); background-repeat:no-repeat;  }
+.technique_image_smelting { background-image:url('/image/m_/301000.png'); background-repeat:no-repeat;  }
+.technique_image_casting { background-image:url('/image/m_/301100.png'); background-repeat:no-repeat;  }
+.technique_image_machinery { background-image:url('/image/m_/301200.png'); background-repeat:no-repeat;  }
+.technique_image_mil_fencing { background-image:url('/image/m_/301300.png'); background-repeat:no-repeat;  }
+.technique_image_mil_shield { background-image:url('/image/m_/301400.png'); background-repeat:no-repeat;  }
+.technique_image_mil_spear { background-image:url('/image/m_/301500.png'); background-repeat:no-repeat;  }
+.technique_image_mil_horse { background-image:url('/image/m_/301600.png'); background-repeat:no-repeat;  }
+.technique_image_mil_science { background-image:url('/image/m_/301700.png'); background-repeat:no-repeat;  }
+.technique_image_fortification { background-image:url('/image/m_/301800.png'); background-repeat:no-repeat;  }
+.technique_image_compass { background-image:url('/image/m_/301900.png'); background-repeat:no-repeat;  }
+.technique_image_logistics { background-image:url('/image/m_/302000.png'); background-repeat:no-repeat;  }
+.technique_image_informatics { background-image:url('/image/m_/302100.png'); background-repeat:no-repeat;  }
+.technique_image_mil_archery { background-image:url('/image/m_/302200.png'); background-repeat:no-repeat;  }
+.technique_image_mil_formation { background-image:url('/image/m_/302300.png'); background-repeat:no-repeat;  }
+.technique_image_mil_siege { background-image:url('/image/m_/302400.png'); background-repeat:no-repeat;  }

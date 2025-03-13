@@ -1,0 +1,191 @@
+<style>
+    #incr_skill_form table {
+        float: left;
+        margin: 0 5px;
+    }
+    #incr_skill_form table, #incr_skill_form th, #incr_skill_form td {
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+</style>
+
+<h2>[ {{ _SESSION['selected_lord']['lord_name']}} ] 군주 보유 스킬</h2>
+<hr />
+<table id="lord_own_skill" class="jqGridTable">
+</table>
+<div id="pager_lord_own_skill"></div>
+
+<br/>
+
+<div style="text-align:right;">
+    <button id="decr_skill" style="padding:0.4em;">&nbsp;스킬 회수&nbsp;</button>
+    <button id="incr_skill" style="padding:0.4em;">&nbsp;스킬 지급&nbsp;</button>
+</div>
+
+<br/>
+
+<div id="decr_skill_form" title="스킬 회수">
+    <div>
+
+        <table class="item_list_table" border="1">
+            <thead>
+            <tr>
+                <th colspan="4">전투</th>
+                <th colspan="4">수행</th>
+                <th colspan="4">배속</th>
+                <th colspan="4">성장</th>
+                <th colspan="4">특수</th>
+            </tr>
+            <tr>
+                <th class="check"></th>
+                <th>스킬명</th>
+                <th>현재 수량</th>
+                <th class="input">회수할 수량</th>
+                <th class="check"></th>
+                <th>스킬명</th>
+                <th>현재 수량</th>
+                <th class="input">회수할 수량</th>
+                <th class="check"></th>
+                <th>스킬명</th>
+                <th>현재 수량</th>
+                <th class="input">회수할 수량</th>
+                <th class="check"></th>
+                <th>스킬명</th>
+                <th>현재 수량</th>
+                <th class="input">회수할 수량</th>
+                <th class="check"></th>
+                <th>스킬명</th>
+                <th>현재 수량</th>
+                <th class="input">회수할 수량</th>
+            </tr>
+            </thead>
+            <tbody id="desc_skill_lord_own_list">
+            </tbody>
+        </table>
+
+    </div>
+    <br/>
+    <h3>사유 입력</h3>
+    <hr />
+    <div>
+        <textarea id="decr_skill_cause" style="width:900px; height:64px; margin: 0 auto;"></textarea>
+    </div>
+</div>
+
+<div id="incr_skill_form" title="스킬 지급">
+    <table>
+        <thead>
+        <tr>
+            <th class="check">-</th>
+            <th>스킬명</th>
+            <th class="input">수량</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="3" >전투 스킬</td>
+        </tr>
+        {% for k, v in _M['HERO_SKILL'] | sort | filter(s => s.type == 'D') %}
+            <tr>
+                <td class="check"><input type='checkbox' value='{{ v.m_hero_skil_pk }}' /></td>
+                <td>{{ v.title }} Lv.{{ v.rare }}</td>
+                <td class="input"><input type='number' id='m_skill_{{ v.m_hero_skil_pk }}' min="0" max="99" value="0" style='width:40px' /></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th class="check">-</th>
+            <th>스킬명</th>
+            <th class="input">수량</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="3">수행 스킬</td>
+        </tr>
+        {% for k, v in _M['HERO_SKILL'] | sort | filter(s => s.type == 'A') %}
+            <tr>
+                <td class="check"><input type='checkbox' value='{{ v.m_hero_skil_pk }}' /></td>
+                <td>{{ v.title }} Lv.{{ v.rare }}</td>
+                <td class="input"><input type='number' id='m_skill_{{ v.m_hero_skil_pk }}' min="0" max="99" value="0" style='width:40px' /></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th class="check">-</th>
+            <th>스킬명</th>
+            <th class="input">수량</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="3">배속 스킬</td>
+        </tr>
+        {% for k, v in _M['HERO_SKILL'] | sort | filter(s => s.type == 'P') %}
+            <tr>
+                <td class="check"><input type='checkbox' value='{{ v.m_hero_skil_pk }}' /></td>
+                <td>{{ v.title }} Lv.{{ v.rare }}</td>
+                <td class="input"><input type='number' id='m_skill_{{ v.m_hero_skil_pk }}' min="0" max="99" value="0" style='width:40px' /></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th class="check">-</th>
+            <th>스킬명</th>
+            <th class="input">수량</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="3">성장 스킬</td>
+        </tr>
+        {% for k, v in _M['HERO_SKILL'] | sort | filter(s => s.type == 'S') %}
+            <tr>
+                <td class="check"><input type='checkbox' value='{{ v.m_hero_skil_pk }}' /></td>
+                <td>{{ v.title }} Lv.{{ v.rare }}</td>
+                <td class="input"><input type='number' id='m_skill_{{ v.m_hero_skil_pk }}' min="0" max="99" value="0" style='width:40px' /></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <table>
+        <thead>
+        <tr>
+            <th class="check">-</th>
+            <th>스킬명</th>
+            <th class="input">수량</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td colspan="3">특수 스킬</td>
+        </tr>
+        {% for k, v in _M['HERO_SKILL'] | sort | filter(s => s.type == 'B') %}
+            <tr>
+                <td class="check"><input type='checkbox' value='{{ v.m_hero_skil_pk }}' /></td>
+                <td>{{ v.title }} Lv.{{ v.rare }}</td>
+                <td class="input"><input type='number' id='m_skill_{{ v.m_hero_skil_pk }}' min="0" max="99" value="0" style='width:40px' /></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+    <div style="clear: both;"></div>
+    <br/>
+    <h3>사유 입력</h3>
+    <hr/>
+    <div>
+        <textarea id="incr_skill_cause" style="width:900px; height:64px; margin: 0 auto;"></textarea>
+    </div>
+</div>

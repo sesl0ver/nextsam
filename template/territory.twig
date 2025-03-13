@@ -1,0 +1,29 @@
+<div id="wrap_terr">
+    <div id="terr">
+        <div class="terr_bg"></div>
+        <div id="terr_bdic">
+            <div id="ns_bdic_1">
+                <p class="ns_tile_event"></p>
+                <span class="ns_tile_title"></span>
+            </div>
+            {% for i in range(3, 33) %}
+            <div id="ns_bdic_{{ i }}">
+                <p class="ns_tile_event"></p>
+                <span class="ns_tile_title"></span>
+            </div>
+            {% endfor %}
+        </div>
+        <div id="ns_bdic_2">
+            <p class="ns_tile_event"></p>
+            <span class="ns_tile_title"></span>
+        </div>
+        <div id="terr_bdoc">
+            {% for i in range(1, 33) %}
+                <div id="ns_bdoc_{{ i }}">
+                    <p class="ns_tile_event"></p>
+                    <span class="ns_tile_title"></span>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

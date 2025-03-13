@@ -1,0 +1,132 @@
+@CHARSET "UTF-8";
+.cpn_box
+{
+	margin : 6px 3px;
+	padding : 6px;
+	background-color : #fff;
+	border : 1px solid #DBDBDB;
+}
+
+fieldset.cpn_inp
+{
+	padding : 0 12px 12px;
+	width : 280px;
+	margin : 0 auto;
+	text-align:center;
+}
+
+fieldset.cpn_inp legend
+{
+	padding : 12px;
+}
+
+fieldset.cpn_inp input
+{
+	display : inline-block;
+	line-height : 18px;
+	width : 120px;
+}
+
+fieldset.cpn_inp span.input_title
+{
+	display : inline-block;
+	float : left;
+	width : 120px;
+	line-height : 18px;
+	text-align : right;
+	font-size : 0.9em;
+}
+
+fieldset.cpn_inp button
+{
+	margin-top : 4px;
+}
+
+
+
+span.bullet, li.bullet
+{
+	background-image : url('/tools/img/layout/bullet.png');
+	background-repeat : no-repeat;
+	background-position : left 50%;
+	padding-left : 7px;
+}
+
+span.checked, li.checked
+{
+	background-image : url('/tools/img/layout/checked.png');
+	background-repeat : no-repeat;
+	background-position : left 50%;
+	padding-left : 16px;
+	color : #2e83ff;
+}
+
+span.not, li.not
+{
+	background-image : url('/tools/img/layout/not.png');
+	background-repeat : no-repeat;
+	background-position : left 50%;
+	padding-left : 16px;
+	color : #cd0a0a;
+}
+
+table.jqGridTable
+{
+	border-spacing: 0;
+}
+
+table .ui-th-column
+{
+	height: 24px;
+}
+
+fieldset.cpn_search_form
+{
+	padding : 0 12px 12px;
+	width : 180px;
+}
+
+fieldset.cpn_search_form legend
+{
+	padding : 6px;
+}
+
+fieldset.cpn_search_form input[type=text]
+{
+	width : 100px;
+}
+
+fieldset.cpn_search_form input.offset
+{
+	width : 30px;
+}
+
+.quest_list { padding-left : 1em; }
+.quest_list ul { padding-left : 1em; }
+
+
+table.item_list_table
+{
+	text-align:center;
+	width:100%;
+	border-collapse:collapse;
+	border:1px solid #000;
+}
+
+table.item_list_table th, td
+{
+	padding : 0.3em;
+}
+
+table.item_list_table th.check, td.check
+{
+	width : 20px;
+}
+table.item_list_table th.input, td.input
+{
+	width : 50px;
+}
+table.item_list_table td.input input
+{
+	width : 50px;
+}

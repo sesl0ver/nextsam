@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+#ns_dialog_server_select {
+    background: rgba(0, 0, 0, 1);
+}
+
+#ns_dialog_server_select .dialog_wrap {
+    max-width: 960px;
+}
+
+#ns_dialog_server_select .dialog_header {
+    display: none;
+    color: #fcdc80;
+    text-shadow: 0 1px 1px #bba25f;
+    font-weight: bold;
+}
+
+#ns_dialog_server_select .game_rating {
+    display: flex;
+    margin-top: 15px;
+    justify-content: right;
+    gap: 5px;
+}
+
+#ns_dialog_server_select .dialog_content {
+    background: url('/image/ui/bg/connect_bg.png') no-repeat center bottom;
+    background-size: cover;
+    height:100%;
+}
+
+#ns_dialog_server_select .dialog_footer {
+    background: none;
+}
+
+#ns_dialog_server_select .dialog_content:before {
+    display: none;
+}
+
+#ns_dialog_server_select .dialog_content .content{
+    background: none;
+}
+
+#ns_dialog_server_select .ns_dialog_trans_top {
+    line-height:20px;
+    text-align:center;
+    color:#43320F;
+    text-shadow:0 1px 1px #8C6B2A;
+    margin-top: 1.5em;
+    font-size: 1rem !important;
+}
+
+#ns_dialog_server_select .content_button_area {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80px;
+}
+
+#ns_dialog_server_select .content_button_area span {
+    margin: 0 auto;
+    width: 160px;
+}
+
+#ns_dialog_server_select .content_server_bg {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+#ns_dialog_server_select .content_server_lord {
+    text-align: center;
+    color:#43320F;
+    text-shadow:0 1px 1px #8C6B2A;
+    margin-top: 1em;
+    font-size: 1rem !important;
+}
+
+#ns_dialog_server_select .content_server {
+    position: relative;
+    margin: 50px auto;
+}
+
+#ns_dialog_server_select .content_server > div[class^=content_server_] {
+    position: relative;
+    width: 131px;
+    height: 131px;
+    background-size: 131px 131px;
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+#ns_dialog_server_select .content_server .content_server_s1 {
+    background-image:url('/image/ui/server/server_s1.png');
+}
+
+#ns_dialog_server_select .content_server .content_server_s2 {
+    background-image:url('/image/ui/server/server_s2.png');
+}
+
+#ns_dialog_server_select .content_server .content_server_s3 {
+    background-image:url('/image/ui/server/server_s3.png');
+}
+
+#ns_dialog_server_select .content_server .content_server_s4 {
+    background-image:url('/image/ui/server/server_s4.png');
+}
+
+#ns_dialog_server_select .content_server .content_server_s5 {
+    background-image:url('/image/ui/server/server_s5.png');
+}
+
+#ns_dialog_server_select .content_server .content_server_test {
+    background-image:url('/image/ui/server/server_test.png');
+}
+
+#ns_dialog_server_select .content_flag_recommend,
+#ns_dialog_server_select .content_flag_new {
+    margin: 0 auto;
+    width: 60px;
+    height: 27px;
+}
+
+#ns_dialog_server_select .content_server .content_flag_new {
+    background: url('/image/ui/server/server_new.png') no-repeat;
+    background-size: 60px 27px;
+    z-index: 100;
+}
+
+#ns_dialog_server_select .content_server .content_flag_recommend {
+    background: url('/image/ui/server/server_recom.png') no-repeat;
+    background-size: 60px 27px;
+    z-index: 200;
+}
+
+#ns_dialog_server_select .server_button_wrap {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: 131px;
+}
+
+#ns_button_server_select_left,
+#ns_button_server_select_right {
+    margin: auto;
+}
+
+#ns_button_server_select_star {
+    margin: auto auto 8px auto;
+    z-index: 100;
+}
+

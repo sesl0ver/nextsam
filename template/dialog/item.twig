@@ -1,0 +1,90 @@
+<div id="ns_dialog_item">
+    <span id="ns_button_item_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('item_shop') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_item_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_item_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+
+            <div class="ns_panel_sub_top ns_panel_flex wrapper_sub_top_button">
+                <div class="ns_panel_flex_item_auto">
+                    <span id="ns_button_item_my_item">{{ i18n.t('treasure_house') }}</span><!-- pan id="ns_button_per_info">확률 상세보기&nbsp;</span --><span class="main_notice_icon_event">&nbsp;</span>
+                </div>
+                <div class="ns_panel_flex_right">
+                    <div id="ns_button_item_cash" class="button_charge_qbig_common">
+                        <span class="ns_qbig"></span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="ns_panel_tab ns_panel_grid_7">
+                <span id="ns_button_item_tab_popularity">{{ i18n.t('popularity') }}</span>
+                <span id="ns_button_item_tab_production">{{ i18n.t('increase') }}</span>
+                <span id="ns_button_item_tab_speedup">{{ i18n.t('shorten') }}</span>
+                <span id="ns_button_item_tab_lord">{{ i18n.t('lord') }}</span>
+                <span id="ns_button_item_tab_special">{{ i18n.t('special') }}</span>
+                <span id="ns_button_item_tab_package">{{ i18n.t('package') }}</span>
+                <span id="ns_button_item_tab_hero">{{ i18n.t('hero') }}</span>
+            </div>
+
+            <div class="content">
+
+                <div class="ns_panel_trans">
+                    <div class="content_item_list_wrap ns_panel_grid_2">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_item_buy">
+    <span id="ns_button_item_buy_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_item_buy_close"></span>
+                <span class="content_pop_title"></span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_margin_10">
+                    <div class="ns_panel_flex">
+                        <div class="ns_panel_flex_item_auto"><div class="item_image"></div></div>
+                        <div class="ns_panel_flex_item_auto"><div class="item_description"></div></div>
+                    </div>
+
+                    <div class="ns_panel_basic ns_panel_margin_xx">
+                        <div id="item_buy_amount_group" class="ns_panel_flex_center ns_panel_margin_yy">
+                            <input class="amount_field" type="number"/>
+                            <span> / </span>
+                            <span id="ns_button_item_buy_max_count"></span>
+                        </div>
+                        <div id="item_buy_slide_group" class="ns_panel_flex_center ns_panel_margin_yy">
+                            <label>
+                                <span id="ns_button_button_decrease"></span>
+                                <input name="develop_slide" type="range" value="0" min="0" max="0" class="slider" />
+                                <span id="ns_button_button_increase"></span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_item_buy_ok">{{ i18n.t('purchase') }}<span class="inner_asset_text qbig"></span></span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+.text_dlg_like_tab {
+    font-size: .7rem;
+    font-weight: bold;
+    color: #000000;
+    line-height: 24px;
+    padding-left: 10px;
+    background: url('/image/icon/like_tab.png') no-repeat 3px 2px;
+}
+
+.text_hero_stat_plusstat { color: #3278AE; }
+.text_hero_stat_enchant { color: #B12B0C; }
+.text_hero_stat_officer { color: #287904; }
+.text_hero_stat_skill { color: #E75606; }
+
+.text_size_small {
+    font-size: .6rem;
+}
+
+.text_size_medium {
+    font-size: .75rem;
+}
+
+.text_size_large {
+    font-size: .9rem;
+}
+
+.text_weight_bold {
+    font-weight: bold;
+}
+
+.text_white {
+    color: #FFFFFF;
+}
+
+.text_white_with_shadow {
+    color: #FFFFFF;
+    text-shadow: 0 1px 3px #000000;
+}
+
+.text_gray_with_shadow {
+    font-weight: bold;
+    color: #767D85;
+    text-shadow: 0 1px 1px #000000;
+}
+
+.text_gray {
+    color: #767D85;
+}
+
+.text_page_paging {
+    color: #DBE8F1;
+}
+
+.text_cadet_gray {
+    color: #91A1B0;
+}
+
+.text_status {
+    font-weight: bold;
+    color: #91A1B0;
+}
+
+.text_description {
+    color: #91A1B0;
+}
+
+.text_condition_yes {
+    color: #43FF3E;
+}
+
+.text_condition_no {
+    color: #FF2323;
+}
+
+.text_condition_other {
+    color: #09459f;
+}
+
+.text_condition_disable {
+    color: #666;
+}
+
+.text_qbig_amount {
+    color: #ffffff;
+    background-position-y: 1px;
+    display: inline-block;
+    padding-left: 17px;
+    height: 17px;
+    line-height: 17px;
+    background: url('/image/icon/icon_qbig.png') no-repeat;
+    background-size:17px 17px;
+    font-weight: bold;
+}
+
+.text_align_center {
+    text-align: center;
+}
+
+.text_align_left {
+    text-align: left;
+}
+
+.text_align_right {
+    text-align: right;
+}
+
+.text_un {
+    font-weight: bold;
+    color: #666;
+}
+
+.content_level {
+    font-family: var(--main-font-family);
+    font-weight: bold;
+    color: #FF2323;
+}
+
+.text_red {
+    color: red !important;
+}
+
+.text_green {
+    color:#44FF3E !important;
+}
+
+.text_brown {
+    color: #673409 !important;
+}
+
+.text_light_brown {
+    color: #503B26 !important;
+}
+
+.text_light_green {
+    color: #9aca3f !important;
+}
+
+.text_yellow {
+    color: #ffdb4d !important;
+}
+
+.text_table_title {
+    color: #767D85;
+    font-weight: bold;
+}
+
+.text_position_link {
+    color: #67bcff;
+    font-size: .7rem;
+    font-weight: bold;
+    text-decoration: underline;
+    cursor: pointer;
+}

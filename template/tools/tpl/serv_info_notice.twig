@@ -1,0 +1,312 @@
+<style>
+	#reserve_datetime_set_box input[type=text] {
+		border: 1px solid #000;
+		width: 200px;
+		height: 22px;
+		font-size: 14px;
+		text-align: center;
+		vertical-align: middle;
+	}
+
+	#reserve_datetime_set_box input[type=button] {
+		border: 1px solid #000;
+		text-align: center;
+		height: 30px;
+		cursor: pointer;
+	}
+
+	#reserve_datetime_set_box input[type=button]:hover {
+		background: #333;
+		color: #fff;
+	}
+
+	#reserve_datetime_set_box input[type=button]:active {
+		background: #666;
+		color: #aaa;
+	}
+
+	#target_server_select .buttons {
+		text-align: right;
+	}
+
+	#target_server_select p {
+		background: #5ec55e;
+		padding: 10px;
+		border-radius: 10px;
+	}
+
+	#all_target_server {
+		width: 50px;
+	}
+
+	#add_notice_message,
+	#update_notice_message,
+	#cancel_notice_message {
+		width: 200px;
+		height: 30px;
+		border: 1px solid #000;
+		border-radius: 40px;
+	}
+
+	#add_notice_message:hover,
+	#update_notice_message:hover,
+	#cancel_notice_message:hover {
+		background: #aaa;
+		cursor: pointer;
+	}
+
+	.ns_table_common {
+		width: 100%;
+		border-spacing: 0;
+	}
+
+	.ns_table_common table {
+		border-spacing: 0;
+		width:100%;
+	}
+
+	.ns_table_common thead > tr {
+		height: 30px;
+		line-height: 30px;
+		padding: 5px 10px;
+		background: #2B3C57;
+		color: #B4D2EC;
+		text-align: center;
+		font-size: .75rem;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		box-shadow: 0 1px 2px 0 #0008;
+	}
+
+	.ns_table_common tr th:first-child{
+		border-bottom-left-radius: 3px;
+		border-top-left-radius: 3px;
+	}
+
+	.ns_table_common tr th:last-child{
+		border-bottom-right-radius: 3px;
+		border-top-right-radius: 3px;
+	}
+
+	.ns_table_common tr th:not(:first-child):not(:last-child) {
+		border-radius: 0;
+		-webkit-border-radius: 0;
+		-moz-border-radius: 0;
+	}
+
+	.ns_table_common tr th:last-child {
+		border-left: none;
+	}
+
+	.ns_table_common tbody,
+	.ns_table_common tfoot {
+		text-align: center;
+	}
+
+	.ns_table_common tbody > tr {
+		height: 40px;
+	}
+
+	.ns_table_common td {
+		height: 28px;
+		border-right: 0;
+		border-bottom: 1px solid #596C8E;
+		font-size: .75rem;
+	}
+
+	.ns_table_common tr:last-child > td
+	{
+		border-bottom:0;
+		box-shadow:none;
+	}
+
+	.ns_table_common.hovering tr:hover {
+		font-weight: bold;
+		/*background-color: #eeb37a;*/
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(1) {
+		width: 60px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(3) {
+		width: 120px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(4) {
+		width: 110px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(5) {
+		width: 70px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(6) {
+		width: 70px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(7) {
+		width: 70px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(8) {
+		width: 90px;
+	}
+
+	.ns_table_common > thead > tr > th:nth-child(9) {
+		width: 100px;
+	}
+
+	.ns_table_common > tbody > tr > td:nth-child(2) {
+		text-align: left;
+	}
+
+	.ns_table_common button {
+		font-size: 1.5rem;
+	}
+
+	#repeat_notice {
+		vertical-align: middle;
+	}
+
+	input, textarea {
+		border: 1px solid #000;
+		outline: none;
+		background: #fff;
+	}
+
+	input:disabled {
+		background: #666;
+		color: #aaa;
+	}
+
+	#notice_message {
+		width: 100%;
+		height:60px;
+		resize: none;
+		padding: 5px;
+		border: 1px solid #000;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	#notice_start_datetime,
+	#notice_end_datetime,
+	#repeat_notice_time {
+		height: 22px;
+		font-size: .85rem;
+		resize: none;
+		padding: 5px;
+		border: 1px solid #000;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
+	}
+
+	#repeat_notice_time {
+		width: 80px !important;
+		text-align: right;
+	}
+
+	.td-size {
+		width: 150px;
+	}
+
+	/* Chrome, Safari, Edge, Opera */
+	input::-webkit-outer-spin-button,
+	input::-webkit-inner-spin-button {
+		-webkit-appearance: none;
+		margin: 0;
+	}
+
+	/* Firefox  */
+	input[type='number'] {
+		-moz-appearance: textfield;
+	}
+</style>
+<h2>서버 공지</h2>
+<hr />
+
+<div id="target_server_select">
+	<h2>공지 게시하기</h2>
+	<table>
+		<tbody>
+		<tr>
+			<th class="td-size">공지 내용</th>
+			<td><label><textarea id="notice_message"></textarea></label></td>
+		</tr>
+		<tr>
+			<th>대상 서버</th>
+			<td>
+				<button id="all_target_server">전체</button>
+				{% for v in _SESSION['server_list']  %}
+					<label><input type="checkbox" value="{{ v['server_pk'] }}" name="target_server" />{{ v['server_name'] }}</label>
+				{% endfor %}
+			</td>
+		</tr>
+		<tr>
+			<th>공지시작 시간</th>
+			<td>
+				<label><input type="text" id="notice_start_datetime" autocomplete="off" /></label>
+			</td>
+		</tr>
+		<tr>
+			<th>공지종료 시간</th>
+			<td>
+				<label><input type="text" id="notice_end_datetime" autocomplete="off" /></label>
+				<label><input type="checkbox" id="repeat_notice" value="1" /> 반복</label>
+			</td>
+		</tr>
+		<tr>
+			<th>반복 간격(분 단위)</th>
+			<td><label><input type="number" id="repeat_notice_time" value="1" min="1" />분 마다</label></td>
+		</tr>
+		<tr>
+			<th>활성화</th>
+			<td>
+				<label><input type="checkbox" id="notice_active" value="1" /></label>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<p>
+					1. 공지사항은 시작시간을 기준으로 공지가 게시됩니다.<br />
+					2. 반복 공지에 경우 시작 시간을 기준으로 간격시간을 기준으로 반복되며 종료시 자동으로 비활성화 됩니다.<br />
+					3. 공지 삭제는 비활성화 상태의 공지만 삭제 가능합니다.
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				<button id="add_notice_message">게시하기</button>
+				<button id="update_notice_message">수정하기</button>
+				<button id="cancel_notice_message">취소하기</button>
+			</td>
+		</tr>
+		</tbody>
+	</table>
+</div>
+
+<br/>
+<br/>
+
+<table id="notice_list" class="ns_table_common">
+	<thead>
+	<tr>
+		<th>번호</th>
+		<th>메세지</th>
+		<th>대상서버</th>
+		<th>공지기간</th>
+		<th>반복간격</th>
+		<th>활성여부</th>
+		<th>다음시간</th>
+		<th>등록일</th>
+		<th>관리</th>
+	</tr>
+	</thead>
+	<tbody>
+
+	</tbody>
+</table>

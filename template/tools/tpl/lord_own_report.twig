@@ -1,0 +1,30 @@
+<h2>[{{ _SESSION['selected_lord']['lord_name'] }} ] 보고서 현황</h2>
+<hr />
+<table id="lord_own_report" class="jqGridTable">
+</table>
+<div id="pager_lord_own_report"></div>
+
+<div id="report_info">
+	<table border="1" bordercolor="#000" style="border-collapse:collapse;width:100%;text-align:center;">
+		<tbody>
+			<tr>
+				<th style="padding:0.4em; width:100px;">제목</th>
+				<td style="padding:0.4em; text-align: left;" class="title"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">소속/출발/아군</th>
+				<td style="padding:0.4em; text-align: left;" class="from_name"></td>
+			</tr>
+			<tr>
+				<th style="padding:0.4em;">대상/목적/적군</th>
+				<td style="padding:0.4em; text-align: left;" class="to_name"></td>
+			</tr>
+			<tr>
+				<td colspan="2" style="text-align: left; line-height:160%;" class="content"></td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+
+<script type="text/javascript" src='/js/ns_text.js'></script>
+<script type="text/javascript" src='/locale/ko/code_set.js'></script>

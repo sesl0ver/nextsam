@@ -1,0 +1,205 @@
+<div id="ns_dialog_hero_card">
+    <span id="ns_button_hero_card_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="content">
+            <div class="ns_panel_flex width-full">
+                <span id="ns_button_hero_card_prev"></span>
+
+                <div class="card_slot"></div>
+
+                <span id="ns_button_hero_card_next"></span>
+            </div>
+
+            <!-- div class="over_rank_description">
+                오버랭크 영웅은 24시간 동안 사용 가능하며 그 후 무능화됨.
+            </div -->
+
+            <div class="card_bottom">
+                <span id="ns_button_hero_card_flipping">{{ i18n.t('flipping') }}</span>
+                <span class="content_hero_card_use_item_amount"></span>
+                <span id="ns_button_hero_card_use_again">{{ i18n.t('continue_using') }}</span>
+
+                <span id="ns_button_hero_card_tobe_guest">{{ i18n.t('recruitment') }}</span>
+                <span id="ns_button_hero_card_tobe_appoint">{{ i18n.t('appoint') }}</span>
+                <span id="ns_button_hero_card_tobe_abandon">{{ i18n.t('abandon') }}</span>
+
+                <span id="ns_button_hero_card_enchant">{{ i18n.t('enhance') }}</span>
+                <span id="ns_button_hero_card_skill">{{ i18n.t('skill_manage') }}</span>
+                <span id="ns_button_hero_card_group">{{ i18n.t('group_manage') }}</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="ns_dialog_card_prize">
+    <span id="ns_button_card_prize_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_card_prize_close"></span>
+                <span class="content_pop_title">{{ i18n.t('prize') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_trans">
+
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th colspan="2">{{ i18n.t('prize_money') }}</th>
+                            <th>{{ i18n.t('salary') }}</th>
+                            <th>{{ i18n.t('max_prize_money') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td><span id="ns_button_card_prize_value">0</span></td>
+                            <td><span id="ns_button_card_prize_updown"></span></td>
+                            <td><p class="employment_fee"></p></td>
+                            <td><p class="max_prize"></p></td>
+                        </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="ns_panel_trans card_prize_description">{{ i18n.t('prize_description') }}</div>
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_card_prize_submit">{{ i18n.t('prize_reward') }}</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_card_enchant">
+    <span id="ns_button_card_enchant_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_card_enchant_close"></span>
+                <span class="content_pop_title">{{ i18n.t('hero_enhance') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_trans">
+                    <div class="ns_panel_margin_xx ns_panel_margin_yy">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th class="width-50">{{ i18n.t('number_of_enhance') }}</th>
+                                <th>{{ i18n.t('success_rate') }}</th>
+                                <!-- th>영웅상실 확률</th -->
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="enchant_count">0</span></td>
+                                <td><span class="enchant_per">0</span></td>
+                                <!-- td><span class="enchant_hero_lost_per">0</span></td-->
+                            </tr>
+                            </tbody>
+                        </table>
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th class="width-50">({{ i18n.t('required_enhance_item') }})</th>
+                                <th>({{ i18n.t('required_resource_gold') }})</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td><span class="enchant_item">0</span> (<span class="enchant_item_have">0</span>)</td>
+                                <td><span class="enchant_gold">0</span> (<span class="enchant_gold_have">0</span>)</td>
+                            </tr>
+                            </tbody>
+                        </table>
+
+                        <table class="ns_table_common">
+                            <thead>
+                                <tr>
+                                    <th>{{ i18n.t('item') }}</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><span id="ns_button_card_enchant_select_item">{{ i18n.t('choose') }}</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <span id="enchant_caution_msg" class="text_light_green"></span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <div class="ns_panel_pop_button">
+                            <span id="ns_button_card_enchant_submit">{{ i18n.t('enhance') }}</span>
+                            <span id="ns_button_card_enchant_init">{{ i18n.t('enhance_initialization') }}</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_card_group">
+    <span id="ns_button_card_group_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_card_group_close"></span>
+                <span class="content_pop_title">{{ i18n.t('group_manage') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic ns_panel_trans">
+
+                    <div class="ns_panel_tab ns_panel_grid_2">
+                        <span id="ns_button_card_group_tab_battle">{{ i18n.t('battle') }}</span>
+                        <span id="ns_button_card_group_tab_affair">{{ i18n.t('domestic_affairs') }}</span>
+                    </div>
+
+                    <div class="card_group_tab_battle ns_panel_tab ns_panel_grid_3">
+                        <span id="ns_button_card_group_tab_assign_captain">{{ i18n.t('troop_captain') }}</span>
+                        <span id="ns_button_card_group_tab_assign_director">{{ i18n.t('troop_director') }}</span>
+                        <span id="ns_button_card_group_tab_assign_staff">{{ i18n.t('troop_staff') }}</span>
+                    </div>
+
+                    <div class="card_group_tab_affair ns_panel_tab ns_panel_grid_3">
+                        <span id="ns_button_card_group_tab_cmd_encounter">{{ i18n.t('exploration') }}</span>
+                        <span id="ns_button_card_group_tab_cmd_build">{{ i18n.t('construction') }}</span>
+                        <span id="ns_button_card_group_tab_cmd_technique">{{ i18n.t('skill') }}</span>
+                    </div>
+
+                    <table class="ns_table_common">
+                        <thead>
+                        <tr>
+                            <th>{{ i18n.t('number') }}</th>
+                            <th>{{ i18n.t('designated_hero') }}</th>
+                            <th>{{ i18n.t('belong_territory') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        </tbody>
+                    </table>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

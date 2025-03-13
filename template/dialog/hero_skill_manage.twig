@@ -1,0 +1,217 @@
+<div id="ns_dialog_hero_skill_manage">
+    <span id="ns_button_hero_skill_manage_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('hero_skill_manage') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_hero_skill_manage_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_hero_skill_manage_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic cont_background">
+                    <div class="ns_panel_flex">
+                        <div class="ns_panel_flex_item_auto content_hero_wrap">
+                            <div class="content_hero_no_select">
+                                <div class="content_hero_card"></div>
+                                <span id="ns_button_hero_skill_manage_hero_list"></span>
+                            </div>
+                        </div>
+                        <div class="ns_panel_flex_right content_hero_skill_wrap ns_panel_grid_3">
+                            <div class="hero_skill_slot_1"><div class="hero_skill_image"></div></div>
+                            <div class="hero_skill_slot_2"><div class="hero_skill_image"></div></div>
+                            <div class="hero_skill_slot_3"><div class="hero_skill_image"></div></div>
+                            <div class="hero_skill_slot_4"><div class="hero_skill_image"></div></div>
+                            <div class="hero_skill_slot_5"><div class="hero_skill_image"></div></div>
+                            <div class="hero_skill_slot_6"><div class="hero_skill_image"></div></div>
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_tab ns_panel_grid_5">
+                        <!-- TODO 깃발 처리 필요 css after -->
+                        <span id="ns_button_hero_skill_manage_tab_battle">{{ i18n.t('battle') }}</span>
+                        <!-- div class="report_unread_blue cont_hero_skill_manage_flag_battle">N</div -->
+                        <span id="ns_button_hero_skill_manage_tab_perform">{{ i18n.t('performance') }}</span>
+                        <span id="ns_button_hero_skill_manage_tab_assign">{{ i18n.t('assign') }}</span>
+                        <span id="ns_button_hero_skill_manage_tab_develop">{{ i18n.t('grow') }}</span>
+                        <span id="ns_button_hero_skill_manage_tab_special">{{ i18n.t('special') }}</span>
+                    </div>
+
+                    <div class="ns_panel_sub_top ns_panel_flex">
+                        <div class="ns_panel_flex_item_auto ns_panel_flex_middle">
+                            <!-- span id="ns_button_hero_skill_manage_prev"></span>
+                            <span class="text_page_paging">
+                                <span class="content_current_page">0</span>&nbsp;/&nbsp;<span class="content_total_page">0</span>
+                            </span>
+                            <span id="ns_button_hero_skill_manage_next"></span -->
+                            <span id="ns_button_hero_skill_manage_sort">-</span>
+                        </div>
+                        <div class="ns_panel_flex_right">
+                            <span id="ns_button_hero_skill_medal_prize">{{ i18n.t('medal_prize') }}</span>
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_basic ns_panel_margin_yy">
+                        <div class="hero_skill_manage_list_wrap ns_panel_grid_2"></div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_hero_skill_detail">
+    <span id="ns_button_hero_skill_detail_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_hero_skill_detail_close"></span>
+                <span class="content_pop_title"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic">
+                    <div class="ns_panel_flex ns_panel_margin_10">
+                        <div class="ns_panel_flex_item_auto skill_icon_wrapper">
+                            <div class="skill_image"></div>
+                        </div>
+                        <div class="ns_panel_trans">
+                            <div class="skill_description"></div>
+                        </div>
+                    </div>
+
+                    <div class="ns_panel_margin_xx ns_panel_most">
+                        <table class="ns_table_common">
+                            <thead>
+                            <tr>
+                                <th class="col1">{{ i18n.t('possession') }}</th>
+                                <th class="col2">{{ i18n.t('level') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="col1"><span class="skill_count"></span></td>
+                                <td><span class="skill_level"></span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="ns_panel_pop_button">
+                        <span id="ns_button_hero_skill_detail_equip">{{ i18n.t('equip') }}</span>
+                        <span id="ns_button_hero_skill_detail_un_equip">{{ i18n.t('disarm') }}</span>
+                        <span id="ns_button_hero_skill_detail_delete_equip">{{ i18n.t('remove') }}</span>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_hero_medal_prize_list">
+    <span id="ns_button_hero_medal_prize_list_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_pop_header">
+                <span id="ns_button_hero_medal_prize_list_close"></span>
+                <span class="content_pop_title">{{ i18n.t('choose_item') }}</span>
+            </div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="hero_medal_prize_list_wrap"></div>
+
+                <span id="ns_button_hero_medal_prize_selected"></span>
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>
+
+<div id="ns_dialog_hero_skill_manage_list">
+    <span id="ns_button_hero_skill_manage_list_sub_close"></span>
+    <div class="dialog_wrap">
+        <div class="dialog_header">
+            <div class="dialog_title">
+                <span class="content_title">{{ i18n.t('choose_hero') }}</span>
+            </div>
+            <div class="dialog_header_left"><span id="ns_button_hero_skill_manage_list_close"></span></div>
+            <div class="dialog_header_right"><span id="ns_button_hero_skill_manage_list_close_all"></span></div>
+        </div>
+        <div class="dialog_content">
+            <div class="content">
+
+                <div class="ns_panel_basic">
+
+                    <div class="ns_panel_tab ns_panel_grid_3">
+                        <span id="ns_button_hero_skill_manage_list_tab_stat">{{ i18n.t('ability_value') }}</span>
+                        <span id="ns_button_hero_skill_manage_list_tab_officer">{{ i18n.t('office_and_status') }}</span>
+                        <span id="ns_button_hero_skill_manage_list_tab_army">{{ i18n.t('military_aptitude') }}</span>
+                    </div>
+
+                    <div class="ns_panel_sub_top ns_panel_flex">
+                        <div class="ns_panel_flex_item_auto ns_panel_flex_middle content_header_wrapper text_gray">
+                            <span id="ns_button_hero_skill_manage_list_prev">&nbsp;</span>
+                            <span class="text_page_paging">
+                            <span class="content_current_page">0</span>&nbsp;/&nbsp;<span class="content_total_page">0</span>
+                        </span>
+                            <span id="ns_button_hero_skill_manage_list_next">&nbsp;</span>
+                            <span id="ns_button_hero_skill_manage_list_sort">-</span>&nbsp;
+                        </div>
+                        <span class="text_status ns_panel_flex_right">
+                        <span>{{ i18n.t('chosen_hero') }}</span>&nbsp;<span class="content_selected_hero_count">0</span>&nbsp;/&nbsp;<span class="content_max_selected_hero_count">1</span>
+                    </span>
+                    </div>
+
+                    <div class="ns_panel_most ns_panel_trans">
+
+                        <table class="ns_table_common content_hero_manage_table">
+                            <thead>
+                            <tr>
+                                <th>{{ i18n.t('hero') }}</th>
+                                <th>{{ i18n.t('hero_grade') }}</th>
+
+                                <th class="filter_stat">{{ i18n.t('stats_leadership') }}</th>
+                                <th class="filter_stat">{{ i18n.t('stats_military_force') }}</th>
+                                <th class="filter_stat">{{ i18n.t('stats_intellect') }}</th>
+                                <th class="filter_stat">{{ i18n.t('stats_politics') }}</th>
+                                <th class="filter_stat">{{ i18n.t('stats_charm') }}</th>
+
+                                <th class="filter_officer">{{ i18n.t('officer') }}</th>
+                                <!-- <th class="cont_filter_officer">충성</th> -->
+                                <th class="filter_officer">{{ i18n.t('skill') }}</th>
+                                <th class="filter_officer">{{ i18n.t('slot') }}</th>
+                                <th class="filter_officer">현황</th>
+
+                                <th class="filter_army">{{ i18n.t('infantry') }}</th>
+                                <th class="filter_army">{{ i18n.t('spearmen') }}</th>
+                                <th class="filter_army">{{ i18n.t('pikeman') }}</th>
+                                <th class="filter_army">{{ i18n.t('archer') }}</th>
+                                <th class="filter_army">{{ i18n.t('cavalry') }}</th>
+                                <th class="filter_army">{{ i18n.t('siege') }}</th>
+
+                                <th>{{ i18n.t('status') }}</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="dialog_footer"></div>
+    </div>
+</div>

@@ -1,0 +1,49 @@
+
+<h2>[ {{ _SESSION['selected_lord']['lord_name'] }} ] 군주 영지 버프 정보</h2>
+<hr />
+    <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_lord_own_terr_list" dir="ltr" style="width: 100%; ">
+        <div class="ui-jqgrid-view" id="gview_lord_own_terr_list" style="width: 100%; ">
+            <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix">
+                <span class="ui-jqgrid-title">영지별 버프 리스트</span>
+            </div>
+            <div class="ui-jqgrid-bdiv" style=" width: 100%; ">
+                <div style="position:relative;">
+                    <div></div>
+                    <table id="lord_own_terr_list" style="width:100%; text-align:center; table-layout:fixed;" class="jqGridTable ui-jqgrid-btable" cellSpacing="0" cellPadding="0" border="0">
+                        <thead>
+                        <tr class="ui-jqgrid-labels">
+                            <th class="ui-state-default ui-th-column ui-th-ltr" style="width:120px;">좌표</th>
+                            <th class="ui-state-default ui-th-column ui-th-ltr" style="width:100px;">아이템</th>
+                            <th class="ui-state-default ui-th-column ui-th-ltr" style="width:120px;">버프 코드</th>
+                            <th class="ui-state-default ui-th-column ui-th-ltr" style="width:180px;">시작시간</th>
+                            <th class="ui-state-default ui-th-column ui-th-ltr" style="width:180px;">종료시간</th>
+                            <th class="ui-state-default ui-th-column ui-th-ltr" style="width:100px;">버프시간</th>
+                            <th class="ui-state-default ui-th-column ui-th-ltr" style="width:180px;">설명</th>
+                            <th class="ui-state-default ui-th-column ui-th-ltr" style="width:95px;">버프상태</th>
+                            <th class="ui-state-default ui-th-column ui-th-ltr" style="width:95px;">시간상태</th>
+                            <th class="ui-state-default ui-th-column ui-th-ltr">처리</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% if view_data.buff_rows is iterable %}
+                            {% for k, v in view_data.buff_rows %}
+                                <tr id="terr_{{ v.terr_item_buff_pk }}" class="ui-widget-content jqgrow ui-row-ltr" style="text-align:center;">
+                                    <td style='text-align:center;'>{{ v.posi_pk }}</td>
+                                    <td style='text-align:center;'>{{ _M['ITEM'][v.m_item_pk]['title'] }}</td>
+                                    <td style='text-align:center;'>{{ v.description ?? '-' }}</td>
+                                    <td style='text-align:center;'>{% if v.start_dt != 0 %}{{ v.start_dt | date('Y-m-d H:i:s') }}{% else %}-{% endif %}</td>
+                                    <td style='text-align:center;'>{% if v.end_dt != 0 %}{{ v.end_dt | date('Y-m-d H:i:s') }}{% else %}-{% endif %}</td>
+                                    <td style='text-align:center;'>{% if v.m_item_pk != 500522 %}{{ v.buff_time | number_format }}초{% else %}-{% endif %}</td>
+                                    <td style='text-align:center;'>{{ _M['ITEM'][v.m_item_pk]['buff_title'] }}</td>
+                                    <td style='text-align:center;'>{{ v.time_pk == '' and v.m_item_pk != 500522 ? '<span style="color:red">비정상</span>' : '정상' }}</td>
+                                    <td style='text-align:center;'>{{ v.buff_time != v.build_time and v.m_item_pk != 500522 ? '<span style="color:red">비정상</span>' : '정상' }}</td>
+                                    <td style='text-align:center;'>{% if v.m_item_pk != 500522 %}<button id='{{ v.terr_item_buff_pk }}' data-pk="{{ v.time_pk }}" class='btn_buffend'>버프 종료</button>{% else %}-{% endif %}</td>
+                                </tr>
+                            {% endfor %}
+                        {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>

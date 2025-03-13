@@ -1,0 +1,308 @@
+@charset "utf-8";
+
+#ns_dialog_troop_order {
+    z-index: 2352;
+}
+
+#ns_dialog_troop_order .ns_panel_build_button_right {
+    height: auto !important;
+}
+
+#ns_dialog_troop_order .troop_order_preset_wrap {
+    display: flex;
+    align-items: center;
+    gap: 3px;
+}
+
+#ns_dialog_troop_order .troop_order_preset_wrap span {
+    color: #ffffff;
+    text-shadow: 1px 1px #000000;
+    font-size: 1rem;
+}
+
+#ns_dialog_troop_order .ns_table_common_3 > thead > tr > th,
+#ns_dialog_troop_order .ns_table_common_3 > tbody > tr > td {
+    border-radius: 0;
+}
+
+#ns_dialog_troop_order .troop_order_army_list_wrap {
+    overflow: hidden;
+    height: 305px;
+}
+
+#ns_dialog_troop_order .troop_order_army_list .empty_list {
+    height: 303px;
+    color: #536687;
+    font-weight: bold;
+}
+
+#ns_dialog_troop_order .ns_table_common_3 {
+    border-top: 1px solid #596C8E;
+    border-bottom: 1px solid #596C8E;
+}
+
+#ns_dialog_troop_order .ns_table_common_3 > tbody.troop_order_army_list > tr > td:first-child {
+    width: 45px;
+}
+
+#ns_dialog_troop_order .ns_table_common_3 > tbody.troop_order_army_list > tr > td:nth-child(2) {
+    width: 45px;
+}
+
+#ns_dialog_troop_order .ns_table_common_3 > tbody.troop_order_army_list > tr > td:nth-child(3) {
+    border-right: none;
+}
+
+#ns_dialog_troop_order .ns_table_common_3 > tbody.troop_order_army_list > tr > td:nth-child(4) {
+    width: 36px;
+    border-right: none;
+}
+
+#ns_dialog_troop_order .ns_table_common_3 > tbody.troop_order_army_list > tr > td:last-child {
+    width: 70px;
+    padding: 0 0 0 5px;
+}
+
+#ns_dialog_troop_order .ns_table_common_3 tbody {
+    color: #FFF;
+}
+
+#ns_dialog_troop_order .ns_table_common_3 tbody .ns_panel_flex_item_auto:has(.content_hero_effect_sm > p) {
+    display: flex;
+    align-items: center;
+}
+
+#ns_dialog_troop_order .content_hero_empty_effect_sm {
+    margin-top: 3px;
+    color: #FFF;
+    width: 190px;
+    text-align: left;
+}
+
+#ns_dialog_troop_order .content_hero_effect_sm {
+    margin-top: 3px;
+    width: 190px;
+    text-align: left;
+}
+
+#ns_dialog_troop_order .item_image {
+    display: inline-block;
+    vertical-align: top;
+}
+
+#ns_dialog_troop_order .content_input_number {
+    position: relative;
+    width: 70px;
+    height: 25px;
+    line-height: 25px;
+    background: #000000;
+    color: #FFFFFF;
+}
+
+#ns_dialog_troop_order .content_mil_text_S {
+    color:#fe01a9;
+    font-weight:bold;
+}
+
+#ns_dialog_troop_order .content_mil_text_A {
+    color:#fe6400;
+    font-weight:bold;
+}
+
+#ns_dialog_troop_order .content_mil_text_B {
+    color:#01b959;
+    font-weight:bold;
+}
+
+#ns_dialog_troop_order .content_mil_text_C {
+    color:#0a5cff;
+    font-weight:bold;
+}
+
+#ns_dialog_troop_order .content_mil_text_D {
+    color:#ac00ff;
+    font-weight:bold;
+}
+
+#ns_button_troop_order_do {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    line-height: 17px;
+}
+
+#ns_dialog_troop_order .disable_status {
+    background-color:#000;
+    opacity:0.3;
+}
+
+#ns_dialog_troop_order_preset {
+    z-index: 2353;
+}
+
+#ns_dialog_troop_order_preset .dialog_wrap {
+    min-width: 420px;
+}
+
+ #ns_dialog_troop_order_preset .preset_slot {
+     position: relative;
+     width: 71px;
+     height: 108px;
+     background: url("/image/ui/bg_preset.png") no-repeat;
+     background-size: 71px 108px;
+     color: #ffffff;
+}
+
+#ns_dialog_troop_order_preset .preset_slot_page_1,
+#ns_dialog_troop_order_preset .preset_slot_page_2 {
+    display: flex;
+    gap: 7px;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+#ns_dialog_troop_order_preset .preset_slot.selected::after {
+    position: absolute;
+    width: 71px;
+    height: 108px;
+    background: url("/image/ui/bg_preset_selected.png") no-repeat;
+    background-size: 71px 108px;
+    content: " ";
+    z-index: 1;
+}
+
+#ns_dialog_troop_order_preset .preset_slot.disable {
+    filter: grayscale(1);
+    color: #888888;
+}
+
+#ns_dialog_troop_order_preset .preset_slot .preset_number {
+    position: absolute;
+    top: 21px;
+    left: 17px;
+    width: 40px;
+    text-align: center;
+    text-shadow: 1px 1px #000000;
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+#ns_dialog_troop_order_preset .preset_slot .preset_title {
+    position: absolute;
+    left: 4px;
+    bottom: 17px;
+    width: 64px;
+    height: 30px;
+    text-align: center;
+    font-size: .7rem;
+    pointer-events: none;
+}
+
+#ns_dialog_troop_order_preset .preset_page_wrap {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+#ns_dialog_troop_order_preset .button_area {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 10px 0 5px 0;
+}
+
+#ns_dialog_troop_order_preset .button_input {
+    width: 150px;
+}
+
+
+/*#ns_dialog_troop_order .ns_panel_trans{
+    padding: 8px;
+}
+
+#ns_dialog_troop_order .ns_panel_basic {
+    margin:0;
+}
+
+#ns_dialog_troop_order .button_select_box {
+    width: 100px;
+}
+
+#ns_dialog_troop_order .ns_panel_trans_bottom {
+    text-align: center;
+}
+
+#ns_button_troop_order_do {
+    width:120px;
+    margin-top: 13px;
+}
+
+#ns_dialog_troop_order .content_blue {
+    color:#2f5168;
+}
+
+#ns_dialog_troop_order .content_red {
+    color:#b90000;
+}
+
+#ns_dialog_troop_order .content_btn_info
+{
+    margin-left:10px;
+    text-align:left;
+}
+
+#ns_dialog_troop_order .content_item_btn,
+#ns_dialog_troop_order .content_raid_item_btn {
+    margin-left:10px;
+    text-align:left;
+}
+
+#ns_button_troop_order_item, #ns_button_troop_order_use_item_cancel,
+#ns_button_troop_order_raid_item, #ns_button_troop_order_use_raid_item_cancel {
+    width:70px;
+}
+
+#ns_dialog_troop_order .content_use_item,
+#ns_dialog_troop_order .content_use_raid_item {
+    display:inline-block;
+}
+
+#ns_dialog_troop_order .content_hero {
+    height:50px;
+}
+
+#ns_dialog_troop_order .ns_panel_contents_padding {
+    padding: 0;
+    margin: 0
+}
+
+#ns_dialog_troop_order .button_input {
+}
+
+#ns_dialog_troop_order .button_arrow_updown {
+    position:relative;
+    left:3px;
+}
+
+#ns_dialog_troop_order .content_hero_effect_sm {
+    text-align:left;
+}
+
+#ns_dialog_troop_order .content_button_info.content_dst_position > span:not(.button_input),
+#ns_dialog_troop_order .content_button_info.content_dst_position > span > text
+{
+    vertical-align: middle;
+    line-height: 30px;
+}
+
+#ns_button_troop_order_dst_posi_x_input,
+#ns_button_troop_order_dst_posi_y_input {
+    width:40px;
+}
+
+#ns_button_troop_order_camp_time_h_input,
+#ns_button_troop_order_camp_time_m_input {
+    width:40px;
+}*/

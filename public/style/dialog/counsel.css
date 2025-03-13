@@ -1,0 +1,84 @@
+@charset "utf-8";
+
+#ns_dialog_counsel {
+    position: absolute;
+    display: flex;
+    z-index: 2700;
+}
+
+#ns_dialog_counsel .dialog_content .content{
+    position: relative;
+    padding: 18px 21px;
+}
+
+#ns_dialog_counsel .content .counsel_wrap.ns_panel_flex {
+    height: 77%;
+}
+
+#ns_dialog_counsel .hero_card {
+    position: relative;
+    width: 72px;
+    height: 92px;
+}
+
+#ns_dialog_counsel .hero_card_frame {
+    position:absolute;
+    width:72px;
+    height:95px;
+    background-size: 72px 95px;
+    background-repeat:no-repeat;
+}
+
+#ns_dialog_counsel .hero_card_pic_small {
+    position:absolute;
+    width: 72px;
+    height: 75px;
+    background-size: 72px 75px;
+}
+
+#ns_dialog_counsel .hero_card_name {
+    position: absolute;
+    top: 78px;
+    left: 5px;
+    right:5px;
+    bottom: 2px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.6rem;
+}
+
+#ns_dialog_counsel .hero_card_level {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.66rem;
+}
+
+#ns_dialog_counsel .counsel_description {
+    height:83px;
+    line-height: 15px;
+    padding: 6px 2px;
+    margin-left: 4px;
+    color: #FFF;
+    font-weight: bold;
+    text-align: left;
+    font-size: .75rem;
+}
+
+#ns_dialog_counsel .counsel_bottom_wrap {
+    font-size: .75rem;
+}
+
+#ns_dialog_counsel .counsel_bottom_description {
+    color: #fff;
+    font-weight: bold;
+    line-height: 33px;
+    padding: 5px 3px;
+}
