@@ -1,2 +1,2 @@
 # nextsam
-Next 삼국지 프로젝트
+웹게임 Next 삼국지 프로젝트
